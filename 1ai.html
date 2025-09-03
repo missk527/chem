@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemistry</title>
+    <style>
+        :root{
+            --primary:#007acc;
+            --primary-dark:#005c99;
+            --accent:#0059b3;
+            --ink:#00264d;
+            --bg:#e6f2ff;
+            --panel:#f9fbff;
+            --rule:#99ccff;
+        }
+        *{box-sizing:border-box}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.6;
+            background-image: linear-gradient(white 97%, #cce0ff 100%);
+            background-size: 100% 30px;
+        }
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.5em;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        iframe {
+            width: 80%;
+            height: 450px;
+            border: 2px solid #cbd5e1;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .notes, .game {
+            max-width: 900px;
+            margin: 20px auto;
+            background: var(--panel);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+        }
+        .notes h2, .game h2 {
+            color: var(--accent);
+            border-bottom: 2px solid var(--rule);
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+        }
+        details {
+            margin-bottom: 15px;
+            border: 1px solid #deeafc;
+            border-radius: 10px;
+            background-color: #fff;
+            padding: 12px 14px;
+        }
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            color: #004080;
+        }
+        summary:hover {
+            color: #0066cc;
+        }
+        ul {
+            margin: 10px 0 0 20px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        .inline-key{
+            display:inline-block;
+            padding:2px 8px;
+            border-radius:999px;
+            background:#eef6ff;
+            border:1px solid #d6e9ff;
+            font-size:0.95em;
+        }
+        button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            margin-top: 10px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        button:hover { background: var(--primary-dark); }
+        .question-box {
+            margin-top: 15px;
+            padding: 12px;
+            border: 1px solid #deeafc;
+            border-radius: 10px;
+            background: #fff;
+        }
+        .feedback { margin-top: 8px; font-weight: bold; }
+        .correct { color: #0f7b0f; }
+        .incorrect { color: #b00020; }
+        .small {font-size:0.95em;color:#334e68}
+    </style>
+</head>
+<body>
+
+<header>
+    Chemistry
+</header>
+
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/pVl67aQ8IZ0" allowfullscreen title="Atoms - intro"></iframe>
+</div>
+
+<div class="notes">
+    <h2>Key Notes</h2>
+
+    <details open>
+        <summary>Atoms: the tiny particles of matter</summary>
+        <ul>
+            <li>Everything (living and non‑living) is made of <strong>atoms</strong>; a single cell contains an enormous number (well over 10<sup>14</sup>).</li>
+            <li>An atom has a <strong>central nucleus</strong> with <em>protons</em> and <em>neutrons</em>, and <em>electrons</em> that move around it in <strong>shells</strong> (energy levels).</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Relative mass & charge of subatomic particles</summary>
+        <ul>
+            <li><span class="inline-key">Proton</span>: charge = <strong>+1</strong>; relative mass = <strong>1</strong>.</li>
+            <li><span class="inline-key">Neutron</span>: charge = <strong>0</strong> (neutral); relative mass = <strong>1</strong>.</li>
+            <li><span class="inline-key">Electron</span>: charge = <strong>−1</strong>; relative mass ≈ <strong>1/2000</strong> (often taken as ~0).</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Size & scale</summary>
+        <ul>
+            <li>Typical atomic radius ≈ <strong>0.1 nm</strong> (1×10<sup>−10</sup> m). Most of an atom is <em>empty space</em>.</li>
+            <li>The nucleus is about <strong>10,000× smaller</strong> than the atom; electrons are even smaller (too small to draw to scale).</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Neutral atoms & ions</summary>
+        <ul>
+            <li>If <strong>protons = electrons</strong> → overall charge <strong>0</strong> (neutral atom).</li>
+            <li><strong>Gain electrons</strong> → more negatives → a <strong>negative ion</strong> (e.g., 1−, 2−).</li>
+            <li><strong>Lose electrons</strong> → more positives → a <strong>positive ion</strong> (e.g., 1+, 2+).</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Periodic table & nuclear symbols</summary>
+        <ul>
+            <li>Each box is an <strong>element</strong> (a type of atom) with its <em>element symbol</em> (e.g., O for oxygen, Li for lithium).</li>
+            <li><strong>Atomic number (Z)</strong> = number of <em>protons</em> (also electrons in a neutral atom).</li>
+            <li><strong>Mass number (A)</strong> = total <em>protons + neutrons</em>.</li>
+        </ul>
+        <p class="small">Examples: Oxygen has Z = 8 and A = 16 → neutrons = 16 − 8 = 8. Lithium has Z = 3 and A = 7 → neutrons = 4.</p>
+    </details>
+</div>
+
+<div class="game">
+    <h2>Quiz Game</h2>
+    <div id="game-area">
+        <button onclick="startGame()">Start Quiz Game</button>
+    </div>
+</div>
+
+<script>
+    const questions = [
+        // 1
+        {
+            type: "mcq",
+            question: "Which particles are found in the nucleus of an atom?",
+            options: ["Protons and electrons", "Protons and neutrons", "Electrons and neutrons"],
+            answer: 1,
+            explanation: "The nucleus contains protons and neutrons; electrons move in shells around it."
+        },
+        // 2
+        {
+            type: "fill",
+            question: "Electrons move around the nucleus in energy levels called ________.",
+            answerText: ["shells","energy levels"],
+            explanation: "These rings are commonly called shells (energy levels)."
+        },
+        // 3
+        {
+            type: "mcq",
+            question: "What is the charge on a proton?",
+            options: ["0", "-1", "+1"],
+            answer: 2,
+            explanation: "Protons are positively charged: +1."
+        },
+        // 4
+        {
+            type: "mcq",
+            question: "What is the charge on a neutron?",
+            options: ["0", "-1", "+1"],
+            answer: 0,
+            explanation: "Neutrons are neutral (0 charge)."
+        },
+        // 5
+        {
+            type: "fill",
+            question: "An electron has a ________ charge (same magnitude as a proton’s positive charge).",
+            answerText: ["-1","negative"],
+            explanation: "Electrons carry a −1 (negative) charge."
+        },
+        // 6
+        {
+            type: "mcq",
+            question: "Which statement about relative mass is correct?",
+            options: [
+                "Proton and neutron both have relative mass 1; electron is ~1/2000",
+                "Proton has mass 0; electron has mass 1",
+                "Electron and proton both have mass 1"
+            ],
+            answer: 0,
+            explanation: "Proton ≈ 1, neutron ≈ 1, electron ≈ 1/2000."
+        },
+        // 7
+        {
+            type: "fill",
+            question: "The atomic number (Z) equals the number of ________ in the nucleus.",
+            answerText: ["protons"],
+            explanation: "Z counts protons; in a neutral atom it also equals the number of electrons."
+        },
+        // 8
+        {
+            type: "mcq",
+            question: "The mass number (A) of an atom equals:",
+            options: ["Electrons + protons", "Protons + neutrons", "Neutrons + electrons"],
+            answer: 1,
+            explanation: "A = total number of nucleons: protons + neutrons."
+        },
+        // 9
+        {
+            type: "fill",
+            question: "Oxygen has A = 16 and Z = 8. The number of neutrons is ________.",
+            answerText: ["8","eight"],
+            explanation: "Neutrons = A − Z = 16 − 8 = 8."
+        },
+        // 10
+        {
+            type: "fill",
+            question: "Lithium has A = 7 and Z = 3. The number of neutrons is ________.",
+            answerText: ["4","four"],
+            explanation: "Neutrons = 7 − 3 = 4."
+        },
+        // 11
+        {
+            type: "mcq",
+            question: "A neutral atom has equal numbers of:",
+            options: ["Protons and electrons", "Protons and neutrons", "Neutrons and electrons"],
+            answer: 0,
+            explanation: "Charges balance when protons = electrons."
+        },
+        // 12
+        {
+            type: "mcq",
+            question: "Adding one extra electron to a neutral atom makes:",
+            options: ["A 1− negative ion", "A 1+ positive ion", "A neutral atom"],
+            answer: 0,
+            explanation: "More electrons than protons → negative ion; one extra → 1−."
+        },
+        // 13
+        {
+            type: "mcq",
+            question: "If an atom loses two electrons, it becomes a:",
+            options: ["2+ positive ion", "2− negative ion", "Neutral atom"],
+            answer: 0,
+            explanation: "Fewer electrons than protons → positive ion; two fewer → 2+."
+        },
+        // 14
+        {
+            type: "fill",
+            question: "A typical atomic radius is about ________ nm.",
+            answerText: ["0.1","0.10"],
+            explanation: "Atoms are roughly 0.1 nm across (≈ 1 Å)."
+        },
+        // 15
+        {
+            type: "mcq",
+            question: "The nucleus is approximately how many times smaller than the whole atom in diameter?",
+            options: ["100×", "10,000×", "1,000,000×"],
+            answer: 1,
+            explanation: "Nuclear diameter ≈ 10,000 times smaller than the atom."
+        },
+        // 16
+        {
+            type: "mcq",
+            question: "Most of an atom’s volume is:",
+            options: ["Filled with electrons", "Empty space", "Solid nucleus"],
+            answer: 1,
+            explanation: "Between the nucleus and outer electrons is mostly empty space."
+        },
+        // 17
+        {
+            type: "fill",
+            question: "The two types of particles in the nucleus are ________ and ________.",
+            answerText: ["protons and neutrons","neutrons and protons"],
+            explanation: "These are the nucleons."
+        },
+        // 18
+        {
+            type: "mcq",
+            question: "Which quantity determines the element (type of atom)?",
+            options: ["Number of neutrons", "Number of protons", "Number of electrons"],
+            answer: 1,
+            explanation: "The atomic number (protons) defines the element."
+        },
+        // 19
+        {
+            type: "fill",
+            question: "The element symbol for lithium is ________.",
+            answerText: ["li","li."],
+            explanation: "Lithium’s symbol is Li (case-insensitive)."
+        },
+        // 20
+        {
+            type: "mcq",
+            question: "If an atom has 3 protons and 3 electrons, its overall charge is:",
+            options: ["Positive ion", "Negative ion", "Neutral (0)"],
+            answer: 2,
+            explanation: "Equal positive and negative charges cancel: net 0."
+        }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+    let shuffledQuestions = [];
+
+    function startGame() {
+        shuffledQuestions = questions.slice().sort(() => Math.random() - 0.5);
+        currentQuestion = 0;
+        score = 0;
+        showQuestion();
+    }
+
+    function showQuestion() {
+        const gameArea = document.getElementById("game-area");
+        const q = shuffledQuestions[currentQuestion];
+        let html = `<div class='question-box'><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+        if (q.type === "mcq") {
+            q.options.forEach((opt, index) => {
+                html += `<label><input type='radio' name='option' value='${index}'> ${opt}</label><br>`;
+            });
+            html += `<button onclick='checkMCQ()'>Submit</button>`;
+        } else if (q.type === "fill") {
+            html += `<input type='text' id='fill-answer' placeholder='Type your answer here'><br>`;
+            html += `<button onclick='checkFill()'>Submit</button>`;
+        }
+
+        html += `<div id='feedback' class='feedback'></div></div>`;
+        gameArea.innerHTML = html;
+    }
+
+    function checkMCQ() {
+        const q = shuffledQuestions[currentQuestion];
+        const selected = document.querySelector("input[name='option']:checked");
+        const feedback = document.getElementById("feedback");
+        if (!selected) {
+            feedback.textContent = "Please select an answer!";
+            feedback.className = "feedback incorrect";
+            return;
+        }
+        if (parseInt(selected.value, 10) === q.answer) {
+            feedback.textContent = "✅ Correct! " + q.explanation;
+            feedback.className = "feedback correct";
+            score++;
+        } else {
+            feedback.textContent = "❌ Incorrect. " + q.explanation;
+            feedback.className = "feedback incorrect";
+        }
+        setTimeout(nextQuestion, 1200);
+    }
+
+    function checkFill() {
+        const q = shuffledQuestions[currentQuestion];
+        const ansEl = document.getElementById("fill-answer");
+        const answer = (ansEl.value || "").trim().toLowerCase();
+        const feedback = document.getElementById("feedback");
+        if (!answer) {
+            feedback.textContent = "Please enter your answer!";
+            feedback.className = "feedback incorrect";
+            return;
+        }
+        let ok = false;
+        if (Array.isArray(q.answerText)) {
+            ok = q.answerText.some(a => answer.includes(a));
+        } else {
+            ok = answer.includes((q.answerText || "").toLowerCase());
+        }
+        if (ok) {
+            feedback.textContent = "✅ Correct! " + q.explanation;
+            feedback.className = "feedback correct";
+            score++;
+        } else {
+            feedback.textContent = "❌ Incorrect. " + q.explanation;
+            feedback.className = "feedback incorrect";
+        }
+        setTimeout(nextQuestion, 1200);
+    }
+
+    function nextQuestion() {
+        currentQuestion++;
+        if (currentQuestion < shuffledQuestions.length) {
+            showQuestion();
+        } else {
+            endGame();
+        }
+    }
+
+    function endGame() {
+        const gameArea = document.getElementById("game-area");
+        gameArea.innerHTML = `<h3>Game Over!</h3><p>Your score: ${score} / ${shuffledQuestions.length}</p>` +
+                             `<button onclick='startGame()'>Play Again</button>`;
+    }
+</script>
+
+</body>
+</html>
