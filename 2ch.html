@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atoms, Isotopes & Relative Atomic Mass</title>
+  <style>
+    :root{
+      --brand:#4F46E5;
+      --bg:#f9fafb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --ok:#15803d;
+      --bad:#b91c1c;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:ui-sans-serif,system-ui;line-height:1.6;background:var(--bg);color:#111827}
+    header{background:linear-gradient(135deg,var(--brand),#22c55e);color:#fff;padding:20px 16px;text-align:center;box-shadow:0 8px 30px rgba(79,70,229,.3)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .video{background:var(--card);border-radius:14px;padding:14px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin-bottom:16px}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .card h2{margin:0 0 10px;color:var(--brand)}
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .formula{
+      font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;
+      padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap
+    }
+    .quiz h3{margin:0 0 8px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .qbox{border:1px solid #e5e7eb;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    .feedback{font-weight:700;margin-top:8px}
+    .feedback.ok{color:var(--ok)}
+    .feedback.bad{color:var(--bad)}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Atoms, Isotopes & Relative Atomic Mass (RAM)</h1>
+    <div>Video updated • Notes in English • 30 quiz questions</div>
+  </header>
+  <div class="wrap">
+    <section class="video">
+      <iframe src="https://www.youtube.com/embed/CqoJde8Vvz4" allowfullscreen></iframe>
+    </section>
+    <section class="card">
+      <h2>Key Notes</h2>
+      <details open><summary>1) Structure of the Atom</summary>
+        <p>An atom has a <strong>nucleus</strong> with protons and neutrons, and electrons orbiting it. The <strong>proton number</strong> (atomic number, Z) determines the element.</p>
+        <ul><li>Hydrogen: 1 proton, 1 electron.</li><li>Helium: 2 protons, 2 neutrons, 2 electrons.</li></ul>
+      </details>
+      <details><summary>2) Element Symbols</summary>
+        <p>Symbols use 1–2 letters. Examples: C=Carbon, Li=Lithium, Na=Sodium, Fe=Iron.</p>
+      </details>
+      <details><summary>3) Isotopes</summary>
+        <p>Isotopes = same protons, different neutrons. Chemical properties same, mass differs.</p>
+        <ul><li>Carbon‑12: 6p, 6n, 6e.</li><li>Carbon‑13: 6p, 7n, 6e.</li></ul>
+      </details>
+      <details><summary>4) Relative Atomic Mass (A<sub>r</sub>)</summary>
+        <p>Weighted average of isotope mass numbers and abundances.</p>
+        <div class="formula">A<sub>r</sub> = Σ(isotope abundance × isotope mass) / Σ(abundances)</div>
+        <p><strong>Example (copper):</strong> (69.2×63 + 30.8×65) / <u>(69.2 + 30.8)</u> = 63.6 (1 d.p.)</p>
+      </details>
+      <details><summary>5) Exam Tips</summary>
+        <ul>
+          <li>Element identity depends only on <strong>protons</strong>.</li>
+          <li>Mass number (≈ p + n) distinguishes isotopes.</li>
+          <li>When using %, denominator is 100; otherwise, sum of fractional abundances is 1.</li>
+        </ul>
+      </details>
+    </section>
+    <section class="card quiz">
+      <h2>Quiz (30 questions)</h2>
+      <div id="game"><button onclick="startGame()">Start Quiz</button></div>
+    </section>
+    <footer>© 2025 Chemistry Pack</footer>
+  </div>
+  <script>
+    const questions = [
+      {type:"mcq",q:"Which number determines the element?",opts:["Neutrons","Protons","Electrons"],a:1,exp:"Proton number decides."},
+      {type:"fill",q:"Hydrogen nucleus has how many protons?",ans:"1",exp:"Z=1."},
+      {type:"mcq",q:"Z=2 is which element?",opts:["H","He","Li"],a:1,exp:"Helium."},
+      {type:"mcq",q:"6 protons = ?",opts:["Carbon","Oxygen","Nitrogen"],a:0,exp:"Carbon."},
+      {type:"mcq",q:"3 protons = ?",opts:["Li","Na","Fe"],a:0,exp:"Lithium."},
+      {type:"fill",q:"Li stands for ______.",ans:"Lithium",exp:"Li= Lithium."},
+      {type:"mcq",q:"Symbol for Sodium?",opts:["So","Sn","Na"],a:2,exp:"Na."},
+      {type:"mcq",q:"Symbol for Iron?",opts:["Ir","Fe","Fi"],a:1,exp:"Fe."},
+      {type:"fill",q:"Isotopes: same protons, different ______.",ans:"neutrons",exp:"Different neutrons."},
+      {type:"mcq",q:"Which are isotopes?",opts:["12C & 14N","12C & 13C","1H & 2He"],a:1,exp:"Same element diff neutrons."},
+      {type:"mcq",q:"Chemical properties of isotopes are:",opts:["Different","Same","Unrelated"],a:1,exp:"Same chemistry."},
+      {type:"fill",q:"Mass number of carbon‑12?",ans:"12",exp:"By definition."},
+      {type:"fill",q:"Neutrons in carbon‑13?",ans:"7",exp:"13-6=7."},
+      {type:"mcq",q:"Which change keeps element same?",opts:["Protons","Neutrons","Charge"],a:1,exp:"Neutrons → isotope."},
+      {type:"mcq",q:"Bottom left number in nuclear symbol?",opts:["Mass","Atomic number","Charge"],a:1,exp:"Atomic number."},
+      {type:"fill",q:"Relative atomic mass uses isotope mass and ______.",ans:"abundance",exp:"Weighted by abundance."},
+      {type:"mcq",q:"Denominator when abundances in %?",opts:["10","100","1000"],a:1,exp:"% sums to 100."},
+      {type:"mcq",q:"Stable copper isotopes?",opts:["Cu60,61","Cu63,65","Cu64,66"],a:1,exp:"Cu63 & Cu65."},
+      {type:"fill",q:"69.2×63 = ?",ans:"4359.6",exp:"Calculation."},
+      {type:"fill",q:"30.8×65 = ?",ans:"2002",exp:"Calculation."},
+      {type:"mcq",q:"RAM of Cu (1dp)?",opts:["63.2","63.6","64.0"],a:1,exp:"63.6."},
+      {type:"mcq",q:"2p 2n 2e = ?",opts:["H","He","Li"],a:1,exp:"Helium."},
+      {type:"fill",q:"Symbol for atomic number?",ans:"Z",exp:"Z=atomic number."},
+      {type:"mcq",q:"Mass number≈",opts:["p+n","p+e","n+e"],a:0,exp:"p+n."},
+      {type:"mcq",q:"Correct:?",opts:["3p=Carbon","6p=Carbon","2n=Helium"],a:1,exp:"6p=Carbon."},
+      {type:"fill",q:"Isotopes differ only in ______.",ans:"mass",exp:"Different neutrons."},
+      {type:"mcq",q:"Which are element symbols?",opts:["Ar","C,Li,Na","Z"],a:1,exp:"C,Li,Na."},
+      {type:"fill",q:"Denominator in % calculation?",ans:"100",exp:"Because percentages."},
+      {type:"mcq",q:"Why isotopes same chemistry?",opts:["Neutrons control bonds","Protons/electrons decide","Mass decides"],a:1,exp:"Electrons decide."},
+      {type:"fill",q:"Symbol for Iron?",ans:"Fe",exp:"Fe."}
+    ];
+    let order=[],idx=0,score=0;
+    function startGame(){order=[...Array(questions.length).keys()].sort(()=>Math.random()-0.5);idx=0;score=0;renderQ();}
+    function renderQ(){const q=questions[order[idx]];let html=`<div class="qbox"><h3>Q ${idx+1}/${questions.length}</h3><p>${q.q}</p>`;
+      if(q.type==="mcq"){q.opts.forEach((o,i)=>{html+=`<label><input type="radio" name="opt" value="${i}"> ${o}</label><br>`});html+=`<button onclick="checkMCQ()">Submit</button>`;}
+      else{html+=`<input id="fill" placeholder="Answer"><button onclick="checkFill()">Submit</button>`;}html+=`<div id="fb" class="feedback"></div></div>`;
+      document.getElementById('game').innerHTML=html;}
+    function checkMCQ(){const q=questions[order[idx]],p=document.querySelector('input[name="opt"]:checked');const fb=document.getElementById('fb');
+      if(!p){fb.textContent="Select one";fb.className="feedback bad";return;}if(parseInt(p.value)===q.a){score++;fb.textContent="✅ "+q.exp;fb.className="feedback ok";}
+      else{fb.textContent="❌ "+q.exp;fb.className="feedback bad";}setTimeout(nextQ,1200);}
+    function checkFill(){const q=questions[order[idx]],ans=(document.getElementById('fill').value||"").trim();const fb=document.getElementById('fb');
+      if(!ans){fb.textContent="Enter answer";fb.className="feedback bad";return;}if(ans.toLowerCase()===q.ans.toLowerCase()){score++;fb.textContent="✅ "+q.exp;fb.className="feedback ok";}
+      else{fb.textContent="❌ Correct: "+q.ans+". "+q.exp;fb.className="feedback bad";}setTimeout(nextQ,1200);}
+    function nextQ(){idx++;if(idx<questions.length)renderQ();else endGame();}
+    function endGame(){document.getElementById('game').innerHTML=`<div class="qbox"><h3>Done!</h3><p>Your score: ${score}/${questions.length}</p><button onclick="startGame()">Play again</button></div>`;}
+  </script>
+</body>
+</html>
