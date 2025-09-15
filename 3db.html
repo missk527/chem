@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Molecules, Compounds & Mixtures</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#22c55e);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .pill{display:inline-block;background:#e0f2fe;border:1px solid #bae6fd;border-radius:999px;padding:2px 10px;margin-right:6px}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Molecules, Compounds & Mixtures</h1>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <iframe src="https://www.youtube.com/embed/MqpGNJUePcY" title="Molecules, Compounds & Mixtures" allowfullscreen></iframe>
+    </section>
+
+    <section class="card">
+      <h2>Key Notes (rewritten from the speech)</h2>
+
+      <details open>
+        <summary>1) Molecules vs. Compounds</summary>
+        <ul>
+          <li><b>Molecule:</b> two or more atoms held together by chemical bonds (can be the same element or different elements).</li>
+          <li><b>Compound:</b> a pure substance made of <em>two or more different elements</em> chemically bonded.</li>
+          <li>Therefore: all compounds are molecules, but not all molecules are compounds (e.g., O<sub>2</sub>, N<sub>2</sub>, Cl<sub>2</sub> are molecules <em>not</em> compounds).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) Examples</summary>
+        <div>
+          <span class="pill">O<sub>2</sub> — oxygen molecule (elemental)</span>
+          <span class="pill">N<sub>2</sub> — nitrogen molecule (elemental)</span>
+          <span class="pill">Cl<sub>2</sub> — chlorine molecule (elemental)</span>
+          <span class="pill">H<sub>2</sub>O — water (compound)</span>
+          <span class="pill">CO<sub>2</sub> — carbon dioxide (compound)</span>
+          <span class="pill">He — helium (monatomic, <em>not</em> a molecule)</span>
+        </div>
+      </details>
+
+      <details>
+        <summary>3) Fixed Ratios & Chemical Formulae</summary>
+        <ul>
+          <li>In a given compound, elements appear in the <b>same fixed proportions</b>.</li>
+          <li>Use chemical symbols with <b>subscripts</b> for counts.</li>
+        </ul>
+        <div class="chem">
+Water → H₂O  (2 H, 1 O)
+Carbon dioxide → CO₂  (1 C, 2 O)
+Sulfuric acid → H₂SO₄  (2 H, 1 S, 4 O)
+        </div>
+        <p>When only one atom of an element is present, no subscript is written (e.g., the “C” in CO₂).</p>
+      </details>
+
+      <details>
+        <summary>4) Brackets in Formulae</summary>
+        <p>Brackets group atoms just like in maths. A subscript outside the bracket multiplies the entire group.</p>
+        <div class="chem">
+Calcium hydroxide → Ca(OH)₂ = 1 Ca, 2 × (O + H) → 1 Ca, 2 O, 2 H
+        </div>
+      </details>
+
+      <details>
+        <summary>5) Giant (Non‑molecular) Compounds & Ratios</summary>
+        <ul>
+          <li>Some compounds contain <b>millions/billions</b> of atoms in a <b>giant lattice</b> (often held by <b>ionic bonds</b>), so they are not discrete molecules.</li>
+          <li>Formula shows the <b>simplest ratio</b> of ions/atoms, not a single molecule.</li>
+        </ul>
+        <div class="chem">
+Sodium chloride → NaCl  (ratio 1:1; e.g., 1×10⁹ Na⁺ with 1×10⁹ Cl⁻ in a crystal)
+        </div>
+      </details>
+
+      <details>
+        <summary>6) Mixtures</summary>
+        <ul>
+          <li>A <b>mixture</b> contains two or more <em>substances</em> (elements and/or compounds) that are <b>not chemically combined</b>.</li>
+          <li>No new bonds between substances; they are just physically mixed.</li>
+          <li>Therefore, mixtures can be separated by <b>physical methods</b> such as <b>filtration</b>, <b>crystallization</b>, and <b>distillation</b>.</li>
+        </ul>
+        <p><em>Example mixture:</em> O<sub>2</sub> molecules + NaCl crystals + He atoms + a CO<sub>2</sub> molecule in one beaker.</p>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Quiz (30 Questions)</h2>
+      <div id="game"><button onclick="startGame()">Start Quiz</button></div>
+    </section>
+
+    <footer>© 2025 Chemistry Pack</footer>
+  </div>
+
+  <script>
+    // 30-question quiz based on the speech
+    const questions = [
+      {type:"mcq", q:"What is a molecule?", opts:["A single atom","Two or more atoms chemically bonded","Two or more elements physically mixed"], a:1, exp:"Molecules contain ≥2 atoms held by bonds."},
+      {type:"mcq", q:"What is a compound?", opts:["Any two atoms stuck together","Two or more different elements chemically bonded","A mixture of gases"], a:1, exp:"Compounds contain different elements."},
+      {type:"mcq", q:"Which statement is true?", opts:["All molecules are compounds","All compounds are molecules","No compounds are molecules"], a:1, exp:"Compounds are a subset of molecules."},
+      {type:"mcq", q:"Oxygen in air exists mainly as:", opts:["O","O₂","O₃ only"], a:1, exp:"Diatomic oxygen (O₂)."},
+      {type:"mcq", q:"Helium is:", opts:["Monatomic and not a molecule","A diatomic molecule","A compound"], a:0, exp:"He exists as single atoms."},
+      {type:"mcq", q:"Water is a:", opts:["Molecule and compound","Molecule only","Neither"], a:0, exp:"H₂O is both."},
+      {type:"mcq", q:"Which is a molecule but NOT a compound?", opts:["CO₂","H₂O","N₂"], a:2, exp:"N₂ has one element only."},
+      {type:"fill", q:"Write the formula for carbon dioxide.", ans:"CO2", exp:"CO₂ has 1 C and 2 O."},
+      {type:"fill", q:"In H2O, the small '2' is called a ______.", ans:"subscript", exp:"Subscript shows atom count."},
+      {type:"mcq", q:"In CO2, how many carbon atoms are present?", opts:["1","2","0"], a:0, exp:"No subscript means 1 atom."},
+      {type:"mcq", q:"Which formula represents sulfuric acid?", opts:["H2SO4","HSO4","H2S2O4"], a:0, exp:"H₂SO₄."},
+      {type:"mcq", q:"Which contains different elements?", opts:["O2","Cl2","H2O"], a:2, exp:"Water has H and O."},
+      {type:"fill", q:"N2 is called ______ nitrogen.", ans:"diatomic", exp:"Two atoms → diatomic."},
+      {type:"mcq", q:"In Ca(OH)2, the '2' multiplies:", opts:["Only O","Only H","Both O and H inside the brackets"], a:2, exp:"Brackets group atoms."},
+      {type:"fill", q:"Expand Ca(OH)2 to counts: Ca = 1, O = __, H = __.", ans:"2, 2", exp:"Two groups of OH → 2 O and 2 H."},
+      {type:"mcq", q:"Sodium chloride exists as:", opts:["Small molecules NaCl","A giant ionic lattice","Discrete Na2Cl2 molecules"], a:1, exp:"NaCl forms a lattice."},
+      {type:"mcq", q:"For NaCl, the formula shows:", opts:["The exact number of atoms in a molecule","A 1:1 ratio of ions in the lattice","A 2:1 ratio of Na to Cl"], a:1, exp:"Empirical ratio."},
+      {type:"fill", q:"If a salt crystal has 5×10^8 Na+ ions, it has ______ Cl− ions.", ans:"5×10^8", exp:"1:1 ratio."},
+      {type:"mcq", q:"Which set is a mixture?", opts:["Pure CO2 gas","NaCl crystal","O2 + NaCl + He + CO2 in a beaker"], a:2, exp:"Physically combined substances."},
+      {type:"mcq", q:"In a mixture, substances are:", opts:["Chemically bonded","Not chemically combined","Always reacting"], a:1, exp:"No new bonds between substances."},
+      {type:"mcq", q:"A mixture can be separated by:", opts:["Filtration/crystallization/distillation","Electrolysis only","Cannot be separated"], a:0, exp:"Physical methods work."},
+      {type:"fill", q:"H2O always contains hydrogen and oxygen in a fixed ______.", ans:"ratio", exp:"Fixed proportions define compounds."},
+      {type:"mcq", q:"Which is NOT a compound?", opts:["CO2","O2","H2O"], a:1, exp:"O₂ is an element molecule."},
+      {type:"fill", q:"The smallest whole-number ratio in an ionic lattice is called the ______ formula.", ans:"empirical", exp:"Formula shows simplest ratio."},
+      {type:"mcq", q:"Which best describes Cl2?", opts:["Compound of chlorine and chlorine","Elemental molecule of chlorine","Mixture of chlorine atoms"], a:1, exp:"Two chlorine atoms bonded."},
+      {type:"mcq", q:"Brackets in formulae are used to:", opts:["Change state symbols","Group atoms before multiplying","Show charge"], a:1, exp:"They group atoms."},
+      {type:"fill", q:"CO2 has how many oxygen atoms per molecule?", ans:"2", exp:"Subscript 2."},
+      {type:"mcq", q:"A beaker with only NaCl(s) is:", opts:["A mixture","A compound","An element"], a:1, exp:"Pure compound."},
+      {type:"mcq", q:"Which choice lists only physical separation methods?", opts:["Filtration, crystallization, distillation","Combustion, oxidation, electrolysis","Polymerization, neutralization, fermentation"], a:0, exp:"As stated in the notes."},
+      {type:"fill", q:"Molecules must contain at least ______ atoms.", ans:"two", exp:"By definition."}
+    ];
+
+    let order=[], idx=0, score=0;
+    function startGame(){
+      order=[...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+      idx=0; score=0; renderQ();
+    }
+    function renderQ(){
+      const q=questions[order[idx]];
+      let html = `<div class='qbox'><h3>Q ${idx+1}/${questions.length}</h3><p>${q.q}</p>`;
+      if(q.type==="mcq"){
+        q.opts.forEach((o,i)=>{ html += `<label><input type='radio' name='opt' value='${i}'> ${o}</label><br>`; });
+        html += `<button onclick='checkMCQ()'>Submit</button>`;
+      }else{
+        html += `<input id='fill' placeholder='Answer'> <button onclick='checkFill()'>Submit</button>`;
+      }
+      html += `<div id='fb' class='feedback'></div></div>`;
+      document.getElementById('game').innerHTML = html;
+    }
+    function checkMCQ(){
+      const q=questions[order[idx]];
+      const pick=document.querySelector("input[name='opt']:checked");
+      const fb=document.getElementById('fb');
+      if(!pick){ fb.textContent='Select one'; fb.className='feedback bad'; return; }
+      if(parseInt(pick.value)===q.a){ score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok'; }
+      else{ fb.textContent='❌ '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+    function checkFill(){
+      const q=questions[order[idx]];
+      const ans=(document.getElementById('fill').value||'').trim().toLowerCase();
+      const fb=document.getElementById('fb');
+      if(!ans){ fb.textContent='Enter answer'; fb.className='feedback bad'; return; }
+      if(ans===q.ans.toLowerCase()){
+        score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok';
+      }else{
+        fb.textContent='❌ Correct: '+q.ans+'. '+q.exp; fb.className='feedback bad';
+      }
+      setTimeout(nextQ, 1200);
+    }
+    function nextQ(){
+      idx++;
+      if(idx<questions.length) renderQ();
+      else endGame();
+    }
+    function endGame(){
+      document.getElementById('game').innerHTML = `<div class='qbox'><h3>Finished!</h3><p>Your score: <b>${score}/${questions.length}</b></p><button onclick='startGame()'>Play again</button></div>`;
+    }
+  </script>
+</body>
+</html>
