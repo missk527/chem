@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chemical Equations: Word vs Symbol & Balancing</title>
+  <style>
+    :root{ --brand:#0ea5e9; --paper:#fff; --ink:#0f172a; --muted:#64748b; --ok:#16a34a; --bad:#dc2626; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, ui-sans-serif, system-ui, Segoe UI, Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#22c55e);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .pill{display:inline-block;background:#e0f2fe;border:1px solid #bae6fd;border-radius:999px;padding:2px 10px;margin-right:6px}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+    .kbd{background:#eef2ff;border:1px solid #c7d2fe;border-bottom-width:3px;border-radius:8px;padding:2px 6px;font-family:ui-monospace,Consolas,monospace}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Chemical Equations: Word & Symbol Forms + Balancing</h1>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <!-- Updated video link as requested -->
+      <iframe src="https://www.youtube.com/embed/QUnPflziTkk" title="Chemical Equations & Balancing" allowfullscreen></iframe>
+    </section>
+
+    <section class="card">
+      <h2>Key Notes (rewritten from the speech)</h2>
+
+      <details open>
+        <summary>1) Why chemical equations?</summary>
+        <ul>
+          <li>They show <b>what happens</b> in a chemical reaction.</li>
+          <li>Two common forms: <b>word equations</b> and <b>symbol (formula) equations</b>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) Word vs. Symbol equations</summary>
+        <ul>
+          <li><b>Word equation</b> example: “Methane + oxygen → carbon dioxide + water”.</li>
+          <li><b>Symbol equation</b> uses chemical formulae: <span class="chem">CH₄ + O₂ → CO₂ + H₂O</span></li>
+          <li>Left side: <b>reactants</b>. Right side: <b>products</b>. The arrow shows the reaction proceeds to products.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Diatomic elements (use the correct formulas)</summary>
+        <ul>
+          <li>Some elements exist naturally as <b>diatomic molecules</b>: O₂ (oxygen), Cl₂ (chlorine), N₂ (nitrogen).</li>
+          <li>Therefore, write O₂ (not O), Cl₂ (not Cl), N₂ (not N) in equations.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) Balancing rule: conservation of atoms</summary>
+        <ul>
+          <li>A <b>balanced</b> equation has the <b>same number of each type of atom</b> on both sides of the arrow.</li>
+          <li>Balancing is often <b>trial and error</b>—adjust and recheck until counts match.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) What you can and can’t change</summary>
+        <ul>
+          <li>Never change the small numbers in formulas (<b>subscripts</b>)—that would make a <em>different substance</em> (e.g., O₂ ≠ O₃).</li>
+          <li>You may change only the big numbers out front (<b>coefficients</b>): they tell how many units of a substance are involved.</li>
+          <li>Keep coefficients as <b>whole numbers</b> (no fractions like 1½ O₂).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>6) Example 1: Methane combustion</summary>
+        <div class="chem">
+Unbalanced:  CH4 + O2 → CO2 + H2O
+Counts LHS:  C=1, H=4, O=2
+Counts RHS:  C=1, H=2, O=3   ← not balanced
+Step 1: Make O even on LHS → 2 O2 (gives 4 O atoms).
+Step 2: Fix H and O on RHS → 2 H2O.
+Balanced:    CH4 + 2 O2 → CO2 + 2 H2O
+        </div>
+        <p>Now each side has C=1, H=4, O=4 — perfectly balanced.</p>
+      </details>
+
+      <details>
+        <summary>7) Example 2: Acid–base (H₂SO₄ + NaOH)</summary>
+        <div class="chem">
+Word: Sulfuric acid + sodium hydroxide → sodium sulfate + water
+Start: H2SO4 + NaOH → Na2SO4 + H2O
+Check: H=3, S=1, O=5, Na=1 (LHS) vs H=2, S=1, O=5, Na=2 (RHS)
+Tip: Balance the <b>least common elements</b> first (e.g., Na, S).
+Step 1: Put 2 in front of NaOH → H2SO4 + 2 NaOH → Na2SO4 + H2O
+Now: LHS H=4, S=1, O=6, Na=2; RHS H=2, S=1, O=5, Na=2
+Step 2: Add one more water on RHS → 2 H2O
+Balanced: H2SO4 + 2 NaOH → Na2SO4 + 2 H2O
+Check: H=4, S=1, O=6, Na=2 on both sides ✓
+        </div>
+      </details>
+
+      <details>
+        <summary>8) Key terms</summary>
+        <p><span class="kbd">Reactants</span> — starting substances. <span class="kbd">Products</span> — substances formed. <span class="kbd">Coefficient</span> — big number in front. <span class="kbd">Subscript</span> — small number inside a formula.</p>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Quiz (35 Questions)</h2>
+      <div id="game"><button onclick="startGame()">Start Quiz</button></div>
+    </section>
+
+    <footer>© 2025 Chemistry Pack</footer>
+  </div>
+
+  <script>
+    // 35-question quiz based strictly on the provided speech
+    const questions = [
+      {type:"mcq", q:"In a word equation, substances on the left are called:", opts:["Products","Reactants","Catalysts"], a:1, exp:"Left side are reactants."},
+      {type:"mcq", q:"In a word equation, substances on the right are called:", opts:["Reactants","Solvents","Products"], a:2, exp:"Right side are products."},
+      {type:"mcq", q:"The single arrow in the examples means:", opts:["Reversible reaction","Reaction proceeds to form products","No reaction occurs"], a:1, exp:"Arrow shows reactants form products."},
+      {type:"mcq", q:"Symbol equations use:", opts:["Full chemical names","Chemical formulas/symbols","Pictures"], a:1, exp:"They use formulas like CH4, O2."},
+      {type:"mcq", q:"In the methane example, methane is written as:", opts:["C4H","CH4","C2H2"], a:1, exp:"Methane is CH4."},
+      {type:"mcq", q:"In equations, oxygen should be written as:", opts:["O","O2","O3 always"], a:1, exp:"Oxygen exists as O2 in the context given."},
+      {type:"mcq", q:"Other diatomic elements mentioned:", opts:["Cl2 and N2","He2 and Ne2","H and He"], a:0, exp:"Chlorine and nitrogen are diatomic here."},
+      {type:"mcq", q:"A balanced equation must have:", opts:["Same total mass only","Same number of each atom on both sides","Same number of molecules"], a:1, exp:"Atom counts must match."},
+      {type:"mcq", q:"Balancing is often:", opts:["Exact on first try","A trial-and-error process","Impossible"], a:1, exp:"Trial and error is common."},
+      {type:"mcq", q:"You are allowed to change:", opts:["Subscripts","Coefficients (big numbers in front)","Chemical symbols"], a:1, exp:"Only coefficients may change."},
+      {type:"mcq", q:"You must not change:", opts:["Coefficients","States (s,l,g)","Subscripts inside formulas"], a:2, exp:"Changing subscripts changes the substance."},
+      {type:"mcq", q:"Coefficients must be kept as:", opts:["Fractions if needed","Whole numbers","Any real numbers"], a:1, exp:"Whole numbers only in the procedure described."},
+      {type:"mcq", q:"Unbalanced methane combustion is written:", opts:["CH4 + O2 → CO2 + H2O","CH4 + O → CO2 + H2O","CH4 → CO2 + H2O"], a:0, exp:"Start with O2, not O."},
+      {type:"mcq", q:"Initial atom counts for CH4 + O2 → CO2 + H2O (LHS):", opts:["C=1, H=4, O=2","C=1, H=2, O=3","C=2, H=4, O=2"], a:0, exp:"Left has 1 C, 4 H, 2 O."},
+      {type:"mcq", q:"Initial atom counts for CH4 + O2 → CO2 + H2O (RHS):", opts:["C=1, H=2, O=3","C=1, H=4, O=4","C=2, H=4, O=2"], a:0, exp:"Right has 1 C, 2 H, 3 O at first."},
+      {type:"mcq", q:"First step used to fix oxygen in methane example:", opts:["Put 2 in front of CO2","Put 2 in front of O2","Put 2 in front of CH4"], a:1, exp:"2 O2 gives 4 O atoms on LHS."},
+      {type:"mcq", q:"Why not use 1.5 O2?", opts:["Fractions are not allowed in balancing here","It would change substances","It makes hydrogen odd"], a:0, exp:"Use whole-number coefficients."},
+      {type:"mcq", q:"To fix hydrogen in methane example, we:", opts:["Double CH4","Double CO2","Double H2O"], a:2, exp:"Make 2 H2O to get 4 H on RHS."},
+      {type:"fill", q:"Balanced methane combustion: CH4 + __ O2 → CO2 + __ H2O.", ans:"2, 2", exp:"CH4 + 2 O2 → CO2 + 2 H2O."},
+      {type:"mcq", q:"After balancing methane combustion, oxygen atoms on each side are:", opts:["3","4","2"], a:1, exp:"4 O atoms on both sides."},
+      {type:"mcq", q:"In the acid–base example, product salt is:", opts:["Sodium sulfide","Sodium sulfate","Sodium sulfite"], a:1, exp:"Na2SO4 is sodium sulfate."},
+      {type:"mcq", q:"Initial check (before balancing) for H2SO4 + NaOH → Na2SO4 + H2O shows sodium is:", opts:["Balanced","Short on LHS","Short on RHS"], a:1, exp:"Need one more Na on the LHS."},
+      {type:"mcq", q:"First balancing move in the acid–base example:", opts:["Put 2 in front of NaOH","Put 2 in front of H2SO4","Put 2 in front of H2O"], a:0, exp:"2 NaOH fixes Na count."},
+      {type:"mcq", q:"After adding 2 NaOH, we then:", opts:["Remove H2O","Add one more H2O to make 2 H2O","Change Na2SO4 to NaSO4"], a:1, exp:"2 H2O balances H and O."},
+      {type:"fill", q:"Final balanced acid–base equation: H2SO4 + __ NaOH → Na2SO4 + __ H2O.", ans:"2, 2", exp:"H2SO4 + 2 NaOH → Na2SO4 + 2 H2O."},
+      {type:"mcq", q:"A suggested strategy is to balance:", opts:["Hydrogen first always","Least common elements first","Oxygen last always"], a:1, exp:"Tip from the speech."},
+      {type:"mcq", q:"Changing O2 to O3 while balancing would:", opts:["Be acceptable","Create a different substance","Have no effect"], a:1, exp:"O3 is ozone, not oxygen in this context."},
+      {type:"fill", q:"The small number in CO2 is called a ______.", ans:"subscript", exp:"Subscripts are part of formulas."},
+      {type:"fill", q:"The big number placed in front of a formula is the ______.", ans:"coefficient", exp:"Coefficients scale quantities."},
+      {type:"mcq", q:"Reactants are located:", opts:["Right of the arrow","Left of the arrow","Above the arrow"], a:1, exp:"Left side."},
+      {type:"mcq", q:"Products are located:", opts:["Right of the arrow","Left of the arrow","Under the arrow"], a:0, exp:"Right side."},
+      {type:"mcq", q:"The methane word equation reads:", opts:["Methane + oxygen → carbon dioxide + water","Methane + water → carbon dioxide + oxygen","Oxygen + water → methane + carbon dioxide"], a:0, exp:"As given in the speech."},
+      {type:"fill", q:"Write the symbolic methane combustion (balanced, no states): __ + 2 O2 → CO2 + 2 H2O.", ans:"CH4", exp:"CH4 + 2 O2 → CO2 + 2 H2O."},
+      {type:"mcq", q:"After fully balancing H2SO4 + 2 NaOH → Na2SO4 + 2 H2O, hydrogen atoms per side are:", opts:["2","3","4"], a:2, exp:"There are 4 H on each side."},
+      {type:"mcq", q:"In balancing, when counts don't match you should:", opts:["Change a subscript","Keep trying different whole-number coefficients","Give up"], a:1, exp:"Trial-and-error with coefficients."},
+      {type:"fill", q:"List two diatomic elements from the lesson: O2, __, __.", ans:"Cl2, N2", exp:"Chlorine and nitrogen were named."}
+    ];
+
+    let order=[], idx=0, score=0;
+    function startGame(){
+      order=[...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+      idx=0; score=0; renderQ();
+    }
+    function renderQ(){
+      const q=questions[order[idx]];
+      let html = `<div class='qbox'><h3>Q ${idx+1}/${questions.length}</h3><p>${q.q}</p>`;
+      if(q.type==="mcq"){
+        q.opts.forEach((o,i)=>{ html += `<label><input type='radio' name='opt' value='${i}'> ${o}</label><br>`; });
+        html += `<button onclick='checkMCQ()'>Submit</button>`;
+      }else{
+        html += `<input id='fill' placeholder='Answer'> <button onclick='checkFill()'>Submit</button>`;
+      }
+      html += `<div id='fb' class='feedback'></div></div>`;
+      document.getElementById('game').innerHTML = html;
+    }
+    function checkMCQ(){
+      const q=questions[order[idx]];
+      const pick=document.querySelector("input[name='opt']:checked");
+      const fb=document.getElementById('fb');
+      if(!pick){ fb.textContent='Select one'; fb.className='feedback bad'; return; }
+      if(parseInt(pick.value)===q.a){ score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok'; }
+      else{ fb.textContent='❌ '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+    function checkFill(){
+      const q=questions[order[idx]];
+      const ans=(document.getElementById('fill').value||'').trim().toLowerCase();
+      const fb=document.getElementById('fb');
+      if(!ans){ fb.textContent='Enter answer'; fb.className='feedback bad'; return; }
+      if(ans===q.ans.toLowerCase()){
+        score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok';
+      }else{
+        fb.textContent='❌ Correct: '+q.ans+'. '+q.exp; fb.className='feedback bad';
+      }
+      setTimeout(nextQ, 1200);
+    }
+    function nextQ(){
+      idx++;
+      if(idx<questions.length) renderQ();
+      else endGame();
+    }
+    function endGame(){
+      document.getElementById('game').innerHTML = `<div class='qbox'><h3>Finished!</h3><p>Your score: <b>${score}/${questions.length}</b></p><button onclick='startGame()'>Play again</button></div>`;
+    }
+  </script>
+</body>
+</html>
