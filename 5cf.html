@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Separating Solids from Liquids — Filtration, Evaporation & Crystallization</title>
+  <style>
+    :root{ --brand:#0ea5e9; --paper:#fffef7; --ink:#1f2937; }
+    *{ box-sizing:border-box }
+    body{
+      margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f1f5f9; color:var(--ink); line-height:1.6;
+      background-image:linear-gradient(white 97%, #e5e7eb 100%); background-size:100% 30px;
+    }
+    header{ background:linear-gradient(120deg,var(--brand),#22c55e); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    header h1{ margin:0; font-size:clamp(22px,4vw,34px) }
+    .small{ opacity:.9; font-size:.95rem }
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:100%; max-width:980px; height:480px; border:0; border-radius:12px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ height:240px } }
+    .card{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin-bottom:18px }
+    .card h2{ color:#0369a1; border-bottom:2px solid #bae6fd; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#0369a1 }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #e5e7eb; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#16a34a } .incorrect{ color:#dc2626 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#e0f2fe; color:#0369a1; border:1px solid #bae6fd; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#6b7280; font-size:.85rem; padding:20px 0 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Separating Solids from Liquids <span class="pill">Filtration · Evaporation · Crystallization</span></h1>
+    <div class="small">Video + exam-focused notes + 35-question practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/MgvdVMoAGe4" title="Separation techniques" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Notes (Exam-ready key points)</h2>
+
+      <details open>
+        <summary>Key terminology</summary>
+        <ul>
+          <li><strong>Insoluble solid + liquid</strong> (e.g., sand in water) → a <strong>mixture</strong> of a liquid and an insoluble solid.</li>
+          <li><strong>Soluble solid + liquid</strong> (e.g., sodium chloride in water) → a <strong>solution</strong>.</li>
+          <li>In a solution: the <strong>solute</strong> is the substance that dissolves; the <strong>solvent</strong> is the liquid that does the dissolving.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Filtration (insoluble solid from liquid)</summary>
+        <ul>
+          <li>Like using a kitchen sieve; in labs we use <strong>filter paper</strong> (tiny pores) often in a <strong>filter funnel</strong>.</li>
+          <li><strong>Liquid</strong> passes through the paper; the <strong>insoluble solid</strong> is left behind on the paper.</li>
+          <li>Filtration does <em>not</em> separate a <strong>soluble</strong> solid from a liquid (solutions pass through).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Evaporation (soluble solid from solution)</summary>
+        <ul>
+          <li>Place the solution in an <strong>evaporating dish</strong> (or crucible) on a tripod and heat gently with a <strong>Bunsen burner</strong>.</li>
+          <li>The <strong>solvent evaporates</strong> → solution becomes more concentrated → <strong>crystals form</strong> → eventually <strong>dry crystals</strong> remain.</li>
+          <li>Pros: relatively <strong>quick and easy</strong>.</li>
+          <li>Con: some solids can <strong>decompose on heating</strong> (<em>thermal decomposition</em>).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Crystallization (for heat‑sensitive solids)</summary>
+        <ul>
+          <li>Use when the solute might <strong>thermally decompose</strong> if strongly heated.</li>
+          <li>Steps: heat the solution <strong>gently</strong> (often in a <strong>water bath</strong>) until crystals just start to form → <strong>stop heating</strong> and <strong>allow to cool</strong>.</li>
+          <li>As it cools, <strong>solubility decreases</strong> → more crystals form.</li>
+          <li><strong>Filter</strong> the crystals from the remaining solution, then <strong>dry</strong> them (warm place or oven).</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Quiz (35 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Separation techniques practice</div>
+
+<script>
+// Quiz schema: mcq (options[], answer index), tf (boolean), fill (string or pipe-separated acceptable answers)
+const questions = [
+  // 1
+  {type:"mcq", question:"What do you have when a solid does NOT dissolve in a liquid (e.g., sand in water)?", options:["A solution","A mixture of a liquid and an insoluble solid","A pure solvent"], answer:1, explanation:"Insoluble solid + liquid = mixture, not a solution."},
+  // 2
+  {type:"mcq", question:"In a solution, the substance that dissolves is called the:", options:["Solvent","Solute","Residue"], answer:1, explanation:"Solute dissolves; solvent does the dissolving."},
+  // 3
+  {type:"tf", question:"Sand mixed with water is an example of an insoluble solid in a liquid.", answer:true, explanation:"Sand does not dissolve in water."},
+  // 4
+  {type:"mcq", question:"Filtration is used to separate:", options:["Soluble solids from liquids","Insoluble solids from liquids","Liquids from gases"], answer:1, explanation:"Filter paper retains insoluble solids."},
+  // 5
+  {type:"mcq", question:"Filter paper works because it has:", options:["Large holes that trap liquids","Tiny pores that let liquid through but not solids","Magnetic fibers"], answer:1, explanation:"Liquid passes; solids are trapped."},
+  // 6
+  {type:"tf", question:"You can remove a dissolved solute from a solution by simple filtration.", answer:false, explanation:"Solutions pass through filter paper; solute is not retained."},
+  // 7
+  {type:"mcq", question:"Which apparatus is commonly used for filtration?", options:["Evaporating dish alone","Filter funnel and filter paper","Condenser"], answer:1, explanation:"Mixture is poured through funnel with paper."},
+  // 8
+  {type:"mcq", question:"Evaporation is a technique to:", options:["Separate insoluble solids","Separate a soluble solid from a solution","Distil a solvent"], answer:1, explanation:"Heating drives off solvent leaving solid."},
+  // 9
+  {type:"mcq", question:"During evaporation you typically heat the solution in:", options:["A beaker held by hand","An evaporating dish or crucible on a tripod with a Bunsen burner","A sealed flask"], answer:1, explanation:"Open heating in a dish/crucible."},
+  // 10
+  {type:"tf", question:"Evaporation is relatively quick and easy.", answer:true, explanation:"It’s a fast way to obtain dry crystals."},
+  // 11
+  {type:"mcq", question:"Main disadvantage of evaporation for some solids:", options:["It is too slow","It can cause thermal decomposition","It dilutes the solution"], answer:1, explanation:"Some solids break down on strong heating."},
+  // 12
+  {type:"mcq", question:"Crystallization is preferred when the solute:", options:["Is completely insoluble","Might decompose on strong heating","Is magnetic"], answer:1, explanation:"Use gentler conditions to avoid decomposition."},
+  // 13
+  {type:"mcq", question:"Gentle heating in crystallization is often achieved using a:", options:["Bunsen flame directly","Water bath","Ice bath only"], answer:1, explanation:"Water bath provides gentler, controlled heating."},
+  // 14
+  {type:"mcq", question:"In crystallization, you stop heating when:", options:["Boiling becomes vigorous","Crystals just begin to form","The solvent is completely gone"], answer:1, explanation:"Then allow the solution to cool."},
+  // 15
+  {type:"tf", question:"As a solution cools, solids are generally less soluble, so more crystals form.", answer:true, explanation:"Lower temperature reduces solubility for many solids."},
+  // 16
+  {type:"mcq", question:"After cooling in crystallization, the crystals are separated by:", options:["Decanting only","Filtration with filter paper and funnel","Adding more solvent"], answer:1, explanation:"Filter to collect crystals."},
+  // 17
+  {type:"mcq", question:"A correct way to dry crystals is to:", options:["Leave them in a warm place or use an oven","Immerse them back in hot solvent","Expose to open flame"], answer:0, explanation:"Gentle drying preserves crystals."},
+  // 18
+  {type:"fill", question:"A liquid with a dissolved solid is called a ______.", answer:"solution", explanation:"Solute + solvent = solution."},
+  // 19
+  {type:"fill", question:"The dissolved substance in a solution is the ______.", answer:"solute", explanation:"Solute dissolves."},
+  // 20
+  {type:"fill", question:"The liquid that dissolves the solute is the ______.", answer:"solvent", explanation:"Solvent does the dissolving."},
+  // 21
+  {type:"tf", question:"Filtering a salt solution with filter paper will collect salt crystals on the paper.", answer:false, explanation:"Dissolved salt passes through; no crystals are collected."},
+  // 22
+  {type:"mcq", question:"What happens to the solution during evaporation?", options:["It becomes more dilute","It becomes more concentrated as solvent evaporates","It freezes"], answer:1, explanation:"Solvent leaves, concentration rises."},
+  // 23
+  {type:"mcq", question:"Which action increases the concentration of the solution?", options:["Adding more solvent","Removing solvent by heating","Adding ice"], answer:1, explanation:"Removing solvent concentrates the solute."},
+  // 24
+  {type:"mcq", question:"When is a water bath particularly useful?", options:["When rapid boiling is needed","When gentle heating is needed to avoid decomposition","When cooling is needed"], answer:1, explanation:"Water bath provides gentle heating."},
+  // 25
+  {type:"mcq", question:"In crystallization you should heat until:", options:["All solvent is gone","Crystals start to appear, then stop and cool","No change is visible"], answer:1, explanation:"Then cooling forms more crystals."},
+  // 26
+  {type:"tf", question:"After crystallization, filtering separates the crystals from the remaining solution.", answer:true, explanation:"Crystals are the solid; remaining liquid passes through."},
+  // 27
+  {type:"mcq", question:"Best overall sequence for crystallization:", options:["Cool → filter → heat strongly → dry","Heat gently → see first crystals → cool → filter → dry","Add solvent → heat strongly → decant"], answer:1, explanation:"That’s the workflow described."},
+  // 28
+  {type:"fill", question:"Breaking a compound down by heat is called ______ decomposition.", answer:"thermal", explanation:"Thermal decomposition is the term used."},
+  // 29
+  {type:"tf", question:"Filter paper has tiny holes that allow the liquid through but retain insoluble solids.", answer:true, explanation:"That’s why filtration works."},
+  // 30
+  {type:"mcq", question:"Filtration is most similar to which everyday process?", options:["Sieving cooked pasta","Freezing water","Microwaving soup"], answer:0, explanation:"It’s like a fine sieve."},
+  // 31
+  {type:"mcq", question:"To separate a soluble solid from a liquid you would use:", options:["Filtration only","Evaporation or crystallization","Chromatography only"], answer:1, explanation:"Both are appropriate for soluble solids."},
+  // 32
+  {type:"mcq", question:"To separate an insoluble solid from a liquid you would use:", options:["Filtration","Crystallization","Evaporation"], answer:0, explanation:"Filtration is designed for insoluble solids."},
+  // 33
+  {type:"fill", question:"Place the solution in an ______ dish for evaporation.", answer:"evaporating", explanation:"Use an evaporating dish."},
+  // 34
+  {type:"mcq", question:"A common heating source in evaporation is a:", options:["Bunsen burner","Hair dryer","Incandescent lamp"], answer:0, explanation:"Bunsen provides steady heat."},
+  // 35
+  {type:"tf", question:"Crystallization is typically slower than simple evaporation.", answer:true, explanation:"It’s gentler and involves cooling and subsequent steps."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 800);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 800);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 800);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
