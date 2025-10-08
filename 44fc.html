@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hydrogen–Oxygen Fuel Cell</title>
+<style>
+    :root{ --brand:#0ea5e9; --paper:#fffef7; --ink:#1f2937; }
+    *{ box-sizing:border-box }
+    body{
+      margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f1f5f9; color:var(--ink); line-height:1.6;
+      background-image:linear-gradient(white 97%, #e5e7eb 100%); background-size:100% 30px;
+    }
+    header{ background:linear-gradient(120deg,var(--brand),#22c55e); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    header h1{ margin:0; font-size:clamp(22px,4vw,34px) }
+    .small{ opacity:.9; font-size:.95rem }
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:100%; max-width:980px; height:480px; border:0; border-radius:12px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ height:240px } }
+    .card{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin-bottom:18px }
+    .card h2{ color:#0369a1; border-bottom:2px solid #bae6fd; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#0369a1 }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #e5e7eb; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#16a34a } .incorrect{ color:#dc2626 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#e0f2fe; color:#0369a1; border:1px solid #bae6fd; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#6b7280; font-size:.85rem; padding:20px 0 }
+  </style>
+</head>
+<body>
+<header>
+<h1>Hydrogen–Oxygen Fuel Cell</h1>
+<div class="small">Video + exam-focused notes + 40-question practice</div>
+</header>
+<div class="wrap">
+<section class="card video">
+<div class="video-container">
+<iframe allowfullscreen="" src="https://www.youtube.com/embed/PdnH1LHU2yU" title="Distillation techniques"></iframe>
+</div>
+</section>
+<section class="card">
+<h2>Notes (Exam-ready key points)</h2>
+<details open=""><summary>Hydrogen–Oxygen Fuel Cell (Exam‑ready Notes)</summary><h3>What a fuel cell does</h3><ul><li>Electrochemical device that converts the chemical energy of a fuel + O₂ directly into electrical energy.</li><li>The most common type uses H₂ (fuel) and O₂ (oxidant) to produce electricity, heat, and H₂O only.</li></ul><h3>Key structure</h3><ul><li>Electrolyte in the centre (often alkaline KOH in this syllabus) conducts ions.</li><li>Porous carbon electrodes with a catalyst (↑ surface area, speeds reactions).</li><li>Anode (−, left) and Cathode (+, right) connected by an external wire for electron flow (anode → cathode).</li><li>Gas inlets: H₂ enters anode compartment; O₂ enters cathode compartment. Water/heat leave at the cathode outlet.</li></ul><h3>How it works (sequence)</h3><ul><li>At the anode: H₂ is oxidised → H⁺ ions and e⁻ formed; electrons go through the external circuit.</li><li>H⁺ (or equivalent ionic species) migrates through the electrolyte to the cathode.</li><li>At the cathode: O₂ combines with H⁺ and incoming e⁻ to form H₂O.</li><li>Electron flow through the wire powers the external load (lamp/motor, etc.).</li></ul><h3>Half‑equations &amp; overall</h3><ul><li>Anode (oxidation): H₂ → 2H⁺ + 2e⁻</li><li>Cathode (reduction): O₂ + 4H⁺ + 4e⁻ → 2H₂O</li><li>Overall: 2H₂ + O₂ → 2H₂O (electrical energy released via moving e⁻)</li></ul><h3>Exam tips</h3><ul><li>In fuel cells the cathode is positive and the anode is negative (opposite of electrolysis sign convention).</li><li>Fuel is oxidised at the anode; oxidant is reduced at the cathode.</li><li>A potential difference is set up between electrodes, driving electrons around the circuit.</li><li>Electrons move through the external circuit; ions move through the electrolyte.</li></ul><h3>Pros</h3><ul><li>Very clean at point of use: product is water (no CO₂/NOₓ/soot).</li><li>High efficiency; continuous operation while fuel is supplied.</li><li>Longer service life than many batteries and less polluting at disposal.</li></ul><h3>Cons</h3><ul><li>H₂ storage is bulky (low volumetric energy density) and H₂–air mixtures can be explosive.</li><li>Hydrogen production often needs energy (commonly from fossil fuels), reducing overall environmental benefit.</li><li>Infrastructure and safe storage/transport add cost and complexity.</li></ul></details>
+<details>
+<summary>Simple distillation (e.g., obtaining pure water from seawater)</summary>
+<ul>
+<li><strong>Apparatus</strong>: flask containing the mixture, <strong>bung</strong> with a <strong>thermometer</strong>, <strong>condenser</strong> with a <em>water jacket</em> (cold water in at the bottom, out at the top), receiver (beaker), and a <strong>Bunsen burner</strong> or other heat source.</li>
+<li><strong>Process</strong>: heat the solution → the target liquid <strong>evaporates</strong> → vapor is pushed into the condenser → it <strong>cools and condenses</strong> → pure liquid <strong>collects</strong> in the beaker.</li>
+<li><strong>Outcome</strong> for seawater: distilled water is collected; <strong>salt remains</strong> in the flask.</li>
+<li><strong>Limitation</strong>: poor separation if the mixture contains <strong>multiple liquids with similar boiling points</strong>—more than one will evaporate.</li>
+</ul>
+</details>
+<details>
+<summary>Fractional distillation (for mixtures of liquids)</summary>
+<ul>
+<li>Same basic setup but add a <strong>fractionating column</strong> between the flask and condenser.</li>
+<li>The column: packed with <strong>glass beads/rods</strong> → very high <strong>surface area</strong>; <strong>temperature gradient</strong> (hotter at the bottom, <strong>cooler at the top</strong>).</li>
+<li><strong>How it works</strong>: the lowest-boiling liquid reaches the top first and passes into the condenser. Vapors of higher-boiling liquids <strong>condense on the cooler packing</strong> and <strong>reflux</strong> back into the flask.</li>
+<li><strong>Example</strong>: a mixture of <em>methanol</em> (~65 °C), <em>ethanol</em> (~78 °C), and <em>propanol</em> (higher b.p.). Heat to ~65 °C to collect <strong>methanol</strong> first; then raise to ~78 °C for <strong>ethanol</strong>; finally collect <strong>propanol</strong> at the highest temperature.</li>
+<li>Note: in reality these liquids are <strong>colorless</strong>; colors in diagrams are just for clarity.</li>
+</ul>
+</details>
+<details>
+<summary>Core exam tips</summary>
+<ul>
+<li>Always feed <strong>cold water at the bottom</strong> of the condenser to ensure efficient cooling and a filled jacket.</li>
+<li>Use a <strong>thermometer</strong> to monitor the boiling point of the vapor being collected.</li>
+<li><strong>Simple distillation</strong>: best for <em>liquid from solution</em> (large b.p. difference or non-volatile solute).</li>
+<li><strong>Fractional distillation</strong>: best for <em>liquid–liquid mixtures</em> with <strong>close</strong> boiling points.</li>
+<li>“Reflux” in the fractionating column increases <strong>purity</strong> of the fraction being collected.</li>
+</ul>
+</details>
+</section>
+<section class="card">
+<h2>Quiz (40 Questions)</h2>
+<div id="game-area">
+<button onclick="startGame()">Start</button>
+<div class="scorebar muted" id="scorebar">Not started</div>
+</div>
+</section>
+</div>
+<div class="footer">© Study helper — Distillation practice</div>
+<script>
+// Quiz schema: mcq (options[], answer index), tf (boolean), fill (string or pipe-separated acceptable answers)
+const questions = [
+  {type:"mcq", question:"What is the immediate product formed at the cathode in a hydrogen–oxygen fuel cell?", options:["Water (H\u2082O)", "Hydrogen gas (H\u2082)", "Hydroxide ions (OH\u207b) released to the outlet", "Ozone (O\u2083)"], answer:0, explanation:"At the cathode, O₂, H⁺ (or equivalent) and e⁻ combine to form water."},
+  {type:"mcq", question:"In a hydrogen–oxygen fuel cell used in this syllabus, which statement about electrodes is correct?", options:["Anode is positive; cathode is negative", "Anode is negative; cathode is positive", "Both electrodes are negative", "Both electrodes are positive"], answer:1, explanation:"Fuel cells use galvanic sign convention: anode (oxidation) is −; cathode (reduction) is +."},
+  {type:"mcq", question:"Which best describes the role of the electrolyte?", options:["Conduct electrons between electrodes", "Provide a path for ions between electrodes", "Store hydrogen as a solid", "Increase gas pressure"], answer:1, explanation:"Electrolytes conduct ions; electrons travel via the external circuit."},
+  {type:"mcq", question:"Where do electrons travel in normal operation?", options:["Through the electrolyte from cathode to anode", "Through the external circuit from anode to cathode", "From cathode to anode through the wire", "They do not move"], answer:1, explanation:"Electrons leave the anode and go around the external circuit to the cathode."},
+  {type:"mcq", question:"What is oxidised in a hydrogen–oxygen fuel cell?", options:["Hydrogen", "Oxygen", "Water", "Carbon"], answer:0, explanation:"Fuel (H₂) loses electrons at the anode (oxidation)."},
+  {type:"mcq", question:"What is reduced in a hydrogen–oxygen fuel cell?", options:["Hydrogen", "Oxygen", "Water", "Potassium"], answer:1, explanation:"O₂ gains electrons at the cathode (reduction)."},
+  {type:"mcq", question:"Which half‑equation represents the anode process (acidic notation)?", options:["H\u2082 \u2192 2H\u207a + 2e\u207b", "O\u2082 + 4H\u207a + 4e\u207b \u2192 2H\u2082O", "2H\u2082O + 2e\u207b \u2192 H\u2082 + 2OH\u207b", "2H\u2082 \u2192 4H\u207a + 4e\u207b"], answer:0, explanation:"Hydrogen is oxidised releasing protons and electrons."},
+  {type:"mcq", question:"Which is the overall cell reaction?", options:["H\u2082 + \u00bdO\u2082 \u2192 H\u2082O", "2H\u2082 + O\u2082 \u2192 2H\u2082O", "O\u2082 \u2192 O\u2083", "H\u2082O \u2192 H\u2082 + \u00bdO\u2082"], answer:1, explanation:"Balanced overall reaction is 2H₂ + O₂ → 2H₂O."},
+  {type:"mcq", question:"Why are the electrodes porous and catalytic?", options:["To absorb water as a product", "To increase surface area and speed reactions", "To prevent gas mixing", "To store electrical charge"], answer:1, explanation:"Porosity + catalyst give many active sites and faster kinetics."},
+  {type:"mcq", question:"Which compartment receives oxygen?", options:["Anode compartment", "Cathode compartment", "Electrolyte core", "Both compartments"], answer:1, explanation:"O₂ is fed to the cathode side."},
+  {type:"mcq", question:"What sets up the potential difference (voltage) across the cell?", options:["Friction in the wire", "Different gas pressures", "Redox reactions separating charge at the two electrodes", "Temperature gradient"], answer:2, explanation:"Oxidation at anode and reduction at cathode establish a cell EMF."},
+  {type:"mcq", question:"At the anode, hydrogen is converted into:", options:["Hydroxide ions only", "Hydrogen ions and electrons", "Water and electrons", "Oxygen and protons"], answer:1, explanation:"Anode oxidation produces H⁺ (or equivalent) and e⁻."},
+  {type:"mcq", question:"Which statement about point‑of‑use emissions is true?", options:["Fuel cells emit CO\u2082", "Fuel cells emit NO\u2093", "Fuel cells emit water only", "Fuel cells emit sulfur dioxide"], answer:2, explanation:"H₂–O₂ fuel cells produce water as the product."},
+  {type:"mcq", question:"A common electrolyte mentioned in this course is:", options:["Sodium chloride solution", "Potassium hydroxide solution", "Dilute sulfuric acid only", "Liquid nitrogen"], answer:1, explanation:"KOH is commonly used in alkaline fuel cells."},
+  {type:"mcq", question:"In exams, which sign convention is correct for a fuel cell?", options:["Anode (+), cathode (\u2212)", "Anode (\u2212), cathode (+)", "Both neutral", "Depends on current direction only"], answer:1, explanation:"Galvanic cell convention applies: anode −, cathode +."},
+  {type:"mcq", question:"Which movement is correct during operation?", options:["H\u207a (or ions) through electrolyte; e\u207b through external wire", "e\u207b through electrolyte; H\u207a through wire", "Both e\u207b and ions through electrolyte", "Both e\u207b and ions through wire"], answer:0, explanation:"Charge is split: electrons in the circuit; ions in the electrolyte."},
+  {type:"mcq", question:"Main outlet stream at the cathode contains:", options:["Unreacted hydrogen only", "Water and heat", "Pure oxygen", "Only nitrogen"], answer:1, explanation:"Water and heat leave via the cathode outlet."},
+  {type:"mcq", question:"A significant storage issue for hydrogen is that it:", options:["Is very dense", "Has low volumetric energy density as a gas", "Is solid at room conditions", "Cannot be liquefied"], answer:1, explanation:"Gaseous H₂ takes much more volume than liquid fuels/batteries per energy."},
+  {type:"mcq", question:"A safety concern with hydrogen is that it:", options:["Is non\u2011flammable", "Forms explosive mixtures with air", "Corrodes copper rapidly", "Is radioactive"], answer:1, explanation:"Hydrogen–air mixtures can be explosive."},
+  {type:"mcq", question:"A systems‑level drawback is that hydrogen production:", options:["Requires no energy input", "Often uses fossil\u2011derived energy", "Is always carbon\u2011free", "Produces only oxygen"], answer:1, explanation:"Today much H₂ is made via processes powered by fossil energy."},
+  {type:"mcq", question:"What powers the external device (lamp/motor)?", options:["Ion flow in electrolyte", "Electron flow through the external circuit", "Heat only", "Sound waves"], answer:1, explanation:"Useful electrical work is from electrons moving through the circuit."},
+  {type:"mcq", question:"Which of the following is NOT an advantage of H₂–O₂ fuel cells?", options:["Zero CO\u2082 at point of use", "High efficiency", "Instant recharge without fuel", "Longer life than many batteries"], answer:2, explanation:"They are clean and efficient, but you still need to supply fuel."},
+  {type:"mcq", question:"In a fuel cell, 'fuel is oxidised' means:", options:["Fuel gains electrons", "Fuel loses electrons", "Fuel splits into atoms without charge change", "Fuel is diluted by electrolyte"], answer:1, explanation:"Oxidation = loss of electrons."},
+  {type:"mcq", question:"Which placement is correct in the schematic you studied?", options:["Electrolyte on the outside with electrodes inside", "Electrolyte in the centre with electrodes on each side", "Electrolyte only at the cathode", "Electrolyte only at the anode"], answer:1, explanation:"Electrolyte sits between the two electrodes."},
+  {type:"tf", question:"The cathode in a hydrogen–oxygen fuel cell is negative.", answer:false, explanation:"Cathode is positive in a galvanic fuel cell."},
+  {type:"tf", question:"Hydrogen is oxidised at the anode.", answer:true, explanation:"Fuel (H₂) loses electrons at the anode."},
+  {type:"tf", question:"Electrons move through the electrolyte from cathode to anode.", answer:false, explanation:"Electrons move in the external circuit; ions cross the electrolyte."},
+  {type:"tf", question:"The overall reaction of the cell forms water.", answer:true, explanation:"2H₂ + O₂ → 2H₂O."},
+  {type:"tf", question:"Fuel cells only work until a fixed chemical store is depleted, then must be recharged like a battery.", answer:false, explanation:"They generate continuously while fuel/oxidant are supplied (no recharge needed)."},
+  {type:"tf", question:"Porous carbon electrodes increase reaction surface area.", answer:true, explanation:"Porosity gives many active sites; catalyst speeds kinetics."},
+  {type:"tf", question:"Water and heat leave via the anode outlet.", answer:false, explanation:"They leave via the cathode outlet."},
+  {type:"tf", question:"Potential difference across the cell is created by the redox reactions at the electrodes.", answer:true, explanation:"Separated oxidation/reduction establishes EMF."},
+  {type:"sa", question:"Write the anode half‑equation (acidic notation).", answers:["h2->2h++2e-", "h2 \u2192 2h+ + 2e-", "h2=>2h+ + 2e-"], explanation:"Hydrogen is oxidised: H₂ → 2H⁺ + 2e⁻."},
+  {type:"sa", question:"Write the cathode half‑equation (acidic notation).", answers:["o2+4h++4e-->2h2o", "o2 + 4h+ + 4e- -> 2h2o", "o2 + 4h+ + 4e- => 2h2o"], explanation:"Oxygen is reduced: O₂ + 4H⁺ + 4e⁻ → 2H₂O."},
+  {type:"sa", question:"Write the overall balanced reaction.", answers:["2h2+o2->2h2o", "2h2 + o2 -> 2h2o", "2h2+o2=>2h2o"], explanation:"Overall: 2H₂ + O₂ → 2H₂O."},
+  {type:"sa", question:"State the direction of electron flow in the external circuit (from ___ to ___).", answers:["anode to cathode", "anode\u2192cathode", "from anode to cathode"], explanation:"Electrons leave the anode and arrive at the cathode."},
+  {type:"sa", question:"Name one common electrolyte used in this course.", answers:["koh", "potassium hydroxide", "alkaline koh"], explanation:"Alkaline KOH is common in this syllabus."},
+  {type:"sa", question:"Which electrode (name and sign) is the site of reduction?", answers:["cathode +", "cathode positive", "positive cathode"], explanation:"Reduction occurs at the positive cathode."},
+  {type:"sa", question:"Identify the main advantage at point of use (one phrase).", answers:["water only emission", "zero co2 at point of use", "clean emission"], explanation:"The only product is water; no CO₂ at point of use."},
+  {type:"sa", question:"Give one major drawback related to hydrogen storage.", answers:["low volumetric energy density", "explosive with air", "bulky storage"], explanation:"H₂ gas is bulky and can be explosive with air."}
+];;
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 800);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 800);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 800);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
