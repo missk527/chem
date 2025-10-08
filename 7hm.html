@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>History of the Atom — Models & Experiments</title>
+  <style>
+    :root{ --brand:#7c3aed; --paper:#fffef7; --ink:#111827; }
+    *{ box-sizing:border-box }
+    body{
+      margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f3f4f6; color:var(--ink); line-height:1.6;
+      background-image:linear-gradient(#ffffff 97%, #e5e7eb 100%); background-size:100% 30px;
+    }
+    header{ background:linear-gradient(120deg,var(--brand),#06b6d4); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    header h1{ margin:0; font-size:clamp(22px,4vw,34px) }
+    .small{ opacity:.95; font-size:.95rem }
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:100%; max-width:980px; height:480px; border:0; border-radius:12px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ height:240px } }
+    .card{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin-bottom:18px }
+    .card h2{ color:#4c1d95; border-bottom:2px solid #ddd6fe; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#4c1d95 }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #e5e7eb; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#16a34a } .incorrect{ color:#dc2626 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#ede9fe; color:#4c1d95; border:1px solid #ddd6fe; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#6b7280; font-size:.85rem; padding:20px 0 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>History of the Atom <span class="pill">Models & Experiments</span></h1>
+    <div class="small">Video + exam-focused notes + 35-question practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/ycrhRSA_vJM" title="History of the Atom" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Notes (Exam‑ready key points)</h2>
+
+      <details open>
+        <summary>Big idea</summary>
+        <ul>
+          <li>Atomic theory explains that all matter is made of tiny, indivisible particles called <strong>atoms</strong>, separated by <strong>empty space</strong>.</li>
+          <li>Across time, models changed as <strong>experiments</strong> revealed new evidence.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Early concept — Democritus (~500&nbsp;BC)</summary>
+        <ul>
+          <li>Proposed that everything is built from indivisible particles (atoms) with empty space between them.</li>
+          <li>No experimental proof—just philosophical reasoning.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Dalton (early 1800s) — Solid sphere model</summary>
+        <ul>
+          <li>Atoms as <strong>solid spheres</strong>.</li>
+          <li>Different spheres correspond to <strong>different elements</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>J. J. Thomson (1897) — Plum pudding model</summary>
+        <ul>
+          <li>Discovery of <strong>electrons</strong> showed atoms aren’t solid spheres.</li>
+          <li>Model: a diffuse sphere of <strong>positive charge</strong> with <strong>electrons</strong> embedded within.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Rutherford (1909) — Gold foil experiment → Nuclear model</summary>
+        <ul>
+          <li>Fired positively charged <strong>alpha particles</strong> at thin gold foil.</li>
+          <li>Most passed straight through, some deflected, a few bounced back → the positive charge is <strong>concentrated</strong>.</li>
+          <li>Conclusion: a tiny, dense, <strong>positively charged nucleus</strong> with electrons in a surrounding region.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Problem & solution — Why don’t electrons collapse into the nucleus?</summary>
+        <ul>
+          <li>Rutherford’s model didn’t explain stability—what stops electrons from spiralling inward?</li>
+          <li><strong>Niels Bohr (1913)</strong>: electrons occupy specific <strong>orbits/shells</strong> around the nucleus, preventing collapse.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Refinements — Protons and neutrons</summary>
+        <ul>
+          <li>Further work showed the nucleus contains <strong>protons</strong> (positive) and later <strong>neutrons</strong> (neutral; evidenced by James Chadwick).</li>
+          <li>Modern view largely follows the Bohr‑style nuclear model with later refinements.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Core exam tips</summary>
+        <ul>
+          <li>Know the <strong>chronology</strong>: Democritus → Dalton → Thomson → Rutherford → Bohr → (protons &amp; neutrons).</li>
+          <li>Link each model to its <strong>evidence</strong> (e.g., gold foil → nucleus).</li>
+          <li>Be able to state what each model got <strong>right</strong> and what later evidence showed was <strong>incomplete</strong>.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Quiz (35 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Atomic models practice</div>
+
+<script>
+// Quiz schema: mcq (options[], answer index), tf (boolean), fill (string or pipe-separated acceptable answers)
+const questions = [
+  // 1
+  {type:"mcq", question:"Who first proposed that matter is made of indivisible atoms separated by empty space?", options:["John Dalton","Democritus","Ernest Rutherford"], answer:1, explanation:"Democritus suggested atoms ~500 BC."},
+  // 2
+  {type:"tf", question:"Dalton described atoms as solid spheres and linked different spheres to different elements.", answer:true, explanation:"That is Dalton's solid sphere model."},
+  // 3
+  {type:"mcq", question:"J. J. Thomson’s experiments revealed the existence of:", options:["Protons","Electrons","Neutrons"], answer:1, explanation:"Thomson identified negatively charged electrons."},
+  // 4
+  {type:"mcq", question:"The 'plum pudding' model pictured the atom as:", options:["A dense nucleus with orbiting electrons","A positive 'pudding' with embedded electrons","Empty space only"], answer:1, explanation:"Positive sphere with electrons stuck in it."},
+  // 5
+  {type:"mcq", question:"Rutherford’s gold foil experiment used which particles?", options:["Beta particles","Gamma rays","Alpha particles"], answer:2, explanation:"Positively charged alpha particles were fired at gold."},
+  // 6
+  {type:"tf", question:"If positive charge were spread out as in Thomson’s model, alpha particles should have passed straight through with almost no deflection.", answer:true, explanation:"A diffuse positive charge wouldn't strongly deflect them."},
+  // 7
+  {type:"mcq", question:"A small number of alpha particles were deflected backward. This implied:", options:["Electrons are heavier than protons","Positive charge is concentrated in a tiny nucleus","Atoms are solid spheres"], answer:1, explanation:"Large deflections require a dense, positive center."},
+  // 8
+  {type:"fill", question:"Rutherford’s model introduced the concept of a central ______.", answer:"nucleus", explanation:"A compact, positively charged nucleus."},
+  // 9
+  {type:"tf", question:"Rutherford initially pictured electrons as a diffuse cloud around the nucleus.", answer:true, explanation:"Yes—this raised a stability question."},
+  // 10
+  {type:"mcq", question:"What key problem did Rutherford’s model face?", options:["It had no electrons","It predicted atoms would collapse","It denied the existence of protons"], answer:1, explanation:"Why don't electrons fall into the nucleus?"},
+  // 11
+  {type:"mcq", question:"Who suggested electrons occupy specific orbits (shells)?", options:["Niels Bohr","James Chadwick","Democritus"], answer:0, explanation:"Bohr proposed quantized orbits in 1913."},
+  // 12
+  {type:"tf", question:"Bohr’s idea of shells helps explain why atoms are stable.", answer:true, explanation:"Electrons in allowed orbits don't spiral inward in this model."},
+  // 13
+  {type:"fill", question:"Thomson’s model is commonly called the ______ ______ model.", answer:"plum pudding", explanation:"Positive 'pudding' with embedded electrons."},
+  // 14
+  {type:"mcq", question:"According to Dalton, different elements are made of:", options:["Different types of spheres","A mix of protons and neutrons","Charged clouds"], answer:0, explanation:"He proposed different 'solid spheres' for elements."},
+  // 15
+  {type:"tf", question:"Democritus provided experimental evidence for atoms.", answer:false, explanation:"His idea was philosophical, not experimental."},
+  // 16
+  {type:"mcq", question:"Which observation contradicted the plum pudding model most strongly?", options:["Most particles went straight through the foil","A few particles were deflected at large angles or backwards","The foil heated slightly"], answer:1, explanation:"Large-angle deflections indicate a concentrated positive center."},
+  // 17
+  {type:"fill", question:"The positively charged particles used by Rutherford were called ______ particles.", answer:"alpha|α|alpha particles", explanation:"Alpha particles (helium nuclei)."},
+  // 18
+  {type:"tf", question:"Thomson’s work showed that atoms could not be completely solid and indivisible.", answer:true, explanation:"The electron discovery split the 'indivisible' idea."},
+  // 19
+  {type:"mcq", question:"Bohr compared electron motion to:", options:["Planets orbiting the sun","Cars on a road","Balloons floating"], answer:0, explanation:"Electrons orbit the nucleus like planets around the sun."},
+  // 20
+  {type:"mcq", question:"In Rutherford’s nuclear model, where is nearly all the positive charge located?", options:["In the electron cloud","In the nucleus","Evenly spread throughout the atom"], answer:1, explanation:"Positive charge is concentrated in the nucleus."},
+  // 21
+  {type:"fill", question:"Later work showed the nucleus contains positively charged ______.", answer:"protons", explanation:"Protons carry positive charge."},
+  // 22
+  {type:"fill", question:"James Chadwick supplied evidence for neutral particles called ______.", answer:"neutrons", explanation:"Chadwick evidenced neutrons in the nucleus."},
+  // 23
+  {type:"tf", question:"The modern model is essentially Bohr’s with refinements.", answer:true, explanation:"The speech states it is 'pretty much the same one… with small changes'."},
+  // 24
+  {type:"mcq", question:"Which statement best summarizes the progress of atomic models?", options:["One model replaced another without evidence","Models evolved as new experimental evidence appeared","The earliest model was fully correct"], answer:1, explanation:"Experiments drove model changes."},
+  // 25
+  {type:"mcq", question:"Which scientist is most closely associated with the idea of solid, indivisible spheres in the 1800s?", options:["Chadwick","Dalton","Bohr"], answer:1, explanation:"Dalton."},
+  // 26
+  {type:"tf", question:"According to the speech, the space between atoms is empty.", answer:true, explanation:"Yes—atoms are separated by empty space."},
+  // 27
+  {type:"fill", question:"The experiment that overturned the plum pudding model is known as the ______ foil experiment.", answer:"gold", explanation:"Gold foil (alpha scattering) experiment."},
+  // 28
+  {type:"mcq", question:"Which part of Thomson’s model was kept (in modified form) after Rutherford?", options:["Electrons exist inside atoms","Atoms are solid throughout","Positive charge is diffuse"], answer:0, explanation:"Electrons remain, but not embedded in a positive pudding."},
+  // 29
+  {type:"tf", question:"Only a small fraction of alpha particles were deflected; most passed through the foil.", answer:true, explanation:"Atoms are mostly empty space."},
+  // 30
+  {type:"mcq", question:"Which pair correctly matches scientist → contribution?", options:["Chadwick → electrons","Rutherford → nucleus","Dalton → neutrons"], answer:1, explanation:"Rutherford proposed the nucleus."},
+  // 31
+  {type:"fill", question:"Bohr said electrons occupy specific energy levels called ______.", answer:"shells|orbits|energy levels", explanation:"Shells/orbits prevent 'collapse' in this model."},
+  // 32
+  {type:"tf", question:"The speech states that electrons orbiting the nucleus prevents the atom from collapsing.", answer:true, explanation:"Yes—this is the stabilizing feature in the Bohr model."},
+  // 33
+  {type:"mcq", question:"Which sequence is in correct chronological order?", options:["Dalton → Democritus → Thomson","Democritus → Dalton → Thomson → Rutherford → Bohr","Thomson → Bohr → Rutherford"], answer:1, explanation:"Oldest to newest per the speech."},
+  // 34
+  {type:"mcq", question:"Which statement about neutrons matches the speech?", options:["They carry positive charge","They are neutral particles in the nucleus","They orbit with electrons"], answer:1, explanation:"Neutrons are neutral and in the nucleus."},
+  // 35
+  {type:"tf", question:"According to the speech, our present understanding still includes protons and neutrons in the nucleus and electrons around it.", answer:true, explanation:"That’s the summarized modern picture given."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 800);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 800);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 800);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
