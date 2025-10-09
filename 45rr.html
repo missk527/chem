@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rate of Reaction — Notes & Quiz</title>
+  <style>
+    :root{ --brand:#ef4444; --paper:#fffef7; --ink:#1f2937; }
+    *{ box-sizing:border-box }
+    body{
+      margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f8fafc; color:var(--ink); line-height:1.6;
+      background-image:linear-gradient(white 97%, #fee2e2 100%); background-size:100% 30px;
+    }
+    header{ background:var(--brand); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    header h1{ margin:0; font-size:clamp(22px,4vw,34px) }
+    .small{ opacity:.95; font-size:.95rem }
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:100%; max-width:980px; height:480px; border:0; border-radius:12px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ height:240px } }
+    .card{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin-bottom:18px }
+    .card h2{ color:#b91c1c; border-bottom:2px solid #fecaca; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#b91c1c }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #e5e7eb; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#16a34a } .incorrect{ color:#dc2626 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#fee2e2; color:#7f1d1d; border:1px solid #fecaca; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#6b7280; font-size:.85rem; padding:20px 0 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rate of Reaction — Exam Notes & Quiz <span class="pill">Average vs instantaneous · Units · Graphs</span></h1>
+    <div class="small">Video + exam-focused notes + 35-question practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/u10B5nQJDw8" title="Rate of Reaction video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Notes (Key points from the speech)</h2>
+
+      <details open>
+        <summary>What do we mean by rate of reaction?</summary>
+        <ul>
+          <li><strong>Rate of reaction</strong> = the <strong>speed</strong> at which reactants are converted into products.</li>
+          <li>Rates vary massively: from <strong>very slow</strong> (iron <em>rusting</em>, years/decades) to <strong>very fast</strong> (<em>explosions</em>, fractions of a second), with “typical” reactions in between (e.g., <em>magnesium + acid</em> → gentle H₂ bubbles).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Two equivalent ways to measure rate</summary>
+        <ul>
+          <li>Measure how fast <strong>reactants are used up</strong>, or how fast <strong>products are formed</strong>.</li>
+          <li><strong>Equations</strong>:
+            <ul>
+              <li>Rate = <strong>quantity of reactant used</strong> ÷ <strong>time taken</strong></li>
+              <li>Rate = <strong>quantity of product formed</strong> ÷ <strong>time taken</strong></li>
+            </ul>
+          </li>
+          <li>Quantities can be in <strong>grams (g)</strong> or <strong>cm³</strong>; time commonly in <strong>seconds (s)</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Worked examples (from the speech)</summary>
+        <ul>
+          <li><strong>Gas volume</strong>: 180&nbsp;cm³ H₂ in <em>2&nbsp;minutes</em> → convert 2&nbsp;min = 120&nbsp;s → rate = 180/120 = <strong>1.5&nbsp;cm³·s⁻¹</strong>.</li>
+          <li><strong>Mass used</strong>: 3&nbsp;g Mg used up in <em>4&nbsp;minutes</em> → 4&nbsp;min = 240&nbsp;s → rate = 3/240 = <strong>0.0125&nbsp;g·s⁻¹</strong>.</li>
+          <li><strong>Alternative units</strong>: 0.6&nbsp;<em>mol</em> used in 2&nbsp;minutes → if answer wanted in <em>mol·min⁻¹</em>: 0.6/2 = <strong>0.3&nbsp;mol·min⁻¹</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Average vs instantaneous rate</summary>
+        <ul>
+          <li>Calculated examples above are <strong>average</strong> rates across the whole reaction.</li>
+          <li>In reality, rate is usually <strong>fastest at the start</strong> (many reactant particles) and then <strong>slows down</strong> as reactants are used up.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Interpreting graphs</summary>
+        <ul>
+          <li>Plot <strong>time</strong> on the x‑axis, and either <strong>mass of reactant remaining</strong> or <strong>volume of product formed</strong> on the y‑axis.</li>
+          <li><strong>Reactant‑mass graph</strong> (e.g., 3&nbsp;g Mg start): begins at 3&nbsp;g, falls rapidly at first, then less steep as reaction slows.</li>
+          <li><strong>Product‑volume graph</strong>: starts at 0, rises steeply at first (lots of product early), then becomes less steep and <strong>plateaus</strong> when a reactant runs out.</li>
+          <li><em>Instantaneous rate</em> at a given time = slope (gradient) of the tangent at that point.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Units and exam tips</summary>
+        <ul>
+          <li>Be <strong>careful with units</strong>: convert minutes → seconds if the rate is required in per‑second units.</li>
+          <li>Common units: <strong>g·s⁻¹</strong>, <strong>cm³·s⁻¹</strong>, <strong>mol·s⁻¹</strong>, or per minute (e.g., <strong>mol·min⁻¹</strong>).</li>
+          <li>State units with your final answer.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Quiz (35 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Rate of Reaction practice</div>
+
+<script>
+// Quiz schema supports: mcq (options, answer index), tf (boolean), and fill (string or pipe-separated acceptable answers)
+const questions = [
+  // 1
+  {type:"mcq", question:"What does ‘rate of reaction’ mean?", options:[
+    "How much product is formed overall",
+    "The speed at which reactants turn into products",
+    "The purity of the products",
+    "The temperature of the reaction"
+  ], answer:1, explanation:"Rate is the speed of conversion of reactants to products."},
+
+  // 2
+  {type:"mcq", question:"Which is a very slow reaction mentioned in the speech?", options:[
+    "Magnesium with acid",
+    "Fireworks",
+    "Rusting of iron",
+    "Combustion of hydrogen"
+  ], answer:2, explanation:"Rusting can take years or decades."},
+
+  // 3
+  {type:"mcq", question:"Which is a very fast reaction mentioned?", options:[
+    "Photosynthesis",
+    "Fireworks (explosions)",
+    "Neutralisation",
+    "Rusting"
+  ], answer:1, explanation:"Explosions occur in a fraction of a second."},
+
+  // 4
+  {type:"mcq", question:"A ‘typical’ lab reaction example given is:", options:[
+    "Magnesium reacting with an acid",
+    "Sodium reacting with chlorine",
+    "Rusting of iron",
+    "Electrolysis of water"
+  ], answer:0, explanation:"Mg + acid → gentle hydrogen bubbles."},
+
+  // 5
+  {type:"mcq", question:"Two equivalent ways to measure rate are:", options:[
+    "Colour change per minute or pH change per day",
+    "Reactant used per time or product formed per time",
+    "Mass per volume or volume per mass",
+    "Energy per time or power per area"
+  ], answer:1, explanation:"Either monitor disappearance of reactants or appearance of products."},
+
+  // 6
+  {type:"tf", question:"The faster the rate, the faster reactants are used up.", answer:true, explanation:"High rate → quick consumption of reactants."},
+
+  // 7
+  {type:"mcq", question:"Which pair of quantities and units from the speech is valid for rate?", options:[
+    "Joules per second",
+    "Grams or cm^3 divided by seconds",
+    "Meters per minute",
+    "Kelvin per mol"
+  ], answer:1, explanation:"Quantities in g or cm^3; time commonly in seconds."},
+
+  // 8
+  {type:"mcq", question:"If 180 cm^3 of H2 are produced in 2 minutes, the rate in cm^3/s is:", options:[
+    "3.0",
+    "1.5",
+    "0.75",
+    "90"
+  ], answer:1, explanation:"2 min = 120 s; 180/120 = 1.5 cm^3/s."},
+
+  // 9
+  {type:"mcq", question:"If 3 g of Mg are used up in 4 minutes, the rate in g/s is:", options:[
+    "0.0125",
+    "0.125",
+    "0.75",
+    "0.03"
+  ], answer:0, explanation:"4 min = 240 s; 3/240 = 0.0125 g/s."},
+
+  // 10
+  {type:"tf", question:"The two calculated rates above are average rates over the whole reaction.", answer:true, explanation:"They use total change divided by total time."},
+
+  // 11
+  {type:"mcq", question:"Which statement about the time course of many reactions is true?", options:[
+    "They are slowest at the start and fastest at the end",
+    "Rate is constant throughout",
+    "They are fastest at the start and slow down as reactants are used up",
+    "They stop and start randomly"
+  ], answer:2, explanation:"Plenty of reactants early → fastest initially."},
+
+  // 12
+  {type:"mcq", question:"On a product–time graph, the curve usually:", options:[
+    "Starts high and falls to zero",
+    "Starts at zero, rises quickly, then levels off (plateaus)",
+    "Is a straight line through the origin with constant slope",
+    "Oscillates up and down"
+  ], answer:1, explanation:"Fast rise at first, then less steep, then plateau."},
+
+  // 13
+  {type:"mcq", question:"On a reactant–mass vs time graph (starting at 3 g Mg), the curve:", options:[
+    "Starts at 0 and rises linearly",
+    "Starts at 3 g and falls quickly then more slowly",
+    "Is flat at 3 g the whole time",
+    "Drops to negative values"
+  ], answer:1, explanation:"Rapid early fall, then less steep as reactant is used up."},
+
+  // 14
+  {type:"tf", question:"Instantaneous rate at a given time equals the slope of the tangent at that point.", answer:true, explanation:"Gradient = rate at that instant."},
+
+  // 15
+  {type:"mcq", question:"When calculating a rate ‘per second’, you should:", options:[
+    "Leave minutes as minutes",
+    "Convert minutes to seconds",
+    "Convert seconds to minutes",
+    "Ignore units"
+  ], answer:1, explanation:"Always match the requested units."},
+
+  // 16
+  {type:"mcq", question:"The rate unit for 0.6 mol used in 2 minutes, if asked for per minute, is:", options:[
+    "0.6 mol·min^-1",
+    "0.3 mol·min^-1",
+    "0.2 mol·min^-1",
+    "3.0 mol·min^-1"
+  ], answer:1, explanation:"0.6/2 = 0.3 mol per minute."},
+
+  // 17
+  {type:"tf", question:"Volume can be measured in cm^3 and time in seconds for rate calculations.", answer:true, explanation:"These are common choices in the speech."},
+
+  // 18
+  {type:"tf", question:"Mass should always be measured in kilograms for rate questions in this topic.", answer:false, explanation:"Grams are used in the examples."},
+
+  // 19
+  {type:"mcq", question:"Which pair correctly matches ‘what to plot’ on axes?", options:[
+    "x: mass or volume; y: time",
+    "x: time; y: mass of reactant remaining or volume of product",
+    "x: temperature; y: pressure",
+    "x: concentration; y: pH"
+  ], answer:1, explanation:"Time is the independent variable on x‑axis."},
+
+  // 20
+  {type:"fill", question:"Rate = quantity of ______ used ÷ time taken.", answer:"reactant|reactants", explanation:"Disappearance of reactant per time."},
+
+  // 21
+  {type:"fill", question:"Rate = quantity of ______ formed ÷ time taken.", answer:"product|products", explanation:"Appearance of product per time."},
+
+  // 22
+  {type:"fill", question:"2 minutes = ______ seconds.", answer:"120", explanation:"×60."},
+
+  // 23
+  {type:"fill", question:"4 minutes = ______ seconds.", answer:"240", explanation:"×60."},
+
+  // 24
+  {type:"fill", question:"The rate for 180 cm^3 in 120 s is ______ cm^3/s.", answer:"1.5", explanation:"180/120 = 1.5."},
+
+  // 25
+  {type:"fill", question:"The rate for 3 g in 240 s is ______ g/s.", answer:"0.0125", explanation:"3/240 = 0.0125."},
+
+  // 26
+  {type:"tf", question:"Average rate and instantaneous rate are always the same value.", answer:false, explanation:"Average uses total change; instantaneous is slope at a moment."},
+
+  // 27
+  {type:"mcq", question:"At the start of the magnesium + acid reaction, the product‑volume graph is:", options:[
+    "Least steep",
+    "Steepest",
+    "Horizontal",
+    "Negative"
+  ], answer:1, explanation:"Fastest production at the start."},
+
+  // 28
+  {type:"mcq", question:"When a reactant is completely used up, the product‑time curve:", options:[
+    "Drops back to zero",
+    "Becomes horizontal (plateau)",
+    "Becomes vertical",
+    "Oscillates"
+  ], answer:1, explanation:"No further product is formed → flat line."},
+
+  // 29
+  {type:"tf", question:"The reactant‑mass curve can never be steeper at the start than later.", answer:false, explanation:"It IS usually steepest at the start."},
+
+  // 30
+  {type:"mcq", question:"Which quantity is NOT listed as acceptable for rate in this speech?", options:[
+    "cm^3",
+    "grams",
+    "moles",
+    "kelvin"
+  ], answer:3, explanation:"Temperature unit is not used as a numerator here."},
+
+  // 31
+  {type:"mcq", question:"If the answer must be in mol·min^-1, you should:", options:[
+    "Convert time into minutes before dividing",
+    "Convert time into seconds only",
+    "Ignore time units",
+    "Give the value with no units"
+  ], answer:0, explanation:"Match the requested unit convention."},
+
+  // 32
+  {type:"fill", question:"Instantaneous rate equals the ______ of the tangent on a quantity–time graph.", answer:"slope|gradient", explanation:"Slope at that instant."},
+
+  // 33
+  {type:"tf", question:"A reaction may start fast because there are many reactant particles available to collide.", answer:true, explanation:"More collisions per second at the beginning."},
+
+  // 34
+  {type:"mcq", question:"Which statement is consistent with the speech?", options:[
+    "Average rate can be found using total change/total time",
+    "Average rate requires calculus",
+    "Instantaneous rate equals total change/total time",
+    "Rates never change during a reaction"
+  ], answer:0, explanation:"Average rate is straightforward ratio of totals."},
+
+  // 35
+  {type:"fill", question:"0.6 mol in 2 minutes equals ______ mol·min^-1.", answer:"0.3|0.30", explanation:"0.6/2 = 0.3 mol per minute."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 800);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 800);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 800);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
