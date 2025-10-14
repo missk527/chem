@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Electron Arrangement — Notes & Quiz</title>
+  <style>
+    :root{ --brand:#10b981; --paper:#fffef9; --ink:#1f2937; }
+    *{ box-sizing:border-box }
+    body{ margin:0; font-family:Inter,Arial,system-ui,sans-serif; background:#f6f7fb; color:var(--ink); line-height:1.7; }
+    header{ background:var(--brand); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15) }
+    header h1{ margin:0; font-size:1.2rem; letter-spacing:.2px }
+    .small{ opacity:.95; font-size:.9rem }
+    .wrap{ max-width:1000px; margin:20px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #e3e8f5; border-radius:12px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin:18px 0 }
+    .notes h2,.game h2{ color:#047857; border-bottom:2px solid #a7f3d0; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#047857 }
+    ul{ margin:8px 0 0 22px }
+    code.k{ background:#ecfdf5; padding:2px 6px; border-radius:6px }
+    .question-box{ border:1px solid #e0e0e0; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#d1fae5; color:#065f46; border:1px solid #a7f3d0; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#666; font-size:.85rem; padding:20px 0 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Electron Arrangement — Exam Notes & Quiz <span class="pill">Shells · Stability · Noble gases · Ions</span></h1>
+    <div class="small">Video + exam-focused notes + 40-question practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <!-- Updated video link -->
+        <iframe src="https://www.youtube.com/embed/9zqmFFb4e1c" title="Electron Arrangement video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="notes">
+      <h2>Notes (Key points from the speech)</h2>
+
+      <details open>
+        <summary>Why electron arrangement matters</summary>
+        <ul>
+          <li>Electrons occupy <strong>shells</strong> around the nucleus (lowest energy shell fills first).</li>
+          <li>Atoms are most <strong>stable</strong> when their <strong>outer (valence) shell is full</strong>.</li>
+          <li>Atoms with incomplete outer shells tend to <strong>react</strong> to gain/lose electrons and achieve a full shell.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Shell capacities (GCSE rule)</summary>
+        <ul>
+          <li>1st shell: <strong>2</strong> electrons.</li>
+          <li>2nd shell: up to <strong>8</strong> electrons.</li>
+          <li>3rd shell: treat as up to <strong>8</strong> electrons for the first 20 elements.</li>
+          <li>Fill the first shell before the second, etc.</li>
+          <li>Drawing tip: place one electron at top, right, bottom, left before pairing (clockwise) to keep spacing tidy.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Examples from the speech</summary>
+        <ul>
+          <li><strong>Sodium (Na)</strong>, atomic number 11 → electrons = 11 → arrangement <code class="k">2,8,1</code>. Unstable (one in outer shell).</li>
+          <li><strong>Argon (Ar)</strong>, atomic number 18 → arrangement <code class="k">2,8,8</code>. Full outer shell → <strong>stable</strong> (noble gas).</li>
+          <li><strong>Calcium (Ca)</strong>, atomic number 20 → arrangement <code class="k">2,8,8,2</code>. To be stable, it can <strong>lose two</strong> outer electrons → becomes <strong>Ca<sup>2+</sup></strong> with arrangement <code class="k">2,8,8</code> (draw in brackets with charge).</li>
+          <li><strong>Fluorine (F)</strong>, atomic number 9 → arrangement <code class="k">2,7</code>. To be stable, it can <strong>gain one</strong> electron → becomes <strong>F<sup>−</sup></strong> (fluoride) with arrangement <code class="k">2,8</code>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Noble gases</summary>
+        <ul>
+          <li>Group 0 elements already have <strong>full outer shells</strong> (e.g., <strong>Ne</strong>, <strong>Ar</strong>), so they are generally <strong>unreactive</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Ions vs atoms (notation)</summary>
+        <ul>
+          <li>Atoms become <strong>positive ions (cations)</strong> by <strong>losing</strong> electrons; <strong>negative ions (anions)</strong> by <strong>gaining</strong> electrons.</li>
+          <li>When drawing ions, use <strong>square brackets</strong> and show the <strong>charge</strong> at top right (e.g., [Ca]<sup>2+</sup>, [F]<sup>−</sup>).</li>
+          <li>Electron-structure shorthand uses commas: e.g., <code class="k">2,8,1</code>.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="game">
+      <h2>Quiz (40 Questions — Mixed Types)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Electron Arrangement practice</div>
+
+<script>
+// Quiz schema supports: mcq (options, answer index), tf (boolean), and fill (string answer)
+// All questions are derived strictly from the provided speech content.
+const questions = [
+  // MCQ (1–16)
+  {type:"mcq", question:"Which shell fills first when drawing electron arrangements?", options:["Third","Second","First (closest to nucleus)","Any order"], answer:2, explanation:"Lowest energy (closest) fills first."},
+  {type:"mcq", question:"How many electrons can the first shell hold?", options:["2","4","6","8"], answer:0, explanation:"First shell max is 2."},
+  {type:"mcq", question:"For the first 20 elements, what maximum do we use for the second shell?", options:["6","8","10","14"], answer:1, explanation:"GCSE rule: 2,8,8…"},
+  {type:"mcq", question:"For the first 20 elements, what maximum do we use for the third shell?", options:["4","6","8","18"], answer:2, explanation:"Use 8 for simplicity at GCSE level."},
+  {type:"mcq", question:"What makes an atom ‘stable’ in this model?", options:["Half-full outer shell","Full outer shell","Empty second shell","More neutrons than protons"], answer:1, explanation:"Full outer shell = stable."},
+  {type:"mcq", question:"What is sodium’s electron arrangement (atomic number 11)?", options:["2,8,1","2,7,2","2,8,2","2,6,3"], answer:0, explanation:"11 → 2,8,1."},
+  {type:"mcq", question:"Argon (18 electrons) has the arrangement:", options:["2,8,6","2,10,6","2,8,8","2,6,10"], answer:2, explanation:"18 → 2,8,8."},
+  {type:"mcq", question:"Calcium atom (20 electrons) has the arrangement:", options:["2,8,10","2,8,8,2","2,10,8","2,6,8,4"], answer:1, explanation:"20 → 2,8,8,2."},
+  {type:"mcq", question:"Calcium becomes Ca²⁺ by:", options:["Gaining 2 e⁻","Losing 2 e⁻","Gaining 1 e⁻","Losing 1 e⁻"], answer:1, explanation:"It loses its two outer electrons."},
+  {type:"mcq", question:"Fluorine atom (9 e⁻) has the arrangement:", options:["2,8","2,7","2,6,1","2,5,2"], answer:1, explanation:"9 → 2,7."},
+  {type:"mcq", question:"Fluoride ion (F⁻) has the arrangement:", options:["2,7","2,8","2,8,1","2,6,1"], answer:1, explanation:"Gains one electron → 2,8."},
+  {type:"mcq", question:"Which group contains elements with full outer shells?", options:["Group 1","Group 7","Group 0 (noble gases)","Transition metals"], answer:2, explanation:"Noble gases are unreactive."},
+  {type:"mcq", question:"What drawing convention helps space electrons evenly?", options:["Random scatter","Pair all immediately","Top, right, bottom, left then pair","Left side only"], answer:2, explanation:"Place singles at NESW then pair."},
+  {type:"mcq", question:"What do atoms with incomplete outer shells tend to do?", options:["Stay inert","React to gain/lose electrons","Emit neutrons","Split"], answer:1, explanation:"They react to achieve a full shell."},
+  {type:"mcq", question:"How should ions be drawn in diagrams?", options:["No brackets","Round brackets only","Square brackets with charge top-right","Just the element symbol"], answer:2, explanation:"e.g., [Ca]²⁺."},
+  {type:"mcq", question:"What is the shorthand for electron structures?", options:["Hyphens between numbers","Roman numerals","Commas between shell counts (e.g., 2,8,1)","Sum only"], answer:2, explanation:"Use commas per shell."},
+
+  // True/False (17–26)
+  {type:"tf", question:"A full outer shell usually makes an atom unreactive.", answer:true, explanation:"Full shell → stable/noble-like."},
+  {type:"tf", question:"The second shell can hold up to eight electrons in the first 20 elements.", answer:true, explanation:"Yes, 2,8,…"},
+  {type:"tf", question:"In the sodium atom example, the outermost shell contains two electrons.", answer:false, explanation:"Na has 2,8,1 — one outer electron."},
+  {type:"tf", question:"Argon is reactive because it has 18 electrons.", answer:false, explanation:"It is unreactive due to a full outer shell."},
+  {type:"tf", question:"Calcium becomes more stable by losing its two outer electrons.", answer:true, explanation:"Then it has a full shell beneath."},
+  {type:"tf", question:"Fluorine becomes more stable by losing one electron.", answer:false, explanation:"It gains one to reach 2,8."},
+  {type:"tf", question:"Noble gases do not generally gain or lose electrons.", answer:true, explanation:"Their valence shells are already full."},
+  {type:"tf", question:"When calcium loses 2 electrons, it has 18 electrons but still 20 protons.", answer:true, explanation:"Hence overall 2+ charge."},
+  {type:"tf", question:"The third shell can be treated as holding up to eight electrons for the first 20 elements.", answer:true, explanation:"GCSE simplification."},
+  {type:"tf", question:"Electron shells are filled starting from the outermost shell first.", answer:false, explanation:"Fill closest/lowest energy first."},
+
+  // Fill-in (27–40)
+  {type:"fill", question:"Complete: Stable atoms have a ______ outer shell.", answer:"full|filled|complete", explanation:"Full valence shell."},
+  {type:"fill", question:"First shell capacity = ______ electrons.", answer:"2|two", explanation:"Max 2."},
+  {type:"fill", question:"Second shell capacity (GCSE rule) = up to ______ electrons.", answer:"8|eight", explanation:"Max 8."},
+  {type:"fill", question:"Write sodium’s electron structure (11 e⁻): ______.", answer:"2,8,1|2 8 1|2-8-1", explanation:"Any equivalent formatting accepted."},
+  {type:"fill", question:"Write argon’s electron structure (18 e⁻): ______.", answer:"2,8,8|2 8 8|2-8-8", explanation:"Full outer shell."},
+  {type:"fill", question:"Write calcium’s electron structure (20 e⁻): ______.", answer:"2,8,8,2|2 8 8 2|2-8-8-2", explanation:"20 electrons."},
+  {type:"fill", question:"After forming Ca²⁺, calcium’s structure becomes ______.", answer:"2,8,8|2 8 8|2-8-8", explanation:"Lost two outer electrons."},
+  {type:"fill", question:"Fluorine atom structure (9 e⁻) is ______.", answer:"2,7|2 7|2-7", explanation:"Nine total → 2,7."},
+  {type:"fill", question:"Fluoride ion (F⁻) structure is ______.", answer:"2,8|2 8|2-8", explanation:"Gains one electron."},
+  {type:"fill", question:"When an atom gains electrons it becomes a(n) ______.", answer:"anion|negative ion|negatively charged ion", explanation:"Gaining e⁻ → negative."},
+  {type:"fill", question:"When an atom loses electrons it becomes a(n) ______.", answer:"cation|positive ion|positively charged ion", explanation:"Losing e⁻ → positive."},
+  {type:"fill", question:"In diagrams of ions, draw ______ brackets and put the ______ at the top right.", answer:"square|charge|square; charge|square brackets|charge", explanation:"[Ion]ⁿ⁺/ⁿ⁻."},
+  {type:"fill", question:"Place single electrons at top, right, bottom, left before ______.", answer:"pairing|pairing them|adding pairs", explanation:"Keeps spacing tidy."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
