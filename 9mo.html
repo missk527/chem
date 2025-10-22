@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Periodic Table — Notes & 40-Q Quiz</title>
+  <style>
+    :root{ --brand:#0f766e; --brand-2:#14b8a6; --paper:#fcfffd; --ink:#1f2937; }
+    *{ box-sizing:border-box }
+    body{
+      margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f3faf8; color:var(--ink); line-height:1.6;
+    }
+    header{ background:linear-gradient(90deg,var(--brand), var(--brand-2)); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    header h1{ margin:0; font-size:1.25rem; letter-spacing:.2px }
+    .small{ opacity:.95; font-size:.92rem }
+    .wrap{ max-width:1000px; margin:20px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #d1fae5; border-radius:14px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:16px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin:18px 0 }
+    .notes h2,.game h2{ color:#065f46; border-bottom:2px solid #a7f3d0; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#ffffff; border:1px solid #e6f5ef; border-radius:12px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#0f766e }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #dbece7; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#ccfbf1; color:#064e3b; border:1px solid #99f6e4; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#667; font-size:.85rem; padding:20px 0 }
+    .key{ background:#ecfdf5; border-left:4px solid #10b981; padding:10px 12px; border-radius:8px; }
+    code.k{ background:#e6fffb; padding:2px 6px; border-radius:6px; border:1px solid #bff0e6 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Periodic Table — Exam Notes & 40-Question Quiz <span class="pill">Mendeleev · Groups · Periods</span></h1>
+    <div class="small">Video + exam-focused notes + interactive practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <!-- Updated video link -->
+        <iframe src="https://www.youtube.com/embed/ZgVP_kJpaYg" title="Periodic Table video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="notes">
+      <h2>Notes (Key points rewritten from the speech)</h2>
+
+      <details open>
+        <summary>Mendeleev and the purpose of the table</summary>
+        <ul>
+          <li><strong>Dmitri Mendeleev</strong> (Russian chemist) devised the <strong>periodic table</strong> in the 19th century.</li>
+          <li>It organised known elements and even <strong>predicted undiscovered elements</strong>.</li>
+          <li>All substances are made from different <strong>combinations of elements</strong> in the table.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>How the table is read and what each box shows</summary>
+        <ul>
+          <li>Read like a book: <strong>left → right</strong>, then <strong>top → bottom</strong>.</li>
+          <li>Elements are arranged by increasing <strong>atomic number</strong> (number of protons).</li>
+          <li>Typical box shows: <em>symbol</em> (e.g., <strong>Na</strong>), <em>atomic number</em> (bottom‑left), and <em>mass number</em> (top‑left).</li>
+          <li><strong>Atomic number</strong> = number of protons; <strong>mass number</strong> = protons + neutrons.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Patterns → periods and groups</summary>
+        <ul>
+          <li>Repeating patterns of chemical properties led to starting a new row called a <strong>period</strong>.</li>
+          <li>Elements in the same vertical column (<strong>group</strong>) have <strong>similar chemical properties</strong>.</li>
+          <li>Groups are numbered from <strong>1 to 7</strong>, with the far right called <strong>group 0</strong> (noble gases).</li>
+          <li>The block between groups 2 and 3 are the <strong>transition metals</strong> (often unnumbered).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Outer electrons and reactivity trends</summary>
+        <ul>
+          <li>Elements in the same group have the <strong>same number of outer‑shell (valence) electrons</strong>.</li>
+          <li>For main‑group elements, the <strong>group number = number of outer electrons</strong>.</li>
+          <li><strong>Group 1 (alkali metals):</strong> 1 outer electron; similar properties (e.g., react vigorously with water); <em>reactivity increases</em> down the group.</li>
+          <li><strong>Group 7 (halogens):</strong> 7 outer electrons; <em>reactivity decreases</em> down the group.</li>
+          <li><strong>Group 0 (noble gases):</strong> full outer shells → very unreactive.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Metals vs non‑metals & layout variations</summary>
+        <ul>
+          <li>A zig‑zag line (Al → Po) often separates <strong>metals</strong> (left) from <strong>non‑metals</strong> (right). There are more metals than non‑metals.</li>
+          <li><strong>Transition metals</strong> sit in the centre block.</li>
+          <li>Different periodic tables may position <em>numbers</em> differently, but <strong>atomic number is the smaller number</strong> in an element box.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="game">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Periodic Table practice</div>
+
+<script>
+// Quiz schema supports: mcq (options, answer index), tf (boolean), and fill (string answer with '|' for alternates)
+// All items are derived from the provided speech.
+const questions = [
+  // 1
+  {type:"mcq", question:"Who devised the periodic table discussed in the speech?", options:[
+    "John Dalton","Niels Bohr","Dmitri Mendeleev","Marie Curie"
+  ], answer:2, explanation:"Mendeleev organised the elements in the 19th century and predicted new ones."},
+
+  // 2
+  {type:"tf", question:"The periodic table is read left to right, then top to bottom.", answer:true, explanation:"Like a book: across then down."},
+
+  // 3
+  {type:"mcq", question:"Elements are arranged in order of increasing ______.", options:[
+    "mass number","atomic number","density","melting point"
+  ], answer:1, explanation:"Atomic number equals the number of protons."},
+
+  // 4
+  {type:"fill", question:"Atomic number equals the number of ______ in the nucleus.", answer:"protons|proton", explanation:"Atomic number = protons."},
+
+  // 5
+  {type:"fill", question:"Mass number = number of protons + number of ______.", answer:"neutrons|neutron", explanation:"Mass number counts nucleons."},
+
+  // 6
+  {type:"mcq", question:"In a typical element box, what does the symbol 'Na' represent?", options:[
+    "Neon","Sodium","Nitrogen","Sodium oxide"
+  ], answer:1, explanation:"Na stands for sodium."},
+
+  // 7
+  {type:"tf", question:"Mendeleev’s table even predicted elements that were undiscovered at the time.", answer:true, explanation:"He left gaps and predicted their properties."},
+
+  // 8
+  {type:"mcq", question:"A new row in the table is called a:", options:[
+    "group","block","period","series"
+  ], answer:2, explanation:"Rows are periods; columns are groups."},
+
+  // 9
+  {type:"mcq", question:"Elements in the same vertical column have:", options:[
+    "very different properties","similar chemical properties","identical masses","the same number of total electrons"
+  ], answer:1, explanation:"Groups share similar chemical properties."},
+
+  // 10
+  {type:"fill", question:"A vertical column in the periodic table is called a ______.", answer:"group", explanation:"Columns = groups."},
+
+  // 11
+  {type:"fill", question:"A horizontal row in the periodic table is called a ______.", answer:"period", explanation:"Rows = periods."},
+
+  // 12
+  {type:"mcq", question:"The groups on the far right are called:", options:[
+    "Group 8","Group 0 (noble gases)","Transition metals","Halogens"
+  ], answer:1, explanation:"Far right is called Group 0 in this syllabus."},
+
+  // 13
+  {type:"tf", question:"The block between groups 2 and 3 are the transition metals.", answer:true, explanation:"These central elements are the transition metals."},
+
+  // 14
+  {type:"mcq", question:"Why do elements in a group have similar properties?", options:[
+    "They have the same number of total electrons","They have the same number of outer‑shell electrons","They have the same atomic mass","They are the same colour"
+  ], answer:1, explanation:"Outer electrons largely determine reactivity."},
+
+  // 15
+  {type:"fill", question:"For main‑group elements, the group number equals the number of ______ electrons.", answer:"outer|valence|outer‑shell|outer shell|valence electrons", explanation:"E.g., Group 2 → two outer electrons."},
+
+  // 16
+  {type:"mcq", question:"Group 1 elements are also called the:", options:[
+    "alkaline earth metals","noble gases","transition metals","alkali metals"
+  ], answer:3, explanation:"Group 1 are the alkali metals."},
+
+  // 17
+  {type:"mcq", question:"Group 1 elements all have how many electrons in their outer shell?", options:[
+    "1","2","7","8"
+  ], answer:0, explanation:"This gives them similar properties."},
+
+  // 18
+  {type:"tf", question:"Group 1 reactivity increases down the group.", answer:true, explanation:"A key trend mentioned in the speech."},
+
+  // 19
+  {type:"mcq", question:"Group 7 elements are called the:", options:[
+    "noble gases","halogens","lanthanides","alkali metals"
+  ], answer:1, explanation:"Group 7 are the halogens."},
+
+  // 20
+  {type:"fill", question:"Group 7 elements have ______ electrons in their outer shell.", answer:"7|seven", explanation:"Hence their group number."},
+
+  // 21
+  {type:"tf", question:"Group 7 reactivity increases down the group.", answer:false, explanation:"Halogens become less reactive down the group."},
+
+  // 22
+  {type:"mcq", question:"Group 0 elements are known as the:", options:[
+    "alkaline earth metals","noble gases","metalloids","actinides"
+  ], answer:1, explanation:"They are very unreactive."},
+
+  // 23
+  {type:"fill", question:"Noble gases have ______ outer shells.", answer:"full|complete", explanation:"Full shells → very unreactive."},
+
+  // 24
+  {type:"fill", question:"Helium has a full outer shell with ______ electrons.", answer:"2|two", explanation:"First shell holds up to two electrons."},
+
+  // 25
+  {type:"mcq", question:"Argon has three shells and has how many electrons in its outer shell?", options:[
+    "2","6","8","10"
+  ], answer:2, explanation:"Outer shell is full at eight for argon."},
+
+  // 26
+  {type:"mcq", question:"Which statement about noble gases is correct?", options:[
+    "They are very reactive because they need electrons","They are unreactive because their outer shells are full","They react violently with water","They have one outer electron"
+  ], answer:1, explanation:"Full outer shells → little tendency to react."},
+
+  // 27
+  {type:"tf", question:"There are more metals than non‑metals in the periodic table.", answer:true, explanation:"Most elements are metals (left of zig‑zag)."},
+
+  // 28
+  {type:"mcq", question:"A zig‑zag line from Al to Po often separates:", options:[
+    "solids from liquids","metals from non‑metals","radioactive from stable elements","synthetic from natural"
+  ], answer:1, explanation:"Left: metals, right: non‑metals."},
+
+  // 29
+  {type:"mcq", question:"Where are the transition metals located?", options:[
+    "Far left","Far right","Centre block between groups 2 and 3","Top row only"
+  ], answer:2, explanation:"They occupy the central block."},
+
+  // 30
+  {type:"fill", question:"Different periodic tables may place numbers differently, but the ______ number is the smaller number.", answer:"atomic|atomic number", explanation:"Atomic number is smaller than mass number in a box."},
+
+  // 31
+  {type:"tf", question:"Mass number is always smaller than atomic number.", answer:false, explanation:"Mass number (protons+neutrons) is larger."},
+
+  // 32
+  {type:"mcq", question:"Which of these best describes what mass number represents?", options:[
+    "Number of protons","Total number of protons and neutrons","Number of electrons in outer shell","Number of isotopes"
+  ], answer:1, explanation:"Mass number = p + n."},
+
+  // 33
+  {type:"fill", question:"Give the usual group number range used here: groups 1 to ______, plus group 0.", answer:"7|seven", explanation:"Groups 1–7 and 0 at the far right."},
+
+  // 34
+  {type:"mcq", question:"Why did Mendeleev start a new period at intervals?", options:[
+    "To sort by colour","Because a repeating pattern of properties appeared","To match the alphabet","To separate metals from non‑metals"
+  ], answer:1, explanation:"Periodic recurrence of properties."},
+
+  // 35
+  {type:"tf", question:"Elements in the same group have the same total number of electrons.", answer:false, explanation:"They share the same number of outer electrons, not total electrons."},
+
+  // 36
+  {type:"mcq", question:"Which group’s elements react vigorously with water?", options:[
+    "Group 1 (alkali metals)","Group 7 (halogens)","Group 0 (noble gases)","Transition metals"
+  ], answer:0, explanation:"A hallmark property of Group 1 metals."},
+
+  // 37
+  {type:"fill", question:"Group 1 reactivity trend: it ______ as you go down the group.", answer:"increases|goes up|rises", explanation:"Stated explicitly in the speech."},
+
+  // 38
+  {type:"fill", question:"Group 7 reactivity trend: it ______ as you go down the group.", answer:"decreases|goes down|falls|drops|reduces", explanation:"Stated explicitly in the speech."},
+
+  // 39
+  {type:"mcq", question:"Which of the following is TRUE about periodic tables you might find online?", options:[
+    "They show different information","They often present the same information in different layouts","They always use group 8 instead of group 0","They never include mass numbers"
+  ], answer:1, explanation:"Layout may vary, information is the same."},
+
+  // 40
+  {type:"tf", question:"In exams, you can always identify the atomic number because it is the smaller of the two numbers shown in a box.", answer:true, explanation:"Atomic number is smaller than mass number."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #dbece7;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      const alts = q.answer.split("|").map(s=>s.trim().toLowerCase());
+      ok = alts.includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>

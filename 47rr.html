@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rates of Reaction from Graphs — Notes & 40-Q Quiz</title>
+  <style>
+    :root{ --brand:#0f766e; --brand-2:#14b8a6; --paper:#fcfffd; --ink:#1f2937; }
+    *{ box-sizing:border-box }
+    body{
+      margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f3faf8; color:var(--ink); line-height:1.6;
+    }
+    header{ background:linear-gradient(90deg,var(--brand), var(--brand-2)); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    header h1{ margin:0; font-size:clamp(22px,4vw,28px); letter-spacing:.2px }
+    .small{ opacity:.95; font-size:.92rem }
+    .wrap{ max-width:1000px; margin:20px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #d1fae5; border-radius:14px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:16px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin:18px 0 }
+    .notes h2,.game h2{ color:#065f46; border-bottom:2px solid #a7f3d0; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#ffffff; border:1px solid #e6f5ef; border-radius:12px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#0f766e }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #dbece7; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#ccfbf1; color:#064e3b; border:1px solid #99f6e4; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#667; font-size:.85rem; padding:20px 0 }
+    .key{ background:#ecfdf5; border-left:4px solid #10b981; padding:10px 12px; border-radius:8px; }
+    code.k{ background:#e6fffb; padding:2px 6px; border-radius:6px; border:1px solid #bff0e6 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rates of Reaction from Graphs — Exam Notes & 40-Question Quiz <span class="pill">Mean Rate · Tangent · Gradient</span></h1>
+    <div class="small">Video + exam-focused notes + interactive practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <!-- Updated video link -->
+        <iframe src="https://www.youtube.com/embed/jkui6i2jTZA" title="Reaction rates from graphs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="notes">
+      <h2>Notes (Key points rewritten from the speech)</h2>
+
+      <details open>
+        <summary>Defining rate of reaction</summary>
+        <ul>
+          <li><strong>Rate</strong> = change in amount of reactant used or product formed <em>per unit time</em>.</li>
+          <li>Units depend on what you measure (e.g., <strong>cm³&nbsp;s⁻¹</strong> for gas volume; <strong>g&nbsp;s⁻¹</strong> for mass).</li>
+          <li>Example: 1200&nbsp;cm³ H₂ in 4&nbsp;min → mean rate = \(\frac{1200}{4 \times 60}\) = <strong>5&nbsp;cm³&nbsp;s⁻¹</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Using a graph of product volume vs time</summary>
+        <ul>
+          <li>x‑axis = <strong>time</strong>; y‑axis = <strong>volume of gas (e.g., H₂)</strong>.</li>
+          <li>Curve is <strong>steepest at the start</strong> (fastest rate), then <strong>gradually flattens</strong> as reactants are used.</li>
+          <li>When the curve <strong>plateaus</strong>, reaction has <strong>finished</strong> (no more product formed).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Mean rate from a graph</summary>
+        <ul>
+          <li>Pick the time interval, read corresponding y‑values, compute <strong>Δy/Δt</strong>.</li>
+          <li>Example: first 3&nbsp;min gives 1200&nbsp;cm³ → mean rate = \( \frac{1200}{180} \) = <strong>6.67&nbsp;cm³&nbsp;s⁻¹</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Instantaneous rate at a particular time</summary>
+        <ul>
+          <li>Draw a <strong>tangent</strong> at that point (a line touching the curve with the same gradient).</li>
+          <li>Find <strong>gradient</strong> = <strong>Δy/Δx</strong> using two far‑apart points on the tangent.</li>
+          <li>Example at 2&nbsp;min: Δy ≈ 600&nbsp;cm³ and Δx ≈ 170&nbsp;s → rate ≈ <strong>3.53&nbsp;cm³&nbsp;s⁻¹</strong>.</li>
+          <li>Examiners accept a <em>small range</em> because the tangent is judged by eye.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Reactant‑remaining graph (mass vs time)</summary>
+        <ul>
+          <li>y‑axis = <strong>mass of reactant remaining</strong>; starts high and <strong>decreases</strong> over time.</li>
+          <li>Use the <strong>same tangent method</strong> for instantaneous rate.</li>
+          <li>Example at 1&nbsp;min: Δy ≈ 0.72&nbsp;g; Δx ≈ 100&nbsp;s → rate ≈ <strong>0.0072&nbsp;g&nbsp;s⁻¹</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Exam tips</summary>
+        <ul>
+          <li><strong>Convert minutes → seconds</strong> before calculating rates.</li>
+          <li>Make tangents <strong>as long as possible</strong> to reduce percentage error.</li>
+          <li>Always state <strong>units</strong> with your rate.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="game">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Reaction Rates (Graphs) practice</div>
+
+<script>
+// Quiz schema supports: mcq (options, answer index), tf (boolean), and fill (string answer with '|' for alternates)
+// All items are derived from the provided speech.
+const questions = [
+  // 1
+  {type:"mcq", question:"Rate of reaction can be calculated from:", options:[
+    "Change in mass or volume only, without time",
+    "Amount of reactant used or product formed per unit time",
+    "Temperature only",
+    "Pressure only"
+  ], answer:1, explanation:"Rate = change in amount / time (e.g., cm³ s⁻¹ or g s⁻¹)."},
+
+  // 2
+  {type:"fill", question:"Mean rate = change in amount ÷ change in ______.", answer:"time", explanation:"Divide by time interval."},
+
+  // 3
+  {type:"mcq", question:"In the magnesium + acid example, 1200 cm³ in 4 min gives a mean rate of:", options:[
+    "20 cm³ s⁻¹","10 cm³ s⁻¹","5 cm³ s⁻¹","1 cm³ s⁻¹"
+  ], answer:2, explanation:"1200 ÷ (4×60) = 5 cm³ s⁻¹."},
+
+  // 4
+  {type:"tf", question:"An average rate over 4 minutes is the same as the instantaneous rate at every moment.", answer:false, explanation:"Instantaneous rate varies; fastest at start, slower later."},
+
+  // 5
+  {type:"mcq", question:"On a product‑volume vs time graph, a steep curve indicates:", options:[
+    "High rate","Low rate","No reaction","Negative rate"
+  ], answer:0, explanation:"Steeper slope → faster production per unit time."},
+
+  // 6
+  {type:"tf", question:"As reactants are used up, the curve becomes less steep and may plateau.", answer:true, explanation:"Rate slows and eventually stops when reactants are finished."},
+
+  // 7
+  {type:"fill", question:"At the end of the reaction the graph ______ (no further increase in product).", answer:"plateaus|levels off|flattens", explanation:"No more product formed."},
+
+  // 8
+  {type:"mcq", question:"To find the mean rate for the first 3 minutes you should:", options:[
+    "Read the volume at 3 min and divide by 180 s","Draw a tangent at 3 min","Use the maximum y‑value only","Divide by 3 minutes without converting units"
+  ], answer:0, explanation:"Mean over first 3 min = V(3 min)/180 s."},
+
+  // 9
+  {type:"mcq", question:"Which construction gives the instantaneous rate at 2 minutes?", options:[
+    "A horizontal line through the 2‑min point","A tangent to the curve at 2 minutes","A secant from 0 to 2 minutes","A vertical line at 2 minutes"
+  ], answer:1, explanation:"Tangent slope equals the curve’s gradient at that point."},
+
+  // 10
+  {type:"fill", question:"Instantaneous rate = gradient = Δy ÷ Δx = change in ______ ÷ change in time.", answer:"volume|product|amount", explanation:"For gas graphs, Δy is change in volume."},
+
+  // 11
+  {type:"tf", question:"Making your tangent longer reduces percentage error when measuring its gradient.", answer:true, explanation:"Longer run gives more accurate Δy/Δx."},
+
+  // 12
+  {type:"mcq", question:"At 2 minutes in the speech example, Δy ≈ 600 cm³ and Δx ≈ 170 s. The rate is about:", options:[
+    "1.8 cm³ s⁻¹","3.5 cm³ s⁻¹","6.7 cm³ s⁻¹","12 cm³ s⁻¹"
+  ], answer:1, explanation:"600/170 ≈ 3.53 cm³ s⁻¹."},
+
+  // 13
+  {type:"fill", question:"Always convert minutes to ______ before calculating rates.", answer:"seconds|s", explanation:"Use SI seconds."},
+
+  // 14
+  {type:"tf", question:"Examiners accept a small range of values for tangent‑based rates.", answer:true, explanation:"Because tangents are judged by eye."},
+
+  // 15
+  {type:"mcq", question:"On a reactant‑remaining (mass vs time) graph, the curve:", options:[
+    "Increases then plateaus","Decreases rapidly at first then more slowly","Is perfectly flat","Oscillates up and down"
+  ], answer:1, explanation:"Reactant mass drops quickly at first, then the rate slows."},
+
+  // 16
+  {type:"fill", question:"In the mass example, Δy ≈ 0.72 g and Δx ≈ 100 s, so the rate ≈ ______ g s⁻¹.", answer:"0.0072|7.2e-3|7.2 x 10^-3", explanation:"0.72/100 = 0.0072 g s⁻¹."},
+
+  // 17
+  {type:"mcq", question:"Which axis is time placed on in these reaction‑rate graphs?", options:[
+    "x‑axis","y‑axis","z‑axis","Either axis"
+  ], answer:0, explanation:"Time on x, measured quantity on y."},
+
+  // 18
+  {type:"mcq", question:"Which is the best description of a tangent?", options:[
+    "A line that cuts the curve twice","A straight line that just touches the curve at a point and shares its gradient","A horizontal line through the point","A perpendicular to the curve"
+  ], answer:1, explanation:"By definition, tangent touches and matches gradient."},
+
+  // 19
+  {type:"tf", question:"The instantaneous rate equals the slope of a secant over an interval.", answer:false, explanation:"Secant gives mean rate over that interval."},
+
+  // 20
+  {type:"mcq", question:"If 900 cm³ of gas forms in 3 minutes, the mean rate is:", options:[
+    "3 cm³ s⁻¹","5 cm³ s⁻¹","10 cm³ s⁻¹","15 cm³ s⁻¹"
+  ], answer:1, explanation:"900/(3×60) = 900/180 = 5 cm³ s⁻¹."},
+
+  // 21
+  {type:"fill", question:"Gradient formula used on these graphs: ______y / ______x.", answer:"delta; delta|Δ; Δ|change in; change in", explanation:"Δy/Δx."},
+
+  // 22
+  {type:"mcq", question:"A plateau on the product‑time graph indicates:", options:[
+    "Maximum pressure","Reaction has finished","Reactants are forming","Rate is increasing"
+  ], answer:1, explanation:"No further product formed."},
+
+  // 23
+  {type:"tf", question:"The reaction is usually fastest at the start.", answer:true, explanation:"Concentrations are highest initially."},
+
+  // 24
+  {type:"mcq", question:"To read the volume produced by 3 minutes you:", options:[
+    "Draw up from 3 min to curve; across to y‑axis","Draw a tangent at 3 min","Divide 3 by the final volume","Read the first data point only"
+  ], answer:0, explanation:"Standard graph‑reading method."},
+
+  // 25
+  {type:"fill", question:"Units for gas‑based rate in these examples: ______ cm³ s⁻¹.", answer:"per|/|", explanation:"Any equivalent expression of per second is fine."},
+
+  // 26
+  {type:"mcq", question:"Which change (keeping others constant) will make the slope shallower?", options:[
+    "More magnesium used","Reaction nearing completion","Higher acid concentration","Higher temperature"
+  ], answer:1, explanation:"As reactants deplete, production per time slows."},
+
+  // 27
+  {type:"tf", question:"Mean rate over 0–2 min equals the instantaneous rate at 2 min.", answer:false, explanation:"Mean over interval ≠ instant at endpoint."},
+
+  // 28
+  {type:"mcq", question:"Best practice for choosing two points on a tangent:", options:[
+    "Pick two points very close together","Pick two widely separated points on the tangent","Pick one point on the tangent and one on the curve","Pick points randomly"
+  ], answer:1, explanation:"Wide separation reduces measurement error."},
+
+  // 29
+  {type:"fill", question:"When using mass vs time, Δy is measured in ______.", answer:"grams|g", explanation:"Mass change in grams."},
+
+  // 30
+  {type:"mcq", question:"If the tangent crosses y=0 at 250 s and the point at 2 min is (120 s, 800 cm³), approximate gradient is:", options:[
+    "800/130 ≈ 6.15 cm³ s⁻¹","(800-0)/(120-250) negative","(800-0)/(250-120) ≈ 6.15 cm³ s⁻¹","Impossible to tell"
+  ], answer:2, explanation:"Use Δy/Δx with tangent endpoints."},
+
+  // 31
+  {type:"tf", question:"Rates can be negative if you plot reactant remaining vs time (mass decreases).", answer:true, explanation:"Negative slope indicates decrease; often we quote magnitude."},
+
+  // 32
+  {type:"mcq", question:"Which pair correctly matches graph and y‑quantity?", options:[
+    "Product‑time → mass remaining","Reactant‑time → volume formed","Product‑time → volume formed","Reactant‑time → temperature"
+  ], answer:2, explanation:"Product‑time graphs use product amount (e.g., volume)."},
+
+  // 33
+  {type:"fill", question:"Another name for 'mean rate over an interval' using a straight line through two points is a ______.", answer:"secant|chord", explanation:"Secant line across the interval."},
+
+  // 34
+  {type:"mcq", question:"Which step is NOT part of the instantaneous rate method?", options:[
+    "Locate the time of interest","Draw a tangent at that point","Find Δy and Δx along the tangent","Use total reaction time as Δx regardless"
+  ], answer:3, explanation:"Use the tangent’s own Δx, not the total time."},
+
+  // 35
+  {type:"tf", question:"A carefully drawn different‑length tangent with the same steepness gives the same gradient.", answer:true, explanation:"Gradient depends on steepness, not the segment length."},
+
+  // 36
+  {type:"mcq", question:"If Δy = 500 cm³ over Δx = 200 s along a tangent, the rate is:", options:[
+    "2.5 cm³ s⁻¹","0.4 cm³ s⁻¹","4.0 cm³ s⁻¹","250 cm³ s⁻¹"
+  ], answer:0, explanation:"500/200 = 2.5 cm³ s⁻¹."},
+
+  // 37
+  {type:"fill", question:"Write the gradient formula used: rate = ______y / ______x.", answer:"Δ; Δ|delta; delta|change in; change in", explanation:"Δy/Δx."},
+
+  // 38
+  {type:"mcq", question:"Why is the reaction fastest at the beginning in these examples?", options:[
+    "Because temperature is lowest","Because reactant concentrations are highest","Because the graph starts at zero","Because pressure is zero"
+  ], answer:1, explanation:"More frequent successful collisions initially."},
+
+  // 39
+  {type:"tf", question:"If the curve is horizontal at a time t, the instantaneous rate there is zero.", answer:true, explanation:"Slope zero → rate zero."},
+
+  // 40
+  {type:"fill", question:"State one key exam tip for rate calculations mentioned in the notes.", answer:"convert minutes to seconds|state units|draw long tangents|make tangents long", explanation:"Any one of the listed tips earns the mark."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #dbece7;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      const alts = q.answer.split("|").map(s=>s.trim().toLowerCase());
+      ok = alts.includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
