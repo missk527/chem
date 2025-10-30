@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reversible Reactions & Equilibrium — Notes & Quiz</title>
+  <style>
+    :root{ --brand:#7c3aed; --paper:#fffdfc; --ink:#0f172a; --accent:#5b21b6 }
+    *{box-sizing:border-box}
+    body{ margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f6f5ff; color:var(--ink); line-height:1.62 }
+    header{ background:linear-gradient(90deg, var(--brand), #22d3ee); color:#fff; padding:18px 20px; text-align:center; font-size:1.3rem; box-shadow:0 2px 10px rgba(0,0,0,.1) }
+    .wrap{ max-width:1100px; margin:0 auto; padding:0 14px 28px }
+    .video{ display:flex; justify-content:center; margin:18px 0 }
+    iframe{ width:88%; max-width:1100px; height:480px; border:2px solid #ddd6fe; border-radius:14px; background:#000; box-shadow:0 2px 12px rgba(124,58,237,.18) }
+    .card{ background:var(--paper); border-radius:16px; box-shadow:0 8px 20px rgba(15,23,42,.08); padding:20px; margin:18px 0 }
+    h2{ color:var(--accent); border-bottom:2px solid #ddd6fe; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#ffffff; border:1px solid #e5e7eb; border-radius:12px; padding:12px 14px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#4c1d95 }
+    .pill{ display:inline-block; background:#ede9fe; border:1px solid #ddd6fe; border-radius:999px; padding:2px 10px; margin:2px; font-size:.9rem }
+    .question-box{ border:1px solid #e5e7eb; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 6px 16px rgba(124,58,237,.25) }
+    .feedback{ margin-top:8px; font-weight:bold }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem }
+    .tiny{ font-size:.85rem; color:#475569 }
+    @media (max-width:760px){ iframe{ width:96%; height:240px } }
+  </style>
+</head>
+<body>
+<header>Reversible Reactions, Equilibrium & Position of Equilibrium</header>
+
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/vtIEwM2RUSk" title="Reversible Reactions & Equilibrium" allowfullscreen></iframe>
+</div>
+
+<div class="wrap">
+  <section class="card">
+    <h2>Notes (rewritten in English from the speech)</h2>
+
+    <details open>
+      <summary>Reversible vs one‑way reactions</summary>
+      <ul>
+        <li>One‑way reactions are shown with a single arrow (<b>→</b>): reactants turn into products and don’t go back (e.g., CO₂ does not split into C + O₂ in normal conditions).</li>
+        <li><b>Reversible reactions</b> use a double arrow (<b>⇌</b>): both the <b>forward</b> and <b>backward</b> reactions can occur.</li>
+        <li>Example: <b>NH₄Cl(s) ⇌ NH₃(g) + HCl(g)</b>. Top arrow = forward (decomposition), bottom arrow = backward (reformation).</li>
+      </ul>
+      <div>
+        <span class="pill">Forward reaction</span>
+        <span class="pill">Backward reaction</span>
+        <span class="pill">Double arrow (⇌)</span>
+      </div>
+    </details>
+
+    <details>
+      <summary>Equilibrium (dynamic)</summary>
+      <ul>
+        <li>At the start: forward rate is fast (lots of reactant), backward rate is near zero (few products).</li>
+        <li>Over time: forward slows, backward speeds up.</li>
+        <li><b>Equilibrium</b> is reached when the <b>forward and backward rates are equal</b>.</li>
+        <li>At equilibrium, <b>concentrations stay constant</b> — but <b>not necessarily equal</b> to each other.</li>
+        <li>Molecules still convert both ways; there’s just <b>no overall change</b> (dynamic balance).</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Position of equilibrium</summary>
+      <ul>
+        <li>If there is relatively more <b>products</b>, equilibrium is said to lie to the <b>right</b>.</li>
+        <li>If there is relatively more <b>reactants</b>, equilibrium lies to the <b>left</b>.</li>
+        <li>Changing conditions (e.g., heating/cooling) can shift the position.</li>
+        <li>For NH₄Cl ⇌ NH₃ + HCl: <b>heating</b> drives the decomposition (more products → right), while <b>cooling</b> favors NH₄Cl (left).</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Closed system requirement</summary>
+      <ul>
+        <li>Equilibrium can only be achieved in a <b>closed system</b> — a sealed setup where no reactants or products escape.</li>
+        <li>If gases escape, equal rates cannot be maintained and the system won’t reach equilibrium.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Exothermic vs endothermic directions</summary>
+      <ul>
+        <li>Every reversible reaction is <b>endothermic in one direction</b> and <b>exothermic in the other</b>.</li>
+        <li>Example: <b>Hydrated copper sulfate ⇌ anhydrous copper sulfate + water</b>.</li>
+        <li>Forward (dehydration) is <b>endothermic</b>: heating blue crystals drives the reaction to the right → white anhydrous powder + water vapor.</li>
+        <li>Backward (hydration) is <b>exothermic</b>: adding water to the powder reforms the <b>blue crystals</b> and releases heat; position shifts left.</li>
+      </ul>
+    </details>
+
+  </section>
+
+  <section class="card">
+    <h2>Quiz (40 Questions)</h2>
+    <div id="game-area">
+      <button onclick="startGame()">Start</button>
+      <div class="scorebar tiny" id="scorebar">Not started</div>
+    </div>
+  </section>
+</div>
+
+<script>
+// 40 tightly grounded questions based on the provided speech
+const Q = [
+  // Multiple Choice (1–20)
+  {type:"mcq", q:"Which arrow shows a one-way reaction?", opts:["⇌","→","↔"], a:1, exp:"Single arrow to the right indicates one-way."},
+  {type:"mcq", q:"What does a double arrow (⇌) indicate?", opts:["Irreversible reaction","Reversible reaction","No reaction"], a:1, exp:"Double arrow means reversible."},
+  {type:"mcq", q:"In NH₄Cl ⇌ NH₃ + HCl, which is the forward reaction?", opts:["NH₃ + HCl → NH₄Cl","NH₄Cl → NH₃ + HCl","No forward reaction"], a:1, exp:"Decomposition of ammonium chloride is forward."},
+  {type:"mcq", q:"At the very start, which rate is fastest?", opts:["Forward","Backward","Both equal"], a:0, exp:"Plenty of reactant, so forward is fast initially."},
+  {type:"mcq", q:"At equilibrium, the forward and backward rates are:", opts:["Unequal","Both zero","Equal"], a:2, exp:"Equal rates define equilibrium."},
+  {type:"mcq", q:"At equilibrium, concentrations of reactants and products are:", opts:["Constant","Oscillating wildly","Always equal"], a:0, exp:"They are constant (but not necessarily equal)."},
+  {type:"mcq", q:"If products are greater at equilibrium, we say equilibrium lies:", opts:["Left","Right","Center"], a:1, exp:"More products → equilibrium to the right."},
+  {type:"mcq", q:"Heating NH₄Cl ⇌ NH₃ + HCl shifts equilibrium:", opts:["Left (toward NH₄Cl)","Right (toward NH₃ + HCl)","No effect"], a:1, exp:"Heating favors decomposition → right."},
+  {type:"mcq", q:"Cooling the system shifts NH₄Cl ⇌ NH₃ + HCl:", opts:["Right","Left","No change"], a:1, exp:"Cooling favors NH₄Cl → left."},
+  {type:"mcq", q:"Equilibrium requires what kind of system?", opts:["Open","Closed","Isolated only"], a:1, exp:"A closed system is needed to reach equilibrium."},
+  {type:"mcq", q:"In a reversible pair, one direction is endothermic and the other is:", opts:["Also endothermic","Exothermic","Neither"], a:1, exp:"They are opposite in heat flow."},
+  {type:"mcq", q:"Heating hydrated CuSO₄ drives the reaction:", opts:["Left (to blue crystals)","Right (to anhydrous + water)","No change"], a:1, exp:"Endothermic dehydration proceeds on heating."},
+  {type:"mcq", q:"Adding water to anhydrous CuSO₄ shifts equilibrium:", opts:["Right","Left","Has no effect"], a:1, exp:"Hydration forms blue crystals (left)."},
+  {type:"mcq", q:"The backward reaction in the CuSO₄ example is:", opts:["Endothermic","Exothermic","Neither"], a:1, exp:"Hydration releases heat."},
+  {type:"mcq", q:"Dynamic equilibrium means:", opts:["Reactions stop","Rates equal; no net change","Only products exist"], a:1, exp:"Both directions continue at equal rates."},
+  {type:"mcq", q:"Which statement is true at equilibrium?", opts:["Reactant and product concentrations are identical","No further reactions occur","Concentrations are constant"], a:2, exp:"They are constant, not necessarily equal."},
+  {type:"mcq", q:"In a closed system, gases:", opts:["Can escape","Cannot escape","Must be pumped out"], a:1, exp:"Nothing escapes."},
+  {type:"mcq", q:"Position of equilibrium refers to:", opts:["Which side has more at equilibrium","How fast the reaction is","Activation energy"], a:0, exp:"It indicates relative amounts of reactants/products."},
+  {type:"mcq", q:"If cooling increases NH₄Cl amount, the equilibrium lies to the:", opts:["Right","Left","Neither"], a:1, exp:"More reactant → left."},
+  {type:"mcq", q:"Which pair names the directions correctly?", opts:["Forward = products → reactants; Backward = reactants → products","Forward = reactants → products; Backward = products → reactants","Both the same"], a:1, exp:"That is the standard convention."},
+
+  // True / False (21–30)
+  {type:"tf", q:"CO₂ normally decomposes back to C and O₂ in a one-way reaction.", a:false, exp:"One-way arrow indicates no reverse under normal conditions."},
+  {type:"tf", q:"At equilibrium, both forward and backward reactions are still occurring.", a:true, exp:"They continue at equal rates."},
+  {type:"tf", q:"Equal concentrations are required for equilibrium.", a:false, exp:"Only equal rates are required; amounts can differ."},
+  {type:"tf", q:"If products dominate, equilibrium lies to the right.", a:true, exp:"‘Right’ means more products."},
+  {type:"tf", q:"Heating always shifts equilibrium to the left.", a:false, exp:"Effect depends on which direction is endothermic."},
+  {type:"tf", q:"A closed system is necessary to reach equilibrium.", a:true, exp:"Escaping products prevent equilibrium."},
+  {type:"tf", q:"Endothermic forward implies exothermic backward.", a:true, exp:"Opposite heat changes for reverse directions."},
+  {type:"tf", q:"Hydrated copper sulfate is blue; anhydrous is white.", a:true, exp:"Those are the observed colors."},
+  {type:"tf", q:"Adding water to anhydrous CuSO₄ reforms blue crystals.", a:true, exp:"Hydration drives left and releases heat."},
+  {type:"tf", q:"At the beginning of NH₄Cl ⇌ NH₃ + HCl, backward rate is fastest.", a:false, exp:"Backward starts near zero since products are absent."},
+
+  // Fill‑in (31–40)
+  {type:"fill", q:"Reversible reactions are written with a ______ arrow.", text:"double", exp:"Use ⇌ (double arrow)."},
+  {type:"fill", q:"Equilibrium occurs when forward and backward ______ are equal.", text:"rates", exp:"Equal rates define equilibrium."},
+  {type:"fill", q:"If more products are present at equilibrium, it lies to the ______.", text:"right", exp:"Right = products favored."},
+  {type:"fill", q:"Equilibrium requires a ______ system.", text:"closed", exp:"No substances can escape."},
+  {type:"fill", q:"In NH₄Cl ⇌ NH₃ + HCl, heating shifts equilibrium to the ______.", text:"right", exp:"Heating favors decomposition."},
+  {type:"fill", q:"A reaction that absorbs heat is ______.", text:"endothermic", exp:"Endothermic absorbs heat."},
+  {type:"fill", q:"A reaction that releases heat is ______.", text:"exothermic", exp:"Exothermic releases heat."},
+  {type:"fill", q:"Hydrated copper sulfate is ______ in color.", text:"blue", exp:"Blue crystals when hydrated."},
+  {type:"fill", q:"Removing heat and adding water reforms the ______ crystals.", text:"blue", exp:"Hydration reforms blue CuSO₄·5H₂O."},
+  {type:"fill", q:"The backward reaction for CuSO₄ hydration is ______ (heat change).", text:"exothermic", exp:"Hydration releases heat."}
+];
+
+let i=0, score=0, order=[];
+function startGame(){
+  order = [...Array(Q.length).keys()].sort(()=>Math.random()-0.5);
+  i = 0; score = 0;
+  document.getElementById("scorebar").textContent = `Question ${i+1} / ${Q.length}  Score: ${score}`;
+  renderQ();
+}
+function renderQ(){
+  const q = Q[order[i]];
+  let html = `<div class='question-box'><p><strong>Q${i+1}:</strong> ${q.q}</p>`;
+  if(q.type==="mcq"){
+    q.opts.forEach((opt,idx)=> html += `<label><input type="radio" name="opt" value="${idx}"> ${opt}</label><br>`);
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type==="tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input type="text" id="fill" placeholder="Type answer"> <button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  const area = document.getElementById("game-area");
+  const inner = document.getElementById("game-area-inner");
+  if(inner){ inner.innerHTML = html; } else { area.insertAdjacentHTML("beforeend", `<div id="game-area-inner">${html}</div>`); }
+}
+function checkMCQ(){
+  const q = Q[order[i]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select an answer."; fb.className="feedback incorrect"; return;}
+  if(parseInt(sel.value) === q.a){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function checkTF(){
+  const q = Q[order[i]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select True or False."; fb.className="feedback incorrect"; return;}
+  const val = sel.value === "true";
+  if(val === q.a){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function checkFill(){
+  const q = Q[order[i]];
+  const ans = (document.getElementById("fill").value||"").trim().toLowerCase();
+  const fb = document.getElementById("feedback");
+  if(!ans){ fb.textContent = "Enter an answer."; fb.className="feedback incorrect"; return;}
+  function norm(s){ return s.replace(/\s+/g,"").toLowerCase(); }
+  const ok = norm(ans).includes(norm(q.text));
+  if(ok){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function nextQ(){
+  i++;
+  if(i < Q.length){
+    document.getElementById("scorebar").textContent = `Question ${i+1} / ${Q.length}  Score: ${score}`;
+    renderQ();
+  }else{
+    endGame();
+  }
+}
+function endGame(){
+  const game = document.getElementById("game-area");
+  game.querySelector("#game-area-inner").innerHTML = `<h3>Finished!</h3><p>Your score: <b>${score} / ${Q.length}</b></p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${Q.length}`;
+}
+</script>
+</body>
+</html>
