@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metals and Non-Metals — Notes & Quiz</title>
+<style>
+:root{--brand:#0284c7;--accent:#0c4a6e;--bg:#f0f9ff;--ink:#111827;}
+body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--ink);margin:0;line-height:1.6;}
+header{background:linear-gradient(90deg,#0284c7,#0ea5e9);color:#fff;text-align:center;padding:18px;font-size:1.4rem;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 14px 28px;}
+.video{display:flex;justify-content:center;margin:18px 0;}
+iframe{width:88%;max-width:1000px;height:480px;border-radius:14px;border:2px solid #bae6fd;box-shadow:0 2px 12px rgba(2,132,199,.2)}
+.card{background:#fff;border-radius:16px;box-shadow:0 6px 18px rgba(0,0,0,.06);padding:20px;margin:18px 0;}
+h2{color:var(--accent);border-bottom:2px solid #bae6fd;padding-bottom:6px;margin-bottom:12px;}
+details{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;}
+summary{cursor:pointer;font-weight:700;color:#075985;}
+button{background:var(--brand);color:#fff;border:none;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer;transition:.25s;margin-top:8px;}
+button:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(2,132,199,.25)}
+.feedback{margin-top:8px;font-weight:bold;}
+.correct{color:#16a34a}.incorrect{color:#dc2626}
+.scorebar{margin-top:10px;font-size:.95rem;}
+.question-box{border:1px solid #e5e7eb;border-radius:12px;background:#fff;padding:12px;margin-top:14px;}
+@media(max-width:760px){iframe{width:96%;height:240px}}
+</style>
+</head>
+<body>
+<header>Metals and Non-Metals — Periodic Table, Properties & Reactivity</header>
+
+<div class="video">
+<iframe src="https://www.youtube.com/embed/waJh4buNZOo" title="Metals and Non-Metals" allowfullscreen></iframe>
+</div>
+
+<div class="wrap">
+<section class="card">
+<h2>Notes (Rewritten in English)</h2>
+<details open>
+<summary>Location and ions</summary>
+<ul>
+<li>Most elements in the periodic table are <b>metals</b>, mainly found at the <b>bottom left</b>.</li>
+<li>Metals form <b>positive ions</b> (e.g., Ca²⁺), while non-metals form <b>negative ions</b> or none (e.g., Cl⁻, carbon).</li>
+<li>Atoms aim for a <b>full outer electron shell</b> to be stable.</li>
+<li>Elements on the left lose electrons easily; those on the right gain or share them.</li>
+</ul>
+</details>
+
+<details>
+<summary>Why metals form positive ions</summary>
+<ul>
+<li>Metals have <b>few outer electrons</b> — easy to lose and form positive ions.</li>
+<li>Example: Calcium (Group 2) → loses 2 outer electrons → Ca²⁺.</li>
+<li>Non-metals like chlorine would need to lose 7 electrons to be positive — too much energy, so it doesn’t happen.</li>
+</ul>
+</details>
+
+<details>
+<summary>Reactivity of metals</summary>
+<ul>
+<li>Metals become <b>more reactive further down a group</b>.</li>
+<li>Lower elements have <b>more electron shells</b>; outer electrons are farther from the nucleus.</li>
+<li>Weaker attraction between nucleus and electrons → easier to lose electrons → higher reactivity.</li>
+<li>Example: Lead (Pb) has 6 shells, so it loses outer electrons easily.</li>
+</ul>
+</details>
+
+<details>
+<summary>Physical properties of metals</summary>
+<ul>
+<li>Metals have <b>metallic bonding</b> — strong bonds responsible for their key properties.</li>
+<li>They are <b>strong, malleable</b> (can bend or be hammered), and <b>good conductors</b> of heat and electricity.</li>
+<li>Most have <b>high melting and boiling points</b> (many above 2000°C).</li>
+<li>Other features: <b>shiny</b> and <b>sonorous</b> (ring when struck).</li>
+</ul>
+</details>
+
+<details>
+<summary>Physical properties of non-metals</summary>
+<ul>
+<li><b>Dull</b> in appearance, <b>brittle</b> (break easily).</li>
+<li><b>Low melting and boiling points</b>; many are gases at room temperature.</li>
+<li><b>Poor conductors</b> of heat and electricity.</li>
+<li><b>Lower density</b> than metals — lighter for the same volume.</li>
+</ul>
+</details>
+
+<details>
+<summary>Transition metals</summary>
+<ul>
+<li>Found in the <b>center of the periodic table</b> (green area).</li>
+<li>Have typical metal properties plus extras:</li>
+<ul>
+<li>Can form <b>multiple ions</b> (e.g., Cr²⁺, Cr³⁺, Cr⁶⁺).</li>
+<li>Often form <b>colored compounds</b> (blue, green, orange, etc.).</li>
+<li>Act as <b>catalysts</b> — speed up reactions without being used up.</li>
+</ul>
+<li>Examples: <b>Iron</b> (Haber process for ammonia) and <b>Nickel</b> (hydrogenation to make margarine).</li>
+</ul>
+</details>
+</section>
+
+<section class="card">
+<h2>Quiz (40 Questions)</h2>
+<div id="game-area">
+<button onclick="startGame()">Start</button>
+<div class="scorebar" id="scorebar">Not started</div>
+</div>
+</section>
+</div>
+
+<script>
+const Q=[
+{type:"mcq",q:"Where are most metals found on the periodic table?",opts:["Top right","Bottom left","Top center"],a:1,exp:"Metals are mainly on the bottom left."},
+{type:"mcq",q:"What kind of ions do metals form?",opts:["Positive","Negative","Neutral"],a:0,exp:"Metals form positive ions."},
+{type:"mcq",q:"What kind of ions do non-metals usually form?",opts:["Positive","Negative","Neutral"],a:1,exp:"Non-metals form negative ions or none."},
+{type:"mcq",q:"Why do atoms react?",opts:["To gain electrons","To get a full outer shell","To lose mass"],a:1,exp:"Atoms aim for a full outer shell."},
+{type:"mcq",q:"How many outer electrons does calcium have?",opts:["1","2","7"],a:1,exp:"Calcium has 2 outer electrons."},
+{type:"mcq",q:"What ion does calcium form?",opts:["Ca⁺","Ca²⁺","Ca³⁺"],a:1,exp:"Calcium forms a Ca²⁺ ion."},
+{type:"mcq",q:"Why doesn’t chlorine form a positive ion?",opts:["It’s unreactive","It would need to lose 7 electrons","It’s too small"],a:1,exp:"Losing 7 electrons requires too much energy."},
+{type:"mcq",q:"What happens to reactivity of metals down a group?",opts:["Increases","Decreases","Stays the same"],a:0,exp:"Reactivity increases down a group."},
+{type:"mcq",q:"Why are lower metals more reactive?",opts:["More protons","Outer electrons farther from nucleus","Heavier atoms"],a:1,exp:"Weaker attraction to distant outer electrons."},
+{type:"mcq",q:"How many electron shells does lead (Pb) have?",opts:["2","4","6"],a:2,exp:"Lead has 6 shells."},
+{type:"mcq",q:"What type of bonding do metals have?",opts:["Ionic","Metallic","Covalent"],a:1,exp:"Metals have metallic bonding."},
+{type:"mcq",q:"What property does metallic bonding give?",opts:["Weakness","Strength","Transparency"],a:1,exp:"Metallic bonds are strong."},
+{type:"mcq",q:"What does 'malleable' mean?",opts:["Can be bent or shaped","Easily broken","Attracts magnets"],a:0,exp:"Malleable means can be hammered into shape."},
+{type:"mcq",q:"Are metals good or poor conductors?",opts:["Good","Poor","Neither"],a:0,exp:"Metals are good conductors of heat and electricity."},
+{type:"mcq",q:"Do metals have high or low melting points?",opts:["High","Low","None"],a:0,exp:"Metals have high melting points."},
+{type:"mcq",q:"What does 'sonorous' mean?",opts:["Makes a ringing sound","Shiny surface","Easily melted"],a:0,exp:"Sonorous metals ring when struck."},
+{type:"mcq",q:"What appearance do non-metals usually have?",opts:["Shiny","Dull","Bright"],a:1,exp:"Non-metals are dull."},
+{type:"mcq",q:"Are non-metals brittle or malleable?",opts:["Brittle","Malleable","Flexible"],a:0,exp:"They are brittle and break easily."},
+{type:"mcq",q:"Do non-metals have high or low melting points?",opts:["High","Low","Same as metals"],a:1,exp:"They have low melting points."},
+{type:"mcq",q:"What is the density of non-metals compared to metals?",opts:["Higher","Lower","Equal"],a:1,exp:"Non-metals have lower density."},
+{type:"tf",q:"Metals are mostly located on the right of the periodic table.",a:false,exp:"They are on the left side."},
+{type:"tf",q:"Non-metals tend to form negative ions.",a:true,exp:"Yes, like chloride (Cl⁻)."},
+{type:"tf",q:"Calcium easily loses two electrons to form Ca²⁺.",a:true,exp:"Group 2 metals lose two electrons."},
+{type:"tf",q:"Metals at the bottom of the periodic table are less reactive.",a:false,exp:"They are more reactive."},
+{type:"tf",q:"Metallic bonds are weak.",a:false,exp:"They are strong bonds."},
+{type:"tf",q:"Metals are poor conductors of heat.",a:false,exp:"They conduct heat well."},
+{type:"tf",q:"Non-metals often exist as gases at room temperature.",a:true,exp:"Yes, many are gaseous."},
+{type:"tf",q:"Non-metals have high density.",a:false,exp:"They have low density."},
+{type:"tf",q:"Transition metals are found in the center of the periodic table.",a:true,exp:"Yes, they occupy the central block."},
+{type:"tf",q:"Transition metals can form more than one ion.",a:true,exp:"Example: Cr²⁺, Cr³⁺, Cr⁶⁺."},
+{type:"fill",q:"Metals form ______ ions when they react.",text:"positive",exp:"Metals lose electrons forming positive ions."},
+{type:"fill",q:"Non-metals form ______ ions or share electrons.",text:"negative",exp:"Non-metals gain electrons."},
+{type:"fill",q:"Metals become more ______ down a group.",text:"reactive",exp:"Reactivity increases down a group."},
+{type:"fill",q:"The strong bond in metals is called ______ bonding.",text:"metallic",exp:"Metals have metallic bonding."},
+{type:"fill",q:"Metals can be bent or hammered because they are ______.",text:"malleable",exp:"Malleable metals change shape without breaking."},
+{type:"fill",q:"A metal that rings when hit is called ______.",text:"sonorous",exp:"Sonorous metals produce a ringing sound."},
+{type:"fill",q:"Transition metals can act as ______ in reactions.",text:"catalysts",exp:"They speed up reactions without being used up."},
+{type:"fill",q:"Iron is a catalyst in the ______ process.",text:"haber",exp:"Used in ammonia production."},
+{type:"fill",q:"Nickel is used in hydrogenation to make ______.",text:"margarine",exp:"Nickel catalyzes hydrogenation for margarine."},
+{type:"fill",q:"Transition metal compounds are often ______ in color.",text:"colored",exp:"They form colored compounds."}
+];
+let i=0,score=0,order=[];
+function startGame(){order=[...Array(Q.length).keys()].sort(()=>Math.random()-0.5);i=0;score=0;document.getElementById("scorebar").textContent=`Question ${i+1}/${Q.length}  Score:${score}`;renderQ();}
+function renderQ(){const q=Q[order[i]];let html=`<div class='question-box'><p><strong>Q${i+1}:</strong> ${q.q}</p>`;
+if(q.type==="mcq"){q.opts.forEach((o,x)=>html+=`<label><input type='radio' name='opt' value='${x}'> ${o}</label><br>`);html+=`<button onclick='checkMCQ()'>Submit</button>`;}
+else if(q.type==="tf"){html+=`<label><input type='radio' name='opt' value='true'> True</label><br><label><input type='radio' name='opt' value='false'> False</label><br><button onclick='checkTF()'>Submit</button>`;}
+else{html+=`<input type='text' id='fill' placeholder='Type answer'> <button onclick='checkFill()'>Submit</button>`;}
+html+=`<div id='feedback' class='feedback'></div></div>`;
+const a=document.getElementById("game-area"),inner=document.getElementById("game-area-inner");
+if(inner){inner.innerHTML=html;}else{a.insertAdjacentHTML("beforeend",`<div id='game-area-inner'>${html}</div>`);}}
+function checkMCQ(){const q=Q[order[i]],sel=document.querySelector("input[name='opt']:checked"),fb=document.getElementById("feedback");if(!sel){fb.textContent="Select an answer.";fb.className="feedback incorrect";return;}
+if(parseInt(sel.value)===q.a){fb.textContent="✅ Correct! "+q.exp;fb.className="feedback correct";score++;}else{fb.textContent="❌ Incorrect. "+q.exp;fb.className="feedback incorrect";}setTimeout(nextQ,1200);}
+function checkTF(){const q=Q[order[i]],sel=document.querySelector("input[name='opt']:checked"),fb=document.getElementById("feedback");if(!sel){fb.textContent="Select True or False.";fb.className="feedback incorrect";return;}
+const val=sel.value==="true";if(val===q.a){fb.textContent="✅ Correct! "+q.exp;fb.className="feedback correct";score++;}else{fb.textContent="❌ Incorrect. "+q.exp;fb.className="feedback incorrect";}setTimeout(nextQ,1200);}
+function checkFill(){const q=Q[order[i]],ans=(document.getElementById("fill").value||"").trim().toLowerCase(),fb=document.getElementById("feedback");if(!ans){fb.textContent="Enter an answer.";fb.className="feedback incorrect";return;}
+const ok=ans.includes(q.text.toLowerCase());if(ok){fb.textContent="✅ Correct! "+q.exp;fb.className="feedback correct";score++;}else{fb.textContent="❌ Incorrect. "+q.exp;fb.className="feedback incorrect";}setTimeout(nextQ,1200);}
+function nextQ(){i++;if(i<Q.length){document.getElementById("scorebar").textContent=`Question ${i+1}/${Q.length}  Score:${score}`;renderQ();}else{endGame();}}
+function endGame(){const g=document.getElementById("game-area");g.querySelector("#game-area-inner").innerHTML=`<h3>Finished!</h3><p>Your score: <b>${score}/${Q.length}</b></p><button onclick='startGame()'>Play again</button>`;document.getElementById("scorebar").textContent=`Finished. Final Score: ${score}/${Q.length}`;}
+</script>
+</body>
+</html>
