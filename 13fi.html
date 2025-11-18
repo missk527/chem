@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formation of Ions</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --ink:#1f2937;
+      --paper:#fafafa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --good:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(135deg,var(--brand),#6366f1);
+      color:white;
+      padding:20px 16px;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);
+    }
+    header h1{margin:0;font-size:clamp(1.2rem,2.5vw,1.8rem);letter-spacing:.5px}
+    .wrap{max-width:1000px;margin:0 auto;padding:16px}
+    .video-container{
+      display:flex;justify-content:center;align-items:center; margin:18px 0;
+    }
+    iframe{
+      width:100%;max-width:900px;height:480px;border:0;border-radius:12px;
+      box-shadow:0 8px 24px rgba(2,6,23,.15);
+      background:#000;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(2,6,23,.08);
+      margin:16px 0;
+    }
+    h2{
+      margin:.2rem 0 .8rem;
+      color:#0f172a;
+      font-size:1.2rem;
+    }
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{font-weight:700;color:#0f766e;cursor:pointer}
+    ul{margin:.5rem 0 .5rem 1.2rem}
+    .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#e0f2fe;color:#075985;font-weight:600;font-size:.8rem;margin-right:.4rem}
+    .muted{color:var(--muted)}
+    .quiz h2{color:#0f172a}
+    .btn{
+      background:var(--brand);color:#fff;border:0;border-radius:10px;
+      padding:10px 14px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(14,165,233,.35);
+      transition:transform .06s ease,box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(14,165,233,.45)}
+    .question-box{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin-top:12px;background:#fff}
+    .feedback{margin-top:8px;font-weight:700}
+    .correct{color:var(--good)}
+    .incorrect{color:var(--bad)}
+    code{background:#f1f5f9;border-radius:6px;padding:2px 6px}
+    .footer{font-size:.85rem;color:var(--muted);text-align:center;margin:16px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>13. Formation of Ions</h1>
+  </header>
+
+  <div class="wrap">
+    <div class="video-container card">
+      <!-- Requested video link -->
+      <iframe src="https://www.youtube.com/embed/1ubt3SHZmi0" title="Formation of Ions Video" allowfullscreen></iframe>
+    </div>
+
+    <section class="card">
+      <h2>Key Notes (English)</h2>
+      <p class="muted">Adapted from the provided speech. Focus: how ions are formed, which atoms form ions most easily, and how to write ion equations.</p>
+
+      <details open>
+        <summary>1) What is an Ion?</summary>
+        <ul>
+          <li>An <strong>ion</strong> is a <strong>charged particle</strong>.</li>
+          <li>It can be:
+            <ul>
+              <li>a single atom, e.g. <code>Na⁺</code>, or</li>
+              <li>a group of atoms (a polyatomic ion), e.g. hydroxide <code>OH⁻</code>.</li>
+            </ul>
+          </li>
+          <li>Ions are formed when atoms <strong>gain or lose electrons</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) Why Do Atoms Form Ions?</summary>
+        <ul>
+          <li>Atoms form ions to achieve a <strong>full outer electron shell</strong>.</li>
+          <li>A full outer shell makes the atom (or ion) more <strong>stable</strong>.</li>
+          <li>Forming ions involves <strong>gaining</strong> or <strong>losing</strong> electrons, which always involves energy.</li>
+          <li>Atoms that only need to gain or lose <strong>one or two electrons</strong> need less energy to form ions, so they are <strong>more likely</strong> to become ions.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Group Number and Outer Electrons</summary>
+        <ul>
+          <li>In the periodic table, the <strong>group number</strong> tells you how many electrons an atom has in its <strong>outer shell</strong> (for main-group elements).</li>
+          <li>Examples:
+            <ul>
+              <li><strong>Group 1</strong> atoms → 1 electron in the outer shell.</li>
+              <li><strong>Group 2</strong> atoms → 2 electrons in the outer shell.</li>
+              <li><strong>Group 6</strong> atoms → 6 electrons in the outer shell.</li>
+              <li><strong>Group 7</strong> atoms → 7 electrons in the outer shell.</li>
+            </ul>
+          </li>
+          <li>To become stable, atoms <strong>lose or gain electrons</strong> until their outer shell is full.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) Which Groups Form Ions Easily?</summary>
+        <ul>
+          <li>Because forming ions costs energy, atoms that only change by <strong>1 or 2 electrons</strong> form ions most easily.</li>
+          <li><span class="pill">Group 1 (alkali metals)</span>
+            <ul>
+              <li>Have 1 outer electron.</li>
+              <li>Easily <strong>lose 1 electron</strong>.</li>
+              <li>Form <strong>1⁺ ions</strong> (e.g. <code>Na → Na⁺ + e⁻</code>).</li>
+            </ul>
+          </li>
+          <li><span class="pill">Group 2</span>
+            <ul>
+              <li>Have 2 outer electrons.</li>
+              <li>Easily <strong>lose 2 electrons</strong>.</li>
+              <li>Form <strong>2⁺ ions</strong> (e.g. <code>Mg → Mg²⁺ + 2e⁻</code>).</li>
+            </ul>
+          </li>
+          <li><span class="pill">Group 6</span>
+            <ul>
+              <li>Have 6 outer electrons.</li>
+              <li>Need to <strong>gain 2 electrons</strong> to fill the outer shell.</li>
+              <li>Form <strong>2⁻ ions</strong> (e.g. <code>O + 2e⁻ → O²⁻</code>).</li>
+            </ul>
+          </li>
+          <li><span class="pill">Group 7</span>
+            <ul>
+              <li>Have 7 outer electrons.</li>
+              <li>Need to <strong>gain 1 electron</strong>.</li>
+              <li>Form <strong>1⁻ ions</strong> (e.g. <code>Cl + e⁻ → Cl⁻</code>).</li>
+            </ul>
+          </li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) Groups that Rarely Form Simple Ions</summary>
+        <ul>
+          <li>Elements in <strong>groups 3, 4 and 5</strong> would need to lose or gain <strong>3 or 4 electrons</strong> to get a full outer shell.</li>
+          <li>This would require a lot of energy, so they are <strong>much less likely</strong> to form simple ions.</li>
+          <li>Therefore, we do not usually see simple ions like <code>X³⁺</code> or <code>X⁴⁻</code> from these groups in basic examples.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>6) Writing Ion Formation Equations</summary>
+        <ul>
+          <li>We can write <strong>symbol equations</strong> to show atoms gaining or losing electrons when forming ions.</li>
+          <li>General ideas:
+            <ul>
+              <li>If the atom <strong>loses electrons</strong> and becomes a <strong>positive ion</strong>, the electrons are written on the <strong>right-hand side</strong>.</li>
+              <li>If the atom <strong>gains electrons</strong> and becomes a <strong>negative ion</strong>, the electrons are written on the <strong>left-hand side</strong>.</li>
+            </ul>
+          </li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>7) Examples – Losing Electrons (Cations)</summary>
+        <ul>
+          <li><span class="pill">Sodium (Group 1)</span></li>
+          <li>A sodium atom easily loses 1 electron:
+            <ul>
+              <li><code>Na → Na⁺ + e⁻</code></li>
+            </ul>
+          </li>
+          <li><span class="pill">Magnesium (Group 2)</span></li>
+          <li>A magnesium atom loses 2 electrons:
+            <ul>
+              <li><code>Mg → Mg²⁺ + 2e⁻</code></li>
+            </ul>
+          </li>
+          <li>In both examples, the electrons appear on the <strong>right</strong> because they are being <strong>lost</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>8) Examples – Gaining Electrons (Anions)</summary>
+        <ul>
+          <li><span class="pill">Chlorine (Group 7)</span></li>
+          <li>A chlorine atom gains 1 electron:
+            <ul>
+              <li><code>Cl + e⁻ → Cl⁻</code></li>
+            </ul>
+          </li>
+          <li><span class="pill">Oxygen (Group 6)</span></li>
+          <li>An oxygen atom gains 2 electrons:
+            <ul>
+              <li><code>O + 2e⁻ → O²⁻</code></li>
+            </ul>
+          </li>
+          <li>In both examples, the electrons are written on the <strong>left</strong> because they are being <strong>gained</strong> by the atom.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>9) Charges and Electron Changes</summary>
+        <ul>
+          <li>If an atom <strong>loses electrons</strong>, it becomes a <strong>positively charged ion (cation)</strong>:
+            <ul>
+              <li>Losing 1 electron → <code>1⁺</code> charge.</li>
+              <li>Losing 2 electrons → <code>2⁺</code> charge.</li>
+            </ul>
+          </li>
+          <li>If an atom <strong>gains electrons</strong>, it becomes a <strong>negatively charged ion (anion)</strong>:
+            <ul>
+              <li>Gaining 1 electron → <code>1⁻</code> charge.</li>
+              <li>Gaining 2 electrons → <code>2⁻</code> charge.</li>
+            </ul>
+          </li>
+          <li>The <strong>size of the charge</strong> equals the <strong>number of electrons gained or lost</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>10) Energy and Likely Ions</summary>
+        <ul>
+          <li>Forming ions always needs energy to move electrons.</li>
+          <li>Atoms that need to move fewer electrons (<strong>1 or 2</strong>) are more likely to form simple ions.</li>
+          <li>Therefore, simple ions in basic chemistry usually come from:
+            <ul>
+              <li><strong>Groups 1 and 2</strong> (losing electrons, forming positive ions).</li>
+              <li><strong>Groups 6 and 7</strong> (gaining electrons, forming negative ions).</li>
+            </ul>
+          </li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card quiz">
+      <h2>Quiz (40 Questions)</h2>
+      <p class="muted">Mix of multiple choice and short answer. Based strictly on the speech and notes above.</p>
+      <div id="game-area">
+        <button class="btn" onclick="startGame()">Start Quiz</button>
+      </div>
+    </section>
+
+    <p class="footer">© 2025 Ions Formation Study Helper</p>
+  </div>
+
+<script>
+// 40 quiz questions (based on the ion formation speech/notes)
+const questions = [
+  // 1
+  {type:"mcq", question:"What is an ion?", options:["A neutral atom","A charged particle","A type of molecule with no electrons"], answer:1,
+   explanation:"An ion is defined as a charged particle."},
+  // 2
+  {type:"mcq", question:"Which of the following can be an ion?", options:["A single atom only","A group of atoms only","Either a single atom or a group of atoms"], answer:2,
+   explanation:"Ions can be single atoms like Na⁺ or groups of atoms like OH⁻."},
+  // 3
+  {type:"fill", question:"Ions are formed when atoms ______ or lose electrons.", answerText:"gain",
+   explanation:"Ions form when atoms gain or lose electrons to get a full outer shell."},
+  // 4
+  {type:"fill", question:"Atoms form ions in order to have a full ______ shell.", answerText:"outer",
+   explanation:"They aim for a full outer (electron) shell for stability."},
+  // 5
+  {type:"mcq", question:"Why does having a full outer shell make an atom or ion more likely to be stable?", options:["Because it has more mass","Because it is at a lower energy state","Because it becomes radioactive"], answer:1,
+   explanation:"A full outer shell corresponds to a lower energy, more stable arrangement of electrons."},
+  // 6
+  {type:"mcq", question:"In the periodic table, what does the group number tell you (for main-group elements)?", options:["Number of protons","Number of outer-shell electrons","Number of neutrons"], answer:1,
+   explanation:"Group number gives the number of electrons in the outermost shell."},
+  // 7
+  {type:"mcq", question:"How many outer electrons do group 1 elements have?", options:["1","2","7"], answer:0,
+   explanation:"Group 1 elements have one electron in the outer shell."},
+  // 8
+  {type:"mcq", question:"How many outer electrons do group 2 elements have?", options:["1","2","6"], answer:1,
+   explanation:"Group 2 elements have two electrons in the outer shell."},
+  // 9
+  {type:"mcq", question:"How many outer electrons do group 7 elements have?", options:["5","6","7"], answer:2,
+   explanation:"Group 7 elements have seven outer-shell electrons."},
+  // 10
+  {type:"fill", question:"Group 6 elements have ______ electrons in the outer shell.", answerText:"6",
+   explanation:"Group 6 atoms have six electrons in their outermost shell."},
+  // 11
+  {type:"mcq", question:"Why are atoms that only need to lose or gain 1 or 2 electrons more likely to form ions?", options:["It requires less energy","They are always gases","They have more neutrons"], answer:0,
+   explanation:"Moving fewer electrons means less energy is needed to form the ion."},
+  // 12
+  {type:"mcq", question:"What charge do group 1 metal ions usually form?", options:["1⁺","1⁻","2⁺"], answer:0,
+   explanation:"Group 1 metals lose one electron and form 1⁺ ions."},
+  // 13
+  {type:"mcq", question:"What charge do group 2 metal ions usually form?", options:["1⁺","2⁺","2⁻"], answer:1,
+   explanation:"Group 2 metals lose two electrons and form 2⁺ ions."},
+  // 14
+  {type:"mcq", question:"What charge do group 6 non-metal ions usually form?", options:["1⁺","1⁻","2⁻"], answer:2,
+   explanation:"Group 6 non-metals gain two electrons and form 2⁻ ions."},
+  // 15
+  {type:"mcq", question:"What charge do group 7 non-metal ions usually form?", options:["1⁺","1⁻","3⁺"], answer:1,
+   explanation:"Group 7 non-metals gain one electron and form 1⁻ ions."},
+  // 16
+  {type:"fill", question:"Group 1 elements are also called the ______ metals.", answerText:"alkali",
+   explanation:"Group 1 elements are known as the alkali metals."},
+  // 17
+  {type:"mcq", question:"Why do elements in groups 3, 4 and 5 rarely form simple ions?", options:["They are not reactive","They would need to lose or gain 3 or 4 electrons, which requires a lot of energy","They have no electrons"], answer:1,
+   explanation:"Moving 3 or 4 electrons costs a lot of energy, so simple ions from these groups are uncommon."},
+  // 18
+  {type:"fill", question:"Forming ions always involves using ______ to move electrons.", answerText:"energy",
+   explanation:"Energy is needed to remove or add electrons when forming ions."},
+  // 19
+  {type:"mcq", question:"In the ion equation Na → Na⁺ + e⁻, what happens to the electron?", options:["It is gained","It is lost","Nothing changes"], answer:1,
+   explanation:"Sodium loses one electron to form Na⁺."},
+  // 20
+  {type:"fill", question:"When an atom loses electrons to form a positive ion, the electrons are written on the ______ side of the equation.", answerText:"right",
+   explanation:"Electrons lost appear on the right-hand side of the equation."},
+  // 21
+  {type:"mcq", question:"Which of the following shows a chlorine atom gaining one electron correctly?", options:["Cl → Cl⁺ + e⁻","Cl + e⁻ → Cl⁻","Cl + e⁻ → Cl⁺ + e⁻"], answer:1,
+   explanation:"Cl + e⁻ → Cl⁻ shows chlorine gaining one electron to form a 1⁻ ion."},
+  // 22
+  {type:"fill", question:"When an atom gains electrons to form a negative ion, the electrons are written on the ______ side of the equation.", answerText:"left",
+   explanation:"Electrons gained are written on the left-hand side."},
+  // 23
+  {type:"mcq", question:"Which equation correctly shows magnesium forming an ion?", options:["Mg → Mg²⁺ + 2e⁻","Mg + 2e⁻ → Mg²⁺","Mg → Mg⁺ + e⁻"], answer:0,
+   explanation:"Magnesium loses two electrons: Mg → Mg²⁺ + 2e⁻."},
+  // 24
+  {type:"mcq", question:"Which equation correctly shows oxygen forming an ion?", options:["O → O²⁺ + 2e⁻","O + 2e⁻ → O²⁻","O + e⁻ → O⁺ + e⁻"], answer:1,
+   explanation:"Oxygen gains two electrons: O + 2e⁻ → O²⁻."},
+  // 25
+  {type:"fill", question:"A positively charged ion is called a ______.", answerText:"cation",
+   explanation:"Positive ions are called cations."},
+  // 26
+  {type:"fill", question:"A negatively charged ion is called an ______.", answerText:"anion",
+   explanation:"Negative ions are called anions."},
+  // 27
+  {type:"mcq", question:"What happens to the charge of an atom when it loses one electron?", options:["It becomes 1⁺","It becomes 1⁻","It stays neutral"], answer:0,
+   explanation:"Losing one electron leaves one extra proton, so the ion is 1⁺."},
+  // 28
+  {type:"mcq", question:"What happens to the charge of an atom when it gains two electrons?", options:["It becomes 2⁺","It becomes 2⁻","It becomes 1⁺"], answer:1,
+   explanation:"Gaining two electrons makes the ion 2⁻."},
+  // 29
+  {type:"fill", question:"In the equation Na → Na⁺ + e⁻, sodium is forming a ______ ion.", answerText:"positive",
+   explanation:"Na⁺ is a positive ion (a cation)."},
+  // 30
+  {type:"fill", question:"In the equation Cl + e⁻ → Cl⁻, chlorine is forming a ______ ion.", answerText:"negative",
+   explanation:"Cl⁻ is a negative ion (an anion)."},
+  // 31
+  {type:"mcq", question:"Which group on the periodic table is most likely to form 1⁺ ions?", options:["Group 1","Group 6","Group 7"], answer:0,
+   explanation:"Group 1 metals typically form 1⁺ ions."},
+  // 32
+  {type:"mcq", question:"Which group on the periodic table is most likely to form 2⁻ ions?", options:["Group 2","Group 6","Group 3"], answer:1,
+   explanation:"Group 6 non-metals often form 2⁻ ions."},
+  // 33
+  {type:"mcq", question:"Which statement is TRUE about ion formation?", options:["Atoms always gain electrons","Atoms always lose electrons","Atoms may gain or lose electrons to get a full outer shell"], answer:2,
+   explanation:"Atoms can either gain or lose electrons to achieve a full outer shell."},
+  // 34
+  {type:"fill", question:"The size of the ionic charge equals the number of ______ gained or lost.", answerText:"electrons",
+   explanation:"The magnitude of the charge is the number of electrons transferred."},
+  // 35
+  {type:"mcq", question:"Which of these is a correct description of a hydroxide ion?", options:["A single oxygen atom with a 2⁺ charge","A group of atoms with an overall negative charge","A neutral molecule"], answer:1,
+   explanation:"Hydroxide is a group of atoms (oxygen and hydrogen) with an overall negative charge."},
+  // 36
+  {type:"fill", question:"Atoms in groups 3, 4 and 5 would have to move ______ or four electrons to get a full outer shell.", answerText:"three",
+   explanation:"They would need to gain or lose three or four electrons, which costs a lot of energy."},
+  // 37
+  {type:"mcq", question:"Which of these is most likely to form a simple ion in basic school-level chemistry?", options:["A group 4 element gaining 4 electrons","A group 1 metal losing 1 electron","A group 5 element losing 5 electrons"], answer:1,
+   explanation:"Group 1 metals easily lose 1 electron and so commonly form simple ions."},
+  // 38
+  {type:"mcq", question:"Which side of the equation do we write electrons on for an atom that is gaining them?", options:["Left side","Right side","Both sides"], answer:0,
+   explanation:"Electrons are written on the left side when the atom gains them."},
+  // 39
+  {type:"mcq", question:"Which side of the equation do we write electrons on for an atom that is losing them?", options:["Left side","Right side","Neither side"], answer:1,
+   explanation:"Electrons are written on the right side when the atom loses them."},
+  // 40
+  {type:"fill", question:"Simple ions in school chemistry very often come from groups 1, 2, ______ and 7.", answerText:"6",
+   explanation:"Groups 1, 2, 6 and 7 most commonly form simple ions as described in the speech."}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let shuffledQuestions = [];
+
+function startGame(){
+  shuffledQuestions = [...questions].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  showQuestion();
+}
+
+function showQuestion(){
+  const gameArea = document.getElementById("game-area");
+  const q = shuffledQuestions[currentQuestion];
+  let html = `<div class="question-box"><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+  if(q.type==="mcq"){
+    q.options.forEach((opt, idx)=>{
+      html += `<label style="display:block;margin:.25rem 0"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+    });
+    html += `<button class="btn" onclick="checkMCQ()">Submit</button>`;
+  } else {
+    html += `<input id="fill" type="text" placeholder="Type your answer…" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px">`;
+    html += `<div style="height:8px"></div>`;
+    html += `<button class="btn" onclick="checkFill()">Submit</button>`;
+  }
+
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  gameArea.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = shuffledQuestions[currentQuestion];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const feedback = document.getElementById("feedback");
+  if(!sel){
+    feedback.textContent = "Please select an answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(parseInt(sel.value,10) === q.answer){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  }else{
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = shuffledQuestions[currentQuestion];
+  const ans = (document.getElementById("fill").value || "").trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  if(!ans){
+    feedback.textContent = "Please enter your answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(ans.includes(q.answerText)){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  } else {
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < shuffledQuestions.length){
+    showQuestion();
+  } else {
+    endGame();
+  }
+}
+
+function endGame(){
+  const gameArea = document.getElementById("game-area");
+  gameArea.innerHTML = `<h3>Quiz Complete!</h3>
+    <p>Your score: <strong>${score} / ${shuffledQuestions.length}</strong></p>
+    <button class="btn" onclick="startGame()">Try Again</button>`;
+}
+</script>
+</body>
+</html>
