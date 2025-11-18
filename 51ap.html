@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alkanes: Properties & Combustion</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --ink:#1f2937;
+      --paper:#fafafa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --good:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(135deg,var(--brand),#6366f1);
+      color:white;
+      padding:20px 16px;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);
+    }
+    header h1{margin:0;font-size:clamp(1.2rem,2.5vw,1.8rem);letter-spacing:.5px}
+    .wrap{max-width:1000px;margin:0 auto;padding:16px}
+    .video-container{
+      display:flex;justify-content:center;align-items:center; margin:18px 0;
+    }
+    iframe{
+      width:100%;max-width:900px;height:480px;border:0;border-radius:12px;
+      box-shadow:0 8px 24px rgba(2,6,23,.15);
+      background:#000;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(2,6,23,.08);
+      margin:16px 0;
+    }
+    h2{
+      margin:.2rem 0 .8rem;
+      color:#0f172a;
+      font-size:1.2rem;
+    }
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{font-weight:700;color:#0f766e;cursor:pointer}
+    ul{margin:.5rem 0 .5rem 1.2rem}
+    .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#e0f2fe;color:#075985;font-weight:600;font-size:.8rem;margin-right:.4rem}
+    .muted{color:var(--muted)}
+    .quiz h2{color:#0f172a}
+    .btn{
+      background:var(--brand);color:#fff;border:0;border-radius:10px;
+      padding:10px 14px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(14,165,233,.35);
+      transition:transform .06s ease,box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(14,165,233,.45)}
+    .question-box{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin-top:12px;background:#fff}
+    .feedback{margin-top:8px;font-weight:700}
+    .correct{color:var(--good)}
+    .incorrect{color:var(--bad)}
+    code{background:#f1f5f9;border-radius:6px;padding:2px 6px}
+    .footer{font-size:.85rem;color:var(--muted);text-align:center;margin:16px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>51. Alkanes: Properties & Combustion</h1>
+  </header>
+
+  <div class="wrap">
+    <div class="video-container card">
+      <!-- Requested video link -->
+      <iframe src="https://www.youtube.com/embed/6TiQq-GAO9Q" title="Alkanes Properties and Combustion Video" allowfullscreen></iframe>
+    </div>
+
+    <section class="card">
+      <h2>Key Notes (English)</h2>
+      <p class="muted">Adapted from the provided speech. Focus: how the properties of alkanes change with chain length, and how to write balanced equations for complete combustion.</p>
+
+      <details open>
+        <summary>1) Recap – What Are Alkanes?</summary>
+        <ul>
+          <li>Alkanes are a <strong>homologous series</strong> of <strong>hydrocarbons</strong>.</li>
+          <li>They contain only <strong>carbon (C)</strong> and <strong>hydrogen (H)</strong> atoms.</li>
+          <li>Alkanes have <strong>no double bonds</strong> between carbon atoms (only single C–C bonds).</li>
+          <li>Examples include the first four: <strong>methane, ethane, propane, butane</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) General Property Trends with Chain Length</summary>
+        <ul>
+          <li>All alkanes have similar chemical properties, but there are <strong>trends</strong> as the <strong>carbon chain length increases</strong>.</li>
+          <li>Key trend: <strong>Boiling point increases</strong> as chain length increases.</li>
+          <li>Shorter alkanes (with 1–4 carbons) have <strong>low boiling points</strong> and are usually <strong>gases at room temperature</strong>.</li>
+          <li>Longer alkanes (more than four carbons) tend to be <strong>liquids</strong> at room temperature, and very long chains can be <strong>solids</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Volatility and Viscosity</summary>
+        <ul>
+          <li><span class="pill">Volatile</span> means a substance <strong>evaporates easily</strong>.</li>
+          <li><strong>Shorter alkanes</strong> are <strong>more volatile</strong> because of their lower boiling points.</li>
+          <li><span class="pill">Viscous</span> means a liquid is <strong>thick and sticky</strong> (like honey).</li>
+          <li><strong>Longer alkanes</strong> are <strong>more viscous</strong> – they flow slowly and feel “thicker”.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) Flammability of Alkanes</summary>
+        <ul>
+          <li><span class="pill">Flammable</span> means a substance is <strong>easy to ignite or burn</strong>.</li>
+          <li><strong>Shorter alkanes</strong> are <strong>more flammable</strong> than longer ones.</li>
+          <li>This makes short-chain alkanes very useful as <strong>fuels</strong>.</li>
+          <li>We will see this again when studying <strong>crude oil</strong> and its fractions.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) Combustion of Alkanes – General Idea</summary>
+        <ul>
+          <li>One of the main uses of hydrocarbons like alkanes is as <strong>fuels</strong>.</li>
+          <li>When they burn in oxygen, they <strong>release a lot of energy</strong>.</li>
+          <li>If there is enough oxygen, the alkane undergoes <strong>complete combustion</strong>.</li>
+          <li>Complete combustion products:
+            <ul>
+              <li><strong>Carbon dioxide (CO₂)</strong></li>
+              <li><strong>Water (H₂O)</strong></li>
+            </ul>
+          </li>
+          <li>These reactions are <strong>exothermic</strong> – they release energy to the surroundings.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>6) Oxidation in Combustion</summary>
+        <ul>
+          <li>During complete combustion, both <strong>carbon</strong> and <strong>hydrogen</strong> in the hydrocarbon are <strong>oxidised</strong>.</li>
+          <li>Carbon combines with oxygen to form <strong>CO₂</strong>.</li>
+          <li>Hydrogen combines with oxygen to form <strong>H₂O</strong>.</li>
+          <li>So we can say the carbon and hydrogen atoms are being <strong>oxidised</strong> by the oxygen.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>7) Writing Combustion Equations – General Form</summary>
+        <ul>
+          <li>For a hydrocarbon like an alkane, complete combustion always fits the pattern:</li>
+          <li><code>hydrocarbon + oxygen → carbon dioxide + water</code></li>
+          <li>In symbols, for an alkane <code>CₓHᵧ</code>:
+            <ul>
+              <li><code>CₓHᵧ + O₂ → CO₂ + H₂O</code></li>
+            </ul>
+          </li>
+          <li>In exams you must be able to <strong>write and balance</strong> these equations.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>8) Example 1 – Complete Combustion of Propane</summary>
+        <ul>
+          <li>Propane has the formula <code>C₃H₈</code>.</li>
+          <li>Step 1 – Write the unbalanced equation:</li>
+          <li><code>C₃H₈ + O₂ → CO₂ + H₂O</code></li>
+          <li>Step 2 – Balance carbon:</li>
+          <li>There are 3 C atoms on the left, so we need <strong>3 CO₂</strong> on the right:</li>
+          <li><code>C₃H₈ + O₂ → 3CO₂ + H₂O</code></li>
+          <li>Step 3 – Balance hydrogen:</li>
+          <li>There are 8 H atoms on the left, so we need <strong>4 H₂O</strong> (4 × 2 H = 8):</li>
+          <li><code>C₃H₈ + O₂ → 3CO₂ + 4H₂O</code></li>
+          <li>Step 4 – Balance oxygen:</li>
+          <li>On the right: 3CO₂ = 6 O atoms, 4H₂O = 4 O atoms → total <strong>10 O atoms</strong>.</li>
+          <li>To get 10 O atoms from O₂, we need <strong>5 O₂</strong> molecules:</li>
+          <li><code>C₃H₈ + 5O₂ → 3CO₂ + 4H₂O</code></li>
+          <li>Final check: all atoms are balanced → equation is complete.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>9) Example 2 – Complete Combustion of Nonane</summary>
+        <ul>
+          <li>Nonane has the formula <code>C₉H₂₀</code>.</li>
+          <li>Step 1 – Write the unbalanced equation:</li>
+          <li><code>C₉H₂₀ + O₂ → CO₂ + H₂O</code></li>
+          <li>Step 2 – Balance carbon:</li>
+          <li>9 C atoms on the left → need <strong>9 CO₂</strong> on the right.</li>
+          <li>Step 3 – Balance hydrogen:</li>
+          <li>20 H atoms on the left → need <strong>10 H₂O</strong> on the right (10 × 2 = 20).</li>
+          <li>Step 4 – Balance oxygen:</li>
+          <li>Right side: 9CO₂ = 18 O atoms; 10H₂O = 10 O atoms → total <strong>28 O atoms</strong>.</li>
+          <li>To get 28 O atoms from O₂, we need <strong>14 O₂</strong> molecules.</li>
+          <li>Balanced equation:</li>
+          <li><code>C₉H₂₀ + 14O₂ → 9CO₂ + 10H₂O</code></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>10) Key Summary</summary>
+        <ul>
+          <li>The properties of alkanes depend on <strong>carbon chain length</strong>:</li>
+          <li>Shorter alkanes → <strong>lower boiling points</strong>, more <strong>volatile</strong>, more <strong>flammable</strong>.</li>
+          <li>Longer alkanes → <strong>higher boiling points</strong>, more <strong>viscous</strong>, less flammable.</li>
+          <li>Hydrocarbons used as fuels undergo <strong>combustion</strong>.</li>
+          <li><strong>Complete combustion</strong> needs enough oxygen and produces <strong>CO₂ and H₂O</strong>, releasing lots of energy (exothermic).</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card quiz">
+      <h2>Quiz (40 Questions)</h2>
+      <p class="muted">Mix of multiple choice and short answer. Based strictly on the speech and notes above.</p>
+      <div id="game-area">
+        <button class="btn" onclick="startGame()">Start Quiz</button>
+      </div>
+    </section>
+
+    <p class="footer">© 2025 Alkanes Properties Study Helper</p>
+  </div>
+
+<script>
+// 40 quiz questions (based on the alkanes properties/combustion speech/notes)
+const questions = [
+  // 1
+  {type:"mcq", question:"What kind of series do alkanes belong to?", options:["Isomeric series","Homologous series","Radioactive series"], answer:1,
+   explanation:"Alkanes are a homologous series of hydrocarbons."},
+  // 2
+  {type:"mcq", question:"What elements do alkanes contain?", options:["Carbon and oxygen","Carbon and hydrogen","Hydrogen and nitrogen"], answer:1,
+   explanation:"Alkanes are hydrocarbons, so they contain only carbon and hydrogen."},
+  // 3
+  {type:"mcq", question:"Do alkanes contain any double bonds between carbon atoms?", options:["Yes, always","Sometimes","No, they only have single bonds"], answer:2,
+   explanation:"Alkanes have only single C–C bonds and no double bonds."},
+  // 4
+  {type:"fill", question:"As the length of the carbon chain in alkanes increases, the ______ point increases.", answerText:"boiling",
+   explanation:"Boiling point increases with longer carbon chains."},
+  // 5
+  {type:"mcq", question:"What physical state are the first four alkanes (shortest chains) usually in at room temperature?", options:["Solids","Liquids","Gases"], answer:2,
+   explanation:"The first four alkanes have low boiling points and are gases at room temperature."},
+  // 6
+  {type:"mcq", question:"What physical state are many longer-chain alkanes (more than four carbons) in at room temperature?", options:["Gases","Liquids","Noble gases"], answer:1,
+   explanation:"Longer alkanes are often liquids at room temperature."},
+  // 7
+  {type:"fill", question:"Very long-chain alkanes can even be ______ at room temperature.", answerText:"solids",
+   explanation:"With very long chains, they can exist as solids."},
+  // 8
+  {type:"mcq", question:"What does 'volatile' mean?", options:["Hard to burn","Easy to evaporate","Colourless"], answer:1,
+   explanation:"Volatile substances evaporate easily."},
+  // 9
+  {type:"mcq", question:"Which alkanes are more volatile?", options:["Shorter alkanes","Longer alkanes","They are all the same"], answer:0,
+   explanation:"Shorter alkanes have lower boiling points and are more volatile."},
+  // 10
+  {type:"fill", question:"Lower boiling points make short-chain alkanes more ______.", answerText:"volatile",
+   explanation:"Lower boiling points mean they evaporate more easily."},
+  // 11
+  {type:"mcq", question:"What does 'viscous' mean?", options:["Very flammable","Thick and sticky","Very cold"], answer:1,
+   explanation:"Viscous liquids are thick and sticky, like honey."},
+  // 12
+  {type:"mcq", question:"Which alkanes tend to be more viscous?", options:["Shorter alkanes","Longer alkanes","All alkanes have the same viscosity"], answer:1,
+   explanation:"Longer alkanes are more viscous."},
+  // 13
+  {type:"fill", question:"Longer alkanes are described as more ______, meaning thick and sticky.", answerText:"viscous",
+   explanation:"They are more viscous as chain length increases."},
+  // 14
+  {type:"mcq", question:"What does 'flammable' mean?", options:["Able to float","Easy to ignite or burn","Unable to evaporate"], answer:1,
+   explanation:"Flammable substances ignite or burn easily."},
+  // 15
+  {type:"mcq", question:"Which alkanes are more flammable?", options:["Shorter alkanes","Longer alkanes","Neither"], answer:0,
+   explanation:"Short-chain alkanes are more flammable and easier to ignite."},
+  // 16
+  {type:"fill", question:"Shorter alkanes are more ______, so they are easier to ignite and burn.", answerText:"flammable",
+   explanation:"Their high flammability makes them good fuels."},
+  // 17
+  {type:"mcq", question:"Why are hydrocarbons like alkanes mainly used as fuels?", options:["They have high densities","They release lots of energy when burned","They are colourless"], answer:1,
+   explanation:"Combustion of hydrocarbons releases a lot of energy."},
+  // 18
+  {type:"mcq", question:"What is needed for complete combustion of an alkane?", options:["Not much oxygen","No oxygen","Enough oxygen"], answer:2,
+   explanation:"Complete combustion occurs only if there is enough oxygen available."},
+  // 19
+  {type:"mcq", question:"What are the products of complete combustion of a hydrocarbon?", options:["Carbon dioxide and hydrogen","Carbon monoxide and water","Carbon dioxide and water"], answer:2,
+   explanation:"Complete combustion produces carbon dioxide and water."},
+  // 20
+  {type:"fill", question:"Complete combustion of a hydrocarbon forms carbon dioxide and ______.", answerText:"water",
+   explanation:"The products are CO₂ and H₂O."},
+  // 21
+  {type:"mcq", question:"Is complete combustion exothermic or endothermic?", options:["Exothermic","Endothermic","Neither"], answer:0,
+   explanation:"It releases energy, so it is exothermic."},
+  // 22
+  {type:"fill", question:"Combustion reactions that release energy to the surroundings are called ______ reactions.", answerText:"exothermic",
+   explanation:"Combustion is a classic exothermic process."},
+  // 23
+  {type:"mcq", question:"During complete combustion, what happens to the carbon and hydrogen in the hydrocarbon?", options:["They are reduced","They are oxidised","They stay unchanged"], answer:1,
+   explanation:"They combine with oxygen, so we say they are oxidised."},
+  // 24
+  {type:"fill", question:"When an element combines with oxygen in a reaction, we say it has been ______.", answerText:"oxidised",
+   explanation:"Combination with oxygen is oxidation."},
+  // 25
+  {type:"mcq", question:"Propane has which formula?", options:["C₂H₆","C₃H₈","C₄H₁₀"], answer:1,
+   explanation:"Propane is C₃H₈."},
+  // 26
+  {type:"mcq", question:"In the balanced equation for complete combustion of propane, how many CO₂ molecules are formed?", options:["1","2","3"], answer:2,
+   explanation:"There are three carbon atoms, so 3CO₂ are formed."},
+  // 27
+  {type:"mcq", question:"In the balanced combustion equation of propane, how many H₂O molecules are formed?", options:["2","3","4"], answer:2,
+   explanation:"There are eight hydrogens, so you need 4 H₂O molecules."},
+  // 28
+  {type:"mcq", question:"How many O₂ molecules are needed for the complete combustion of propane (C₃H₈)?", options:["3","4","5"], answer:2,
+   explanation:"Balancing oxygen gives 5O₂ in the final equation."},
+  // 29
+  {type:"fill", question:"The balanced equation for complete combustion of propane is C₃H₈ + ______ O₂ → 3CO₂ + 4H₂O.", answerText:"5",
+   explanation:"Five O₂ molecules are needed."},
+  // 30
+  {type:"mcq", question:"Nonane has which molecular formula?", options:["C₇H₁₆","C₉H₂₀","C₁₀H₂₂"], answer:1,
+   explanation:"The speech states nonane is C₉H₂₀."},
+  // 31
+  {type:"mcq", question:"In the balanced combustion equation of nonane, how many CO₂ molecules are produced?", options:["7","8","9"], answer:2,
+   explanation:"There are nine carbon atoms, so 9CO₂."},
+  // 32
+  {type:"mcq", question:"In the combustion of nonane, how many H₂O molecules are formed?", options:["9","10","11"], answer:1,
+   explanation:"There are 20 hydrogens, so you need 10 H₂O molecules."},
+  // 33
+  {type:"mcq", question:"How many O₂ molecules are required for the complete combustion of nonane (C₉H₂₀)?", options:["10","12","14"], answer:2,
+   explanation:"Balancing oxygen gives 14O₂."},
+  // 34
+  {type:"fill", question:"The balanced equation for complete combustion of nonane is C₉H₂₀ + ______ O₂ → 9CO₂ + 10H₂O.", answerText:"14",
+   explanation:"Fourteen O₂ molecules provide the 28 oxygen atoms needed."},
+  // 35
+  {type:"mcq", question:"What is the general word equation for complete combustion of a hydrocarbon?", options:["Hydrocarbon + water → carbon dioxide + oxygen","Hydrocarbon + oxygen → carbon dioxide + water","Hydrocarbon → carbon dioxide + water"], answer:1,
+   explanation:"Hydrocarbon + oxygen → carbon dioxide + water."},
+  // 36
+  {type:"fill", question:"The key idea is that the properties of hydrocarbons depend on the length of their ______ chain.", answerText:"carbon",
+   explanation:"Chain length affects boiling point, volatility, viscosity and flammability."},
+  // 37
+  {type:"mcq", question:"Which type of hydrocarbons are best described as having the lowest boiling points and being most flammable?", options:["Longest-chain hydrocarbons","Shortest hydrocarbons","All the same"], answer:1,
+   explanation:"Shortest hydrocarbons are most volatile and flammable."},
+  // 38
+  {type:"fill", question:"Short hydrocarbons have the lowest boiling points and are the most volatile and ______.", answerText:"flammable",
+   explanation:"They are easy to ignite and burn, making them useful fuels."},
+  // 39
+  {type:"mcq", question:"What do we call the process whenever we use a hydrocarbon as a fuel and burn it?", options:["Photosynthesis","Combustion","Neutralisation"], answer:1,
+   explanation:"Burning a fuel is called combustion."},
+  // 40
+  {type:"fill", question:"Complete combustion only takes place if there is enough ______ available.", answerText:"oxygen",
+   explanation:"Plenty of oxygen is required for complete combustion to produce CO₂ and H₂O."}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let shuffledQuestions = [];
+
+function startGame(){
+  shuffledQuestions = [...questions].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  showQuestion();
+}
+
+function showQuestion(){
+  const gameArea = document.getElementById("game-area");
+  const q = shuffledQuestions[currentQuestion];
+  let html = `<div class="question-box"><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+  if(q.type==="mcq"){
+    q.options.forEach((opt, idx)=>{
+      html += `<label style="display:block;margin:.25rem 0"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+    });
+    html += `<button class="btn" onclick="checkMCQ()">Submit</button>`;
+  } else {
+    html += `<input id="fill" type="text" placeholder="Type your answer…" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px">`;
+    html += `<div style="height:8px"></div>`;
+    html += `<button class="btn" onclick="checkFill()">Submit</button>`;
+  }
+
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  gameArea.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = shuffledQuestions[currentQuestion];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const feedback = document.getElementById("feedback");
+  if(!sel){
+    feedback.textContent = "Please select an answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(parseInt(sel.value,10) === q.answer){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  }else{
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = shuffledQuestions[currentQuestion];
+  const ans = (document.getElementById("fill").value || "").trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  if(!ans){
+    feedback.textContent = "Please enter your answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(ans.includes(q.answerText)){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  } else {
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < shuffledQuestions.length){
+    showQuestion();
+  } else {
+    endGame();
+  }
+}
+
+function endGame(){
+  const gameArea = document.getElementById("game-area");
+  gameArea.innerHTML = `<h3>Quiz Complete!</h3>
+    <p>Your score: <strong>${score} / ${shuffledQuestions.length}</strong></p>
+    <button class="btn" onclick="startGame()">Try Again</button>`;
+}
+</script>
+</body>
+</html>
