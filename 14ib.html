@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ionic Bonding & Dot-and-Cross Diagrams</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#22c55e);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .pill{display:inline-block;background:#e0f2fe;border:1px solid #bae6fd;border-radius:999px;padding:2px 10px;margin-right:6px;margin-bottom:4px}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ionic Bonding &amp; Dot-and-Cross Diagrams</h1>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <iframe src="https://www.youtube.com/embed/iVRHn-jyy5k" title="Ionic Bonding" allowfullscreen></iframe>
+    </section>
+
+    <section class="card">
+      <h2>Key Notes (rewritten from the speech)</h2>
+
+      <details open>
+        <summary>1) Recap: ions and stability</summary>
+        <ul>
+          <li><b>Ions</b> are charged particles formed when atoms <b>lose</b> or <b>gain</b> electrons.</li>
+          <li>If an atom loses electrons it becomes a <b>positive ion (cation)</b>; if it gains electrons it becomes a <b>negative ion (anion)</b>.</li>
+          <li>Atoms tend to gain or lose electrons in order to get a <b>full outer shell</b> of electrons – this makes them more stable.</li>
+          <li>We can show ion formation using half-equations, for example:
+            <div class="chem">
+Na → Na⁺ + e⁻    (sodium atom loses one electron)
+Cl + e⁻ → Cl⁻   (chlorine atom gains one electron)
+            </div>
+          </li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) Electron transfer &amp; formation of an ionic bond</summary>
+        <ul>
+          <li>In real reactions, electron transfer doesn’t happen in isolation – it happens between <b>metal</b> and <b>non-metal</b> atoms.</li>
+          <li>Example: <b>sodium</b> has one electron in its outer shell that it “wants” to lose; <b>chlorine</b> has seven outer electrons and “wants” one more.</li>
+          <li>The outer electron from sodium is transferred to chlorine:
+            <div class="chem">
+Na + Cl → Na⁺ + Cl⁻
+            </div>
+          </li>
+          <li>Both particles now have full outer shells, but they are charged ions.</li>
+          <li>Sodium forms a <b>1+ ion (Na⁺)</b>; chloride forms a <b>1− ion (Cl⁻)</b>.</li>
+          <li>Oppositely charged ions are attracted to each other by strong <b>electrostatic forces</b>.</li>
+          <li>This electrostatic attraction between positive and negative ions is called an <b>ionic bond</b>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Dot-and-cross diagrams for ionic bonding</summary>
+        <ul>
+          <li>A <b>dot-and-cross diagram</b> shows electrons as dots for one atom and crosses for the other, so we can see which electrons came from which atom.</li>
+          <li>We show the <b>movement of electrons</b> with an arrow from the atom losing the electron to the atom gaining it.</li>
+          <li>After the transfer, each ion is drawn inside <b>square brackets</b> with its charge in the top right corner:
+            <div class="chem">
+[Na]⁺  [Cl]⁻
+            </div>
+          </li>
+          <li>In full diagrams we can draw <b>all shells</b> of each atom, but often the exam only asks for the <b>outer shell</b>, which saves time.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) Example: sodium chloride (NaCl)</summary>
+        <ul>
+          <li>Sodium has <b>1 outer electron</b>; chlorine has <b>7 outer electrons</b>.</li>
+          <li>One electron moves from sodium to chlorine.</li>
+          <li>The result is:
+            <div class="chem">
+Na atom → Na⁺ ion (1+ charge, lost 1 electron)
+Cl atom → Cl⁻ ion (1− charge, gained 1 electron)
+            </div>
+          </li>
+          <li>These ions form the ionic compound <b>sodium chloride</b>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) Harder example: magnesium chloride (MgCl₂)</summary>
+        <ul>
+          <li>Magnesium has <b>two electrons</b> in its outer shell.</li>
+          <li>Each chlorine atom has <b>seven outer electrons</b> and needs one more to get a full outer shell.</li>
+          <li>In MgCl₂ there is <b>one magnesium atom</b> and <b>two chlorine atoms</b>.</li>
+          <li>Magnesium loses <b>two electrons</b>, one to each chlorine atom.</li>
+        </ul>
+        <div class="chem">
+Mg → Mg²⁺ + 2e⁻     (magnesium loses 2 electrons)
+Cl + e⁻ → Cl⁻       (each chlorine gains 1 electron)
+
+Overall: Mg + 2Cl → Mg²⁺ + 2Cl⁻
+        </div>
+        <ul>
+          <li>The final ions have charges:
+            <div class="chem">
+Mg²⁺  (magnesium 2+ ion)
+2 × Cl⁻  (two chloride 1− ions)
+            </div>
+          </li>
+          <li>In a dot-and-cross diagram for MgCl₂ (outer shells only):
+            <ul>
+              <li>Show Mg²⁺ in brackets with no outer-shell electrons.</li>
+              <li>Show each Cl⁻ in brackets with a full outer shell (8 electrons).</li>
+              <li>Place the two chloride ions on either side of the magnesium ion, to reflect the attraction between them.</li>
+            </ul>
+          </li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>6) Key exam reminders</summary>
+        <ul>
+          <li><b>Always show charges</b> clearly on ions (e.g. 1+, 2+, 1−).</li>
+          <li>Use <b>dots</b> for electrons from one atom and <b>crosses</b> for electrons from the other atom.</li>
+          <li>Draw <b>square brackets</b> around each ion in the final diagram.</li>
+          <li>Include <b>arrows</b> to show the direction of electron transfer.</li>
+          <li>Remember: <b>metal → positive ion</b>, <b>non-metal → negative ion</b>.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game"><button onclick="startGame()">Start Quiz</button></div>
+    </section>
+
+    <footer>© 2025 Chemistry Pack</footer>
+  </div>
+
+  <script>
+    // 40-question quiz based on the ionic bonding speech
+    const questions = [
+      {type:"mcq", q:"What is an ion?", opts:["A neutral atom","A charged particle formed when an atom gains or loses electrons","A molecule made of two atoms"], a:1, exp:"Ions are charged particles formed by electron gain or loss."},
+      {type:"fill", q:"Ions are formed when atoms lose or gain ______.", ans:"electrons", exp:"Loss or gain of electrons produces ions."},
+      {type:"mcq", q:"What charge does an atom get if it loses electrons?", opts:["Positive","Negative","No charge"], a:0, exp:"Losing electrons leaves more protons than electrons → positive ion."},
+      {type:"mcq", q:"What charge does an atom get if it gains electrons?", opts:["Positive","Negative","Neutral"], a:1, exp:"Gaining electrons gives extra negative charge."},
+      {type:"fill", q:"Atoms usually gain or lose electrons to get a full ______ shell.", ans:"outer", exp:"A full outer shell makes atoms more stable."},
+      {type:"mcq", q:"How many outer-shell electrons does a sodium atom have before bonding?", opts:["1","2","7"], a:0, exp:"Sodium has one electron in its outer shell."},
+      {type:"fill", q:"When sodium becomes Na+, it has lost ______ electron(s).", ans:"1", exp:"Na → Na⁺ + e⁻ shows loss of one electron."},
+      {type:"mcq", q:"What charge does sodium have after losing one electron?", opts:["1+","2+","1−"], a:0, exp:"It becomes a Na⁺ ion with a 1+ charge."},
+      {type:"mcq", q:"How many outer-shell electrons does a chlorine atom have before bonding?", opts:["6","7","8"], a:1, exp:"Chlorine has seven electrons in its outer shell."},
+      {type:"fill", q:"When chlorine becomes Cl−, it has ______ one electron.", ans:"gained", exp:"Cl + e⁻ → Cl⁻ shows gain of one electron."},
+      {type:"mcq", q:"What charge does chloride have after gaining one electron?", opts:["1+","1−","2−"], a:1, exp:"It becomes a Cl⁻ ion with a 1− charge."},
+      {type:"mcq", q:"What type of force holds positive and negative ions together?", opts:["Gravitational force","Electrostatic force","Nuclear force"], a:1, exp:"Opposite charges attract by electrostatic forces."},
+      {type:"fill", q:"The electrostatic attraction between oppositely charged ions is called an ______ bond.", ans:"ionic", exp:"Ionic bonding is the attraction between positive and negative ions."},
+      {type:"mcq", q:"Which combination typically forms ionic bonds?", opts:["Metal + metal","Non-metal + non-metal","Metal + non-metal"], a:2, exp:"Ionic bonding usually occurs between metals and non-metals."},
+      {type:"mcq", q:"In a dot-and-cross diagram, why do we use dots and crosses?", opts:["To look pretty","To show which electrons came from which atom","To show states of matter"], a:1, exp:"Dots and crosses distinguish electrons from each original atom."},
+      {type:"fill", q:"In ionic dot-and-cross diagrams, each final ion is drawn in ______ brackets.", ans:"square", exp:"Ions are shown inside square brackets with their charges."},
+      {type:"mcq", q:"Where should the charge be written on an ion in a diagram?", opts:["Bottom left corner","Top right corner","Underneath the symbol"], a:1, exp:"Charges are written at the top right of the ion symbol."},
+      {type:"fill", q:"In NaCl, the sodium ion has a charge of ______.", ans:"1+", exp:"Sodium forms a 1+ ion (Na⁺)."},
+      {type:"fill", q:"In NaCl, the chloride ion has a charge of ______.", ans:"1-", exp:"Chloride forms a 1− ion (Cl⁻)."},
+      {type:"mcq", q:"In a full dot-and-cross diagram, what do we sometimes draw for each atom?", opts:["Only the nucleus","All electron shells","Just the inner shell"], a:1, exp:"Full diagrams show all electron shells."},
+      {type:"mcq", q:"In exams you are often allowed to draw only:", opts:["The nucleus","The inner shell","The outer electron shell"], a:2, exp:"To save time, only the outer shell is required in many questions."},
+      {type:"fill", q:"The compound formed from sodium and chlorine is called sodium ______.", ans:"chloride", exp:"NaCl is sodium chloride."},
+      {type:"mcq", q:"How many outer electrons does magnesium have before it forms ions?", opts:["1","2","3"], a:1, exp:"Magnesium has two electrons in its outer shell."},
+      {type:"fill", q:"When magnesium forms Mg2+, it has lost ______ electrons.", ans:"2", exp:"Mg → Mg²⁺ + 2e⁻ shows loss of two electrons."},
+      {type:"mcq", q:"What is the formula of magnesium chloride?", opts:["MgCl","MgCl2","Mg2Cl"], a:1, exp:"The correct formula is MgCl₂."},
+      {type:"mcq", q:"In MgCl2, how many chloride ions are bonded to each magnesium ion?", opts:["1","2","3"], a:1, exp:"There are two chloride ions for each magnesium ion."},
+      {type:"fill", q:"Each chlorine atom in MgCl2 gains ______ electron.", ans:"1", exp:"Each chlorine gains one electron from magnesium."},
+      {type:"fill", q:"In MgCl2, the magnesium ion has a charge of ______.", ans:"2+", exp:"Magnesium forms a 2+ ion (Mg²⁺)."},
+      {type:"fill", q:"In MgCl2, each chloride ion has a charge of ______.", ans:"1-", exp:"Each chloride is a 1− ion (Cl⁻)."},
+      {type:"mcq", q:"In a dot-and-cross diagram for MgCl2 (outer shells only), how many Cl− ions are drawn?", opts:["1","2","3"], a:1, exp:"Two chloride ions surround the magnesium ion."},
+      {type:"mcq", q:"In ionic bonding, electrons move from:", opts:["Non-metal to metal","Metal to non-metal","Non-metal to non-metal"], a:1, exp:"Electrons are transferred from the metal to the non-metal."},
+      {type:"fill", q:"The type of diagram that shows dots and crosses for electrons is called a ______ diagram.", ans:"dot and cross", exp:"These are dot-and-cross diagrams."},
+      {type:"mcq", q:"Why do we show arrows in dot-and-cross diagrams?", opts:["To show ion charges","To show electron movement","To show covalent bonds"], a:1, exp:"Arrows indicate the movement of electrons from one atom to another."},
+      {type:"fill", q:"The strength of ionic bonds is described as ______.", ans:"strong", exp:"Ionic bonds are strong electrostatic attractions."},
+      {type:"mcq", q:"What happens to the outer shells of both atoms after electron transfer in NaCl?", opts:["They become empty","They both have full outer shells","They both lose all electrons"], a:1, exp:"Both resulting ions have full outer shells."},
+      {type:"fill", q:"Positive ions are also called ______.", ans:"cations", exp:"Cations are positively charged ions."},
+      {type:"fill", q:"Negative ions are also called ______.", ans:"anions", exp:"Anions are negatively charged ions."},
+      {type:"mcq", q:"How are the ions arranged in the final MgCl2 dot-and-cross diagram?", opts:["Randomly scattered","Both chlorides on one side of magnesium","Chloride ions on either side of the magnesium ion"], a:2, exp:"Chloride ions are drawn on either side of the central magnesium ion."},
+      {type:"mcq", q:"Which statement is correct about ionic bonds?", opts:["They are electrostatic attractions between opposite charges","They involve sharing electrons between atoms","They only occur between non-metals"], a:0, exp:"Ionic bonds are electrostatic attractions between positive and negative ions."}
+    ];
+
+    let order=[], idx=0, score=0;
+    function startGame(){
+      order=[...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+      idx=0; score=0; renderQ();
+    }
+    function renderQ(){
+      const q=questions[order[idx]];
+      let html = `<div class='qbox'><h3>Q ${idx+1}/${questions.length}</h3><p>${q.q}</p>`;
+      if(q.type==="mcq"){
+        q.opts.forEach((o,i)=>{ html += `<label><input type='radio' name='opt' value='${i}'> ${o}</label><br>`; });
+        html += `<button onclick='checkMCQ()'>Submit</button>`;
+      }else{
+        html += `<input id='fill' placeholder='Answer'> <button onclick='checkFill()'>Submit</button>`;
+      }
+      html += `<div id='fb' class='feedback'></div></div>`;
+      document.getElementById('game').innerHTML = html;
+    }
+    function checkMCQ(){
+      const q=questions[order[idx]];
+      const pick=document.querySelector("input[name='opt']:checked");
+      const fb=document.getElementById('fb');
+      if(!pick){ fb.textContent='Select one'; fb.className='feedback bad'; return; }
+      if(parseInt(pick.value)===q.a){ score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok'; }
+      else{ fb.textContent='❌ '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+    function checkFill(){
+      const q=questions[order[idx]];
+      const ans=(document.getElementById('fill').value||'').trim().toLowerCase();
+      const fb=document.getElementById('fb');
+      if(!ans){ fb.textContent='Enter answer'; fb.className='feedback bad'; return; }
+      if(ans===q.ans.toLowerCase()){
+        score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok';
+      }else{
+        fb.textContent='❌ Correct: '+q.ans+'. '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+    function nextQ(){
+      idx++;
+      if(idx<questions.length) renderQ();
+      else endGame();
+    }
+    function endGame(){
+      document.getElementById('game').innerHTML = `<div class='qbox'><h3>Finished!</h3><p>Your score: <b>${score}/${questions.length}</b></p><button onclick='startGame()'>Play again</button></div>`;
+    }
+  </script>
+</body>
+</html>
