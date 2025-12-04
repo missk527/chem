@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cracking & Alkenes</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --ink:#1f2937;
+      --paper:#fafafa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --good:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(135deg,var(--brand),#6366f1);
+      color:white;
+      padding:20px 16px;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);
+    }
+    header h1{margin:0;font-size:clamp(1.2rem,2.5vw,1.8rem);letter-spacing:.5px}
+    .wrap{max-width:1000px;margin:0 auto;padding:16px}
+    .video-container{
+      display:flex;justify-content:center;align-items:center; margin:18px 0;
+    }
+    iframe{
+      width:100%;max-width:900px;height:480px;border:0;border-radius:12px;
+      box-shadow:0 8px 24px rgba(2,6,23,.15);
+      background:#000;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(2,6,23,.08);
+      margin:16px 0;
+    }
+    h2{
+      margin:.2rem 0 .8rem;
+      color:#0f172a;
+      font-size:1.2rem;
+    }
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{font-weight:700;color:#0f766e;cursor:pointer}
+    ul{margin:.5rem 0 .5rem 1.2rem}
+    .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#fee2e2;color:#b91c1c;font-weight:600;font-size:.8rem;margin-right:.4rem}
+    .muted{color:var(--muted)}
+    .quiz h2{color:#0f172a}
+    .btn{
+      background:var(--brand);color:#fff;border:0;border-radius:10px;
+      padding:10px 14px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(14,165,233,.35);
+      transition:transform .06s ease,box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(14,165,233,.45)}
+    .question-box{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin-top:12px;background:#fff}
+    .feedback{margin-top:8px;font-weight:700}
+    .correct{color:var(--good)}
+    .incorrect{color:var(--bad)}
+    code{background:#f1f5f9;border-radius:6px;padding:2px 6px}
+    .footer{font-size:.85rem;color:var(--muted);text-align:center;margin:16px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>53. Cracking of Hydrocarbons & Alkenes</h1>
+  </header>
+
+  <div class="wrap">
+    <div class="video-container card">
+      <!-- Requested video link -->
+      <iframe src="https://www.youtube.com/embed/K_SG3MMPKis" title="Cracking and Alkenes Video" allowfullscreen></iframe>
+    </div>
+
+    <section class="card">
+      <h2>Key Notes (English)</h2>
+      <p class="muted">Adapted from the provided speech. Focus: why we crack long-chain hydrocarbons, how cracking works, how to write cracking equations, and the key properties and uses of alkenes.</p>
+
+      <details open>
+        <summary>1) Crude Oil, Hydrocarbons and Fractional Distillation</summary>
+        <ul>
+          <li>Crude oil is a <strong>mixture of many different hydrocarbons</strong>.</li>
+          <li>Hydrocarbons are molecules made only from <strong>carbon and hydrogen</strong> atoms.</li>
+          <li>We can separate crude oil using <strong>fractional distillation</strong>, based on different <strong>chain lengths</strong> and boiling points.</li>
+          <li><strong>Short-chain hydrocarbons</strong> are the <strong>most flammable</strong> and make the <strong>best fuels</strong>.</li>
+          <li><strong>Long-chain hydrocarbons</strong> are thick, <strong>viscous</strong> liquids and are <strong>less useful</strong> as fuels.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) What Is Cracking?</summary>
+        <ul>
+          <li><strong>Cracking</strong> is a process used to break down long, less useful hydrocarbons into <strong>shorter, more useful ones</strong>.</li>
+          <li>It converts long-chain alkanes into <strong>shorter-chain alkanes and alkenes</strong>.</li>
+          <li>The shorter hydrocarbons tend to be <strong>more flammable</strong>, so they make better fuels.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Cracking as Thermal Decomposition</summary>
+        <ul>
+          <li>Cracking is a type of <strong>thermal decomposition</strong> reaction.</li>
+          <li><strong>Thermal</strong> means <strong>heating</strong>.</li>
+          <li><strong>Decomposition</strong> means <strong>breaking down</strong> a substance into simpler substances.</li>
+          <li>So thermal decomposition means <strong>breaking down molecules by heating them</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) First Step in Cracking – Vaporising the Hydrocarbons</summary>
+        <ul>
+          <li>Whether we use catalytic cracking or steam cracking, the <strong>first step</strong> is the same.</li>
+          <li>The long-chain hydrocarbons are <strong>heated</strong> until they <strong>vaporise</strong>.</li>
+          <li>Vaporising means turning the liquid hydrocarbons into a <strong>gas</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) Catalytic Cracking</summary>
+        <ul>
+          <li>In <strong>catalytic cracking</strong>, the hydrocarbon vapour is passed over a <strong>hot catalyst</strong>.</li>
+          <li>The catalyst is often <strong>powdered aluminium oxide</strong>.</li>
+          <li>As the long-chain hydrocarbon vapour comes into contact with the catalyst, the molecules <strong>split apart</strong>.</li>
+          <li>This produces <strong>two or more smaller hydrocarbons</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>6) Steam Cracking</summary>
+        <ul>
+          <li>In <strong>steam cracking</strong>, the hydrocarbon vapour is <strong>mixed with steam</strong>.</li>
+          <li>The mixture is then heated to a very <strong>high temperature</strong>.</li>
+          <li>The intense heat causes the long hydrocarbon chains to <strong>break</strong> into shorter ones.</li>
+          <li>Again, the products include <strong>shorter alkanes</strong> and <strong>alkenes</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>7) Cracking Equations – Balancing Atoms</summary>
+        <ul>
+          <li>In cracking, a <strong>long-chain alkane</strong> is broken into a <strong>shorter alkane</strong> plus an <strong>alkene</strong>.</li>
+          <li>Example: <strong>decane</strong> (C₁₀H₂₂) can crack to form a shorter alkane (such as heptane, C₇H₁₆) and an alkene (such as propene, C₃H₆).</li>
+          <li>The total number of <strong>carbon atoms</strong> on each side of the equation must be the <strong>same</strong>.</li>
+          <li>The total number of <strong>hydrogen atoms</strong> must also be the <strong>same</strong>.</li>
+          <li>This is the same idea as for any other <strong>balanced chemical equation</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>8) Worked Example – Decane to Ethene and an Alkane</summary>
+        <ul>
+          <li>Consider the cracking: C₁₀H₂₂ → C₂H₄ + ?</li>
+          <li>We know one product is <strong>ethene</strong> (C₂H₄), an alkene.</li>
+          <li>To find the <strong>other alkane</strong>, subtract the atoms in C₂H₄ from C₁₀H₂₂.</li>
+          <li>Carbons: 10 − 2 = <strong>8</strong>, so the alkane must have 8 carbons.</li>
+          <li>Hydrogens: 22 − 4 = <strong>18</strong>, so it must have 18 hydrogens.</li>
+          <li>The other product is therefore <strong>C₈H₁₈</strong>, an alkane.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>9) Alkanes vs Alkenes – Saturated and Unsaturated</summary>
+        <ul>
+          <li><strong>Alkanes</strong> and <strong>alkenes</strong> are both examples of <strong>homologous series</strong> – families of compounds with similar properties and the same general formula style.</li>
+          <li>Alkanes have only <strong>single bonds</strong> between carbon atoms, so they are <strong>saturated</strong>.</li>
+          <li>Alkenes contain at least one <strong>carbon–carbon double bond</strong>, so they are <strong>unsaturated</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>10) Properties and Uses of Alkenes</summary>
+        <ul>
+          <li>Because of the double bond, alkenes are generally <strong>more reactive</strong> than alkanes.</li>
+          <li>Alkenes can react with <strong>bromine</strong>; for example, bromine water is <strong>decolourised</strong> from orange to colourless by an alkene.</li>
+          <li>This colour change is the <strong>test for alkenes</strong> you need to remember.</li>
+          <li>Alkenes can also be joined together in <strong>addition reactions</strong> to form <strong>polymers</strong>.</li>
+          <li>In polymerisation, the double bond breaks and each carbon forms new bonds to neighbouring molecules, creating long <strong>polymer chains</strong>.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card quiz">
+      <h2>Quiz (40 Questions)</h2>
+      <p class="muted">Mix of multiple choice and short answer. Based strictly on the cracking and alkenes speech and notes above.</p>
+      <div id="game-area">
+        <button class="btn" onclick="startGame()">Start Quiz</button>
+      </div>
+    </section>
+
+    <p class="footer">© 2025 Cracking & Alkenes Study Helper</p>
+  </div>
+
+<script>
+// 40 quiz questions (based on the cracking & alkenes speech/notes)
+const questions = [
+  // 1
+  {type:"mcq", question:"What is crude oil best described as?", options:["A single pure substance","A mixture of many different hydrocarbons","A mixture of metals and water"], answer:1,
+   explanation:"Crude oil is a mixture of many different hydrocarbons."},
+  // 2
+  {type:"mcq", question:"What are hydrocarbons made from?", options:["Carbon and oxygen","Carbon and hydrogen","Hydrogen and nitrogen"], answer:1,
+   explanation:"Hydrocarbons contain only carbon and hydrogen atoms."},
+  // 3
+  {type:"mcq", question:"Which hydrocarbons make the best fuels?", options:["The longest-chain hydrocarbons","The shortest-chain hydrocarbons","All hydrocarbons are equally good fuels"], answer:1,
+   explanation:"Short-chain hydrocarbons are the most flammable and make the best fuels."},
+  // 4
+  {type:"fill", question:"Long-chain hydrocarbons tend to be thick, ______ liquids and are less useful as fuels.", answerText:"viscous",
+   explanation:"They are thick, viscous liquids and not as useful as fuels."},
+  // 5
+  {type:"mcq", question:"What is the name of the process used to separate different hydrocarbons in crude oil?", options:["Filtration","Fractional distillation","Crystallisation"], answer:1,
+   explanation:"Fractional distillation separates hydrocarbons based on their boiling points and chain lengths."},
+  // 6
+  {type:"mcq", question:"What is cracking used for?", options:["To make hydrocarbons longer","To break long-chain hydrocarbons into shorter ones","To remove all hydrogen from hydrocarbons"], answer:1,
+   explanation:"Cracking breaks long-chain hydrocarbons into shorter, more useful ones."},
+  // 7
+  {type:"fill", question:"Cracking turns long-chain alkanes into shorter alkanes and ______.", answerText:"alkenes",
+   explanation:"Cracking produces a shorter alkane and an alkene."},
+  // 8
+  {type:"mcq", question:"Cracking is an example of what type of reaction?", options:["Neutralisation","Thermal decomposition","Displacement"], answer:1,
+   explanation:"Cracking is a thermal decomposition reaction."},
+  // 9
+  {type:"fill", question:"In the term 'thermal decomposition', 'thermal' means ______.", answerText:"heating",
+   explanation:"Thermal refers to heating."},
+  // 10
+  {type:"fill", question:"In the term 'thermal decomposition', 'decomposition' means ______ down.", answerText:"breaking",
+   explanation:"Decomposition means breaking down a substance into simpler ones."},
+  // 11
+  {type:"mcq", question:"What is the first step common to both catalytic and steam cracking?", options:["Dissolving the hydrocarbons","Cooling the hydrocarbons","Heating and vaporising the hydrocarbons"], answer:2,
+   explanation:"In both methods, the long-chain hydrocarbons are heated and vaporised."},
+  // 12
+  {type:"mcq", question:"What does 'vaporise' mean?", options:["Turn a liquid into a solid","Turn a liquid into a gas","Turn a solid into a liquid"], answer:1,
+   explanation:"Vaporising means turning a liquid into a gas."},
+  // 13
+  {type:"mcq", question:"In catalytic cracking, what do we pass the hydrocarbon vapour over?", options:["Cold water","Hot powdered aluminium oxide","Ice"], answer:1,
+   explanation:"Hot powdered aluminium oxide acts as the catalyst."},
+  // 14
+  {type:"fill", question:"In catalytic cracking, aluminium oxide is used as a ______.", answerText:"catalyst",
+   explanation:"Aluminium oxide is the catalyst in catalytic cracking."},
+  // 15
+  {type:"mcq", question:"What happens when the long-chain hydrocarbon vapour contacts the hot catalyst?", options:["It dissolves","It splits into smaller hydrocarbon molecules","It freezes"], answer:1,
+   explanation:"The long chains split apart into smaller hydrocarbons."},
+  // 16
+  {type:"mcq", question:"In steam cracking, the hydrocarbon vapour is mixed with:", options:["Air","Steam","Salt"], answer:1,
+   explanation:"In steam cracking, vapour is mixed with steam and heated very strongly."},
+  // 17
+  {type:"fill", question:"In steam cracking, the mixture of hydrocarbon vapour and steam is heated to a very ______ temperature.", answerText:"high",
+   explanation:"The mixture is heated to a very high temperature to break the chains."},
+  // 18
+  {type:"mcq", question:"Which products are formed in both catalytic cracking and steam cracking?", options:["Only alkanes","Only alkenes","Shorter alkanes and alkenes"], answer:2,
+   explanation:"Both methods produce shorter alkanes and alkenes."},
+  // 19
+  {type:"mcq", question:"In a cracking equation, what must be the same on both sides of the arrow?", options:["Total charge only","Number of carbon and hydrogen atoms","Number of molecules"], answer:1,
+   explanation:"The total number of carbon atoms and hydrogen atoms must balance."},
+  // 20
+  {type:"fill", question:"Decane has the formula C10H22. In cracking, the total number of carbons on the product side must add up to ______.", answerText:"10",
+   explanation:"The number of carbon atoms must stay the same, so the total is still 10."},
+  // 21
+  {type:"fill", question:"Decane has 22 hydrogen atoms, so the products of its cracking must together contain ______ hydrogen atoms.", answerText:"22",
+   explanation:"The total hydrogens must still add up to 22."},
+  // 22
+  {type:"mcq", question:"In the example C10H22 → C2H4 + ?, the known alkene product is:", options:["Propene","Ethene","Butene"], answer:1,
+   explanation:"C2H4 is ethene, an alkene."},
+  // 23
+  {type:"fill", question:"In C10H22 → C2H4 + CxHy, the unknown alkane must have 10 − 2 = ______ carbon atoms.", answerText:"8",
+   explanation:"The other product must have 8 carbon atoms (C8...)."},
+  // 24
+  {type:"fill", question:"In C10H22 → C2H4 + CxHy, the unknown alkane must have 22 − 4 = ______ hydrogen atoms.", answerText:"18",
+   explanation:"The other product must have 18 hydrogens (C8H18)."},
+  // 25
+  {type:"mcq", question:"What is the formula of the alkane produced in C10H22 → C2H4 + ? ", options:["C8H18","C6H14","C3H8"], answer:0,
+   explanation:"The missing alkane is C8H18."},
+  // 26
+  {type:"mcq", question:"Alkanes and alkenes are both examples of:", options:["Elements","Homologous series","Ionic compounds"], answer:1,
+   explanation:"They are both homologous series: families of similar compounds."},
+  // 27
+  {type:"fill", question:"Alkanes have only single bonds and are therefore described as ______.", answerText:"saturated",
+   explanation:"Alkanes are saturated hydrocarbons."},
+  // 28
+  {type:"fill", question:"Alkenes contain at least one carbon–carbon double bond and are described as ______.", answerText:"unsaturated",
+   explanation:"Alkenes are unsaturated because they contain C=C double bonds."},
+  // 29
+  {type:"mcq", question:"Which is generally more reactive: alkanes or alkenes?", options:["Alkanes","Alkenes","They have the same reactivity"], answer:1,
+   explanation:"Alkenes are more reactive due to the presence of the double bond."},
+  // 30
+  {type:"mcq", question:"What happens when bromine water is added to an alkene solution?", options:["It stays orange","It turns orange to colourless","It turns colourless to orange"], answer:1,
+   explanation:"Alkenes decolourise bromine water from orange to colourless."},
+  // 31
+  {type:"fill", question:"The colour change from orange to ______ is the test for alkenes using bromine water.", answerText:"colourless",
+   explanation:"Alkenes turn bromine water from orange to colourless."},
+  // 32
+  {type:"mcq", question:"Why is bromine water decolourised when it reacts with an alkene?", options:["Because the alkene forms a colourless product with bromine","Because the alkene evaporates","Because the bromine freezes"], answer:0,
+   explanation:"The alkene adds across the double bond, forming a colourless compound and removing the orange colour."},
+  // 33
+  {type:"mcq", question:"What can alkenes form when they add together in long chains?", options:["Salts","Polymers","Ions"], answer:1,
+   explanation:"Alkenes can join to form polymers."},
+  // 34
+  {type:"fill", question:"During polymerisation, the carbon–carbon double bond in alkenes ______ to allow new bonds to form.", answerText:"breaks",
+   explanation:"The double bond breaks so each carbon can form new single bonds in the polymer chain."},
+  // 35
+  {type:"mcq", question:"Why are the shorter hydrocarbons produced by cracking especially useful?", options:["They are less flammable","They are more flammable and make better fuels","They are all solids"], answer:1,
+   explanation:"Shorter hydrocarbons are more flammable and therefore better fuels."},
+  // 36
+  {type:"fill", question:"Cracking helps us make more of the ______-chain, more useful hydrocarbons from long-chain ones.", answerText:"shorter",
+   explanation:"Cracking produces more of the shorter-chain hydrocarbons."},
+  // 37
+  {type:"mcq", question:"In catalytic cracking, why is a catalyst used?", options:["To cool the reaction","To speed up the reaction and lower the required temperature","To change the colour of the products"], answer:1,
+   explanation:"The catalyst speeds up the reaction and allows it to occur at lower temperatures."},
+  // 38
+  {type:"mcq", question:"In steam cracking, what supplies the energy for breaking the bonds?", options:["Very high temperature","Very low temperature","Light energy only"], answer:0,
+   explanation:"Very high temperatures provide the energy to break the C–C bonds."},
+  // 39
+  {type:"fill", question:"The family of compounds with only single C–C bonds and formula like CnH2n+2 are called ______.", answerText:"alkanes",
+   explanation:"These saturated hydrocarbons are alkanes."},
+  // 40
+  {type:"fill", question:"The family of compounds with a C=C double bond and formula like CnH2n are called ______.", answerText:"alkenes",
+   explanation:"These unsaturated hydrocarbons are alkenes."}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let shuffledQuestions = [];
+
+function startGame(){
+  shuffledQuestions = [...questions].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  showQuestion();
+}
+
+function showQuestion(){
+  const gameArea = document.getElementById("game-area");
+  const q = shuffledQuestions[currentQuestion];
+  let html = `<div class="question-box"><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+  if(q.type==="mcq"){
+    q.options.forEach((opt, idx)=>{
+      html += `<label style="display:block;margin:.25rem 0"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+    });
+    html += `<button class="btn" onclick="checkMCQ()">Submit</button>`;
+  } else {
+    html += `<input id="fill" type="text" placeholder="Type your answer…" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px">`;
+    html += `<div style="height:8px"></div>`;
+    html += `<button class="btn" onclick="checkFill()">Submit</button>`;
+  }
+
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  gameArea.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = shuffledQuestions[currentQuestion];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const feedback = document.getElementById("feedback");
+  if(!sel){
+    feedback.textContent = "Please select an answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(parseInt(sel.value,10) === q.answer){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  }else{
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = shuffledQuestions[currentQuestion];
+  const ans = (document.getElementById("fill").value || "").trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  if(!ans){
+    feedback.textContent = "Please enter your answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(ans.includes(q.answerText)){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  } else {
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < shuffledQuestions.length){
+    showQuestion();
+  } else {
+    endGame();
+  }
+}
+
+function endGame(){
+  const gameArea = document.getElementById("game-area");
+  gameArea.innerHTML = `<h3>Quiz Complete!</h3>
+    <p>Your score: <strong>${score} / ${shuffledQuestions.length}</strong></p>
+    <button class="btn" onclick="startGame()">Try Again</button>`;
+}
+</script>
+</body>
+</html>
