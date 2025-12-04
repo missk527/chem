@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ionic Compounds</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --ink:#1f2937;
+      --paper:#fafafa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --good:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(135deg,var(--brand),#6366f1);
+      color:white;
+      padding:20px 16px;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);
+    }
+    header h1{margin:0;font-size:clamp(1.2rem,2.5vw,1.8rem);letter-spacing:.5px}
+    .wrap{max-width:1000px;margin:0 auto;padding:16px}
+    .video-container{
+      display:flex;justify-content:center;align-items:center; margin:18px 0;
+    }
+    iframe{
+      width:100%;max-width:900px;height:480px;border:0;border-radius:12px;
+      box-shadow:0 8px 24px rgba(2,6,23,.15);
+      background:#000;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(2,6,23,.08);
+      margin:16px 0;
+    }
+    h2{
+      margin:.2rem 0 .8rem;
+      color:#0f172a;
+      font-size:1.2rem;
+    }
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{font-weight:700;color:#0f766e;cursor:pointer}
+    ul{margin:.5rem 0 .5rem 1.2rem}
+    .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#fee2e2;color:#b91c1c;font-weight:600;font-size:.8rem;margin-right:.4rem}
+    .muted{color:var(--muted)}
+    .quiz h2{color:#0f172a}
+    .btn{
+      background:var(--brand);color:#fff;border:0;border-radius:10px;
+      padding:10px 14px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(14,165,233,.35);
+      transition:transform .06s ease,box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(14,165,233,.45)}
+    .question-box{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin-top:12px;background:#fff}
+    .feedback{margin-top:8px;font-weight:700}
+    .correct{color:var(--good)}
+    .incorrect{color:var(--bad)}
+    code{background:#f1f5f9;border-radius:6px;padding:2px 6px}
+    .footer{font-size:.85rem;color:var(--muted);text-align:center;margin:16px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>15. Ionic Compounds</h1>
+  </header>
+
+  <div class="wrap">
+    <div class="video-container card">
+      <!-- Requested video link -->
+      <iframe src="https://www.youtube.com/embed/oINoCU_OZ64" title="Ionic Compounds Video" allowfullscreen></iframe>
+    </div>
+
+    <section class="card">
+      <h2>Key Notes (English)</h2>
+      <p class="muted">Adapted from the provided speech. Focus: what ionic compounds are, how they are structured, their properties, and how to work out their formulas.</p>
+
+      <details open>
+        <summary>1) What Is Ionic Bonding?</summary>
+        <ul>
+          <li>Ionic bonding usually happens between a <strong>metal</strong> and a <strong>non‑metal</strong>.</li>
+          <li>A metal atom (for example, <strong>sodium</strong>) <strong>loses</strong> one or more electrons.</li>
+          <li>A non‑metal atom (for example, <strong>chlorine</strong>) <strong>gains</strong> those electrons.</li>
+          <li>This forms <strong>oppositely charged ions</strong> (e.g. Na⁺ and Cl⁻) that attract each other.</li>
+          <li>The strong electrostatic attraction between the positive and negative ions is called an <strong>ionic bond</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) Ionic Compounds in Real Life</summary>
+        <ul>
+          <li>An ionic compound is made of <strong>huge numbers of ions</strong>, not just one pair.</li>
+          <li>Positive and negative ions <strong>alternate</strong> so each ion is attracted to many others around it.</li>
+          <li>This repeating arrangement in all directions forms a <strong>giant three‑dimensional lattice</strong>.</li>
+          <li>The lattice is <strong>regular</strong> and highly ordered, giving ionic solids a crystalline structure.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Representing Ionic Lattice Structures</summary>
+        <ul>
+          <li>In diagrams, different ions can be drawn with <strong>different colours</strong> (for example, Na⁺ green, Cl⁻ red).</li>
+          <li>We often use <strong>ball‑and‑stick models</strong> to show the positions of ions and how they are connected.</li>
+          <li>The “sticks” show the <strong>ionic bonds</strong>, but remember that in reality the attraction is in <strong>all directions</strong>, not just along the sticks.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) Melting and Boiling Points of Ionic Compounds</summary>
+        <ul>
+          <li>Ionic compounds usually have <strong>very high melting and boiling points</strong>.</li>
+          <li>This is because there are <strong>many strong ionic bonds</strong> throughout the lattice.</li>
+          <li>To melt or boil the solid, we must provide enough energy to <strong>break all these bonds</strong>.</li>
+          <li>That requires <strong>very high temperatures</strong>, so ionic solids are often solid at room temperature.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) Electrical Conductivity</summary>
+        <ul>
+          <li>To conduct electricity, a substance needs <strong>charged particles that can move</strong> (ions or electrons).</li>
+          <li>In a <strong>solid ionic compound</strong>, the ions are fixed in place in the lattice, so they <strong>cannot move</strong>.</li>
+          <li>Therefore, solid ionic compounds <strong>do not conduct electricity</strong>.</li>
+          <li>When ionic compounds are <strong>melted</strong> or <strong>dissolved in water</strong>, the ions are free to move.</li>
+          <li>In these liquid or aqueous states, the movement of ions means they <strong>can conduct electricity</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>6) Simple Ionic Formulas – Sodium Chloride</summary>
+        <ul>
+          <li>When forming an ionic compound, the total positive charge must <strong>balance</strong> the total negative charge.</li>
+          <li>Sodium forms a <strong>1⁺ ion</strong> (Na⁺) and chloride forms a <strong>1⁻ ion</strong> (Cl⁻).</li>
+          <li>One Na⁺ and one Cl⁻ balance to give an overall <strong>neutral</strong> compound.</li>
+          <li>Therefore the formula for sodium chloride is <strong>NaCl</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>7) Group 2 Example – Magnesium Chloride</summary>
+        <ul>
+          <li>Magnesium is in <strong>group 2</strong> of the periodic table.</li>
+          <li>It loses two electrons to form a <strong>2⁺ ion</strong>, Mg²⁺.</li>
+          <li>Chloride is still a <strong>1⁻ ion</strong>, Cl⁻.</li>
+          <li>To balance the 2⁺ charge of Mg²⁺, we need <strong>two chloride ions</strong> (2 × 1⁻ = 2⁻).</li>
+          <li>So the neutral formula is <strong>MgCl₂</strong> (one Mg²⁺ and two Cl⁻).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>8) Important Polyatomic Ions to Remember</summary>
+        <ul>
+          <li>Some ions are not single elements; they are <strong>groups of atoms</strong> that stay together.</li>
+          <li>You must <strong>memorise</strong> their formulas and charges because they are not obvious from the periodic table.</li>
+          <li>Key examples:
+            <ul>
+              <li><strong>Hydroxide</strong> ion: OH⁻</li>
+              <li><strong>Sulfate</strong> ion: SO₄²⁻</li>
+              <li><strong>Nitrate</strong> ion: NO₃⁻</li>
+              <li><strong>Carbonate</strong> ion: CO₃²⁻</li>
+              <li><strong>Ammonium</strong> ion: NH₄⁺</li>
+            </ul>
+          </li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>9) Calcium Hydroxide – Using Brackets</summary>
+        <ul>
+          <li>Calcium is in <strong>group 2</strong>, so it forms a <strong>2⁺ ion</strong>, Ca²⁺.</li>
+          <li>Hydroxide is a <strong>1⁻ ion</strong>, OH⁻.</li>
+          <li>To balance Ca²⁺, we need <strong>two hydroxide ions</strong> (2 × 1⁻ = 2⁻).</li>
+          <li>The formula is therefore <strong>Ca(OH)₂</strong>.</li>
+          <li>We use <strong>brackets</strong> around OH because the little “2” applies to the <strong>whole hydroxide ion</strong>, not just to hydrogen.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>10) Aluminium Sulfate – Finding the Lowest Common Multiple</summary>
+        <ul>
+          <li>Aluminium is in <strong>group 3</strong>, so it forms a <strong>3⁺ ion</strong>, Al³⁺.</li>
+          <li>Sulfate is a <strong>2⁻ ion</strong>, SO₄²⁻.</li>
+          <li>We need a combination of Al³⁺ and SO₄²⁻ so that the <strong>total positive and negative charges are equal</strong>.</li>
+          <li>The lowest common multiple of 3 and 2 is <strong>6</strong>.</li>
+          <li>To get 6⁺, we need <strong>two Al³⁺ ions</strong> (2 × 3⁺ = 6⁺).</li>
+          <li>To get 6⁻, we need <strong>three SO₄²⁻ ions</strong> (3 × 2⁻ = 6⁻).</li>
+          <li>So the formula is <strong>Al₂(SO₄)₃</strong>, with brackets to show that the “3” applies to the whole sulfate ion.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card quiz">
+      <h2>Quiz (40 Questions)</h2>
+      <p class="muted">Mix of multiple choice and short answer. Based strictly on the ionic compounds speech and notes above.</p>
+      <div id="game-area">
+        <button class="btn" onclick="startGame()">Start Quiz</button>
+      </div>
+    </section>
+
+    <p class="footer">© 2025 Ionic Compounds Study Helper</p>
+  </div>
+
+<script>
+// 40 quiz questions (based on the ionic compounds speech/notes)
+const questions = [
+  // 1
+  {type:"mcq", question:"Ionic bonding usually occurs between which types of elements?", options:["Two non-metals","Two metals","A metal and a non-metal"], answer:2,
+   explanation:"Ionic bonding typically occurs between a metal and a non-metal."},
+  // 2
+  {type:"mcq", question:"In ionic bonding, what does the metal atom usually do?", options:["Gains electrons","Loses electrons","Shares electrons equally"], answer:1,
+   explanation:"The metal atom loses one or more electrons to form a positive ion."},
+  // 3
+  {type:"fill", question:"When sodium reacts with chlorine, sodium ______ one electron to chlorine.", answerText:"loses",
+   explanation:"Sodium loses one electron which is transferred to chlorine."},
+  // 4
+  {type:"fill", question:"After electron transfer, sodium becomes a positively charged ______.", answerText:"ion",
+   explanation:"Sodium becomes a positive ion (Na⁺)." },
+  // 5
+  {type:"mcq", question:"What is the force that holds oppositely charged ions together?", options:["Gravitational attraction","Magnetic attraction","Electrostatic attraction"], answer:2,
+   explanation:"Ionic bonds are strong electrostatic attractions between oppositely charged ions."},
+  // 6
+  {type:"mcq", question:"What do we call a substance made from many positive and negative ions held together by ionic bonds?", options:["Covalent molecule","Ionic compound","Metallic crystal"], answer:1,
+   explanation:"A substance made of positive and negative ions joined by ionic bonds is an ionic compound."},
+  // 7
+  {type:"mcq", question:"In a real ionic solid, ions are arranged in:", options:["Random order","A giant three-dimensional lattice","Pairs only"], answer:1,
+   explanation:"Ions form a regular giant three-dimensional lattice."},
+  // 8
+  {type:"fill", question:"In a lattice, positive and negative ions ______ so that each ion is surrounded by oppositely charged ions.", answerText:"alternate",
+   explanation:"Positive and negative ions alternate in the structure."},
+  // 9
+  {type:"mcq", question:"Which diagram is commonly used to represent ionic lattice structures?", options:["Ball-and-stick model","Food pyramid","Distance-time graph"], answer:0,
+   explanation:"Ball-and-stick models are often used to show ionic lattices."},
+  // 10
+  {type:"mcq", question:"Why do ionic compounds usually have high melting points?", options:["They contain weak forces","They contain many strong ionic bonds","They are made of single atoms only"], answer:1,
+   explanation:"There are many strong ionic bonds which require lots of energy to break."},
+  // 11
+  {type:"fill", question:"To melt an ionic solid, we must supply enough ______ to break the ionic bonds.", answerText:"energy",
+   explanation:"High amounts of energy are needed to break the strong bonds."},
+  // 12
+  {type:"mcq", question:"Do solid ionic compounds conduct electricity?", options:["Yes, very well","No, because the ions cannot move","Sometimes, only at low temperature"], answer:1,
+   explanation:"In a solid, the ions are fixed in place and cannot move to carry charge."},
+  // 13
+  {type:"mcq", question:"Which condition allows an ionic compound to conduct electricity?", options:["Being solid","Being melted or dissolved in water","Being cooled to 0 °C"], answer:1,
+   explanation:"When melted or in solution, the ions are free to move and carry charge."},
+  // 14
+  {type:"fill", question:"To conduct electricity, a substance needs charged particles that can ______.", answerText:"move",
+   explanation:"Charged particles (ions or electrons) must be able to move."},
+  // 15
+  {type:"mcq", question:"What is the charge on a sodium ion in sodium chloride?", options:["1+","1-","2+"], answer:0,
+   explanation:"Sodium forms a 1+ ion (Na⁺)."},
+  // 16
+  {type:"mcq", question:"What is the charge on a chloride ion?", options:["1+","1-","2-"], answer:1,
+   explanation:"Chloride forms a 1- ion (Cl⁻)."},
+  // 17
+  {type:"fill", question:"The formula of sodium chloride is ______.", answerText:"nacl",
+   explanation:"One Na⁺ and one Cl⁻ give the formula NaCl."},
+  // 18
+  {type:"mcq", question:"Magnesium is in group 2. What ion does it form?", options:["Mg⁺","Mg²⁺","Mg³⁺"], answer:1,
+   explanation:"Group 2 metals form 2+ ions, so magnesium forms Mg²⁺."},
+  // 19
+  {type:"mcq", question:"To balance Mg²⁺, how many Cl⁻ ions are needed in magnesium chloride?", options:["1","2","3"], answer:1,
+   explanation:"Two chloride ions (each 1-) are needed to balance Mg²⁺."},
+  // 20
+  {type:"fill", question:"The formula of magnesium chloride is ______.", answerText:"mgcl2",
+   explanation:"The formula is MgCl₂ (one magnesium and two chlorides)."},
+  // 21
+  {type:"mcq", question:"What is a polyatomic ion?", options:["An ion made from one atom only","A neutral molecule","An ion made from a group of atoms that stay together"], answer:2,
+   explanation:"Polyatomic ions are groups of atoms that carry an overall charge."},
+  // 22
+  {type:"fill", question:"The formula of the hydroxide ion is ______.", answerText:"oh-",
+   explanation:"Hydroxide ion has the formula OH⁻."},
+  // 23
+  {type:"fill", question:"The sulfate ion has the formula ______.", answerText:"so4",
+   explanation:"The sulfate ion is SO₄²⁻; the key part is SO4."},
+  // 24
+  {type:"mcq", question:"What is the charge on the sulfate ion SO₄²⁻?", options:["1-","2-","3-"], answer:1,
+   explanation:"Sulfate carries a 2- charge."},
+  // 25
+  {type:"mcq", question:"Calcium is in group 2. What ion does it form?", options:["Ca⁺","Ca²⁺","Ca³⁺"], answer:1,
+   explanation:"Calcium forms a 2+ ion (Ca²⁺)."},
+  // 26
+  {type:"mcq", question:"Hydroxide, OH⁻, has what charge?", options:["1+","1-","2-"], answer:1,
+   explanation:"Hydroxide is a 1- ion."},
+  // 27
+  {type:"fill", question:"To balance Ca²⁺, we need ______ hydroxide ions.", answerText:"two",
+   explanation:"Two OH⁻ ions are needed to balance the 2+ charge on Ca²⁺."},
+  // 28
+  {type:"fill", question:"The correct formula for calcium hydroxide is ______.", answerText:"ca(oh)2",
+   explanation:"The formula is Ca(OH)₂, with brackets around OH."},
+  // 29
+  {type:"mcq", question:"Why do we use brackets in Ca(OH)₂?", options:["To show a mixture","To show there are two whole hydroxide ions","To make the formula shorter"], answer:1,
+   explanation:"The brackets show that the subscript 2 applies to the entire hydroxide ion."},
+  // 30
+  {type:"mcq", question:"What is the charge on an aluminium ion?", options:["1+","2+","3+"], answer:2,
+   explanation:"Aluminium, in group 3, forms a 3+ ion (Al³⁺)."},
+  // 31
+  {type:"mcq", question:"In aluminium sulfate, Al₂(SO₄)₃, how many aluminium ions are present?", options:["1","2","3"], answer:1,
+   explanation:"The subscript 2 shows there are two aluminium ions."},
+  // 32
+  {type:"mcq", question:"In Al₂(SO₄)₃, how many sulfate ions are present?", options:["1","2","3"], answer:2,
+   explanation:"The subscript 3 outside the brackets shows there are three sulfate ions."},
+  // 33
+  {type:"fill", question:"The lowest common multiple of 2 and 3, used when balancing Mg²⁺ and Al³⁺ with other ions, is ______.", answerText:"6",
+   explanation:"The lowest common multiple of 2 and 3 is 6."},
+  // 34
+  {type:"mcq", question:"Which of these is a polyatomic ion you should memorise?", options:["Na⁺","Cl⁻","NO₃⁻"], answer:2,
+   explanation:"NO₃⁻ (nitrate) is a polyatomic ion that should be memorised."},
+  // 35
+  {type:"fill", question:"The nitrate ion has the formula ______.", answerText:"no3",
+   explanation:"The nitrate ion is NO₃⁻."},
+  // 36
+  {type:"fill", question:"The carbonate ion has the formula ______.", answerText:"co3",
+   explanation:"The carbonate ion is CO₃²⁻."},
+  // 37
+  {type:"mcq", question:"What is the charge on the ammonium ion, NH₄⁺?", options:["1+","1-","2-"], answer:0,
+   explanation:"Ammonium carries a 1+ charge."},
+  // 38
+  {type:"mcq", question:"Why do we need to memorise hydroxide, sulfate, nitrate, carbonate and ammonium ions?", options:["They are metals","They do not appear in exams","Their charges are not obvious from the periodic table"], answer:2,
+   explanation:"Their formulas and charges are not obvious from the periodic table, so they must be memorised."},
+  // 39
+  {type:"fill", question:"In an ionic compound, the total positive charge must ______ the total negative charge.", answerText:"equal",
+   explanation:"Overall, the total positive and negative charges must be equal."},
+  // 40
+  {type:"fill", question:"Ionic bonds exist because opposite charges ______ each other.", answerText:"attract",
+   explanation:"Oppositely charged ions attract each other, forming ionic bonds."}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let shuffledQuestions = [];
+
+function startGame(){
+  shuffledQuestions = [...questions].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  showQuestion();
+}
+
+function showQuestion(){
+  const gameArea = document.getElementById("game-area");
+  const q = shuffledQuestions[currentQuestion];
+  let html = `<div class="question-box"><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+  if(q.type==="mcq"){
+    q.options.forEach((opt, idx)=>{
+      html += `<label style="display:block;margin:.25rem 0"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+    });
+    html += `<button class="btn" onclick="checkMCQ()">Submit</button>`;
+  } else {
+    html += `<input id="fill" type="text" placeholder="Type your answer…" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px">`;
+    html += `<div style="height:8px"></div>`;
+    html += `<button class="btn" onclick="checkFill()">Submit</button>`;
+  }
+
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  gameArea.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = shuffledQuestions[currentQuestion];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const feedback = document.getElementById("feedback");
+  if(!sel){
+    feedback.textContent = "Please select an answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(parseInt(sel.value,10) === q.answer){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  }else{
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = shuffledQuestions[currentQuestion];
+  const ans = (document.getElementById("fill").value || "").trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  if(!ans){
+    feedback.textContent = "Please enter your answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(ans.includes(q.answerText)){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  } else {
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < shuffledQuestions.length){
+    showQuestion();
+  } else {
+    endGame();
+  }
+}
+
+function endGame(){
+  const gameArea = document.getElementById("game-area");
+  gameArea.innerHTML = `<h3>Quiz Complete!</h3>
+    <p>Your score: <strong>${score} / ${shuffledQuestions.length}</strong></p>
+    <button class="btn" onclick="startGame()">Try Again</button>`;
+}
+</script>
+</body>
+</html>
