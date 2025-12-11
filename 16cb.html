@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Covalent Bonding: Dot-and-Cross, Displayed & 3D Models</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#22c55e);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .pill{display:inline-block;background:#e0f2fe;border:1px solid #bae6fd;border-radius:999px;padding:2px 10px;margin-right:6px;margin-bottom:4px}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Covalent Bonding: Dot-and-Cross, Displayed &amp; 3D Models</h1>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <iframe src="https://www.youtube.com/embed/gk1vk6bFSAA" title="Covalent Bonding: Ways to Draw Molecules" allowfullscreen></iframe>
+    </section>
+
+    <section class="card">
+      <h2>Key Notes (rewritten from the speech)</h2>
+
+      <details open>
+        <summary>1) Ionic vs covalent bonding recap</summary>
+        <ul>
+          <li>In <b>ionic bonding</b>, atoms form ions by <b>transferring electrons</b> from one atom to another.</li>
+          <li>This makes <b>oppositely charged ions</b> which are held together by <b>electrostatic forces</b>.</li>
+          <li>The reason electrons are transferred is so that both atoms end up with a <b>full outer shell</b> of electrons.</li>
+          <li>This works well when:
+            <div>
+              <span class="pill">One atom has too many electrons</span>
+              <span class="pill">The other atom has too few</span>
+            </div>
+            for example in <b>sodium chloride</b>.</li>
+        </ul>
+        <div class="chem">
+Ionic bonding (quick recap)
+• Electrons are transferred.
+• Ions with opposite charges are formed.
+• Ions are attracted by electrostatic forces.
+• Each ion has a full outer shell.
+        </div>
+      </details>
+
+      <details>
+        <summary>2) Why covalent bonding is needed</summary>
+        <ul>
+          <li>Sometimes we have <b>two non-metal atoms</b>, such as two chlorine atoms.</li>
+          <li>In this case, <b>both atoms need an extra electron</b> to complete their outer shells.</li>
+          <li>Simply giving electrons to each other will not work because they both want to gain, not lose.</li>
+          <li>Instead, they can <b>share electrons</b> so that each atom effectively gets an extra electron.</li>
+        </ul>
+        <div class="chem">
+Covalent bond in Cl₂
+• Each chlorine atom needs 1 extra electron.
+• Each chlorine shares 1 of its own electrons.
+• Together, 2 electrons are shared.
+• Each atom now has a full outer shell.
+        </div>
+      </details>
+
+      <details>
+        <summary>3) Dot-and-cross diagrams</summary>
+        <ul>
+          <li>The Cl₂ example can be shown using a <b>dot-and-cross diagram</b>.</li>
+          <li>One atom's electrons are drawn as <b>dots</b> and the other's as <b>crosses</b>.</li>
+          <li>This lets us see clearly which electrons originally belonged to which atom.</li>
+          <li>Sometimes you only draw the <b>outer shell</b> of each atom (like in the example), but exam questions may ask for <b>all shells</b>.</li>
+        </ul>
+        <div class="chem">
+Dot-and-cross diagrams
+• Show electrons as dots for one atom and crosses for the other.
+• Shared electrons are in the overlapping region.
+• Always check whether the exam question wants only outer shells or all shells.
+        </div>
+      </details>
+
+      <details>
+        <summary>4) Displayed formulas and 3D models</summary>
+        <ul>
+          <li>An easier way to draw many covalent molecules is with a <b>displayed formula</b>.</li>
+          <li>In a displayed formula, we:
+            <ul>
+              <li>Write the <b>chemical symbol</b> for each atom.</li>
+              <li>Use <b>lines</b> to show covalent bonds (shared pairs of electrons).</li>
+            </ul>
+          </li>
+          <li>Displayed formulas are especially useful for <b>large molecules</b> that would be awkward as dot-and-cross diagrams.</li>
+        </ul>
+        <div class="chem">
+Example: glucose (a sugar)
+• Large molecule with many atoms.
+• Displayed formula uses symbols (C, H, O) and lines for bonds.
+• You do not need to memorise its exact structure, just recognise it as a displayed formula.
+        </div>
+        <ul>
+          <li>A limitation of displayed formulas is that they <b>do not show the 3D shape</b> of the molecule.</li>
+          <li>To show 3D arrangement, we use <b>3D models</b>, which try to represent the actual shape in space.</li>
+          <li>At this level, you only need to be able to <b>recognise</b> these 3D models, not predict the exact shapes.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) Covalent bonding in ammonia (NH₃)</summary>
+        <ul>
+          <li>Ammonia has the formula <b>NH₃</b>:
+            <div>
+              <span class="pill">1 nitrogen atom (N)</span>
+              <span class="pill">3 hydrogen atoms (H)</span>
+            </div>
+          </li>
+          <li>Step 1: Draw the atoms with their <b>outer shells</b> (for our example).</li>
+        </ul>
+        <div class="chem">
+Electron needs
+• Hydrogen:
+  - First energy level.
+  - Can hold a maximum of 2 electrons.
+  - Each H needs 1 extra electron.
+
+• Nitrogen:
+  - Second energy level.
+  - Can hold a maximum of 8 electrons.
+  - Nitrogen needs 3 extra electrons.
+        </div>
+        <ul>
+          <li>Step 2: Work out how they can share electrons so that <b>all outer shells are full</b>.</li>
+          <li>Each hydrogen shares <b>one electron</b> with nitrogen.</li>
+          <li>Nitrogen shares <b>one electron with each H</b>, so 3 shared pairs in total.</li>
+        </ul>
+        <div class="chem">
+Resulting bonding in NH₃
+• Three N–H covalent bonds.
+• Each hydrogen has 2 electrons in its outer level.
+• Nitrogen has 8 electrons in its outer level.
+• All atoms have full outer shells.
+        </div>
+        <ul>
+          <li>This can be drawn as a dot-and-cross diagram or as a displayed formula:</li>
+        </ul>
+        <div class="chem">
+Displayed formula for ammonia
+• Write N in the centre.
+• Draw three lines from N to three H atoms.
+• Each line represents one covalent bond (a shared pair of electrons).
+        </div>
+      </details>
+
+      <details>
+        <summary>6) Types of substances formed by covalent bonds</summary>
+        <ul>
+          <li>The molecules we have looked at so far (chlorine, ammonia) are <b>simple molecular substances</b>.</li>
+          <li>In a simple molecular substance:
+            <ul>
+              <li>Atoms inside each molecule are joined by <b>strong covalent bonds</b>.</li>
+              <li>However, the forces <b>between molecules</b> are only <b>weak intermolecular forces</b>.</li>
+              <li>These weak intermolecular forces are easily broken.</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="chem">
+Examples of simple molecular substances
+• Chlorine (Cl₂)
+• Ammonia (NH₃)
+• Water (H₂O)
+• Methane (CH₄)
+        </div>
+        <ul>
+          <li>Covalent bonds can also form much <b>larger structures</b>:</li>
+        </ul>
+        <div class="chem">
+Polymers
+• Long chains of repeating units called monomers.
+• Used to make things like plastic bags and T-shirts.
+        </div>
+        <div class="chem">
+Giant covalent structures
+• Huge networks of atoms joined by covalent bonds.
+• Can involve billions or trillions of atoms in a regular lattice.
+• Examples: silicon dioxide, diamond, graphite.
+• Very strong because every atom is covalently bonded.
+        </div>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game"><button onclick="startGame()">Start Quiz</button></div>
+    </section>
+
+    <footer>© 2025 Chemistry Pack</footer>
+  </div>
+
+  <script>
+    // 40-question quiz based on the covalent bonding speech
+    const questions = [
+      // 1
+      {type:"mcq", q:"In ionic bonding, electrons are:", opts:["Shared","Transferred","Ignored"], a:1, exp:"Ionic bonding involves transferring electrons from one atom to another."},
+      // 2
+      {type:"mcq", q:"In covalent bonding, electrons are:", opts:["Shared between atoms","Completely lost","Only around ions"], a:0, exp:"Covalent bonds are formed when atoms share electrons."},
+      // 3
+      {type:"fill", q:"Ionic bonds involve oppositely charged ______ held by electrostatic forces.", ans:"ions", exp:"Ions with opposite charges attract each other."},
+      // 4
+      {type:"fill", q:"Both ionic and covalent bonding help atoms achieve a full ______ shell.", ans:"outer", exp:"Atoms bond to gain full outer electron shells."},
+      // 5
+      {type:"mcq", q:"Which pair of elements is used as an example of ionic bonding in the recap?", opts:["Sodium and chlorine","Hydrogen and oxygen","Carbon and hydrogen"], a:0, exp:"Sodium and chlorine form an ionic compound, sodium chloride."},
+      // 6
+      {type:"mcq", q:"When two chlorine atoms bond, each one:", opts:["Loses two electrons","Shares one electron","Gains two electrons"], a:1, exp:"Each chlorine shares one electron to form a covalent bond."},
+      // 7
+      {type:"fill", q:"In a Cl₂ molecule, there are ______ electrons being shared in total.", ans:"2", exp:"Each chlorine shares one electron so 2 electrons are shared."},
+      // 8
+      {type:"mcq", q:"What type of diagram uses dots and crosses to show electrons?", opts:["Displayed formula","Dot-and-cross diagram","Bar chart"], a:1, exp:"Dot-and-cross diagrams show electrons from different atoms as dots or crosses."},
+      // 9
+      {type:"fill", q:"In a dot-and-cross diagram, one atom’s electrons are drawn as dots and the other's as ______.", ans:"crosses", exp:"This helps distinguish which electrons came from which atom."},
+      // 10
+      {type:"mcq", q:"What do we often draw in dot-and-cross diagrams for simplicity?", opts:["Only the outer shells","Every shell including the nucleus","No shells at all"], a:0, exp:"Often only outer shells are drawn unless the question asks for more."},
+      // 11
+      {type:"mcq", q:"In a displayed formula, covalent bonds are shown as:", opts:["Numbers","Arrows","Lines between atoms"], a:2, exp:"Lines represent pairs of shared electrons (covalent bonds)."},
+      // 12
+      {type:"mcq", q:"Why are displayed formulas useful?", opts:["They show 3D shape accurately","They make large molecules easier to draw","They show every electron"], a:1, exp:"Displayed formulas are easier to use for large molecules."},
+      // 13
+      {type:"fill", q:"The displayed formula of a molecule uses chemical ______ like C, H and O.", ans:"symbols", exp:"Chemical symbols represent the different atoms."},
+      // 14
+      {type:"mcq", q:"What is one limitation of displayed formulas?", opts:["They are too small","They cannot show 3D shapes","They never show bonds"], a:1, exp:"Displayed formulas do not show the true 3D shape."},
+      // 15
+      {type:"mcq", q:"What can we use to represent the 3D arrangement of atoms in a molecule?", opts:["3D models","Ionic equations","Thermometers"], a:0, exp:"3D models show how atoms are arranged in space."},
+      // 16
+      {type:"fill", q:"You only need to be able to ______ 3D models at this level, not predict their shapes.", ans:"recognise", exp:"Recognition of 3D models is sufficient here."},
+      // 17
+      {type:"fill", q:"The molecular formula of ammonia is ______.", ans:"NH3", exp:"Ammonia contains one nitrogen and three hydrogen atoms."},
+      // 18
+      {type:"mcq", q:"How many hydrogen atoms are there in ammonia?", opts:["1","2","3"], a:2, exp:"NH₃ has three hydrogen atoms."},
+      // 19
+      {type:"mcq", q:"Which energy level is the outer shell for hydrogen in ammonia?", opts:["First energy level","Second energy level","Third energy level"], a:0, exp:"Hydrogen's electrons are in the first energy level."},
+      // 20
+      {type:"fill", q:"The first energy level can hold a maximum of ______ electrons.", ans:"2", exp:"The first shell can only hold two electrons."},
+      // 21
+      {type:"mcq", q:"Which energy level is the outer shell for nitrogen in ammonia?", opts:["First","Second","Third"], a:1, exp:"Nitrogen's outer electrons are in the second energy level."},
+      // 22
+      {type:"fill", q:"The second energy level can hold a maximum of ______ electrons.", ans:"8", exp:"The second shell can hold up to eight electrons."},
+      // 23
+      {type:"fill", q:"Nitrogen needs ______ extra electrons to get a full outer shell.", ans:"3", exp:"Nitrogen needs three additional electrons to complete its outer shell."},
+      // 24
+      {type:"mcq", q:"In NH₃, how many electrons does each hydrogen share with nitrogen?", opts:["One","Two","Three"], a:0, exp:"Each hydrogen shares one electron with nitrogen."},
+      // 25
+      {type:"mcq", q:"How many N–H covalent bonds are there in ammonia?", opts:["1","2","3"], a:2, exp:"There are three N–H covalent bonds in ammonia."},
+      // 26
+      {type:"fill", q:"In ammonia, nitrogen ends up with ______ electrons in its outer shell.", ans:"8", exp:"Nitrogen completes its octet through three shared pairs."},
+      // 27
+      {type:"fill", q:"Molecules like chlorine and ammonia are called ______ molecular substances.", ans:"simple", exp:"They are examples of simple molecular substances."},
+      // 28
+      {type:"mcq", q:"Inside a simple molecular substance, atoms within each molecule are joined by:", opts:["Weak forces","Strong covalent bonds","Ionic bonds only"], a:1, exp:"Atoms in each molecule are held by strong covalent bonds."},
+      // 29
+      {type:"mcq", q:"Between separate molecules in a simple molecular substance there are:", opts:["Strong covalent bonds","Weak intermolecular forces","Metallic bonds"], a:1, exp:"Molecules are held together by weak intermolecular forces."},
+      // 30
+      {type:"fill", q:"The weak forces between molecules are called ______ forces.", ans:"intermolecular", exp:"Intermolecular forces act between separate molecules."},
+      // 31
+      {type:"fill", q:"Two other simple molecular substances mentioned are water (H2O) and ______ (CH4).", ans:"methane", exp:"Methane, CH₄, is also a simple molecular substance."},
+      // 32
+      {type:"mcq", q:"Polymers are:", opts:["Single atoms","Short diatomic molecules","Long chains of repeating units"], a:2, exp:"Polymers are long chains of repeating monomer units."},
+      // 33
+      {type:"fill", q:"The small repeating units that make up a polymer are called ______.", ans:"monomers", exp:"Monomers join together to form polymers."},
+      // 34
+      {type:"mcq", q:"Which of these is an example of something made from polymers?", opts:["Plastic bags","Diamond","Table salt"], a:0, exp:"Plastic bags and T-shirts are made from polymers."},
+      // 35
+      {type:"mcq", q:"Giant covalent structures involve:", opts:["Only a few atoms","Billions or trillions of atoms","No bonds at all"], a:1, exp:"They consist of huge numbers of atoms in a network."},
+      // 36
+      {type:"fill", q:"In a giant covalent structure, atoms are arranged in a regular ______.", ans:"lattice", exp:"The atoms form a regular repeating lattice."},
+      // 37
+      {type:"mcq", q:"Which of the following are examples of giant covalent structures?", opts:["Silicon dioxide, diamond, graphite","Water, methane, ammonia","Sodium chloride, potassium chloride"], a:0, exp:"Silicon dioxide, diamond and graphite are giant covalent structures."},
+      // 38
+      {type:"fill", q:"Giant covalent structures are very ______ because all atoms are joined by covalent bonds.", ans:"strong", exp:"Extensive covalent bonding gives these structures great strength."},
+      // 39
+      {type:"mcq", q:"Which statement best describes covalent bonds inside molecules?", opts:["They are very weak","They are very strong","They do not involve electrons"], a:1, exp:"Covalent bonds are strong bonds formed by shared electrons."},
+      // 40
+      {type:"fill", q:"Simple molecular substances have strong bonds inside molecules but only ______ forces between molecules.", ans:"weak", exp:"Intermolecular forces between molecules are weak."}
+    ];
+
+    let order=[], idx=0, score=0;
+    function startGame(){
+      order=[...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+      idx=0; score=0; renderQ();
+    }
+    function renderQ(){
+      const q=questions[order[idx]];
+      let html = `<div class='qbox'><h3>Q ${idx+1}/${questions.length}</h3><p>${q.q}</p>`;
+      if(q.type==="mcq"){
+        q.opts.forEach((o,i)=>{ html += `<label><input type='radio' name='opt' value='${i}'> ${o}</label><br>`; });
+        html += `<button onclick='checkMCQ()'>Submit</button>`;
+      }else{
+        html += `<input id='fill' placeholder='Answer'> <button onclick='checkFill()'>Submit</button>`;
+      }
+      html += `<div id='fb' class='feedback'></div></div>`;
+      document.getElementById('game').innerHTML = html;
+    }
+    function checkMCQ(){
+      const q=questions[order[idx]];
+      const pick=document.querySelector("input[name='opt']:checked");
+      const fb=document.getElementById('fb');
+      if(!pick){ fb.textContent='Select one'; fb.className='feedback bad'; return; }
+      if(parseInt(pick.value)===q.a){ score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok'; }
+      else{ fb.textContent='❌ '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+    function checkFill(){
+      const q=questions[order[idx]];
+      const ans=(document.getElementById('fill').value||'').trim().toLowerCase();
+      const fb=document.getElementById('fb');
+      if(!ans){ fb.textContent='Enter answer'; fb.className='feedback bad'; return; }
+      if(ans===q.ans.toLowerCase()){
+        score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok';
+      }else{
+        fb.textContent='❌ Correct: '+q.ans+'. '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+    function nextQ(){
+      idx++;
+      if(idx<questions.length) renderQ();
+      else endGame();
+    }
+    function endGame(){
+      document.getElementById('game').innerHTML = `<div class='qbox'><h3>Finished!</h3><p>Your score: <b>${score}/${questions.length}</b></p><button onclick='startGame()'>Play again</button></div>`;
+    }
+  </script>
+</body>
+</html>
