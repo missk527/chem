@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wastewater Treatment — Notes & Quiz</title>
+  <style>
+    :root{ --brand:#b00020; --paper:#fffef7; --ink:#222; }
+    *{ box-sizing:border-box }
+    body{
+      margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f7f5f9; color:var(--ink); line-height:1.6;
+      background-image:linear-gradient(white 97%, #ece6f1 100%); background-size:100% 30px;
+    }
+    header{ background:var(--brand); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    header h1{ margin:0; font-size:1.25rem; letter-spacing:.3px }
+    .small{ opacity:.9; font-size:.9rem }
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #e3e8f5; border-radius:12px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin-bottom:18px }
+    .notes h2,.game h2{ color:#6a1b9a; border-bottom:2px solid #e1bee7; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#6a1b9a }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #e0e0e0; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#fde0dc; color:#b00020; border:1px solid #ffcdd2; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#666; font-size:.85rem; padding:20px 0 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Wastewater Treatment — Exam Notes & Quiz <span class="pill">Sources · Screening · Sedimentation · Digestion</span></h1>
+    <div class="small">Video + exam-focused notes + 40-question practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/HXaSJxSNIFM" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="notes">
+  <h2>Notes (Key points from the speech)</h2>
+
+  <details open>
+    <summary>What is wastewater treatment?</summary>
+    <ul>
+      <li><strong>Wastewater treatment</strong> is the process of cleaning used water so it can be <strong>reused</strong> or <strong>safely returned</strong> to rivers, lakes, or the ocean.</li>
+      <li>Wastewater can contain <strong>organic matter</strong>, <strong>harmful microbes</strong>, and sometimes <strong>toxic chemicals</strong>, so it must be treated before disposal.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Main sources of wastewater</summary>
+    <ul>
+      <li><strong>Domestic</strong>: household water from <strong>showers, sinks, and toilets</strong> that flows through sewers to treatment plants.</li>
+      <li><strong>Agricultural</strong>: <strong>nutrient runoff</strong> from fields and <strong>animal waste</strong> from farms.</li>
+      <li><strong>Industrial</strong>: wastewater from <strong>factories</strong>, often containing <strong>chemicals</strong> that need extra removal steps.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Why do we treat wastewater?</summary>
+    <ul>
+      <li>To prevent <strong>pollution</strong> of fresh water and reduce <strong>health risks</strong> from disease-causing microbes.</li>
+      <li>To remove <strong>organic material</strong> that would otherwise use up oxygen in natural waters and harm ecosystems.</li>
+      <li>Industrial wastewater may need additional treatment to remove <strong>harmful chemicals</strong>.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Step 1: Screening</summary>
+    <ul>
+      <li>Large objects (e.g., <strong>twigs</strong>, <strong>plastic bottles</strong>) are removed.</li>
+      <li>This is often done by passing sewage through a <strong>mesh</strong> that blocks big items but lets liquid wastewater through.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Step 2: Sedimentation in a settlement tank</summary>
+    <ul>
+      <li>Wastewater is left to sit so <strong>heavy solids sink</strong> to the bottom.</li>
+      <li>The bottom layer becomes <strong>sludge</strong> (solid-rich).</li>
+      <li>The top layer is <strong>effluent</strong> (liquid-rich) which can be separated for further treatment.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Step 3: Biological breakdown (microorganisms)</summary>
+    <ul>
+      <li>Microbes break down remaining <strong>organic matter</strong>.</li>
+      <li><strong>Effluent tank</strong>: kept <strong>aerobic</strong> by pumping in air (oxygen) → <strong>aerobic digestion</strong>.</li>
+      <li><strong>Sludge tank</strong>: kept <strong>anaerobic</strong> by sealing it (little/no oxygen) → <strong>anaerobic digestion</strong>.</li>
+      <li>Given enough time, organic matter is broken down, including many of the microbes themselves.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Outputs: clean water, methane, and fertilizer</summary>
+    <ul>
+      <li>After treatment, the <strong>effluent water</strong> is safe enough to be <strong>released back into the environment</strong>.</li>
+      <li><strong>Anaerobic digestion</strong> in sludge produces <strong>methane</strong>, which can be <strong>captured and burned for energy</strong>.</li>
+      <li>The remaining digested sludge is <strong>nutrient-rich</strong> and can be used as a <strong>fertilizer</strong>.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Extra stages for toxic substances</summary>
+    <ul>
+      <li>If wastewater contains <strong>toxic chemicals</strong>, extra steps may be needed.</li>
+      <li>Examples include adding chemicals to <strong>precipitate metals</strong> or using <strong>ultraviolet (UV) radiation</strong> to break down harmful compounds.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>How hard is wastewater treatment?</summary>
+    <ul>
+      <li>Treating wastewater usually takes <strong>more effort</strong> than treating fresh water because it contains more contaminants.</li>
+      <li>However, it is still <strong>easier than desalinating seawater</strong>.</li>
+      <li>Countries with limited water supply (e.g., <strong>Singapore</strong>) may rely on treated wastewater as part of their <strong>drinking water supply</strong>.</li>
+    </ul>
+  </details>
+</section>
+
+    <section class="game">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Wastewater treatment practice</div>
+
+<script>
+// Quiz schema supports: mcq (options, answer index), tf (boolean), and fill (string answer)
+const questions = [
+  // 1
+  {type:"mcq", question:"What is the main goal of wastewater treatment?", options:[
+    "To turn seawater into salt",
+    "To clean used water so it can be reused or safely returned to nature",
+    "To increase the amount of pollutants in rivers",
+    "To make water look darker"
+  ], answer:1, explanation:"Treatment makes wastewater safe for reuse or release into natural waters."},
+
+  // 2
+  {type:"mcq", question:"Which of the following is NOT one of the three main wastewater sources named?", options:[
+    "Domestic",
+    "Agricultural",
+    "Industrial",
+    "Volcanic"
+  ], answer:3, explanation:"The speech lists domestic, agricultural, and industrial sources."},
+
+  // 3
+  {type:"mcq", question:"Domestic wastewater mainly comes from:", options:[
+    "Showers, sinks, and toilets",
+    "Ocean waves",
+    "Volcanoes",
+    "Glaciers"
+  ], answer:0, explanation:"Household water from showers, sinks, and toilets becomes domestic wastewater."},
+
+  // 4
+  {type:"tf", question:"After domestic water is flushed down the drain, it travels through sewers toward treatment plants.", answer:true, explanation:"Domestic wastewater goes into sewers and heads to sewage treatment plants."},
+
+  // 5
+  {type:"mcq", question:"Agricultural wastewater commonly includes:", options:[
+    "Nutrient runoff and animal waste",
+    "Only plastic bottles",
+    "Only salt",
+    "Only clean rainwater"
+  ], answer:0, explanation:"Farms produce nutrient runoff from fields and animal waste."},
+
+  // 6
+  {type:"mcq", question:"Industrial wastewater is often associated with:", options:[
+    "Factories that make and use chemicals",
+    "Only bathrooms",
+    "Only forests",
+    "Only mountains"
+  ], answer:0, explanation:"Industrial sources include factories and chemical processes."},
+
+  // 7
+  {type:"mcq", question:"Why must wastewater be treated before disposal?", options:[
+    "To increase disease risk",
+    "To remove harmful microbes and pollutants and make it safe",
+    "To make it smell stronger",
+    "To make it more acidic"
+  ], answer:1, explanation:"Treatment removes organic matter, microbes, and sometimes chemicals to protect health and ecosystems."},
+
+  // 8
+  {type:"tf", question:"Industrial wastewater may require extra steps because it can contain harmful chemicals.", answer:true, explanation:"Industrial sources often add chemical pollutants that need further removal."},
+
+  // 9
+  {type:"mcq", question:"In many systems, what is the first common treatment step?", options:[
+    "Aerobic digestion",
+    "Screening",
+    "Desalination",
+    "Chloroplast filtration"
+  ], answer:1, explanation:"Screening removes large debris first."},
+
+  // 10
+  {type:"mcq", question:"Screening removes large items such as:", options:[
+    "Twigs and plastic bottles",
+    "Dissolved oxygen",
+    "Salt ions",
+    "Water molecules"
+  ], answer:0, explanation:"Large solids are filtered out using a mesh."},
+
+  // 11
+  {type:"tf", question:"Screening is often done by passing sewage through a mesh.", answer:true, explanation:"A mesh lets liquid through but traps big objects."},
+
+  // 12
+  {type:"mcq", question:"What is the main purpose of the settlement tank stage?", options:[
+    "To add nutrients to wastewater",
+    "To allow sedimentation so heavy solids sink",
+    "To make water salty",
+    "To increase plastic content"
+  ], answer:1, explanation:"Sedimentation separates heavy solids from the liquid."},
+
+  // 13
+  {type:"mcq", question:"During sedimentation, the heaviest solids form:", options:[
+    "Effluent",
+    "Sludge",
+    "Vapour",
+    "Mist"
+  ], answer:1, explanation:"Heavy solids sink to form sludge at the bottom."},
+
+  // 14
+  {type:"mcq", question:"The lighter liquid layer at the top after sedimentation is called:", options:[
+    "Sludge",
+    "Effluent",
+    "Magma",
+    "Brine"
+  ], answer:1, explanation:"Effluent sits above the sludge and is treated further."},
+
+  // 15
+  {type:"tf", question:"Sludge is the lighter portion that floats at the top of the settlement tank.", answer:false, explanation:"Sludge is the heavy solid layer that sinks to the bottom."},
+
+  // 16
+  {type:"mcq", question:"The final main stage described focuses on:", options:[
+    "Breaking down organic matter",
+    "Adding more plastic",
+    "Turning water into ice",
+    "Increasing bacteria growth forever"
+  ], answer:0, explanation:"Microorganisms biologically break down organic material."},
+
+  // 17
+  {type:"mcq", question:"Which organisms are relied upon to break down organic matter in treatment?", options:[
+    "Birds",
+    "Microorganisms",
+    "Trees",
+    "Fish"
+  ], answer:1, explanation:"Microbes digest and decompose organic material."},
+
+  // 18
+  {type:"mcq", question:"In the effluent tank, conditions are mainly:", options:[
+    "Aerobic (with oxygen)",
+    "Anaerobic (without oxygen)",
+    "Frozen",
+    "Radioactive"
+  ], answer:0, explanation:"Air is pumped in so microbes can perform aerobic digestion."},
+
+  // 19
+  {type:"mcq", question:"In the sludge tank, conditions are mainly:", options:[
+    "Aerobic (with oxygen)",
+    "Anaerobic (little or no oxygen)",
+    "Highly salty",
+    "Fully sterile"
+  ], answer:1, explanation:"The sludge tank is sealed to keep oxygen low for anaerobic digestion."},
+
+  // 20
+  {type:"tf", question:"Air is pumped into the effluent tank to supply oxygen.", answer:true, explanation:"This creates aerobic conditions for digestion."},
+
+  // 21
+  {type:"mcq", question:"Aerobic digestion happens mainly in the:", options:[
+    "Effluent tank",
+    "Sludge tank",
+    "Screen",
+    "Ocean"
+  ], answer:0, explanation:"Effluent is treated under aerobic conditions."},
+
+  // 22
+  {type:"mcq", question:"Anaerobic digestion happens mainly in the:", options:[
+    "Effluent tank",
+    "Sludge tank",
+    "Mesh screen",
+    "River"
+  ], answer:1, explanation:"Sludge is treated under anaerobic conditions."},
+
+  // 23
+  {type:"mcq", question:"A key gas produced during anaerobic digestion of sludge is:", options:[
+    "Oxygen",
+    "Methane",
+    "Nitrogen",
+    "Helium"
+  ], answer:1, explanation:"Anaerobic digestion produces methane, which can be captured."},
+
+  // 24
+  {type:"mcq", question:"What can captured methane be used for?", options:[
+    "As an energy source when burned",
+    "To make water more polluted",
+    "To freeze the effluent",
+    "To remove oxygen from air permanently"
+  ], answer:0, explanation:"Methane can be burned to provide energy."},
+
+  // 25
+  {type:"mcq", question:"After digestion, the remaining sludge can be used as:", options:[
+    "A fertilizer rich in nutrients",
+    "A plastic substitute",
+    "A metal ore",
+    "A seawater additive"
+  ], answer:0, explanation:"Digested sludge is nutrient-rich and can be used as fertilizer."},
+
+  // 26
+  {type:"tf", question:"After enough biological breakdown, effluent water can be released back into the environment.", answer:true, explanation:"The treated effluent is safe to return to natural waters."},
+
+  // 27
+  {type:"mcq", question:"If wastewater contains toxic substances, treatment may need:", options:[
+    "Additional stages beyond the three main steps",
+    "No treatment at all",
+    "Only screening",
+    "Only freezing"
+  ], answer:0, explanation:"Toxins may require extra chemical or physical processes."},
+
+  // 28
+  {type:"mcq", question:"One method mentioned for removing metals is to:", options:[
+    "Add chemicals to precipitate the metals out",
+    "Add more microbes to make metals disappear instantly",
+    "Boil the water until metal evaporates",
+    "Add sugar to dissolve metals"
+  ], answer:0, explanation:"Precipitation can remove dissolved metals as solids."},
+
+  // 29
+  {type:"mcq", question:"Another method mentioned for dealing with some toxic compounds is:", options:[
+    "Ultraviolet (UV) radiation to break them down",
+    "Magnetism to create salt",
+    "Wind turbines in the tank",
+    "Sound waves to create oxygen"
+  ], answer:0, explanation:"UV can break down certain harmful substances."},
+
+  // 30
+  {type:"tf", question:"Wastewater treatment generally requires more effort than treating fresh water.", answer:true, explanation:"Wastewater contains more contaminants than fresh water."},
+
+  // 31
+  {type:"mcq", question:"Compared with desalination, treating wastewater is usually:", options:[
+    "Harder",
+    "Easier",
+    "Identical",
+    "Impossible"
+  ], answer:1, explanation:"The speech says it is easier than desalinating salt water."},
+
+  // 32
+  {type:"mcq", question:"Desalination refers to:", options:[
+    "Removing salt from salt water",
+    "Adding salt to fresh water",
+    "Removing oxygen from air",
+    "Adding microbes to sludge"
+  ], answer:0, explanation:"Desalination is the removal of salts from seawater or brackish water."},
+
+  // 33
+  {type:"mcq", question:"Which country is mentioned as relying on treated wastewater for drinking supplies?", options:[
+    "Singapore",
+    "Iceland",
+    "Brazil",
+    "Canada"
+  ], answer:0, explanation:"Singapore is noted as using treated wastewater due to limited supply."},
+
+  // 34
+  {type:"tf", question:"All wastewater sources require exactly the same treatment steps in every system.", answer:false, explanation:"Exact steps depend on the source; the speech describes common steps."},
+
+  // 35
+  {type:"fill", question:"The process where heavy solids sink to the bottom of a tank is called ______.", answer:"sedimentation", explanation:"Sedimentation separates solids from the liquid."},
+
+  // 36
+  {type:"fill", question:"The heavy solid layer that forms at the bottom of the settlement tank is called ______.", answer:"sludge", explanation:"Sludge is the solid-rich bottom layer."},
+
+  // 37
+  {type:"fill", question:"The lighter liquid layer separated from sludge is called ______.", answer:"effluent", explanation:"Effluent is the treated liquid portion."},
+
+  // 38
+  {type:"fill", question:"Digestion that occurs with oxygen present is ______ digestion.", answer:"aerobic", explanation:"Aerobic digestion requires oxygen."},
+
+  // 39
+  {type:"fill", question:"Digestion that occurs with little or no oxygen is ______ digestion.", answer:"anaerobic|anoxic", explanation:"Anaerobic digestion happens when oxygen is absent."},
+
+  // 40
+  {type:"tf", question:"Anaerobic digestion can produce methane that may be captured for energy.", answer:true, explanation:"Methane is a useful biogas produced in anaerobic sludge treatment."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
