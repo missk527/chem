@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Esters</title>
+  <style>
+    :root{ --brand:#3f51b5; --paper:#fffef7; --ink:#333; }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Arial, system-ui, sans-serif; background:#f5f7fb; color:var(--ink); line-height:1.6;
+      background-image:linear-gradient(white 97%, #e0e0e0 100%); background-size:100% 30px;
+    }
+    header{ background:var(--brand); color:#fff; padding:16px 20px; text-align:center; font-size:1.4rem; box-shadow:0 2px 10px rgba(0,0,0,.1) }
+    .video-container{ display:flex; justify-content:center; margin-top:20px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #ccc; border-radius:10px; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.15)}
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .notes,.game{ background:var(--paper); border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,.08); padding:18px; margin-bottom:18px }
+    .notes h2,.game h2{ color:var(--brand); border-bottom:2px solid #c5cae9; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:bold; color:#283593 }
+    .question-box{ border:1px solid #e0e0e0; border-radius:10px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:8px; padding:8px 14px; font-weight:bold; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:bold }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .small{font-size:.95rem}
+  </style>
+</head>
+<body>
+<header>Esters</header>
+
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/Nd5Sg2sAxd0" title="Metallic Bonding & Alloys" allowfullscreen></iframe>
+</div>
+
+<div class="wrap">
+          <section class="notes">
+    <h2>Key Notes (rewritten from the speech)</h2>
+
+    <details open>
+      <summary>What esters are</summary>
+      <ul>
+        <li><b>Esters</b> are organic molecules with a characteristic <b>functional group</b> located within the carbon chain.</li>
+        <li>The functional group contains a <b>carbonyl (C=O)</b> next to an <b>oxygen</b>, commonly written as <b>–COO–</b>.</li>
+        <li>This group is often called the <b>ester group</b> or the <b>ester link</b> because it links the acid part to the alcohol part.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Typical properties</summary>
+      <ul>
+        <li>Many esters have <b>pleasant smells</b>, often described as <b>sweet</b> or <b>fruity</b>.</li>
+        <li>Esters are often <b>volatile</b>, meaning they <b>evaporate easily</b>.</li>
+        <li>Because of these properties, esters are commonly used in <b>perfumes</b> and <b>food flavourings</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>How esters are made (esterification)</summary>
+      <ul>
+        <li>Esters are made by reacting a <b>carboxylic acid</b> with an <b>alcohol</b>.</li>
+        <li>This reaction is called <b>esterification</b>.</li>
+        <li>An <b>acid catalyst</b> is used to speed up the reaction, commonly <b>concentrated sulfuric acid</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Example: ethyl ethanoate</summary>
+      <ul>
+        <li>To make <b>ethyl ethanoate</b>, you react <b>ethanoic acid</b> with <b>ethanol</b>.</li>
+        <li>During the reaction, the acid provides an <b>–OH</b> group and the alcohol provides an <b>H</b> from its <b>–OH</b> group.</li>
+        <li>These combine to form <b>water</b>, which is the <b>by-product</b> of the reaction.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Key idea about the ester link</summary>
+      <ul>
+        <li>The <b>ester link (–COO–)</b> is the part of the molecule that connects the <b>carboxylic acid</b> fragment to the <b>alcohol</b> fragment.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section class="game">
+    <h2>Quiz (40 Questions)</h2>
+    <div id="game-area">
+      <button onclick="startGame()">Start</button>
+      <div class="scorebar muted" id="scorebar">Not started</div>
+    </div>
+  </section>
+</div>
+
+<script>
+// 40-question quiz based on the provided speech
+const questions = [
+  {type:"mcq", question:"What is an ester?", options:["A salt formed from metal and acid","An organic compound with an ester functional group","A polymer made only of glucose"], answer:1, explanation:"Esters contain a characteristic functional group."},
+  {type:"mcq", question:"Where is the ester functional group typically found in the molecule (as described)?", options:["At the very end only","Somewhere in the middle of the molecule","Only attached to metals"], answer:1, explanation:"The speech describes it as being in the middle."},
+  {type:"mcq", question:"Which group is associated with esters?", options:["–COO–","–OH","–NH2"], answer:0, explanation:"The ester group can be written as –COO–."},
+  {type:"fill", question:"The key feature of esters is their functional group containing a ______ group.", answerText:"carbonyl", explanation:"Esters include a C=O (carbonyl) as part of their group."},
+  {type:"mcq", question:"Many esters have smells that are often described as:", options:["Bitter or salty","Sweet or fruity","Burnt or smoky"], answer:1, explanation:"Esters often smell sweet/fruity."},
+
+  {type:"mcq", question:"Esters are often volatile. What does volatile mean?", options:["Dissolves in water easily","Evaporates easily","Does not react"], answer:1, explanation:"Volatile substances evaporate easily."},
+  {type:"mcq", question:"Because of their smell and volatility, esters are commonly used in:", options:["Perfumes and food flavourings","Bricks and concrete","Car batteries"], answer:0, explanation:"They are used in perfumes and flavourings."},
+  {type:"mcq", question:"To make an ester, which two types of substances react?", options:["Carboxylic acid and alcohol","Alkane and oxygen","Salt and water"], answer:0, explanation:"Esterification uses a carboxylic acid and an alcohol."},
+  {type:"fill", question:"The reaction that makes an ester from a carboxylic acid and an alcohol is called ______.", answerText:"esterification", explanation:"That reaction is esterification."},
+  {type:"mcq", question:"What is used to speed up esterification?", options:["An acid catalyst","A base catalyst","No catalyst"], answer:0, explanation:"An acid catalyst is used."},
+
+  {type:"mcq", question:"Which acid is commonly used as the catalyst (according to the speech)?", options:["Concentrated sulfuric acid","Dilute hydrochloric acid","Carbonic acid"], answer:0, explanation:"The speech mentions concentrated sulfuric acid."},
+  {type:"mcq", question:"Which ester is used as the example in the speech?", options:["Ethyl ethanoate","Methyl methanoate","Propyl propanoate"], answer:0, explanation:"Ethyl ethanoate is the example."},
+  {type:"mcq", question:"To make ethyl ethanoate, you need ethanoic acid and:", options:["Methanol","Ethanol","Propanol"], answer:1, explanation:"Ethyl ethanoate comes from ethanoic acid and ethanol."},
+  {type:"fill", question:"Ethyl ethanoate is formed from ethanoic acid and ______.", answerText:"ethanol", explanation:"Ethanol is the alcohol used."},
+  {type:"mcq", question:"In esterification, the carboxylic acid loses:", options:["An –OH group","A carbon atom","A nitrogen atom"], answer:0, explanation:"The acid loses its –OH group."},
+
+  {type:"mcq", question:"In esterification, the alcohol loses:", options:["The carbonyl group","A hydrogen from its –OH group","An entire oxygen atom only"], answer:1, explanation:"The alcohol loses H from its –OH."},
+  {type:"mcq", question:"What by-product is formed when the –OH from the acid and H from the alcohol combine?", options:["Hydrogen peroxide","Water","Oxygen gas"], answer:1, explanation:"They form water."},
+  {type:"fill", question:"The by-product of esterification is ______.", answerText:"water", explanation:"Water is produced."},
+  {type:"mcq", question:"The ester group can also be called the ester:", options:["Chain","Link","Ring"], answer:1, explanation:"It is also called an ester link."},
+  {type:"fill", question:"The ester link connects the carboxylic acid part and the ______ part.", answerText:"alcohol", explanation:"It links acid and alcohol fragments."},
+
+  {type:"mcq", question:"Which statement best explains why esters are used in perfumes?", options:["They smell pleasant and evaporate easily","They are always solid","They conduct electricity"], answer:0, explanation:"Sweet smells and volatility make them suitable."},
+  {type:"mcq", question:"Which statement best explains why esters are used in food flavourings?", options:["They are radioactive","They have sweet/fruity smells","They remove oxygen from food"], answer:1, explanation:"Their pleasant smells are used as flavourings."},
+  {type:"mcq", question:"What is the role of the acid catalyst in esterification?", options:["To speed up the reaction","To make the ester insoluble","To produce extra water"], answer:0, explanation:"Catalysts increase reaction rate."},
+  {type:"fill", question:"Concentrated sulfuric acid is used as an acid ______.", answerText:"catalyst", explanation:"It catalyses the reaction."},
+  {type:"mcq", question:"Which pair correctly describes the reactants for making an ester?", options:["Carboxylic acid + alcohol","Alkene + water","Alkane + chlorine"], answer:0, explanation:"Esters form from carboxylic acids and alcohols."},
+
+  {type:"mcq", question:"Which part of the carboxylic acid combines into water?", options:["The –OH group","The carbonyl oxygen","The carbon chain"], answer:0, explanation:"The acid loses –OH."},
+  {type:"mcq", question:"Which part of the alcohol combines into water?", options:["The carbon chain","A hydrogen from –OH","The entire –OH group from acid"], answer:1, explanation:"Alcohol provides H from –OH."},
+  {type:"mcq", question:"What does 'by-product' mean in this context?", options:["Main desired product","A product made alongside the main product","A reactant used up"], answer:1, explanation:"Water is produced alongside the ester."},
+  {type:"fill", question:"Esters often have a ______ smell.", answerText:"fruity", explanation:"They are described as sweet or fruity."},
+  {type:"mcq", question:"What does it mean that esters are volatile?", options:["They evaporate easily","They freeze easily","They are very dense"], answer:0, explanation:"Volatile means evaporates easily."},
+
+  {type:"mcq", question:"In the example, the alcohol used is ethanol. What is the acid used?", options:["Ethanoic acid","Propanoic acid","Methanoic acid"], answer:0, explanation:"Ethanoic acid is used."},
+  {type:"fill", question:"A carboxylic acid has the functional group ______.", answerText:"COOH", explanation:"Carboxylic acids contain –COOH."},
+  {type:"mcq", question:"The ester link is best described as:", options:["A section that links acid and alcohol fragments","A metal ion bond","A hydrogen bond between water molecules"], answer:0, explanation:"It links the two parts together."},
+  {type:"mcq", question:"Which is true about where the ester functional group appears (as described)?", options:["Always at the end","Somewhere in the middle","Only on benzene rings"], answer:1, explanation:"The speech says it is in the middle."},
+  {type:"fill", question:"Esters are commonly found in perfumes and food ______.", answerText:"flavourings", explanation:"Used in food flavourings."},
+
+  {type:"mcq", question:"What is removed overall during esterification?", options:["Elements that form water","All oxygen atoms","All hydrogen atoms"], answer:0, explanation:"An –OH and an H combine to form water."},
+  {type:"mcq", question:"What is the main product of esterification?", options:["An ester","Water","Carbon dioxide"], answer:0, explanation:"The ester is the desired product."},
+  {type:"mcq", question:"Which is the correct combination forming water in esterification?", options:["–OH from acid + H from alcohol","H from acid + O from alcohol","C from acid + H from alcohol"], answer:0, explanation:"Those atoms form water."},
+  {type:"fill", question:"The ester functional group is sometimes called the ester ______.", answerText:"group", explanation:"It is called an ester group."},
+  {type:"mcq", question:"Which description matches an ester link?", options:["–COO– connecting two carbon chains","–OH at the end of a chain","–NH2 in the middle of a chain"], answer:0, explanation:"The –COO– group links the fragments."}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let order = [];
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const game = document.getElementById("game-area");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`;});
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else{
+    html += `<input type="text" id="fill" placeholder="Type answer"> <button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  game.querySelector("#game-area-inner") ? game.querySelector("#game-area-inner").innerHTML = html : game.insertAdjacentHTML("beforeend", `<div id="game-area-inner">${html}</div>`);
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select an answer."; fb.className="feedback incorrect"; return;}
+  if(parseInt(sel.value) === q.answer){
+    fb.textContent = "✅ Correct! " + q.explanation;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.explanation;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const ans = (document.getElementById("fill").value||"").trim().toLowerCase();
+  const fb = document.getElementById("feedback");
+  if(!ans){ fb.textContent = "Enter an answer."; fb.className="feedback incorrect"; return;}
+  if(ans.includes(q.answerText.toLowerCase())){
+    fb.textContent = "✅ Correct! " + q.explanation;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.explanation;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else endGame();
+}
+
+function endGame(){
+  const game = document.getElementById("game-area");
+  game.querySelector("#game-area-inner").innerHTML = `<h3>Finished!</h3><p>Your score: <b>${score} / ${questions.length}</b></p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
