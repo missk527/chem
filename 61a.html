@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Respiration — Notes & Quiz</title>
+  <style>
+    :root{ --brand:#7c3aed; --paper:#fffdf9; --ink:#222; }
+    *{ box-sizing:border-box }
+    body{
+      margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f7f5f9; color:var(--ink); line-height:1.6;
+    }
+    header{ background:var(--brand); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    header h1{ margin:0; font-size:1.2rem; letter-spacing:.2px }
+    .small{ opacity:.95; font-size:.9rem }
+    .wrap{ max-width:1000px; margin:20px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #e3e8f5; border-radius:12px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin:18px 0 }
+    .notes h2,.game h2{ color:#6d28d9; border-bottom:2px solid #e9d5ff; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#6d28d9 }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #e0e0e0; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#ede9fe; color:#4c1d95; border:1px solid #ddd6fe; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#666; font-size:.85rem; padding:20px 0 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Chemical Analysis — Purity & Formulations <span class="pill">Separation · Identification · Tests</span></h1>
+    <div class="small">Video + exam‑focused notes + 40‑question practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <!-- Updated video link -->
+        <iframe src="https://www.youtube.com/embed/Wi4h9jyehu4" title="Respiration video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+                <section class="notes">
+      <h2>Notes (Key points from the speech)</h2>
+
+      <details open>
+        <summary>What is chemical analysis?</summary>
+        <ul>
+          <li><strong>Chemical analysis</strong> (analytical chemistry) uses instruments and methods to <strong>separate</strong>, <strong>identify</strong>, and <strong>quantify</strong> substances.</li>
+          <li>Examples of techniques include <strong>paper chromatography</strong> (separating pigments), <strong>filtration</strong> and <strong>crystallisation</strong> (isolating solids), and <strong>distillation</strong> (separating liquids).</li>
+          <li>Analytical chemistry also includes <strong>chemical tests</strong>, such as tests for common gases.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Pure substances</summary>
+        <ul>
+          <li>A <strong>pure substance</strong> contains only <strong>one compound or one element</strong>.</li>
+          <li>Examples: <strong>pure water</strong> (only H<sub>2</sub>O molecules) and <strong>pure sodium chloride</strong> (NaCl).</li>
+          <li>If substances are mixed (e.g., salt + water), the result is a <strong>mixture</strong> and is <strong>not pure</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Melting and boiling points</summary>
+        <ul>
+          <li><strong>Only pure substances</strong> melt and boil at <strong>specific temperatures</strong>.</li>
+          <li>Example data: water boils at <strong>100°C</strong>; sodium chloride melts at <strong>801°C</strong>.</li>
+          <li>We can use melting/boiling points to <strong>identify unknown substances</strong> by comparing results with reference data.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Physical tests vs chemical tests</summary>
+        <ul>
+          <li>Measuring melting/boiling point is a <strong>physical test</strong> (testing physical properties).</li>
+          <li>Reacting a substance with another chemical to identify it is a <strong>chemical test</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Impure substances</summary>
+        <ul>
+          <li><strong>Impure substances</strong> (mixtures) do <strong>not</strong> have a single melting/boiling point.</li>
+          <li>They melt and boil over a <strong>range</strong> of temperatures that depends on mixture composition.</li>
+          <li>In general, impurities <strong>lower the melting point</strong> and <strong>raise the boiling point</strong>.</li>
+          <li>Example: salt water melts at about <strong>-2°C</strong> (vs 0°C) and boils at about <strong>100.5°C</strong> (vs 100°C).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Formulations</summary>
+        <ul>
+          <li>A <strong>formulation</strong> is a mixture made using a <strong>specific formula</strong> with <strong>precise amounts</strong> of each component.</li>
+          <li>Formulations are designed to have a <strong>particular function</strong> (like a recipe for a product).</li>
+          <li>Examples: <strong>fuels</strong>, <strong>cleaning agents</strong>, <strong>paints</strong>, <strong>medicines</strong>, <strong>alloys</strong>, <strong>fertilisers</strong>, and <strong>food and drink</strong>.</li>
+          <li>Key feature: components are always present in the <strong>same proportions</strong>, and each component can provide a different property.</li>
+          <li>Example: green paint needs a pigment for colour and other components to help it <strong>stick</strong> and behave correctly.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Take-home message</summary>
+        <ul>
+          <li>Purity affects melting/boiling behaviour and helps with identification.</li>
+          <li>Formulations are controlled mixtures with fixed proportions designed for a specific use.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="game">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Respiration practice</div>
+
+<script>
+// Quiz schema supports: mcq (options, answer index), tf (boolean), and fill (string answer)
+// All items are derived from the provided speech.
+const questions = [
+  {type:"mcq", question:"Chemical analysis (analytical chemistry) is mainly about:", options:[
+    "Making new plastics",
+    "Separating, identifying and quantifying substances",
+    "Only heating substances",
+    "Only measuring mass"
+  ], answer:1, explanation:"Analytical chemistry separates, identifies and quantifies substances."},
+
+  {type:"mcq", question:"Which is an example of a separation technique mentioned?", options:[
+    "Photosynthesis",
+    "Paper chromatography",
+    "Neutralisation",
+    "Combustion"
+  ], answer:1, explanation:"Paper chromatography is used to separate pigments."},
+
+  {type:"mcq", question:"Paper chromatography can be used to separate:", options:[
+    "Different pigments from a mixture",
+    "Different metals from an alloy",
+    "Only gases from air",
+    "Only salts from water"
+  ], answer:0, explanation:"It was given as an example for separating pigments."},
+
+  {type:"mcq", question:"Filtration and crystallisation are used to:", options:[
+    "Separate different liquids",
+    "Isolate solids from liquids",
+    "Identify DNA bases",
+    "Measure heart rate"
+  ], answer:1, explanation:"They isolate solids from liquids."},
+
+  {type:"mcq", question:"Distillation is used to:", options:[
+    "Separate out different liquids",
+    "Make a substance impure",
+    "Identify pigments",
+    "Measure melting point only"
+  ], answer:0, explanation:"Distillation separates different liquids."},
+
+  {type:"tf", question:"Chemical analysis includes chemical tests such as tests to identify common gases.", answer:true, explanation:"The speech mentions chemical tests for gases."},
+
+  {type:"mcq", question:"A pure substance contains:", options:[
+    "Only one type of compound or element",
+    "At least two different compounds",
+    "Only mixtures of liquids",
+    "Only gases"
+  ], answer:0, explanation:"Pure means one compound or one element only."},
+
+  {type:"mcq", question:"Which is an example of a pure substance mentioned?", options:[
+    "Salt water",
+    "Pure water",
+    "Paint",
+    "Fertiliser"
+  ], answer:1, explanation:"Pure water contains only water molecules."},
+
+  {type:"mcq", question:"Pure sodium chloride is pure because:", options:[
+    "It contains only NaCl compound",
+    "It contains NaCl and water",
+    "It contains many different salts",
+    "It always boils at 100°C"
+  ], answer:0, explanation:"Pure substances contain one compound or element."},
+
+  {type:"tf", question:"Salt water is a pure substance.", answer:false, explanation:"Salt water is a mixture, so it is not pure."},
+
+  {type:"mcq", question:"Why is purity important when measuring melting and boiling points?", options:[
+    "Only pure substances melt and boil at specific temperatures",
+    "Only impure substances melt at one temperature",
+    "Purity has no effect on phase changes",
+    "Only mixtures can be identified using temperatures"
+  ], answer:0, explanation:"Pure substances have sharp melting/boiling points."},
+
+  {type:"mcq", question:"Water boils at approximately:", options:[
+    "0°C",
+    "100°C",
+    "801°C",
+    "-2°C"
+  ], answer:1, explanation:"Pure water boils at 100°C."},
+
+  {type:"mcq", question:"Sodium chloride melts at approximately:", options:[
+    "100°C",
+    "0°C",
+    "801°C",
+    "100.5°C"
+  ], answer:2, explanation:"Pure sodium chloride melts at 801°C."},
+
+  {type:"mcq", question:"If an unknown liquid boils at 100°C, it is likely to be:", options:[
+    "Ethanol",
+    "Water",
+    "Sodium chloride",
+    "Green paint"
+  ], answer:1, explanation:"Boiling point can identify water."},
+
+  {type:"mcq", question:"Measuring melting and boiling points is a:", options:[
+    "Chemical test",
+    "Physical test",
+    "Biological test",
+    "Electrical test"
+  ], answer:1, explanation:"It tests physical properties."},
+
+  {type:"mcq", question:"Reacting a substance with another chemical to identify it is a:", options:[
+    "Physical test",
+    "Chemical test",
+    "Thermal test only",
+    "Optical test only"
+  ], answer:1, explanation:"Reactions used for identification are chemical tests."},
+
+  {type:"tf", question:"You can compare measured melting/boiling points with reference data to identify an unknown substance.", answer:true, explanation:"You look up data in a book to match chemicals."},
+
+  {type:"mcq", question:"Impure substances (mixtures) usually:", options:[
+    "Melt and boil at single fixed temperatures",
+    "Melt and boil over a range of temperatures",
+    "Always boil at 100°C",
+    "Never change state"
+  ], answer:1, explanation:"Mixtures melt/boil over a range."},
+
+  {type:"mcq", question:"In general, impurities tend to:", options:[
+    "Increase melting point and decrease boiling point",
+    "Lower melting point and raise boiling point",
+    "Raise melting point and raise boiling point",
+    "Lower melting point and lower boiling point"
+  ], answer:1, explanation:"Salt in water lowers melting point and increases boiling point."},
+
+  {type:"mcq", question:"Pure water freezes/melts at about:", options:[
+    "0°C",
+    "-2°C",
+    "100°C",
+    "801°C"
+  ], answer:0, explanation:"Pure water melts at 0°C."},
+
+  {type:"mcq", question:"Salt water has a melting point of about:", options:[
+    "0°C",
+    "-2°C",
+    "100°C",
+    "801°C"
+  ], answer:1, explanation:"Salt water melts at around -2°C."},
+
+  {type:"mcq", question:"Salt water boils at around:", options:[
+    "100°C",
+    "100.5°C",
+    "0°C",
+    "801°C"
+  ], answer:1, explanation:"Salt water boils around 100.5°C."},
+
+  {type:"tf", question:"Adding salt to water increases the boiling point.", answer:true, explanation:"Salt water boils at a higher temperature than pure water."},
+
+  {type:"tf", question:"Impurities always raise the melting point.", answer:false, explanation:"Impurities usually lower melting point."},
+
+  {type:"mcq", question:"A formulation is best described as:", options:[
+    "A pure element",
+    "A mixture made with a specific formula and precise amounts",
+    "A random mixture with unknown proportions",
+    "A substance that cannot be reused"
+  ], answer:1, explanation:"Formulations are precise mixtures designed for a function."},
+
+  {type:"mcq", question:"Formulations are like:", options:[
+    "A recipe for a mixture with a particular function",
+    "A melting point table",
+    "A single molecule",
+    "A chemical equation with no products"
+  ], answer:0, explanation:"The speech compares formulations to recipes."},
+
+  {type:"mcq", question:"Which is an example of a formulation mentioned?", options:[
+    "Fuels",
+    "Pure water",
+    "Pure sodium chloride",
+    "Single oxygen gas"
+  ], answer:0, explanation:"Fuels are listed as formulations."},
+
+  {type:"mcq", question:"Which is another example of a formulation mentioned?", options:[
+    "Cleaning agents",
+    "DNA bases",
+    "Amino acids",
+    "Chlorine atoms"
+  ], answer:0, explanation:"Cleaning agents are listed."},
+
+  {type:"mcq", question:"Which is another example of a formulation mentioned?", options:[
+    "Paints",
+    "Water molecules",
+    "Sodium atoms",
+    "Monomers"
+  ], answer:0, explanation:"Paints are listed."},
+
+  {type:"mcq", question:"Which is another example of a formulation mentioned?", options:[
+    "Medicines",
+    "Pure gold",
+    "Pure oxygen",
+    "Pure glucose"
+  ], answer:0, explanation:"Medicines are listed."},
+
+  {type:"mcq", question:"Which is another example of a formulation mentioned?", options:[
+    "Alloys",
+    "Single elements only",
+    "Only pure compounds",
+    "Only distilled water"
+  ], answer:0, explanation:"Alloys are listed."},
+
+  {type:"mcq", question:"Which is another example of a formulation mentioned?", options:[
+    "Fertilisers",
+    "Only gases",
+    "Only liquids",
+    "Only solids"
+  ], answer:0, explanation:"Fertilisers are listed."},
+
+  {type:"tf", question:"In a formulation, the components are always present in the same proportions.", answer:true, explanation:"Fixed proportions are the key feature."},
+
+  {type:"mcq", question:"Why do different components exist in a formulation?", options:[
+    "They all do exactly the same job",
+    "Each component can contribute a different property",
+    "To make the melting point always 0°C",
+    "To remove all colours"
+  ], answer:1, explanation:"Each component may add a different property."},
+
+  {type:"mcq", question:"In the green paint example, one component is needed to:", options:[
+    "Give it a green colour",
+    "Make oxygen",
+    "Increase boiling point of water",
+    "Turn into sodium chloride"
+  ], answer:0, explanation:"Pigments give the paint its colour."},
+
+  {type:"mcq", question:"In the green paint example, another component helps the paint:", options:[
+    "Stick to the wall",
+    "Become pure water",
+    "Form a double helix",
+    "Melt at 801°C"
+  ], answer:0, explanation:"Components help it stick to the wall."},
+
+  {type:"mcq", question:"Once a correct mixture is found, a formulation allows you to:", options:[
+    "Make the mixture over and over using the same formula",
+    "Change proportions every time",
+    "Remove all components except one",
+    "Avoid measuring amounts"
+  ], answer:0, explanation:"Formulations can be reproduced reliably."},
+
+  {type:"mcq", question:"Which statement is correct about pure vs impure substances?", options:[
+    "Pure substances boil over a range; impure substances boil sharply",
+    "Pure substances have sharp melting/boiling points; impure substances show ranges",
+    "Both pure and impure substances always boil at 100°C",
+    "Purity only affects colour, not boiling point"
+  ], answer:1, explanation:"Purity gives specific melting/boiling points."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
