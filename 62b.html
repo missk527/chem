@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paper Chromatography</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#22c55e);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .pill{display:inline-block;background:#e0f2fe;border:1px solid #bae6fd;border-radius:999px;padding:2px 10px;margin-right:6px;margin-bottom:4px}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Paper Chromatography</h1>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <iframe src="https://www.youtube.com/embed/8fehNL19a7o" title="Paper Chromatography" allowfullscreen></iframe>
+    </section>
+
+    <section class="card">
+      <h2>Key Notes (rewritten from the speech)</h2>
+
+      <details open>
+        <summary>1) What paper chromatography is for</summary>
+        <ul>
+          <li><b>Chromatography</b> is an analytical technique used to <b>separate</b> the different substances in a mixture so we can <b>identify</b> them.</li>
+          <li><b>Paper chromatography</b> is a simple type of chromatography often used to separate <b>dyes in ink</b>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) Setting up the experiment</summary>
+        <ul>
+          <li>Draw a <b>baseline</b> near the bottom of a strip of <b>filter paper</b> using a <b>pencil</b>.</li>
+          <li>Add a small <b>spot</b> of the ink/mixture onto the baseline.</li>
+          <li>Place a shallow layer of <b>solvent</b> (e.g. water or ethanol) into a beaker.</li>
+          <li>Stand the paper in the beaker so the solvent touches the paper <b>below</b> the ink spot.</li>
+          <li>Keep the ink spot <b>above the solvent level</b> so it does not wash straight into the beaker.</li>
+          <li>Cover the beaker with a <b>lid</b> to reduce solvent evaporation.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) What you observe: the chromatogram</summary>
+        <ul>
+          <li>As the solvent rises up the paper, the dyes <b>dissolve</b> and move with the solvent.</li>
+          <li>Different dyes travel at <b>different speeds</b>, so they separate into distinct spots.</li>
+          <li>The final pattern of spots is called a <b>chromatogram</b>.</li>
+          <li>If a substance is <b>not soluble</b> in the solvent, it will stay on the <b>baseline</b>.</li>
+          <li>Stop the run when the solvent is near the top, then remove the paper and let it <b>dry</b>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) Mobile phase vs stationary phase</summary>
+        <ul>
+          <li>These “phases” are <b>materials</b>, not time periods.</li>
+          <li><b>Mobile phase</b> = the substance the molecules can move in (a liquid or gas). Here, it is the <b>solvent</b>.</li>
+          <li><b>Stationary phase</b> = the material the molecules cannot move through. Here, it is the <b>paper</b>.</li>
+          <li>Substances repeatedly <b>dissolve in the solvent</b> (move) and then <b>stick to the paper</b> (pause).</li>
+        </ul>
+        <div class="chem">Key idea
+More soluble in the solvent → spends more time in the mobile phase → moves further/faster.
+More attracted to the paper → spends more time in the stationary phase → moves less/slower.</div>
+      </details>
+
+      <details>
+        <summary>5) RF values and identifying substances</summary>
+        <ul>
+          <li>Distance moved depends on <b>substance properties</b>, but also on <b>how long</b> you run the experiment.</li>
+          <li>So we use an <b>RF value</b> (a ratio) instead of raw distance.</li>
+        </ul>
+        <div class="chem">RF value = (distance travelled by the substance) ÷ (distance travelled by the solvent front)
+
+Example: dye = 6 cm, solvent front = 10 cm
+RF = 6/10 = 0.6</div>
+        <ul>
+          <li>A <b>pure</b> substance gives <b>one spot</b> with a characteristic RF value (for that setup).</li>
+          <li>Changing the <b>solvent</b> or the <b>paper</b> can change the RF value because you changed the mobile/stationary phase.</li>
+          <li>To identify a dye, compare RF values using the <b>same solvent and paper</b> as the reference data.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game"><button onclick="startGame()">Start Quiz</button></div>
+    </section>
+
+    <footer>© 2026 Chemistry Pack</footer>
+  </div>
+
+  <script>
+    // 40-question quiz based on the paper chromatography speech
+    const questions = [
+      {type:"mcq", q:"What is chromatography mainly used for?", opts:["Heating substances", "Separating substances in a mixture", "Measuring mass"], a:1, exp:"Chromatography separates substances in a mixture so they can be identified."},
+      {type:"mcq", q:"Which type of chromatography is described in the video?", opts:["Gas chromatography", "Paper chromatography", "Column chromatography"], a:1, exp:"The method described is paper chromatography."},
+      {type:"mcq", q:"In paper chromatography, what is commonly separated from ink?", opts:["Metals", "Dyes/pigments", "Salts only"], a:1, exp:"Paper chromatography can separate the different dyes in an ink."},
+      {type:"fill", q:"The pencil line drawn near the bottom of the paper is called the ______.", ans:"baseline", exp:"The baseline is where the sample spot is placed."},
+      {type:"mcq", q:"Why should you use a pencil to draw the baseline instead of a pen?", opts:["Pencil is brighter", "Pen ink would dissolve and interfere", "Pencil makes paper stronger"], a:1, exp:"Pen ink can dissolve in the solvent and affect the results."},
+      {type:"fill", q:"The ink sample is placed as a small ______ on the baseline.", ans:"spot", exp:"A small spot helps separation and clear results."},
+      {type:"mcq", q:"What is placed in the beaker to act as the solvent?", opts:["A shallow layer of water or ethanol", "Boiling oil", "A solid salt"], a:0, exp:"A shallow amount of solvent such as water or ethanol is used."},
+      {type:"mcq", q:"Where should the solvent level be relative to the ink spot?", opts:["Above the ink spot", "Exactly on the ink spot", "Below the ink spot"], a:2, exp:"The ink spot must stay above the solvent level."},
+      {type:"mcq", q:"Why is the solvent kept shallow?", opts:["To keep the baseline and ink spot from being submerged", "To make the paper heavier", "To increase temperature"], a:0, exp:"If the spot is submerged it can wash off into the solvent."},
+      {type:"mcq", q:"Why is it helpful to put a lid on the beaker?", opts:["To stop the paper tearing", "To reduce solvent evaporation", "To increase oxygen"], a:1, exp:"A lid helps prevent the solvent from evaporating."},
+      {type:"mcq", q:"What happens as the solvent moves up the paper?", opts:["The paper burns", "The dyes dissolve and move with the solvent", "The dyes turn into gas"], a:1, exp:"Dyes dissolve in the solvent and travel up the paper."},
+      {type:"mcq", q:"Why do different dyes separate into different spots?", opts:["They have different colours", "They travel up the paper at different rates", "They all move the same distance"], a:1, exp:"Different substances move at different speeds, producing separation."},
+      {type:"fill", q:"The final pattern of separated spots on the paper is called a ______.", ans:"chromatogram", exp:"The result is a chromatogram."},
+      {type:"mcq", q:"If a substance is not soluble in the solvent, what will it do?", opts:["Move fastest", "Stay on the baseline", "Disappear"], a:1, exp:"If it cannot dissolve, it will not travel and stays near the baseline."},
+      {type:"mcq", q:"When should you remove the paper from the beaker?", opts:["When the solvent front is near the top", "Immediately after placing it in", "Only after the paper is fully submerged"], a:0, exp:"Remove it when the solvent has almost reached the top."},
+      {type:"fill", q:"The moving edge of the solvent is called the solvent ______.", ans:"front", exp:"The solvent front is used for RF calculations."},
+      {type:"mcq", q:"Which factor directly affects how far a dye travels?", opts:["Its interactions with solvent and paper", "The colour of the beaker", "The brand of pencil"], a:0, exp:"Travel depends on solubility in the solvent and attraction to the paper."},
+      {type:"mcq", q:"If you repeat the experiment under the same conditions, what should happen?", opts:["The chromatogram should look similar", "The dyes will swap colours", "No spots will appear"], a:0, exp:"The same substances usually give the same pattern with the same setup."},
+      {type:"fill", q:"Paper chromatography is used to ______ a mixture before identifying its components.", ans:"separate", exp:"Separation is the key purpose of chromatography."},
+      {type:"mcq", q:"What does a single spot usually suggest about the sample?", opts:["It is pure (one substance)", "It contains many dyes", "It is insoluble"], a:0, exp:"A pure substance produces one spot."},
+      {type:"mcq", q:"In paper chromatography, what is the mobile phase?", opts:["The paper", "The solvent", "The beaker"], a:1, exp:"The mobile phase is the solvent that moves up the paper."},
+      {type:"mcq", q:"In paper chromatography, what is the stationary phase?", opts:["The solvent", "The paper", "The air"], a:1, exp:"The stationary phase is the paper the dyes interact with."},
+      {type:"mcq", q:"The term 'phase' here refers to:", opts:["A time period", "A type of material", "A temperature"], a:1, exp:"Mobile and stationary phases are substances/materials, not times."},
+      {type:"mcq", q:"During the run, dyes repeatedly:", opts:["Freeze and melt", "Dissolve in solvent then stick to paper", "Turn into crystals permanently"], a:1, exp:"They alternate between dissolving (mobile phase) and binding (stationary phase)."},
+      {type:"mcq", q:"A dye that is more soluble in the solvent will generally:", opts:["Move further up the paper", "Stay closer to the baseline", "Not separate at all"], a:0, exp:"More soluble dyes spend more time in the mobile phase and move faster."},
+      {type:"mcq", q:"A dye that is more attracted to the paper will generally:", opts:["Move further", "Move more slowly", "Move only downward"], a:1, exp:"Greater attraction to the stationary phase slows movement."},
+      {type:"fill", q:"The mobile phase is always a liquid or a ______.", ans:"gas", exp:"The mobile phase must allow molecules to move through it."},
+      {type:"mcq", q:"Why do dyes move at different rates?", opts:["Different densities only", "Different balance of solubility in solvent vs attraction to paper", "Different sizes of beaker"], a:1, exp:"Movement depends on time spent in each phase."},
+      {type:"mcq", q:"Which change is most likely to alter the chromatogram?", opts:["Using a different solvent", "Using the same paper and solvent", "Drawing the baseline with the same pencil"], a:0, exp:"Changing solvent changes the mobile phase and can change separation."},
+      {type:"mcq", q:"Which change can also alter RF values?", opts:["Changing the type of paper", "Running the experiment in the same setup", "Measuring with the same ruler"], a:0, exp:"Changing the stationary phase can change RF values."},
+      {type:"mcq", q:"What does RF stand for in chromatography?", opts:["Rate factor", "Retention factor", "Reaction force"], a:1, exp:"RF is commonly called the retention (or retardation) factor."},
+      {type:"mcq", q:"RF value is calculated as:", opts:["Distance solvent \u00f7 distance dye", "Distance dye \u00f7 distance solvent front", "Distance dye + distance solvent"], a:1, exp:"RF = distance travelled by substance divided by distance travelled by solvent front."},
+      {type:"fill", q:"If a dye travels 4 cm and the solvent front travels 8 cm, the RF value is ______.", ans:"0.5", exp:"RF = 4/8 = 0.5."},
+      {type:"mcq", q:"Where do you measure the dye distance from?", opts:["From the top of the paper", "From the baseline to the centre of the spot", "From the beaker base"], a:1, exp:"Measure from baseline to the centre of the dye spot."},
+      {type:"mcq", q:"Why use RF values instead of just distance?", opts:["RF removes the effect of run length", "RF is always 1", "Distances cannot be measured"], a:0, exp:"RF is a ratio, helping comparison when run times/lengths differ."},
+      {type:"mcq", q:"To identify a substance using an RF databook, you must also know:", opts:["The pencil brand", "The solvent and the type of paper used", "The beaker colour"], a:1, exp:"RF depends on the mobile and stationary phases used."},
+      {type:"fill", q:"A pure substance produces ______ spot(s) on the chromatogram.", ans:"one", exp:"A pure substance does not separate and gives one spot."},
+      {type:"mcq", q:"What is the typical range of an RF value?", opts:["Less than 0 only", "Between 0 and 1", "Greater than 10"], a:1, exp:"RF values are usually between 0 and 1."},
+      {type:"mcq", q:"If a spot is very close to the solvent front, its RF value is likely to be:", opts:["Close to 0", "Close to 1", "Negative"], a:1, exp:"If it travels almost as far as the solvent front, RF approaches 1."},
+      {type:"mcq", q:"If two dyes have different RF values in the same setup, that suggests:", opts:["They are the same substance", "They are different substances", "Measurement is impossible"], a:1, exp:"Different RF values under the same conditions indicate different substances."}
+    ];
+
+    let order=[], idx=0, score=0;
+    function startGame(){
+      order=[...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+      idx=0; score=0; renderQ();
+    }
+    function renderQ(){
+      const q=questions[order[idx]];
+      let html = `<div class='qbox'><h3>Q ${idx+1}/${questions.length}</h3><p>${q.q}</p>`;
+      if(q.type==="mcq"){
+        q.opts.forEach((o,i)=>{ html += `<label><input type='radio' name='opt' value='${i}'> ${o}</label><br>`; });
+        html += `<button onclick='checkMCQ()'>Submit</button>`;
+      }else{
+        html += `<input id='fill' placeholder='Answer'> <button onclick='checkFill()'>Submit</button>`;
+      }
+      html += `<div id='fb' class='feedback'></div></div>`;
+      document.getElementById('game').innerHTML = html;
+    }
+    function checkMCQ(){
+      const q=questions[order[idx]];
+      const pick=document.querySelector("input[name='opt']:checked");
+      const fb=document.getElementById('fb');
+      if(!pick){ fb.textContent='Select one'; fb.className='feedback bad'; return; }
+      if(parseInt(pick.value)===q.a){ score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok'; }
+      else{ fb.textContent='❌ '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+    function checkFill(){
+      const q=questions[order[idx]];
+      const ans=(document.getElementById('fill').value||'').trim().toLowerCase();
+      const fb=document.getElementById('fb');
+      if(!ans){ fb.textContent='Enter answer'; fb.className='feedback bad'; return; }
+      if(ans===q.ans.toLowerCase()){
+        score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok';
+      }else{
+        fb.textContent='❌ Correct: '+q.ans+'. '+q.exp; }
+      setTimeout(nextQ, 1200);
+    }
+    function nextQ(){
+      idx++;
+      if(idx<questions.length) renderQ();
+      else endGame();
+    }
+    function endGame(){
+      document.getElementById('game').innerHTML = `<div class='qbox'><h3>Finished!</h3><p>Your score: <b>${score}/${questions.length}</b></p><button onclick='startGame()'>Play again</button></div>`;
+    }
+  </script>
+</body>
+</html>
