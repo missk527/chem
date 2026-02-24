@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tests for Four Common Gases</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#22c55e);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .pill{display:inline-block;background:#e0f2fe;border:1px solid #bae6fd;border-radius:999px;padding:2px 10px;margin-right:6px;margin-bottom:4px}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tests for Four Common Gases</h1>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <iframe src="https://www.youtube.com/embed/VNLWJ6DWRkc" title="Tests for Four Common Gases" allowfullscreen></iframe>
+          <p class="muted" style="margin:10px 0 0;"><a href="https://youtu.be/VNLWJ6DWRkc" target="_blank" rel="noopener">Video link</a></p>
+    </section>
+
+    <section class="card">
+      <h2>Key Notes (rewritten from the 
+
+          
+            <details open>
+        <summary>1) Overview: why we test gases</summary>
+        <div class="detail-body">
+          <p>In the lab, gases are often identified using simple qualitative tests. This video focuses on four common gases—chlorine (Cl₂), oxygen (O₂), hydrogen (H₂), and carbon dioxide (CO₂)—and the observations you should record for each.</p>
+        </div>
+      </details>
+
+      <details open>
+        <summary>2) Chlorine test: damp blue litmus paper</summary>
+        <div class="detail-body">
+          <p>Place <strong>damp</strong> blue litmus paper into the test tube of the gas. If chlorine is present, the paper is <strong>bleached white</strong>. It may briefly turn <strong>red</strong> first because chlorine dissolves in the water on the paper to form acidic solution, then it quickly turns white due to bleaching.</p>
+        </div>
+      </details>
+
+      <details open>
+        <summary>3) Safety note for chlorine</summary>
+        <div class="detail-body">
+          <p>Chlorine is <strong>toxic</strong>. In real experiments, use a fume cupboard and appropriate PPE (for example, eye protection and a mask/respirator as required by local rules).</p>
+        </div>
+      </details>
+
+      <details open>
+        <summary>4) Oxygen test: relights a glowing splint</summary>
+        <div class="detail-body">
+          <p>Insert a <strong>glowing splint</strong> (no flame, glowing ember) into the gas. If the gas is oxygen, the splint <strong>relights</strong> because oxygen supports combustion.</p>
+        </div>
+      </details>
+
+      <details open>
+        <summary>5) Hydrogen test: squeaky pop with a lit splint</summary>
+        <div class="detail-body">
+          <p>Bring a <strong>lit splint</strong> to the mouth of the test tube. If hydrogen is present, it burns rapidly with oxygen from the air and makes a characteristic <strong>“squeaky pop”</strong> as water forms.</p>
+        </div>
+      </details>
+
+      <details open>
+        <summary>6) Carbon dioxide test: turns limewater cloudy</summary>
+        <div class="detail-body">
+          <p>Bubble the gas through <strong>limewater</strong> (aqueous calcium hydroxide). Carbon dioxide reacts to form <strong>calcium carbonate</strong> (a white solid) and water, turning the solution <strong>cloudy/milky</strong>.</p>
+        </div>
+      </details>
+
+      <details open>
+        <summary>7) Quick recap (exam-friendly)</summary>
+        <div class="detail-body">
+          <ul>
+            <li><strong>Chlorine:</strong> damp blue litmus → red (briefly) → <strong>white</strong></li>
+            <li><strong>Oxygen:</strong> <strong>relights</strong> a glowing splint</li>
+            <li><strong>Hydrogen:</strong> lit splint gives <strong>squeaky pop</strong></li>
+            <li><strong>Carbon dioxide:</strong> limewater turns <strong>cloudy</strong></li>
+          </ul>
+        </div>
+      </details>
+
+
+          ard">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game"><button onclick="startGame()">Start Quiz</button></div>
+    </section>
+
+    <footer>© 2026 Chemistry Pack</footer>
+  </div>
+
+  <script>
+    // 40-question quiz based on the gas tests speech
+        const questions = [
+      {type:"mcq", q:"Which four gases are tested in the video?", opts:["Nitrogen, oxygen, helium, argon","Chlorine, oxygen, hydrogen, carbon dioxide","Chlorine, methane, ammonia, carbon monoxide"], a:1, exp:"The video covers chlorine, oxygen, hydrogen, and carbon dioxide."},
+      {type:"mcq", q:"What must you do to blue litmus paper before testing for chlorine?", opts:["Heat it strongly","Dampen it with water","Soak it in limewater"], a:1, exp:"Chlorine test uses damp blue litmus paper."},
+      {type:"mcq", q:"If chlorine is present, damp blue litmus paper ends up what color?", opts:["Green","White","Purple"], a:1, exp:"Chlorine bleaches damp litmus paper white."},
+      {type:"mcq", q:"Why might damp blue litmus paper briefly turn red before going white in chlorine?", opts:["Chlorine is alkaline at first","Chlorine forms an acidic solution on the paper","The paper is contaminated with CO2"], a:1, exp:"Chlorine dissolves to form acidic solution, turning blue litmus red briefly."},
+      {type:"mcq", q:"After briefly turning red, why does the litmus paper turn white with chlorine?", opts:["It is neutralised","It is bleached by chlorine","It dries out"], a:1, exp:"Chlorine is a bleaching agent and removes the dye colour."},
+      {type:"mcq", q:"Which safety statement is correct for chlorine gas?", opts:["Chlorine is harmless","Chlorine is poisonous/toxic","Chlorine is only dangerous when cold"], a:1, exp:"Chlorine is toxic; use proper ventilation/PPE."},
+      {type:"mcq", q:"What apparatus holds the sample gas in these tests?", opts:["Beaker","Test tube","Measuring cylinder"], a:1, exp:"The gas is collected in a test tube."},
+      {type:"mcq", q:"Which splint is used to test for oxygen?", opts:["A wet splint","A glowing splint","A frozen splint"], a:1, exp:"Oxygen relights a glowing splint."},
+      {type:"mcq", q:"If the gas is oxygen, what happens to the glowing splint?", opts:["It goes out immediately","It relights","It turns blue"], a:1, exp:"Oxygen supports combustion so the glowing splint relights."},
+      {type:"mcq", q:"Why does a glowing splint relight in oxygen?", opts:["Oxygen is a fuel","Combustion requires oxygen","Oxygen cools the splint"], a:1, exp:"Combustion needs oxygen; extra oxygen restarts burning."},
+      {type:"mcq", q:"Which gas is tested with a lit (burning) splint?", opts:["Hydrogen","Oxygen","Carbon dioxide"], a:0, exp:"Hydrogen is tested with a lit splint producing a squeaky pop."},
+      {type:"mcq", q:"What sound indicates hydrogen is present?", opts:["A hiss","A squeaky pop","Silence"], a:1, exp:"Hydrogen burns rapidly and gives a squeaky pop."},
+      {type:"mcq", q:"Hydrogen produces a pop because it reacts with oxygen in the air to form:", opts:["Hydrochloric acid","Water","Carbon dioxide"], a:1, exp:"Hydrogen burns with oxygen to form water."},
+      {type:"mcq", q:"Which gas is identified using limewater?", opts:["Carbon dioxide","Oxygen","Chlorine"], a:0, exp:"CO2 turns limewater cloudy."},
+      {type:"mcq", q:"Limewater is an aqueous solution of:", opts:["Sodium chloride","Calcium hydroxide","Calcium carbonate"], a:1, exp:"Limewater is aqueous calcium hydroxide."},
+      {type:"mcq", q:"What observation shows carbon dioxide is present when bubbled through limewater?", opts:["Solution turns green","Solution turns cloudy/milky","Solution turns clear"], a:1, exp:"CO2 forms a precipitate making the solution cloudy."},
+      {type:"mcq", q:"The cloudiness in the limewater test is caused by formation of:", opts:["Calcium carbonate (solid)","Calcium chloride (gas)","Hydrogen peroxide"], a:0, exp:"CO2 reacts to form calcium carbonate solid."},
+      {type:"mcq", q:"Why does calcium carbonate make limewater appear cloudy?", opts:["It is a coloured liquid","It forms tiny solid particles suspended in the liquid","It increases temperature"], a:1, exp:"A precipitate of solid particles scatters light."},
+      {type:"mcq", q:"Which test-result pairing is correct?", opts:["Oxygen → squeaky pop","Hydrogen → relights glowing splint","Chlorine → bleaches damp litmus white"], a:2, exp:"Chlorine bleaches damp litmus paper white."},
+      {type:"mcq", q:"Which gas supports combustion and relights a glowing splint?", opts:["Hydrogen","Oxygen","Carbon dioxide"], a:1, exp:"Oxygen supports combustion."},
+      {type:"mcq", q:"Which gas is commonly described as a bleaching agent in these tests?", opts:["Chlorine","Hydrogen","Oxygen"], a:0, exp:"Chlorine bleaches damp litmus paper."},
+      {type:"mcq", q:"Which gas would extinguish a flame rather than relight a splint?", opts:["Carbon dioxide","Oxygen","Hydrogen"], a:0, exp:"CO2 does not support combustion and is used in fire extinguishers."},
+      {type:"mcq", q:"In the hydrogen test, where should the lit splint be placed?", opts:["At the mouth of the test tube","At the bottom of the test tube","Outside the lab"], a:0, exp:"A lit splint is brought to the mouth of the tube for the pop test."},
+      {type:"mcq", q:"Why must litmus paper be damp for the chlorine test to work well?", opts:["Chlorine only reacts when frozen","Chlorine needs to dissolve to react/bleach","Dry paper is too heavy"], a:1, exp:"Damp paper allows chlorine to dissolve and show acidity/bleaching."},
+      {type:"mcq", q:"If damp blue litmus turns white, the most likely gas is:", opts:["Oxygen","Chlorine","Hydrogen"], a:1, exp:"White bleaching indicates chlorine."},
+      {type:"mcq", q:"If a glowing splint relights, the most likely gas is:", opts:["Oxygen","Hydrogen","CO2"], a:0, exp:"Relighting glowing splint indicates oxygen."},
+      {type:"mcq", q:"If you hear a squeaky pop with a lit splint, the gas is:", opts:["CO2","Hydrogen","Chlorine"], a:1, exp:"Squeaky pop indicates hydrogen."},
+      {type:"mcq", q:"If limewater turns cloudy, the gas is:", opts:["Oxygen","Carbon dioxide","Chlorine"], a:1, exp:"Cloudy limewater indicates CO2."},
+      {type:"mcq", q:"What is the main purpose of using a glowing splint rather than a lit splint for oxygen?", opts:["To avoid any reaction","To test for oxygen’s ability to relight combustion","Because oxygen cannot react with flames"], a:1, exp:"A glowing splint demonstrates oxygen relighting combustion."},
+      {type:"mcq", q:"Which statement about the chlorine litmus test is true?", opts:["It always turns blue darker first","It may turn red briefly before bleaching white","It turns green permanently"], a:1, exp:"It can briefly turn red then white."},
+      {type:"mcq", q:"In the CO2 test, the gas sample is moved into limewater by:", opts:["Heating the limewater","Bubbling the gas through the solution","Freezing the gas"], a:1, exp:"CO2 is bubbled through limewater."},
+      {type:"mcq", q:"Which chemical name matches 'limewater'?", opts:["Aqueous calcium hydroxide","Aqueous hydrochloric acid","Aqueous sodium hydroxide"], a:0, exp:"Limewater is aqueous calcium hydroxide."},
+      {type:"mcq", q:"What forms when CO2 reacts with calcium hydroxide in limewater?", opts:["Calcium carbonate and water","Calcium chloride and water","Calcium oxide and hydrogen"], a:0, exp:"CO2 + Ca(OH)2 -> CaCO3 + H2O."},
+      {type:"mcq", q:"Which observation would best identify oxygen among these gases?", opts:["Bleaches litmus white","Relights a glowing splint","Turns limewater cloudy"], a:1, exp:"Oxygen relights a glowing splint."},
+      {type:"mcq", q:"Which observation would best identify hydrogen among these gases?", opts:["Squeaky pop with a lit splint","Turns blue litmus red only","Turns limewater clear"], a:0, exp:"Hydrogen gives squeaky pop."},
+      {type:"mcq", q:"Which observation would best identify carbon dioxide among these gases?", opts:["Relights a glowing splint","Turns limewater cloudy","Bleaches litmus paper"], a:1, exp:"CO2 makes limewater cloudy."},
+      {type:"mcq", q:"Which observation would best identify chlorine among these gases?", opts:["Squeaky pop","Relights glowing splint","Bleaches damp blue litmus paper white"], a:2, exp:"Chlorine bleaches damp blue litmus paper."},
+      {type:"mcq", q:"Which sequence best matches the recap given?", opts:["Chlorine: pop; Oxygen: cloudy; Hydrogen: white; CO2: relight","Chlorine: white; Oxygen: relight; Hydrogen: pop; CO2: cloudy","Chlorine: cloudy; Oxygen: pop; Hydrogen: relight; CO2: white"], a:1, exp:"These are the standard observations."},
+      {type:"mcq", q:"What should you record in a gas test?", opts:["Only the equipment used","The observation/result of the test","Your guess before testing"], a:1, exp:"Gas tests rely on clear observations."},
+      {type:"mcq", q:"Which test involves a chemical reaction producing a solid precipitate?", opts:["Oxygen test","Hydrogen test","Carbon dioxide (limewater) test"], a:2, exp:"CO2 forms solid calcium carbonate precipitate."},
+    ]
+, a:1, exp:"Communication systems allow different body parts to coordinate behaviour and respond to the environment."},
+      {type:"mcq", q:"Which two organ systems are used for body-wide communication?", opts:["Digestive and respiratory", "Nervous and endocrine", "Skeletal and muscular"], a:1, exp:"The nervous system and endocrine system are the main communication systems."},
+      {type:"mcq", q:"Neurons are adapted to carry:", opts:["Nutrients", "Electrical impulses", "Oxygen"], a:1, exp:"Neurons transmit electrical impulses from one place to another."},
+      {type:"mcq", q:"A typical neuron is described as:", opts:["Short and thick with no branches", "Long and thin with branched ends", "Flat and circular"], a:1, exp:"Neurons are long, thin, and branched to connect with other cells."},
+      {type:"mcq", q:"The biological 'wire' analogy refers to neurons carrying a small:", opts:["Magnetic field", "Current/impulse", "Pressure wave"], a:1, exp:"Neurons conduct electrical impulses like wires carry current."},
+      {type:"mcq", q:"The junction between two neurons is called a:", opts:["Alveolus", "Synapse", "Capillary"], a:1, exp:"Signals pass between neurons at synapses."},
+      {type:"mcq", q:"At a synapse, an electrical impulse causes the release of:", opts:["Enzymes", "Chemicals (neurotransmitters)", "Red blood cells"], a:1, exp:"Neurotransmitters are released into the synaptic gap."},
+      {type:"mcq", q:"Neurotransmitters cross the synapse mainly by:", opts:["Diffusion", "Osmosis", "Evaporation"], a:0, exp:"They diffuse across the synaptic cleft to the next neuron."},
+      {type:"mcq", q:"In synaptic transmission, the signal changes from electrical to chemical and then back to:", opts:["Thermal", "Electrical", "Gravitational"], a:1, exp:"The impulse is electrical in neurons but chemical across synapses."},
+      {type:"mcq", q:"The central nervous system (CNS) is made of the:", opts:["Brain and spinal cord", "Heart and lungs", "Stomach and intestines"], a:0, exp:"The CNS includes the brain and spinal cord."},
+      {type:"mcq", q:"The CNS mainly:", opts:["Produces hormones only", "Processes information and coordinates responses", "Digests food"], a:1, exp:"The CNS receives sensory input and sends out instructions."},
+      {type:"mcq", q:"Neurons that carry information from receptors to the CNS are:", opts:["Motor neurons", "Sensory neurons", "Relay neurons"], a:1, exp:"Sensory neurons transmit impulses from receptors to the CNS."},
+      {type:"mcq", q:"Neurons that carry impulses from the CNS to effectors are:", opts:["Motor neurons", "Sensory neurons", "Photoreceptors"], a:0, exp:"Motor neurons carry impulses to muscles or glands."},
+      {type:"mcq", q:"An effector is usually a:", opts:["Muscle or gland", "Receptor cell only", "Bone"], a:0, exp:"Effectors carry out responses, such as muscle contraction or gland secretion."},
+      {type:"mcq", q:"A receptor is best defined as:", opts:["A cell that detects stimuli", "A nerve that releases hormones", "A muscle that contracts"], a:0, exp:"Receptors detect changes (stimuli) in the body or environment."},
+      {type:"mcq", q:"Which could be a sensory input mentioned in the speech?", opts:["Blood carbon dioxide level", "Bone density", "Hair length"], a:0, exp:"Sensory neurons can carry information like CO\u2082 levels in the blood."},
+      {type:"mcq", q:"Which response is most typical of a muscle effector?", opts:["Secreting a hormone", "Contracting", "Producing antibodies"], a:1, exp:"Muscles respond by contracting."},
+      {type:"mcq", q:"Which response is most typical of a gland effector?", opts:["Contracting", "Secreting chemicals/hormones", "Generating impulses"], a:1, exp:"Glands respond by secreting substances, including hormones."},
+      {type:"mcq", q:"A reflex arc is:", opts:["A voluntary movement pathway", "A pathway for rapid, automatic responses", "A pathway only in the brain"], a:1, exp:"Reflex arcs produce fast, unconscious responses."},
+      {type:"mcq", q:"The main advantage of reflexes is that they are:", opts:["Slow and deliberate", "Rapid and automatic", "Only learned through practice"], a:1, exp:"Reflexes reduce reaction time and help prevent injury."},
+      {type:"mcq", q:"In a withdrawal reflex, the stimulus is detected by:", opts:["Effectors", "Receptors in the skin", "Relay neurons"], a:1, exp:"Skin receptors detect the stimulus and start the pathway."},
+      {type:"mcq", q:"In the reflex arc described, the sensory neuron carries impulses to the:", opts:["Spinal cord", "Biceps", "Heart"], a:0, exp:"The sensory neuron carries the impulse to the spinal cord (CNS)."},
+      {type:"mcq", q:"Inside the spinal cord, the sensory neuron passes the impulse to a:", opts:["Motor neuron directly", "Relay neuron", "Gland cell"], a:1, exp:"Relay neurons link sensory and motor neurons within the CNS."},
+      {type:"mcq", q:"The relay neuron then passes the impulse to a:", opts:["Motor neuron", "Receptor", "Synapse only"], a:0, exp:"Motor neurons carry impulses out to the effector."},
+      {type:"mcq", q:"In the example, the effector that contracts to move the hand away is the:", opts:["Biceps muscle", "Pupil", "Liver"], a:0, exp:"The biceps contracts to withdraw the hand."},
+      {type:"mcq", q:"Which sequence correctly shows a reflex arc pathway?", opts:["Receptor \u2192 motor neuron \u2192 relay neuron \u2192 sensory neuron \u2192 effector", "Stimulus \u2192 receptor \u2192 sensory neuron \u2192 relay neuron \u2192 motor neuron \u2192 effector \u2192 response", "CNS \u2192 receptor \u2192 stimulus \u2192 response"], a:1, exp:"Reflex arcs follow the stimulus-to-response pathway via sensory, relay, and motor neurons."},
+      {type:"mcq", q:"The brain is always required for a reflex response to happen immediately:", opts:["True", "False", "Only during sleep"], a:1, exp:"Many reflexes are coordinated in the spinal cord for speed."},
+      {type:"mcq", q:"At synapses, neurotransmitters are released from the:", opts:["Receiving neuron only", "End of the sending neuron", "Cell nucleus"], a:1, exp:"The presynaptic neuron releases neurotransmitters at its nerve ending."},
+      {type:"mcq", q:"Neurotransmitters trigger a new electrical impulse in the:", opts:["Next neuron", "Red blood cell", "Bone marrow"], a:0, exp:"They bind to receptors on the postsynaptic neuron and start an impulse."},
+      {type:"mcq", q:"The nervous system can detect changes:", opts:["Only outside the body", "Only inside the body", "Both inside and outside the body"], a:2, exp:"It monitors internal and external conditions and coordinates responses."},
+      {type:"mcq", q:"The spinal cord is part of the:", opts:["Peripheral nervous system only", "Central nervous system", "Digestive system"], a:1, exp:"The spinal cord is a major component of the CNS."},
+      {type:"mcq", q:"Which neuron type is found within the CNS linking sensory and motor neurons?", opts:["Relay neuron", "Motor neuron", "Sensory neuron"], a:0, exp:"Relay neurons (interneurons) connect pathways inside the CNS."},
+      {type:"mcq", q:"A stimulus in the reflex example was:", opts:["Bright light", "Pressure from a sharp object", "Low oxygen"], a:1, exp:"The sharp pressure from the pen acts as the stimulus."},
+      {type:"mcq", q:"In general, increasing the number of branch connections on a neuron helps it:", opts:["Store more fat", "Connect to more neurons", "Pump blood"], a:1, exp:"Branching allows communication with many other nerve cells."},
+      {type:"mcq", q:"Which statement best describes synaptic communication?", opts:["Neurons touch and electricity jumps directly across", "Electrical impulses cause chemicals to cross a gap and start a new impulse", "Hormones travel in the blood between neurons"], a:1, exp:"Synapses use chemicals to pass the signal across the gap."},
+      {type:"mcq", q:"The endocrine system mainly communicates using:", opts:["Neurotransmitters across synapses only", "Hormones carried in the blood", "Electrical impulses only"], a:1, exp:"The endocrine system uses hormones, usually slower than nervous impulses."},
+      {type:"mcq", q:"Which is a correct match?", opts:["Sensory neuron \u2192 CNS to effector", "Motor neuron \u2192 CNS to effector", "Relay neuron \u2192 receptor to CNS"], a:1, exp:"Motor neurons carry impulses from the CNS to effectors."},
+      {type:"mcq", q:"The response in a withdrawal reflex is:", opts:["Hand moves away", "Skin detects stimulus", "Impulse enters spinal cord"], a:0, exp:"The response is the action produced by the effector."},
+      {type:"mcq", q:"Why are synapses useful in nervous pathways?", opts:["They allow chemical control of signal transfer", "They stop all impulses permanently", "They increase bone strength"], a:0, exp:"Synapses enable controlled signal transfer via neurotransmitters."},
+      {type:"mcq", q:"The nervous system is best for communication that needs to be:", opts:["Fast and targeted", "Slow and widespread", "Only during digestion"], a:0, exp:"Electrical impulses provide rapid, precise communication."}
+    ];
+
+    let order=[], idx=0, score=0;
+    function startGame(){
+      order=[...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+      idx=0; score=0; renderQ();
+    }
+    function renderQ(){
+      const q=questions[order[idx]];
+      let html = `<div class='qbox'><h3>Q ${idx+1}/${questions.length}</h3><p>${q.q}</p>`;
+      if(q.type==="mcq"){
+        q.opts.forEach((o,i)=>{ html += `<label><input type='radio' name='opt' value='${i}'> ${o}</label><br>`; });
+        html += `<button onclick='checkMCQ()'>Submit</button>`;
+      }else{
+        html += `<input id='fill' placeholder='Answer'> <button onclick='checkFill()'>Submit</button>`;
+      }
+      html += `<div id='fb' class='feedback'></div></div>`;
+      document.getElementById('game').innerHTML = html;
+    }
+    function checkMCQ(){
+      const q=questions[order[idx]];
+      const pick=document.querySelector("input[name='opt']:checked");
+      const fb=document.getElementById('fb');
+      if(!pick){ fb.textContent='Select one'; fb.className='feedback bad'; return; }
+      if(parseInt(pick.value)===q.a){ score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok'; }
+      else{ fb.textContent='❌ '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+    function checkFill(){
+      const q=questions[order[idx]];
+      const ans=(document.getElementById('fill').value||'').trim().toLowerCase();
+      const fb=document.getElementById('fb');
+      if(!ans){ fb.textContent='Enter answer'; fb.className='feedback bad'; return; }
+      if(ans===q.ans.toLowerCase()){
+        score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok';
+      }else{
+        fb.textContent='❌ Correct: '+q.ans+'. '+q.exp; }
+      setTimeout(nextQ, 1200);
+    }
+    function nextQ(){
+      idx++;
+      if(idx<questions.length) renderQ();
+      else endGame();
+    }
+    function endGame(){
+      document.getElementById('game').innerHTML = `<div class='qbox'><h3>Finished!</h3><p>Your score: <b>${score}/${questions.length}</b></p><button onclick='startGame()'>Play again</button></div>`;
+    }
+  </script>
+</body>
+</html>
