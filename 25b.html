@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Mole</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#22c55e);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .pill{display:inline-block;background:#e0f2fe;border:1px solid #bae6fd;border-radius:999px;padding:2px 10px;margin-right:6px;margin-bottom:4px}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Mole</h1>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <iframe src="https://www.youtube.com/embed/Q6ZzOExoW0s" title="The Mole" allowfullscreen></iframe>
+    </section>
+
+        <section class="card">
+      <h2>Key Notes (rewritten from the speech)</h2>
+
+      <details open>
+        <summary>1) What a mole means</summary>
+        <ul>
+          <li>A <b>mole (mol)</b> is a unit for the <b>amount of substance</b>, like metres for distance or seconds for time.</li>
+          <li>It tells you how many particles of a substance you have, not how big the sample looks.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) Avogadro’s constant and “particles”</summary>
+        <ul>
+          <li><b>1 mole</b> contains <b>6.02 × 10<sup>23</sup></b> particles.</li>
+          <li>“Particles” can mean <b>atoms</b>, <b>molecules</b>, <b>ions</b>, or even <b>electrons</b>, depending on the substance.</li>
+          <li>This number is called <b>Avogadro’s constant</b>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Why molar mass matches relative mass numbers</summary>
+        <ul>
+          <li>The mass of <b>6.02 × 10<sup>23</sup></b> particles of a substance (i.e., 1 mole) in grams is the same as its <b>relative atomic mass (A<sub>r</sub>)</b> or <b>relative formula mass (M<sub>r</sub>)</b>.</li>
+          <li>Examples: 1 mol of <b>C</b> has mass <b>12 g</b>; 1 mol of <b>O<sub>2</sub></b> has mass <b>32 g</b>; 1 mol of <b>CO<sub>2</sub></b> has mass <b>44 g</b>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) The key formula (moles, mass, M<sub>r</sub>)</summary>
+        <ul>
+          <li><span class="pill">n = m / M<sub>r</sub></span> where <b>n</b> is moles, <b>m</b> is mass (g), and <b>M<sub>r</sub></b> is relative formula mass.</li>
+          <li>You can rearrange it to find mass: <span class="pill">m = n × M<sub>r</sub></span>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) Worked examples from the speech</summary>
+        <ul>
+          <li>Ammonia: M<sub>r</sub>(NH<sub>3</sub>) = 14 + 3×1 = <b>17</b>. For <b>42.5 g</b>, moles = 42.5 ÷ 17 = <b>2.5 mol</b>.</li>
+          <li>Carbon dioxide: M<sub>r</sub>(CO<sub>2</sub>) = 12 + 2×16 = <b>44</b>. For <b>3 mol</b>, mass = 3 × 44 = <b>132 g</b>.</li>
+          <li>Mass of an element inside a compound: in <b>3 mol of CO<sub>2</sub></b>, carbon mass = 3 × 12 = <b>36 g</b> (so oxygen mass = 132 − 36 = <b>96 g</b>).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>6) Moles in chemical equations (stoichiometry)</summary>
+        <ul>
+          <li>Balanced equations show <b>mole ratios</b>.</li>
+          <li>Example: <span class="chem">Mg + 2HCl → MgCl<sub>2</sub> + H<sub>2</sub></span></li>
+          <li>This means <b>1 mol</b> Mg reacts with <b>2 mol</b> HCl to form <b>1 mol</b> MgCl<sub>2</sub> and <b>1 mol</b> H<sub>2</sub>.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game"><button onclick="startGame()">Start Quiz</button></div>
+    </section>
+
+    <footer>© 2026 Chemistry Pack</footer>
+  </div>
+
+  <script>
+    // 40-question quiz based on the mole speech
+    const questions = [
+      {type:"mcq", q:"In chemistry, the mole (mol) is a unit for measuring:", opts:["Temperature", "Amount of substance", "Pressure"], a:1, exp:"A mole measures the amount of substance (how many particles you have)."},
+      {type:"mcq", q:"1 mole of any substance contains approximately:", opts:["6.02 \u00d7 10^23 particles", "6.02 \u00d7 10^6 particles", "6.02 \u00d7 10^3 particles"], a:0, exp:"One mole contains 6.02 \u00d7 10^23 particles (Avogadro\u2019s constant)."},
+      {type:"fill", q:"The number 6.02 \u00d7 10^23 is called Avogadro\u2019s ______.", ans:"constant", exp:"6.02 \u00d7 10^23 is Avogadro\u2019s constant."},
+      {type:"mcq", q:"Which could be meant by the word \u201cparticles\u201d in a mole?", opts:["Only atoms", "Atoms, molecules, ions, or electrons", "Only molecules"], a:1, exp:"Particles can be atoms, molecules, ions, or electrons depending on the substance."},
+      {type:"mcq", q:"If you have 1 mole of carbon, how many carbon atoms are present?", opts:["12", "32", "6.02 \u00d7 10^23"], a:2, exp:"1 mol contains 6.02 \u00d7 10^23 atoms."},
+      {type:"mcq", q:"Why is the mole linked to relative atomic/formula mass?", opts:["Because 1 mol always has mass 1 g", "Because the mass of 6.02 \u00d7 10^23 particles in grams matches Ar or Mr", "Because it depends on temperature"], a:1, exp:"Molar mass (g per mol) matches the relative mass number (Ar or Mr)."},
+      {type:"mcq", q:"The relative atomic mass (Ar) of carbon is 12, so 1 mole of carbon has a mass of:", opts:["12 g", "24 g", "6.02 g"], a:0, exp:"1 mol of C has a mass of 12 g."},
+      {type:"mcq", q:"Oxygen gas is O2. Its Mr is 16 \u00d7 2 = 32, so 1 mole of O2 has a mass of:", opts:["16 g", "32 g", "64 g"], a:1, exp:"1 mol of O2 has a mass of 32 g."},
+      {type:"mcq", q:"The Mr of CO2 is 12 + 16 + 16 = 44, so 1 mole of CO2 has a mass of:", opts:["28 g", "44 g", "60 g"], a:1, exp:"1 mol of CO2 has a mass of 44 g."},
+      {type:"fill", q:"The formula for moles is n = m / ______.", ans:"mr", exp:"n = m / Mr (mass divided by relative formula mass)."},
+      {type:"mcq", q:"In n = m / Mr, the symbol m represents:", opts:["moles", "mass in grams", "Mr value"], a:1, exp:"m is the mass of the sample in grams."},
+      {type:"mcq", q:"In n = m / Mr, the symbol n represents:", opts:["number of moles", "number of neutrons", "newtons"], a:0, exp:"n is the number of moles."},
+      {type:"mcq", q:"Rearranging n = m / Mr to find mass gives:", opts:["m = n + Mr", "m = n \u00d7 Mr", "m = Mr / n"], a:1, exp:"m = n \u00d7 Mr."},
+      {type:"mcq", q:"What is the Mr of ammonia, NH3?", opts:["14", "17", "20"], a:1, exp:"Mr(NH3)=14 + 3\u00d71 = 17."},
+      {type:"mcq", q:"How many moles are in 42.5 g of NH3 (Mr = 17)?", opts:["1.5 mol", "2.5 mol", "3.5 mol"], a:1, exp:"n = 42.5 \u00f7 17 = 2.5 mol."},
+      {type:"fill", q:"42.5 g of NH3 corresponds to ______ mol (to 1 d.p.).", ans:"2.5", exp:"42.5 \u00f7 17 = 2.5 mol."},
+      {type:"mcq", q:"What is the Mr of CO2?", opts:["32", "44", "48"], a:1, exp:"Mr(CO2)=12 + 2\u00d716 = 44."},
+      {type:"mcq", q:"What is the mass of 3 moles of CO2 (Mr = 44)?", opts:["88 g", "132 g", "144 g"], a:1, exp:"m = 3 \u00d7 44 = 132 g."},
+      {type:"fill", q:"3 mol of CO2 has a mass of ______ g.", ans:"132", exp:"3 \u00d7 44 = 132 g."},
+      {type:"mcq", q:"In 3 moles of CO2, what is the mass of carbon present?", opts:["12 g", "36 g", "48 g"], a:1, exp:"Carbon mass = 3 \u00d7 12 = 36 g."},
+      {type:"mcq", q:"In 3 moles of CO2 (total mass 132 g), what is the mass of oxygen present?", opts:["96 g", "88 g", "44 g"], a:0, exp:"Oxygen mass = 132 \u2212 36 = 96 g."},
+      {type:"fill", q:"The mass of oxygen in 3 mol of CO2 is ______ g.", ans:"96", exp:"132 g total \u2212 36 g carbon = 96 g oxygen."},
+      {type:"mcq", q:"Which of the following is a correct particle count statement?", opts:["1 mol always contains 44 particles", "1 mol always contains 6.02 \u00d7 10^23 particles", "1 mol contains 6.02 \u00d7 10^23 grams"], a:1, exp:"A mole is defined by a fixed number of particles."},
+      {type:"mcq", q:"If a substance has Mr = 50, then 1 mole of it has a mass of:", opts:["50 g", "50 mol", "6.02 \u00d7 10^23 g"], a:0, exp:"Molar mass in g/mol matches Mr in grams for 1 mole."},
+      {type:"mcq", q:"Which step finds moles from mass?", opts:["Multiply mass by Mr", "Divide mass by Mr", "Add mass and Mr"], a:1, exp:"n = m \u00f7 Mr."},
+      {type:"mcq", q:"Which step finds mass from moles?", opts:["Divide moles by Mr", "Multiply moles by Mr", "Subtract Mr from moles"], a:1, exp:"m = n \u00d7 Mr."},
+      {type:"fill", q:"Mr stands for relative ______ mass.", ans:"formula", exp:"Mr is relative formula mass (for compounds)."},
+      {type:"mcq", q:"For elements, the relative mass used is usually:", opts:["Ar (relative atomic mass)", "Cr (relative chemical mass)", "Br (relative boiling mass)"], a:0, exp:"Elements use Ar; compounds use Mr."},
+      {type:"mcq", q:"Which equation shows magnesium reacting with hydrochloric acid?", opts:["Mg + HCl \u2192 MgHCl", "Mg + 2HCl \u2192 MgCl2 + H2", "Mg + H2 \u2192 MgH2"], a:1, exp:"Balanced: Mg + 2HCl \u2192 MgCl2 + H2."},
+      {type:"mcq", q:"In Mg + 2HCl \u2192 MgCl2 + H2, the mole ratio Mg : HCl is:", opts:["1:1", "1:2", "2:1"], a:1, exp:"Coefficients show 1 mol Mg reacts with 2 mol HCl."},
+      {type:"mcq", q:"In Mg + 2HCl \u2192 MgCl2 + H2, 1 mole of Mg produces:", opts:["2 mol H2", "1 mol H2", "0.5 mol H2"], a:1, exp:"The coefficient of H2 is 1, so 1 mol Mg produces 1 mol H2 (if enough HCl)."},
+      {type:"fill", q:"In the equation Mg + 2HCl \u2192 MgCl2 + H2, ______ mol of HCl react with 1 mol of Mg.", ans:"2", exp:"The coefficient of HCl is 2."},
+      {type:"mcq", q:"If you start with 2 moles of Mg, how many moles of HCl are needed (from the balanced equation)?", opts:["2 mol", "4 mol", "6 mol"], a:1, exp:"Scale the 1:2 ratio: 2 mol Mg needs 4 mol HCl."},
+      {type:"mcq", q:"If 2 moles of Mg react completely, how many moles of MgCl2 form?", opts:["1 mol", "2 mol", "4 mol"], a:1, exp:"Mg and MgCl2 are 1:1 in the equation, so 2 mol Mg gives 2 mol MgCl2."},
+      {type:"mcq", q:"If 2 moles of Mg react completely, how many moles of H2 form?", opts:["1 mol", "2 mol", "4 mol"], a:1, exp:"Mg and H2 are 1:1 in the equation, so 2 mol Mg gives 2 mol H2."},
+      {type:"mcq", q:"Balanced equations are best interpreted as ratios of:", opts:["grams", "moles", "litres only"], a:1, exp:"Coefficients show mole ratios between reactants and products."},
+      {type:"mcq", q:"1 mol of CO2 and 1 mol of O2 both contain:", opts:["the same number of particles", "the same mass", "the same Mr"], a:0, exp:"Any 1 mol samples contain 6.02 \u00d7 10^23 particles."},
+      {type:"fill", q:"The relative formula mass of CO2 is ______.", ans:"44", exp:"12 + 2\u00d716 = 44."},
+      {type:"mcq", q:"If n = 0.5 mol and Mr = 44, the mass m is:", opts:["22 g", "44 g", "88 g"], a:0, exp:"m = n \u00d7 Mr = 0.5 \u00d7 44 = 22 g."},
+      {type:"mcq", q:"Which is the correct way to find Mr of a compound?", opts:["Add up the relative atomic masses in its formula", "Multiply the sample mass by Avogadro\u2019s constant", "Divide by 6.02 \u00d7 10^23"], a:0, exp:"Mr is found by summing the Ar values of all atoms in the formula."}
+    ];
+
+    let order=[], idx=0, score=0;
+    function startGame(){
+      order=[...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+      idx=0; score=0; renderQ();
+    }
+    function renderQ(){
+      const q=questions[order[idx]];
+      let html = `<div class='qbox'><h3>Q ${idx+1}/${questions.length}</h3><p>${q.q}</p>`;
+      if(q.type==="mcq"){
+        q.opts.forEach((o,i)=>{ html += `<label><input type='radio' name='opt' value='${i}'> ${o}</label><br>`; });
+        html += `<button onclick='checkMCQ()'>Submit</button>`;
+      }else{
+        html += `<input id='fill' placeholder='Answer'> <button onclick='checkFill()'>Submit</button>`;
+      }
+      html += `<div id='fb' class='feedback'></div></div>`;
+      document.getElementById('game').innerHTML = html;
+    }
+    function checkMCQ(){
+      const q=questions[order[idx]];
+      const pick=document.querySelector("input[name='opt']:checked");
+      const fb=document.getElementById('fb');
+      if(!pick){ fb.textContent='Select one'; fb.className='feedback bad'; return; }
+      if(parseInt(pick.value)===q.a){ score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok'; }
+      else{ fb.textContent='❌ '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+    function checkFill(){
+      const q=questions[order[idx]];
+      const ans=(document.getElementById('fill').value||'').trim().toLowerCase();
+      const fb=document.getElementById('fb');
+      if(!ans){ fb.textContent='Enter answer'; fb.className='feedback bad'; return; }
+      if(ans===q.ans.toLowerCase()){
+        score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok';
+      }else{
+        fb.textContent='❌ Correct: '+q.ans+'. '+q.exp; }
+      setTimeout(nextQ, 1200);
+    }
+    function nextQ(){
+      idx++;
+      if(idx<questions.length) renderQ();
+      else endGame();
+    }
+    function endGame(){
+      document.getElementById('game').innerHTML = `<div class='qbox'><h3>Finished!</h3><p>Your score: <b>${score}/${questions.length}</b></p><button onclick='startGame()'>Play again</button></div>`;
+    }
+  </script>
+</body>
+</html>
