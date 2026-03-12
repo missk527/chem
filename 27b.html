@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Limiting Reactants & Product Mass Calculations</title>
+  <style>
+    :root{ --brand:#16a34a; --paper:#fffefb; --ink:#1f2937; --accent:#065f46 }
+    *{box-sizing:border-box}
+    body{ margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f5faf7; color:var(--ink); line-height:1.6 }
+    header{ background:linear-gradient(90deg, var(--brand), #22c55e); color:#fff; padding:18px 20px; text-align:center; font-size:1.35rem; box-shadow:0 2px 10px rgba(0,0,0,.1) }
+    .wrap{ max-width:1100px; margin:0 auto; padding:0 14px 28px }
+    .video{ display:flex; justify-content:center; margin:18px 0 }
+    iframe{ width:88%; max-width:1100px; height:480px; border:2px solid #d1fae5; border-radius:14px; background:#000; box-shadow:0 2px 12px rgba(5,150,105,.18) }
+    .card{ background:var(--paper); border-radius:16px; box-shadow:0 8px 20px rgba(15,23,42,.08); padding:20px; margin:18px 0 }
+    h2{ color:var(--accent); border-bottom:2px solid #bbf7d0; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#ffffff; border:1px solid #e5e7eb; border-radius:12px; padding:12px 14px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#064e3b }
+    .flex{ display:flex; gap:10px; flex-wrap:wrap }
+    .pill{ background:#dcfce7; border:1px solid #bbf7d0; border-radius:999px; padding:2px 10px; font-size:.9rem }
+    .kbd{background:#eef2ff;border:1px solid #c7d2fe;border-bottom-width:3px;padding:2px 6px;border-radius:6px;font-family:ui-monospace,Consolas,monospace}
+    .muted{opacity:.85}
+    .question-box{ border:1px solid #e5e7eb; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 6px 16px rgba(5,150,105,.25) }
+    .feedback{ margin-top:8px; font-weight:bold }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem }
+    @media (max-width:760px){ iframe{ width:96%; height:240px } }
+    .tiny{font-size:.85rem;color:#475569}
+  </style>
+</head>
+<body>
+<header>Limiting Reactants — Excess Reactants & Product Mass</header>
+
+<div class="video">
+  <!-- Updated link as requested -->
+  <iframe src="https://www.youtube.com/embed/Tk9PcnbMCEY" title="Limiting Reactants" allowfullscreen></iframe>
+</div>
+
+<div class="wrap">
+  <section class="card">
+    <h2>Notes (rewritten in English from the given speech)</h2>
+
+    <details open>
+      <summary>What a limiting reactant is</summary>
+      <ul>
+        <li>A <b>limiting reactant</b> is the reactant that gets used up first in a chemical reaction.</li>
+        <li>Once it is fully consumed, the reaction stops, so it <b>limits the amount of product</b> that can be formed.</li>
+        <li>A reactant that remains after the reaction ends is called an <b>excess reactant</b>.</li>
+      </ul>
+      <div class="flex">
+        <span class="pill">Limiting reactant</span><span class="pill">Excess reactant</span><span class="pill">Product mass</span>
+      </div>
+    </details>
+
+    <details>
+      <summary>Example: hydrochloric acid and calcium carbonate</summary>
+      <ul>
+        <li>Hydrochloric acid reacting with calcium carbonate produces <b>calcium chloride</b>, <b>water</b>, and <b>carbon dioxide</b>.</li>
+        <li>As the reaction happens, the solid calcium carbonate gradually disappears and bubbles of gas are released.</li>
+        <li>The bubbles are <b>carbon dioxide</b>, showing that a reaction is taking place.</li>
+        <li>When the fizzing slows down and finally stops, one reactant must have been completely used up.</li>
+        <li>If the calcium carbonate has all disappeared, then <b>calcium carbonate is the limiting reactant</b>.</li>
+        <li>The hydrochloric acid is likely still left over, so it is <b>in excess</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Why the limiting reactant matters</summary>
+      <ul>
+        <li>The amount of product formed depends entirely on the <b>limiting reactant</b>.</li>
+        <li>If more <b>calcium carbonate</b> is added, more fizzing occurs because more products can be made.</li>
+        <li>If more <b>hydrochloric acid</b> is added after the calcium carbonate is gone, nothing happens because there is no calcium carbonate left to react.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Recognizing excess reactants in calculations</summary>
+      <ul>
+        <li>Sometimes a question directly says one reactant is in excess.</li>
+        <li>Sometimes it is implied. For example, when sodium is <b>burned in air</b>, oxygen is assumed to be in excess because there is plenty of oxygen in the air.</li>
+        <li>That means <b>sodium is the limiting reactant</b> in the calculation.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Worked example: 115 g of sodium making sodium oxide</summary>
+      <ul>
+        <li>Start by writing and balancing the equation: <b>4Na + O₂ → 2Na₂O</b>.</li>
+        <li>Find moles of sodium using <span class="kbd">moles = mass ÷ Mr</span>.</li>
+        <li><b>115 ÷ 23 = 5</b>, so there are <b>5 moles of sodium</b>.</li>
+        <li>Use the balanced equation to find the ratio between sodium and sodium oxide: <b>4:2</b>, which simplifies to <b>2:1</b>.</li>
+        <li>If 5 moles of sodium react, they produce <b>2.5 moles of sodium oxide</b>.</li>
+        <li>Now find the Mr of sodium oxide: <b>(2 × 23) + 16 = 62</b>.</li>
+        <li>Use <span class="kbd">mass = moles × Mr</span> to calculate the product mass.</li>
+        <li><b>2.5 × 62 = 155 g</b>.</li>
+        <li>So, the mass of sodium oxide produced is <b>155 g</b>.</li>
+      </ul>
+      <p class="tiny">Key idea: the product mass is controlled by the limiting reactant, not by the reactant present in excess.</p>
+    </details>
+
+  </section>
+
+  <section class="card">
+    <h2>Quiz (40 Questions based on the speech)</h2>
+    <div id="game-area">
+      <button onclick="startGame()">Start</button>
+      <div class="scorebar muted" id="scorebar">Not started</div>
+    </div>
+  </section>
+</div>
+
+<script>
+// 40 questions based on the limiting reactants speech
+const Q = [
+  // Multiple Choice
+  {type:"mcq", q:"A limiting reactant is the reactant that:", opts:["Is always present in air","Gets used up first","Has the largest Mr"], a:1, exp:"The limiting reactant is the one consumed first."},
+  {type:"mcq", q:"Hydrochloric acid reacts with which substance in the example?", opts:["Sodium oxide","Calcium carbonate","Calcium chloride"], a:1, exp:"The speech uses hydrochloric acid and calcium carbonate as the example."},
+  {type:"mcq", q:"Which gas is released during the reaction?", opts:["Oxygen","Hydrogen","Carbon dioxide"], a:2, exp:"The bubbles are carbon dioxide gas."},
+  {type:"mcq", q:"Which product is formed along with water and carbon dioxide?", opts:["Calcium chloride","Sodium chloride","Calcium oxide"], a:0, exp:"The reaction produces calcium chloride, water, and carbon dioxide."},
+  {type:"mcq", q:"If the calcium carbonate fully disappears, it is the:", opts:["Excess reactant","Limiting reactant","Catalyst"], a:1, exp:"The reactant that disappears first is limiting."},
+  {type:"mcq", q:"If hydrochloric acid is still left after the reaction, it is:", opts:["In excess","Balanced","The product"], a:0, exp:"A leftover reactant is in excess."},
+  {type:"mcq", q:"The amount of product formed depends on the:", opts:["Limiting reactant","Colour of the solution","Size of the beaker"], a:0, exp:"Product amount is controlled by the limiting reactant."},
+  {type:"mcq", q:"Adding more calcium carbonate after the first batch is used up would cause:", opts:["More fizzing","No change","The solution to freeze"], a:0, exp:"More calcium carbonate means more reaction can occur."},
+  {type:"mcq", q:"Adding more hydrochloric acid after all calcium carbonate is gone would:", opts:["Make more carbon dioxide","Do nothing","Produce sodium oxide"], a:1, exp:"No calcium carbonate remains to react."},
+  {type:"mcq", q:"Burning in air basically means reacting with:", opts:["Nitrogen","Oxygen","Hydrogen"], a:1, exp:"Combustion here means reacting with oxygen."},
+  {type:"mcq", q:"When sodium is burned in air, which reactant is assumed to be in excess?", opts:["Sodium","Oxygen","Sodium oxide"], a:1, exp:"There is plenty of oxygen in air, so oxygen is in excess."},
+  {type:"mcq", q:"If oxygen is in excess, which reactant is limiting?", opts:["Oxygen","Air","Sodium"], a:2, exp:"Sodium is the limiting reactant in the example."},
+  {type:"mcq", q:"The first step in this type of calculation is to:", opts:["Estimate the answer","Write and balance the equation","Measure the volume"], a:1, exp:"The speech says to write and balance the equation first."},
+  {type:"mcq", q:"Which balanced equation is used in the sodium example?", opts:["2Na + O₂ → Na₂O","4Na + O₂ → 2Na₂O","Na + O → NaO"], a:1, exp:"This is the balanced equation shown in the worked example."},
+  {type:"mcq", q:"The formula for moles is:", opts:["moles = mass ÷ Mr","moles = mass × Mr","moles = Mr ÷ mass"], a:0, exp:"Moles are found by dividing mass by Mr."},
+  {type:"mcq", q:"How many moles are there in 115 g of sodium?", opts:["2.5","5","62"], a:1, exp:"115 ÷ 23 = 5 moles."},
+  {type:"mcq", q:"The ratio of sodium to sodium oxide in the balanced equation is:", opts:["4:2","2:4","1:4"], a:0, exp:"The balanced equation gives a 4:2 ratio."},
+  {type:"mcq", q:"The simplified ratio of sodium to sodium oxide is:", opts:["1:2","2:1","4:1"], a:1, exp:"4:2 simplifies to 2:1."},
+  {type:"mcq", q:"5 moles of sodium produce how many moles of sodium oxide?", opts:["2.5","5","10"], a:0, exp:"Using the 2:1 ratio, 5 moles Na give 2.5 moles Na₂O."},
+  {type:"mcq", q:"What is the final mass of sodium oxide produced?", opts:["155 g","115 g","62 g"], a:0, exp:"2.5 × 62 = 155 g."},
+
+  // True/False
+  {type:"tf", q:"The reaction stops when one reactant has been completely used up.", a:true, exp:"Once the limiting reactant is gone, the reaction ends."},
+  {type:"tf", q:"Calcium carbonate is a gas in the example.", a:false, exp:"The speech says calcium carbonate is a solid that slowly disappears."},
+  {type:"tf", q:"Fizzing is evidence that a gas is being produced.", a:true, exp:"The bubbles show carbon dioxide is being released."},
+  {type:"tf", q:"The excess reactant limits how much product can form.", a:false, exp:"The limiting reactant controls product amount."},
+  {type:"tf", q:"If the calcium carbonate has disappeared, it must have all been used up.", a:true, exp:"That is how the limiting reactant is identified in the example."},
+  {type:"tf", q:"Adding extra hydrochloric acid always makes more product, even with no calcium carbonate left.", a:false, exp:"Without calcium carbonate, no reaction can continue."},
+  {type:"tf", q:"Some calculation questions state directly that one reactant is in excess.", a:true, exp:"The speech says this may be stated outright."},
+  {type:"tf", q:"Oxygen is assumed to be scarce in air in the sodium example.", a:false, exp:"The speech says there is plenty of oxygen in the air."},
+  {type:"tf", q:"The Mr of sodium is 23 in the example.", a:true, exp:"That value is used to calculate moles of sodium."},
+  {type:"tf", q:"Mass can be calculated by moles × Mr.", a:true, exp:"That is the rearranged formula used in the worked solution."},
+
+  // Fill-in
+  {type:"fill", q:"A reactant left over after a reaction is called an ______ reactant.", text:"excess", exp:"A leftover reactant is in excess."},
+  {type:"fill", q:"The limiting reactant controls how much ______ can be produced.", text:"product", exp:"It limits the amount of product formed."},
+  {type:"fill", q:"The gas released in the beaker example is carbon ______.", text:"dioxide", exp:"Carbon dioxide is the gas causing the fizzing."},
+  {type:"fill", q:"Hydrochloric acid reacts with calcium ______.", text:"carbonate", exp:"The solid reactant is calcium carbonate."},
+  {type:"fill", q:"When sodium is burned in air, oxygen is in ______.", text:"excess", exp:"Oxygen is assumed to be in excess because air contains plenty of it."},
+  {type:"fill", q:"Moles are calculated using mass divided by ______.", text:"mr", exp:"moles = mass ÷ Mr."},
+  {type:"fill", q:"115 g of sodium is equal to ______ moles.", text:"5", exp:"115 ÷ 23 = 5."},
+  {type:"fill", q:"5 moles of sodium produce ______ moles of sodium oxide.", text:"2.5", exp:"The simplified 2:1 ratio gives 2.5 moles."},
+  {type:"fill", q:"The Mr of sodium oxide is ______.", text:"62", exp:"(2 × 23) + 16 = 62."},
+  {type:"fill", q:"The mass of sodium oxide formed is ______ g.", text:"155", exp:"2.5 × 62 = 155 g."}
+];
+
+let idx=0, score=0, order=[];
+function startGame(){
+  order = [...Array(Q.length).keys()].sort(()=>Math.random()-0.5);
+  idx = 0; score = 0;
+  document.getElementById("scorebar").textContent = `Question ${idx+1} / ${Q.length}  Score: ${score}`;
+  renderQ();
+}
+function renderQ(){
+  const q = Q[order[idx]];
+  let html = `<div class='question-box'><p><strong>Q${idx+1}:</strong> ${q.q}</p>`;
+  if(q.type==="mcq"){
+    q.opts.forEach((opt,i)=> html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`);
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type==="tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input type="text" id="fill" placeholder="Type answer"> <button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  const area = document.getElementById("game-area");
+  const inner = document.getElementById("game-area-inner");
+  if(inner){ inner.innerHTML = html; } else { area.insertAdjacentHTML("beforeend", `<div id="game-area-inner">${html}</div>`); }
+}
+function checkMCQ(){
+  const q = Q[order[idx]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select an answer."; fb.className="feedback incorrect"; return;}
+  if(parseInt(sel.value) === q.a){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function checkTF(){
+  const q = Q[order[idx]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select True or False."; fb.className="feedback incorrect"; return;}
+  const val = sel.value === "true";
+  if(val === q.a){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function checkFill(){
+  const q = Q[order[idx]];
+  const ans = (document.getElementById("fill").value||"").trim().toLowerCase();
+  const fb = document.getElementById("feedback");
+  if(!ans){ fb.textContent = "Enter an answer."; fb.className="feedback incorrect"; return;}
+  function norm(s){ return s.replace(/\s+/g,"").toLowerCase(); }
+  const ok = norm(ans).includes(norm(q.text));
+  if(ok){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function nextQ(){
+  idx++;
+  if(idx < Q.length){
+    document.getElementById("scorebar").textContent = `Question ${idx+1} / ${Q.length}  Score: ${score}`;
+    renderQ();
+  }else{
+    endGame();
+  }
+}
+function endGame(){
+  const game = document.getElementById("game-area");
+  game.querySelector("#game-area-inner").innerHTML = `<h3>Finished!</h3><p>Your score: <b>${score} / ${Q.length}</b></p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${Q.length}`;
+}
+</script>
+</body>
+</html>
