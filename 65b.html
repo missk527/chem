@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flame Emission Spectroscopy</title>
+  <style>
+    :root{ --brand:#16a34a; --paper:#fffefb; --ink:#1f2937; --accent:#065f46 }
+    *{box-sizing:border-box}
+    body{ margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f5faf7; color:var(--ink); line-height:1.6 }
+    header{ background:linear-gradient(90deg, var(--brand), #22c55e); color:#fff; padding:18px 20px; text-align:center; font-size:1.35rem; box-shadow:0 2px 10px rgba(0,0,0,.1) }
+    .wrap{ max-width:1100px; margin:0 auto; padding:0 14px 28px }
+    .video{ display:flex; justify-content:center; margin:18px 0 }
+    iframe{ width:88%; max-width:1100px; height:480px; border:2px solid #d1fae5; border-radius:14px; background:#000; box-shadow:0 2px 12px rgba(5,150,105,.18) }
+    .card{ background:var(--paper); border-radius:16px; box-shadow:0 8px 20px rgba(15,23,42,.08); padding:20px; margin:18px 0 }
+    h2{ color:var(--accent); border-bottom:2px solid #bbf7d0; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#ffffff; border:1px solid #e5e7eb; border-radius:12px; padding:12px 14px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#064e3b }
+    .flex{ display:flex; gap:10px; flex-wrap:wrap }
+    .pill{ background:#dcfce7; border:1px solid #bbf7d0; border-radius:999px; padding:2px 10px; font-size:.9rem }
+    .kbd{background:#eef2ff;border:1px solid #c7d2fe;border-bottom-width:3px;padding:2px 6px;border-radius:6px;font-family:ui-monospace,Consolas,monospace}
+    .muted{opacity:.85}
+    .question-box{ border:1px solid #e5e7eb; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 6px 16px rgba(5,150,105,.25) }
+    .feedback{ margin-top:8px; font-weight:bold }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem }
+    @media (max-width:760px){ iframe{ width:96%; height:240px } }
+    .tiny{font-size:.85rem;color:#475569}
+  </style>
+</head>
+<body>
+<header>Flame Emission Spectroscopy — Identifying Metal Ions</header>
+
+<div class="video">
+  <!-- Updated link as requested -->
+  <iframe src="https://www.youtube.com/embed/80FTwq4FeTU" title="Flame Emission Spectroscopy" allowfullscreen></iframe>
+</div>
+
+<div class="wrap">
+    <section class="card">
+    <h2>Notes (rewritten in English from the given speech)</h2>
+
+    <details open>
+      <summary>What flame emission spectroscopy is</summary>
+      <ul>
+        <li><b>Flame emission spectroscopy</b>, also called <b>flame photometry</b>, is used to identify <b>metal ions</b>.</li>
+        <li>When metal ions are heated, they emit light at specific <b>wavelengths</b>.</li>
+        <li>These wavelengths produce characteristic <b>colours</b> and a unique <b>line spectrum</b> for each metal ion.</li>
+      </ul>
+      <div class="flex">
+        <span class="pill">Metal ions</span><span class="pill">Wavelengths</span><span class="pill">Line spectra</span><span class="pill">Concentration</span>
+      </div>
+    </details>
+
+    <details>
+      <summary>How it compares with the flame test</summary>
+      <ul>
+        <li>A simple <b>flame test</b> heats a sample in a Bunsen burner and observes the flame colour.</li>
+        <li>This is useful for a quick test, but it can be difficult when <b>different metals produce similar colours</b>.</li>
+        <li>It is also less reliable if the sample contains <b>more than one metal ion</b>, because the colours mix together.</li>
+        <li>Flame emission spectroscopy solves this by measuring the exact wavelengths of light with a <b>spectroscope</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Unique line spectra</summary>
+      <ul>
+        <li>Each metal ion produces its own <b>pattern of spectral lines</b>.</li>
+        <li>This pattern is called a <b>line spectrum</b>.</li>
+        <li>By comparing an unknown sample with <b>standard spectra</b> from known metal ions, scientists can identify which ions are present.</li>
+        <li>If a sample contains several ions, the final spectrum shows the <b>combined lines</b> from all of them.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Finding concentration</summary>
+      <ul>
+        <li>The <b>brightness</b> or <b>intensity</b> of a spectral line shows how much of that ion is present.</li>
+        <li><b>Brighter lines</b> mean a <b>higher concentration</b> of that metal ion.</li>
+        <li>This means flame emission spectroscopy can identify ions and measure their <b>concentrations</b> at the same time.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Why instrumental methods are better</summary>
+      <ul>
+        <li>Flame emission spectroscopy is an <b>instrumental method</b>, while a flame test is a <b>manual test</b>.</li>
+        <li>Instrumental methods are usually more <b>accurate</b>, more <b>sensitive</b>, and much <b>faster</b>.</li>
+        <li>They can detect very <b>small amounts</b> of a substance and are often <b>automated</b>.</li>
+        <li>Although they use expensive equipment, they usually produce <b>better results</b>.</li>
+      </ul>
+    </details>
+
+  </section>
+
+  <section class="card">
+    <h2>Quiz (40 Questions based on the speech)</h2>
+    <div id="game-area">
+      <button onclick="startGame()">Start</button>
+      <div class="scorebar muted" id="scorebar">Not started</div>
+    </div>
+  </section>
+</div>
+
+<script>
+// 40 questions tightly grounded to the provided plant-leaf speech
+const Q = [{"type": "mcq", "q": "What is another name for flame emission spectroscopy?", "opts": ["Chromatography", "Flame photometry", "Mass spectrometry"], "a": 1, "exp": "The speech says flame emission spectroscopy is sometimes called flame photometry."}, {"type": "mcq", "q": "What happens when metal ions are heated?", "opts": ["They absorb all light", "They emit light", "They stop moving"], "a": 1, "exp": "Heated metal ions emit light."}, {"type": "mcq", "q": "The colour seen in a flame depends on the ion's:", "opts": ["Mass number", "Wavelengths of emitted light", "Boiling point"], "a": 1, "exp": "Different wavelengths produce different visible colours."}, {"type": "mcq", "q": "What is used in a simple flame test?", "opts": ["Bunsen burner", "Voltmeter", "Thermometer"], "a": 0, "exp": "A simple flame test heats the sample in a Bunsen burner flame."}, {"type": "mcq", "q": "Why can flame tests be difficult to use?", "opts": ["Metals never emit light", "Some metal colours are similar", "They always break the sample"], "a": 1, "exp": "Similar flame colours can make identification difficult."}, {"type": "mcq", "q": "What instrument detects individual wavelengths in flame emission spectroscopy?", "opts": ["Microscope", "Spectroscope", "Balance"], "a": 1, "exp": "A spectroscope detects the individual wavelengths emitted."}, {"type": "mcq", "q": "Each different metal ion has a unique:", "opts": ["Line spectrum", "Boiling curve", "Crystal shape"], "a": 0, "exp": "Each ion has its own unique line spectrum."}, {"type": "mcq", "q": "What does the intensity of spectral lines show?", "opts": ["Temperature only", "Concentration of the ion", "Volume of the sample"], "a": 1, "exp": "Line intensity indicates ion concentration."}, {"type": "mcq", "q": "If a line is brighter, the concentration is usually:", "opts": ["Lower", "Higher", "Zero"], "a": 1, "exp": "Brighter spectral lines indicate higher concentration."}, {"type": "mcq", "q": "If a sample contains two metal ions, the spectrum will show:", "opts": ["Only one set of lines", "The combined lines of both ions", "No lines at all"], "a": 1, "exp": "The final spectrum contains the wavelengths of both ions."}, {"type": "mcq", "q": "How are unknown ions identified?", "opts": ["By guessing the flame colour", "By comparing with standard line spectra", "By measuring pH"], "a": 1, "exp": "Unknown spectra are compared with known standard spectra."}, {"type": "mcq", "q": "In exams, how do you identify ions in an unknown sample?", "opts": ["Look for matching spectral lines", "Measure the sample mass", "Check the melting point"], "a": 0, "exp": "You identify ions by matching lines with known spectra."}, {"type": "mcq", "q": "Manual tests are often:", "opts": ["Basic and cheap", "Highly automated", "Always more accurate"], "a": 0, "exp": "The speech describes manual tests as basic and cheap."}, {"type": "mcq", "q": "Instrumental methods usually use:", "opts": ["Expensive machines", "Only hand tools", "Living cells"], "a": 0, "exp": "Instrumental methods use expensive machines."}, {"type": "mcq", "q": "Which is NOT one of the main benefits of instrumental methods?", "opts": ["Accuracy", "Sensitivity", "Low cost"], "a": 2, "exp": "The three benefits given are accuracy, sensitivity, and speed."}, {"type": "mcq", "q": "Sensitive methods can detect:", "opts": ["Only large quantities", "Tiny amounts of a substance", "Only solids"], "a": 1, "exp": "Sensitivity means detecting even tiny amounts."}, {"type": "mcq", "q": "Instrumental methods are often faster because they can be:", "opts": ["Automated", "Painted", "Heated less"], "a": 0, "exp": "Automation makes instrumental methods very fast."}, {"type": "mcq", "q": "What problem happens in a flame test with mixed metal ions?", "opts": ["The colours get mixed", "The sample freezes", "No combustion occurs"], "a": 0, "exp": "Mixed ions can produce mixed flame colours."}, {"type": "mcq", "q": "The main advantage of flame emission spectroscopy is that it can:", "opts": ["Separate ions by mass", "Identify multiple ions in one sample", "Measure density"], "a": 1, "exp": "It can detect the lines from all ions present in a mixture."}, {"type": "mcq", "q": "Scientists may use what to help analyse spectra?", "opts": ["Computer programs", "Stopwatches only", "pH indicators"], "a": 0, "exp": "The speech mentions scientists or computer programs can identify the ions."}, {"type": "tf", "q": "Flame emission spectroscopy and flame tests are based on the same basic idea.", "a": true, "exp": "Both rely on heated metal ions emitting characteristic light."}, {"type": "tf", "q": "A spectroscope can only detect colour, not wavelengths.", "a": false, "exp": "It detects the individual wavelengths emitted."}, {"type": "tf", "q": "Every metal ion produces exactly the same line spectrum.", "a": false, "exp": "Each metal ion has a unique pattern of lines."}, {"type": "tf", "q": "The intensity of a spectral line can be used to estimate concentration.", "a": true, "exp": "Brighter or duller lines indicate concentration."}, {"type": "tf", "q": "A sample containing several metal ions can still be analysed by flame emission spectroscopy.", "a": true, "exp": "The combined spectrum contains lines from all ions present."}, {"type": "tf", "q": "In an unknown spectrum, matching lines suggest the presence of a metal ion.", "a": true, "exp": "Matching lines are used to identify ions."}, {"type": "tf", "q": "Manual tests are usually more sensitive than instrumental methods.", "a": false, "exp": "Instrumental methods are more sensitive."}, {"type": "tf", "q": "Instrumental methods are often slower because they cannot be automated.", "a": false, "exp": "They are often faster because they can be automated."}, {"type": "tf", "q": "Flame tests work perfectly even when two metals have very similar colours.", "a": false, "exp": "Similar colours can make flame tests unreliable."}, {"type": "tf", "q": "Flame emission spectroscopy can identify ions and estimate their concentrations.", "a": true, "exp": "It can do both using spectral lines and their intensities."}, {"type": "fill", "q": "Flame emission spectroscopy is sometimes called flame ______.", "text": "photometry", "exp": "The alternative name is flame photometry."}, {"type": "fill", "q": "Heated metal ions emit ______.", "text": "light", "exp": "The method depends on light being emitted."}, {"type": "fill", "q": "A unique pattern of wavelengths is called a line ______.", "text": "spectrum", "exp": "Each metal ion has its own line spectrum."}, {"type": "fill", "q": "The instrument used is a ______scope.", "text": "spectro", "exp": "A spectroscope detects the emitted wavelengths."}, {"type": "fill", "q": "The ______ of the spectral lines shows concentration.", "text": "intensity", "exp": "Intensity means how bright or dull the lines are."}, {"type": "fill", "q": "More intense lines usually mean a higher ______.", "text": "concentration", "exp": "Brightness indicates how much ion is present."}, {"type": "fill", "q": "To identify unknown ions, compare with ______ spectra.", "text": "standard", "exp": "Scientists compare with standard spectra from known ions."}, {"type": "fill", "q": "Manual tests are usually basic and ______.", "text": "cheap", "exp": "The speech contrasts cheap manual tests with expensive instrumental methods."}, {"type": "fill", "q": "Instrumental methods are very accurate, sensitive, and ______.", "text": "fast", "exp": "These are the three main benefits given."}, {"type": "fill", "q": "Instrumental methods are often ______, so they do not need constant human input.", "text": "automated", "exp": "Automation is one reason they are fast."}];
+
+let idx=0, score=0, order=[];
+function startGame(){
+  order = [...Array(Q.length).keys()].sort(()=>Math.random()-0.5);
+  idx = 0; score = 0;
+  document.getElementById("scorebar").textContent = `Question ${idx+1} / ${Q.length}  Score: ${score}`;
+  renderQ();
+}
+function renderQ(){
+  const q = Q[order[idx]];
+  let html = `<div class='question-box'><p><strong>Q${idx+1}:</strong> ${q.q}</p>`;
+  if(q.type==="mcq"){
+    q.opts.forEach((opt,i)=> html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`);
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type==="tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input type="text" id="fill" placeholder="Type answer"> <button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  const area = document.getElementById("game-area");
+  const inner = document.getElementById("game-area-inner");
+  if(inner){ inner.innerHTML = html; } else { area.insertAdjacentHTML("beforeend", `<div id="game-area-inner">${html}</div>`); }
+}
+function checkMCQ(){
+  const q = Q[order[idx]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select an answer."; fb.className="feedback incorrect"; return;}
+  if(parseInt(sel.value) === q.a){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function checkTF(){
+  const q = Q[order[idx]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select True or False."; fb.className="feedback incorrect"; return;}
+  const val = sel.value === "true";
+  if(val === q.a){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function checkFill(){
+  const q = Q[order[idx]];
+  const ans = (document.getElementById("fill").value||"").trim().toLowerCase();
+  const fb = document.getElementById("feedback");
+  if(!ans){ fb.textContent = "Enter an answer."; fb.className="feedback incorrect"; return;}
+  // Accept basic variants (e.g., plural vs singular)
+  function norm(s){ return s.replace(/\s+/g,"").toLowerCase(); }
+  const ok = norm(ans).includes(norm(q.text));
+  if(ok){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function nextQ(){
+  idx++;
+  if(idx < Q.length){
+    document.getElementById("scorebar").textContent = `Question ${idx+1} / ${Q.length}  Score: ${score}`;
+    renderQ();
+  }else{
+    endGame();
+  }
+}
+function endGame(){
+  const game = document.getElementById("game-area");
+  game.querySelector("#game-area-inner").innerHTML = `<h3>Finished!</h3><p>Your score: <b>${score} / ${Q.length}</b></p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${Q.length}`;
+}
+</script>
+</body>
+</html>
