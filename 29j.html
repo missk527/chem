@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Moles, Concentration and Volume</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --ink:#1f2937;
+      --paper:#fafafa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --good:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(135deg,var(--brand),#6366f1);
+      color:white;
+      padding:20px 16px;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);
+    }
+    header h1{margin:0;font-size:clamp(1.2rem,2.5vw,1.8rem);letter-spacing:.5px}
+    .wrap{max-width:1000px;margin:0 auto;padding:16px}
+    .video-container{
+      display:flex;justify-content:center;align-items:center; margin:18px 0;
+    }
+    iframe{
+      width:100%;max-width:900px;height:480px;border:0;border-radius:12px;
+      box-shadow:0 8px 24px rgba(2,6,23,.15);
+      background:#000;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(2,6,23,.08);
+      margin:16px 0;
+    }
+    h2{
+      margin:.2rem 0 .8rem;
+      color:#0f172a;
+      font-size:1.2rem;
+    }
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{font-weight:700;color:#0f766e;cursor:pointer}
+    ul{margin:.5rem 0 .5rem 1.2rem}
+    .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#e0f2fe;color:#075985;font-weight:600;font-size:.8rem;margin-right:.4rem}
+    .muted{color:var(--muted)}
+    .quiz h2{color:#0f172a}
+    .btn{
+      background:var(--brand);color:#fff;border:0;border-radius:10px;
+      padding:10px 14px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(14,165,233,.35);
+      transition:transform .06s ease,box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(14,165,233,.45)}
+    .question-box{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin-top:12px;background:#fff}
+    .feedback{margin-top:8px;font-weight:700}
+    .correct{color:var(--good)}
+    .incorrect{color:var(--bad)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+    code{background:#f1f5f9;border-radius:6px;padding:2px 6px}
+    .footer{font-size:.85rem;color:var(--muted);text-align:center;margin:16px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>13. Moles, Concentration and Volume</h1>
+  </header>
+
+  <div class="wrap">
+    <div class="video-container card">
+      <!-- Requested video link -->
+      <iframe src="https://www.youtube.com/embed/lgGxObEUuGI" title="Moles, Concentration and Volume Video" allowfullscreen></iframe>
+    </div>
+
+    <section class="card">
+      <h2>Key Notes (English)</h2>
+      <p class="muted">Adapted from the provided speech. Focus: the relationship between moles, concentration and volume, plus how to solve simple and reacting-solution calculations.</p>
+
+      <details open>
+        <summary>1) Core Formula</summary>
+        <ul>
+          <li>The key equation links <strong>moles</strong>, <strong>concentration</strong> and <strong>volume</strong>.</li>
+          <li>You may see it written as <code>moles = concentration × volume</code>.</li>
+          <li>It is also commonly written as <code>n = c × v</code>, where <strong>n</strong> = moles, <strong>c</strong> = concentration and <strong>v</strong> = volume.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) Correct Units</summary>
+        <ul>
+          <li>Volume must be measured in <strong>dm³</strong> (cubic decimetres).</li>
+          <li>Concentration is measured in <strong>mol/dm³</strong> or <strong>mol dm⁻³</strong>.</li>
+          <li>The slash in <code>mol/dm³</code> means <strong>per</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Converting Volume</summary>
+        <ul>
+          <li>Many questions give volume in <strong>cm³</strong>, but the formula needs <strong>dm³</strong>.</li>
+          <li>To convert from cm³ to dm³, <strong>divide by 1000</strong>.</li>
+          <li>Example: <code>800 cm³ = 0.8 dm³</code>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) Example: Finding Moles</summary>
+        <ul>
+          <li>If sodium hydroxide has a volume of <strong>800 cm³</strong> and a concentration of <strong>0.2 mol/dm³</strong>, first convert the volume to <strong>0.8 dm³</strong>.</li>
+          <li>Then use <code>moles = concentration × volume</code>.</li>
+          <li><code>0.8 × 0.2 = 0.16</code>, so the sample contains <strong>0.16 moles</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) Example: Finding Concentration</summary>
+        <ul>
+          <li>If hydrochloric acid has <strong>1.5 dm³</strong> of solution containing <strong>0.6 moles</strong>, then concentration is:</li>
+          <li><code>concentration = moles ÷ volume</code></li>
+          <li><code>0.6 ÷ 1.5 = 0.4</code>, so the concentration is <strong>0.4 mol/dm³</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>6) Reacting Solutions: First Step</summary>
+        <ul>
+          <li>In reaction questions, start by writing down the known values clearly.</li>
+          <li>Example: potassium hydroxide has a volume of <strong>30 cm³</strong> and concentration of <strong>0.5 mol/dm³</strong>.</li>
+          <li>Sulfuric acid has a volume of <strong>25 cm³</strong>, but its concentration is unknown.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>7) Reacting Solutions: Convert Units First</summary>
+        <ul>
+          <li>Convert all volumes into dm³ before using the formula.</li>
+          <li><code>30 cm³ = 0.03 dm³</code></li>
+          <li><code>25 cm³ = 0.025 dm³</code></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>8) Reacting Solutions: Calculate Known Moles</summary>
+        <ul>
+          <li>Find the moles of the substance you know first.</li>
+          <li>For potassium hydroxide: <code>moles = 0.5 × 0.03 = 0.015</code></li>
+          <li>So there are <strong>0.015 moles of KOH</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>9) Use the Molar Ratio</summary>
+        <ul>
+          <li>Next, use the balanced chemical equation to find the <strong>molar ratio</strong>.</li>
+          <li>In the example, potassium hydroxide and sulfuric acid react in a <strong>2:1</strong> ratio.</li>
+          <li>This means <strong>2 moles of KOH react with 1 mole of H₂SO₄</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>10) Find the Unknown Moles and Concentration</summary>
+        <ul>
+          <li>If there are <strong>0.015 moles</strong> of KOH, then the moles of sulfuric acid are <code>0.015 ÷ 2 = 0.0075</code>.</li>
+          <li>Now calculate the unknown concentration using <code>concentration = moles ÷ volume</code>.</li>
+          <li><code>0.0075 ÷ 0.025 = 0.3</code>, so the sulfuric acid concentration is <strong>0.3 mol/dm³</strong>.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card quiz">
+      <h2>Quiz (40 Questions)</h2>
+      <p class="muted">Mix of multiple choice and short answer. Based strictly on the speech and notes above.</p>
+      <div id="game-area">
+        <button class="btn" onclick="startGame()">Start Quiz</button>
+      </div>
+    </section>
+
+    <p class="footer">© 2026 Chemistry Study Helper</p>
+  </div>
+
+<script>
+// 40 quiz questions (based on the moles, concentration and volume speech/notes)
+const questions = [
+  {type:"mcq", question:"What does the equation n = c × v link together?", options:["Mass, density and volume","Moles, concentration and volume","Temperature, pressure and volume"], answer:1,
+   explanation:"The formula n = c × v links moles, concentration and volume."},
+  {type:"fill", question:"In the formula n = c × v, the symbol n stands for ______.", answerText:"moles",
+   explanation:"The symbol n represents the number of moles."},
+  {type:"fill", question:"In the formula n = c × v, the symbol c stands for ______.", answerText:"concentration",
+   explanation:"The symbol c represents concentration."},
+  {type:"fill", question:"In the formula n = c × v, the symbol v stands for ______.", answerText:"volume",
+   explanation:"The symbol v represents volume."},
+  {type:"mcq", question:"Which unit should volume be in when using this formula?", options:["cm³","dm³","m³"], answer:1,
+   explanation:"Volume should be converted to dm³ before using the formula."},
+  {type:"mcq", question:"What is the standard unit for concentration in these questions?", options:["g/cm³","mol/dm³","kg/m³"], answer:1,
+   explanation:"Concentration is measured in mol/dm³."},
+  {type:"fill", question:"The slash in mol/dm³ means ______.", answerText:"per",
+   explanation:"The forward slash means per."},
+  {type:"mcq", question:"To convert from cm³ to dm³, you should:", options:["Multiply by 1000","Divide by 1000","Add 1000"], answer:1,
+   explanation:"cm³ must be divided by 1000 to convert to dm³."},
+  {type:"fill", question:"800 cm³ is equal to ______ dm³.", answerText:"0.8",
+   explanation:"800 ÷ 1000 = 0.8 dm³."},
+  {type:"mcq", question:"If volume = 0.8 dm³ and concentration = 0.2 mol/dm³, how many moles are present?", options:["0.16 mol","1.6 mol","0.04 mol"], answer:0,
+   explanation:"0.8 × 0.2 = 0.16 mol."},
+  {type:"fill", question:"The number of moles in 800 cm³ of 0.2 mol/dm³ sodium hydroxide is ______ mol.", answerText:"0.16",
+   explanation:"After converting volume to 0.8 dm³, multiply by 0.2 to get 0.16 mol."},
+  {type:"mcq", question:"Which formula is used to calculate concentration from moles and volume?", options:["concentration = moles ÷ volume","concentration = moles × volume","concentration = volume ÷ moles"], answer:0,
+   explanation:"Rearranging n = c × v gives c = n ÷ v."},
+  {type:"mcq", question:"If a solution contains 0.6 moles in 1.5 dm³, what is its concentration?", options:["0.4 mol/dm³","0.9 mol/dm³","2.1 mol/dm³"], answer:0,
+   explanation:"0.6 ÷ 1.5 = 0.4 mol/dm³."},
+  {type:"fill", question:"0.6 moles in 1.5 dm³ gives a concentration of ______ mol/dm³.", answerText:"0.4",
+   explanation:"Concentration is moles divided by volume."},
+  {type:"mcq", question:"Before solving reacting solution questions, what should you do first?", options:["Balance the units and write down known values","Ignore the equation","Only find the volume"], answer:0,
+   explanation:"It helps to clearly list the known information and convert units first."},
+  {type:"fill", question:"30 cm³ is equal to ______ dm³.", answerText:"0.03",
+   explanation:"30 ÷ 1000 = 0.03 dm³."},
+  {type:"fill", question:"25 cm³ is equal to ______ dm³.", answerText:"0.025",
+   explanation:"25 ÷ 1000 = 0.025 dm³."},
+  {type:"mcq", question:"If potassium hydroxide has concentration 0.5 mol/dm³ and volume 0.03 dm³, how many moles does it contain?", options:["0.0015 mol","0.015 mol","0.15 mol"], answer:1,
+   explanation:"0.5 × 0.03 = 0.015 mol."},
+  {type:"fill", question:"The moles of potassium hydroxide in the example are ______ mol.", answerText:"0.015",
+   explanation:"Using n = c × v gives 0.015 mol."},
+  {type:"mcq", question:"What is the molar ratio of potassium hydroxide to sulfuric acid in the example?", options:["1:2","2:1","1:1"], answer:1,
+   explanation:"The balanced equation shows a 2:1 ratio of KOH to H₂SO₄."},
+  {type:"fill", question:"If no number appears before a substance in a chemical equation, it is taken to be ______.", answerText:"1",
+   explanation:"A missing coefficient is read as 1."},
+  {type:"mcq", question:"A 2:1 molar ratio means:", options:["2 moles of acid react with 1 mole of base","2 moles of KOH react with 1 mole of H₂SO₄","1 mole of KOH reacts with 2 moles of H₂SO₄"], answer:1,
+   explanation:"The example states that 2 moles of KOH react with 1 mole of sulfuric acid."},
+  {type:"mcq", question:"If there are 0.015 mol of KOH and the ratio KOH:H₂SO₄ is 2:1, how many moles of H₂SO₄ reacted?", options:["0.03 mol","0.0075 mol","0.015 mol"], answer:1,
+   explanation:"0.015 ÷ 2 = 0.0075 mol."},
+  {type:"fill", question:"The moles of sulfuric acid in the example are ______ mol.", answerText:"0.0075",
+   explanation:"Using the 2:1 ratio gives 0.0075 mol of H₂SO₄."},
+  {type:"mcq", question:"Which value is needed last to calculate the concentration of sulfuric acid?", options:["Its volume in dm³","Its colour","Its temperature"], answer:0,
+   explanation:"You need the moles and the volume in dm³ to calculate concentration."},
+  {type:"mcq", question:"What is the concentration of sulfuric acid if it has 0.0075 mol in 0.025 dm³?", options:["0.3 mol/dm³","0.03 mol/dm³","3.0 mol/dm³"], answer:0,
+   explanation:"0.0075 ÷ 0.025 = 0.3 mol/dm³."},
+  {type:"fill", question:"The sulfuric acid concentration in the example is ______ mol/dm³.", answerText:"0.3",
+   explanation:"The final answer is 0.3 mol/dm³."},
+  {type:"mcq", question:"What is the first main step in a reacting solution calculation?", options:["Find the molar ratio","Find the moles of the known substance","Find the mass"], answer:1,
+   explanation:"Start by calculating the moles of the known substance."},
+  {type:"mcq", question:"What is the second main step in this type of reaction calculation?", options:["Use the molar ratio","Convert moles to mass","Round the answer"], answer:0,
+   explanation:"After finding known moles, use the molar ratio from the equation."},
+  {type:"mcq", question:"What is the third main step in this type of reaction calculation?", options:["Use moles and volume to find the unknown concentration","Guess the answer","Convert dm³ back to cm³"], answer:0,
+   explanation:"Finally, use the unknown moles and given volume to calculate concentration."},
+  {type:"fill", question:"The three main stages are: known moles, molar ratio, then unknown ______.", answerText:"concentration",
+   explanation:"The final stage is to calculate the unknown concentration."},
+  {type:"mcq", question:"Why must cm³ usually be converted before using concentration in mol/dm³?", options:["Because the formula requires matching units","Because cm³ is always incorrect in chemistry","Because dm³ is larger than moles"], answer:0,
+   explanation:"The units must match: concentration is given per dm³, so volume must be in dm³."},
+  {type:"fill", question:"The concentration unit mol/dm³ can also be read as moles per cubic ______.", answerText:"decimetre",
+   explanation:"dm³ means cubic decimetre, so mol/dm³ means moles per cubic decimetre."},
+  {type:"mcq", question:"Which operation is used to calculate moles from concentration and volume?", options:["Addition","Multiplication","Subtraction"], answer:1,
+   explanation:"Moles are found by multiplying concentration by volume."},
+  {type:"mcq", question:"Which operation is used to calculate concentration from moles and volume?", options:["Division","Multiplication","Subtraction"], answer:0,
+   explanation:"Concentration is found by dividing moles by volume."},
+  {type:"fill", question:"If a question gives volume in cm³, convert it to dm³ by dividing by ______.", answerText:"1000",
+   explanation:"Divide by 1000 to convert cm³ to dm³."},
+  {type:"mcq", question:"In the sodium hydroxide example, which quantity had to be converted first?", options:["Concentration","Volume","Moles"], answer:1,
+   explanation:"The volume was given in cm³, so it had to be converted first."},
+  {type:"mcq", question:"In the hydrochloric acid example, why was no unit conversion needed?", options:["Because both quantities were already in the correct units","Because hydrochloric acid does not need units","Because moles were not used"], answer:0,
+   explanation:"The values were already given in moles and dm³."},
+  {type:"fill", question:"In a balanced equation, the numbers in front of substances show the ______ ratio.", answerText:"molar",
+   explanation:"These coefficients show the molar ratio between substances."},
+  {type:"mcq", question:"What is the final answer for the sulfuric acid example?", options:["0.3 mol/dm³","0.75 mol/dm³","0.025 mol/dm³"], answer:0,
+   explanation:"The final calculated concentration is 0.3 mol/dm³."},
+  {type:"fill", question:"The final answer to the sulfuric acid problem is ______ mol/dm³.", answerText:"0.3",
+   explanation:"After using moles and dividing by volume, the answer is 0.3 mol/dm³."}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let shuffledQuestions = [];
+
+function startGame(){
+  shuffledQuestions = [...questions].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  showQuestion();
+}
+
+function showQuestion(){
+  const gameArea = document.getElementById("game-area");
+  const q = shuffledQuestions[currentQuestion];
+  let html = `<div class="question-box"><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+  if(q.type==="mcq"){
+    q.options.forEach((opt, idx)=>{
+      html += `<label style="display:block;margin:.25rem 0"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+    });
+    html += `<button class="btn" onclick="checkMCQ()">Submit</button>`;
+  } else {
+    html += `<input id="fill" type="text" placeholder="Type your answer…" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px">`;
+    html += `<div style="height:8px"></div>`;
+    html += `<button class="btn" onclick="checkFill()">Submit</button>`;
+  }
+
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  gameArea.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = shuffledQuestions[currentQuestion];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const feedback = document.getElementById("feedback");
+  if(!sel){
+    feedback.textContent = "Please select an answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(parseInt(sel.value,10) === q.answer){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  }else{
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = shuffledQuestions[currentQuestion];
+  const ans = (document.getElementById("fill").value || "").trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  if(!ans){
+    feedback.textContent = "Please enter your answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(ans.includes(q.answerText)){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  } else {
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < shuffledQuestions.length){
+    showQuestion();
+  } else {
+    endGame();
+  }
+}
+
+function endGame(){
+  const gameArea = document.getElementById("game-area");
+  gameArea.innerHTML = `<h3>Quiz Complete!</h3>
+    <p>Your score: <strong>${score} / ${shuffledQuestions.length}</strong></p>
+    <button class="btn" onclick="startGame()">Try Again</button>`;
+}
+</script>
+</body>
+</html>
