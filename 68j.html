@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carbon Footprints Overview</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --ink:#1f2937;
+      --paper:#fafafa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --good:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(135deg,var(--brand),#6366f1);
+      color:white;
+      padding:20px 16px;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);
+    }
+    header h1{margin:0;font-size:clamp(1.2rem,2.5vw,1.8rem);letter-spacing:.5px}
+    .wrap{max-width:1000px;margin:0 auto;padding:16px}
+    .video-container{
+      display:flex;justify-content:center;align-items:center; margin:18px 0;
+    }
+    iframe{
+      width:100%;max-width:900px;height:480px;border:0;border-radius:12px;
+      box-shadow:0 8px 24px rgba(2,6,23,.15);
+      background:#000;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(2,6,23,.08);
+      margin:16px 0;
+    }
+    h2{
+      margin:.2rem 0 .8rem;
+      color:#0f172a;
+      font-size:1.2rem;
+    }
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{font-weight:700;color:#0f766e;cursor:pointer}
+    ul{margin:.5rem 0 .5rem 1.2rem}
+    .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#e0f2fe;color:#075985;font-weight:600;font-size:.8rem;margin-right:.4rem}
+    .muted{color:var(--muted)}
+    .quiz h2{color:#0f172a}
+    .btn{
+      background:var(--brand);color:#fff;border:0;border-radius:10px;
+      padding:10px 14px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(14,165,233,.35);
+      transition:transform .06s ease,box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(14,165,233,.45)}
+    .question-box{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin-top:12px;background:#fff}
+    .feedback{margin-top:8px;font-weight:700}
+    .correct{color:var(--good)}
+    .incorrect{color:var(--bad)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+    code{background:#f1f5f9;border-radius:6px;padding:2px 6px}
+    .footer{font-size:.85rem;color:var(--muted);text-align:center;margin:16px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>68. Carbon Footprints</h1>
+  </header>
+
+  <div class="wrap">
+    <div class="video-container card">
+      <!-- Requested video link -->
+      <iframe src="https://www.youtube.com/embed/kIPLuj9fdbw" title="Carbon Footprints Video" allowfullscreen></iframe>
+    </div>
+
+    
+    <section class="card">
+      <h2>Key Notes (English)</h2>
+      <p class="muted">Adapted from the provided speech. Focus: what carbon footprints are, why they are hard to measure, ways to reduce emissions, and why change is difficult in real life.</p>
+
+      <details open>
+        <summary>1) What Carbon Footprints Mean</summary>
+        <ul>
+          <li>Carbon footprints measure the total amount of carbon dioxide and other greenhouse gases released over the whole life cycle of something.</li><li>They can be worked out for products, services, or events such as a phone, plane travel, or a festival.</li><li>A life cycle includes everything from raw materials to disposal.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>2) Why Carbon Footprints Matter</summary>
+        <ul>
+          <li>Estimating a carbon footprint helps us judge how environmentally damaging an activity or product is.</li><li>It also helps identify the biggest sources of emissions so that reductions can be targeted more effectively.</li><li>Even rough estimates are useful for comparing different activities.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>3) Why They Are Difficult to Measure</summary>
+        <ul>
+          <li>Carbon footprints are hard to calculate because emissions happen at many different stages.</li><li>For a phone, you would need to include raw material extraction, manufacturing, electricity use during its lifetime, and disposal.</li><li>You would also need to consider extra factors such as transport of parts around the world.</li><li>In real life, it is sometimes impossible to measure every source exactly.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>4) Using Rough Calculations</summary>
+        <ul>
+          <li>Although perfect measurements are difficult, approximate calculations still help us spot the worst emitters.</li><li>They allow sensible comparisons and help guide decisions about reducing emissions.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>5) Reducing Emissions with Energy Choices</summary>
+        <ul>
+          <li>One important method is replacing fossil fuels with lower-carbon energy sources such as wind, solar, or nuclear power.</li><li>This can reduce the greenhouse gases released during energy production.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>6) Improving Manufacturing</summary>
+        <ul>
+          <li>More efficient manufacturing processes can reduce the amount of energy needed.</li><li>They can also cut waste, which lowers emissions further.</li><li>Using fewer resources usually means a smaller carbon footprint.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>7) Why Reducing Waste Matters</summary>
+        <ul>
+          <li>Waste can be broken down by decomposers.</li><li>This process may release methane, which is a greenhouse gas.</li><li>Reducing waste therefore helps reduce climate impacts.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>8) What Governments Can Do</summary>
+        <ul>
+          <li>Governments can introduce laws to limit emissions.</li><li>They can also tax companies based on the amount of greenhouse gases they produce.</li><li>Government action can encourage cleaner technologies and practices.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>9) Carbon Capture Technology</summary>
+        <ul>
+          <li>Carbon capture technology can trap carbon dioxide produced when fossil fuels are burned before it enters the atmosphere.</li><li>The captured carbon dioxide can be stored deep underground.</li><li>Suitable storage sites include cracks in rocks and old oil wells.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>10) Why Reducing Carbon Footprints Is Difficult</summary>
+        <ul>
+          <li>Renewable energy can be more expensive than fossil fuels.</li><li>Modern economies still depend heavily on fossil fuels, making change difficult.</li><li>Governments may worry that strong environmental action could damage the economy.</li><li>International agreements are hard because countries may fear economic disadvantage if others do not act too.</li><li>Individuals also need to take responsibility for their own consumption and lifestyle choices.</li>
+        </ul>
+      </details>
+
+    </section>
+
+
+    <section class="card quiz">
+      <h2>Quiz (40 Questions)</h2>
+      <p class="muted">Mix of multiple choice and short answer. Based strictly on the speech and notes above.</p>
+      <div id="game-area">
+        <button class="btn" onclick="startGame()">Start Quiz</button>
+      </div>
+    </section>
+
+    <p class="footer">© 2025 Carbon Footprints Study Helper</p>
+  </div>
+
+<script>
+// 40 quiz questions (based on the reproductive hormones speech/notes)
+const questions = [{"type":"mcq","question":"What does a carbon footprint measure?","options":["Only carbon dioxide from factories","The total greenhouse gases emitted over a whole life cycle","Only emissions from transport"],"answer":1,"explanation":"A carbon footprint includes carbon dioxide and other greenhouse gases over the entire life cycle."},{"type":"fill","question":"A carbon footprint includes carbon dioxide and other greenhouse ______.","answerText":"gases","explanation":"The speech refers to carbon dioxide and other greenhouse gases."},{"type":"mcq","question":"Which of these could have a carbon footprint?","options":["A phone only","A festival only","A product, service, or event"],"answer":2,"explanation":"Products, services, and events can all have carbon footprints."},{"type":"fill","question":"A phone is given as an example of a ______ whose carbon footprint can be measured.","answerText":"product","explanation":"The speech gives a phone as an example of a product."},{"type":"mcq","question":"Why is it useful to estimate carbon footprints?","options":["To ignore environmental damage","To compare environmental impact","To increase pollution"],"answer":1,"explanation":"Estimating carbon footprints helps compare environmental damage."},{"type":"fill","question":"Carbon footprint estimates help identify the most polluting ______.","answerText":"activities","explanation":"The speech says they help identify the most polluting activities."},{"type":"mcq","question":"Why are carbon footprints hard to measure?","options":["Because emissions occur at many stages","Because greenhouse gases do not exist","Because products have no life cycle"],"answer":0,"explanation":"Emissions happen during sourcing, manufacturing, use, disposal, and more."},{"type":"fill","question":"For a phone, one stage to include is raw material ______.","answerText":"sourcing","explanation":"Raw material sourcing is one part of the life cycle."},{"type":"mcq","question":"Which stage is part of a phone's life cycle?","options":["Manufacturing","Teleportation","Photosynthesis"],"answer":0,"explanation":"Manufacturing is part of a phone's life cycle."},{"type":"fill","question":"The total amount of power a phone uses over its ______ should be considered.","answerText":"lifetime","explanation":"Lifetime energy use is one factor in the calculation."},{"type":"mcq","question":"What other factor is mentioned besides sourcing, manufacture, use, and disposal?","options":["Transporting parts around the world","Moonlight","Sound pollution only"],"answer":0,"explanation":"Transport emissions also need to be considered."},{"type":"fill","question":"In real life, measuring every source exactly can be ______.","answerText":"impossible","explanation":"The speech says it can sometimes be impossible."},{"type":"mcq","question":"Even if a calculation is rough, it can still be useful for what?","options":["Comparing emitters","Stopping all science","Ignoring evidence"],"answer":0,"explanation":"Rough calculations still help compare major emitters."},{"type":"fill","question":"Approximate calculations help us spot the worst ______.","answerText":"emitters","explanation":"They help identify the biggest sources of emissions."},{"type":"mcq","question":"Which energy source is suggested as a lower-carbon option?","options":["Coal","Wind","Oil"],"answer":1,"explanation":"Wind is given as one renewable option."},{"type":"fill","question":"Solar, wind, and nuclear are alternatives to fossil ______.","answerText":"fuels","explanation":"The speech contrasts them with fossil fuels."},{"type":"mcq","question":"How can manufacturing be improved to reduce emissions?","options":["Use more energy","Use more waste","Use more efficient processes"],"answer":2,"explanation":"More efficient manufacturing uses less energy and produces less waste."},{"type":"fill","question":"Efficient manufacturing can also reduce ______.","answerText":"waste","explanation":"Less waste is another benefit of efficient production."},{"type":"mcq","question":"Why is reducing waste important?","options":["Waste can release methane when decomposed","Waste always cools the planet","Waste has no effect"],"answer":0,"explanation":"Decomposers can release methane from waste."},{"type":"fill","question":"Decomposers breaking down waste can release ______.","answerText":"methane","explanation":"Methane is specifically mentioned."},{"type":"mcq","question":"What can governments do to reduce emissions?","options":["Introduce laws or taxes","Ban all products immediately","Ignore company emissions"],"answer":0,"explanation":"Governments can regulate and tax emissions."},{"type":"fill","question":"Governments may tax companies based on the amount of greenhouse gases they ______.","answerText":"emit","explanation":"The speech says taxes can be based on emissions."},{"type":"mcq","question":"What does carbon capture technology do?","options":["Creates fossil fuels","Captures carbon dioxide before it escapes","Melts polar ice"],"answer":1,"explanation":"Carbon capture traps carbon dioxide before it reaches the atmosphere."},{"type":"fill","question":"Captured carbon dioxide can be stored deep ______.","answerText":"underground","explanation":"The speech says it can be stored deep underground."},{"type":"mcq","question":"Which place is mentioned as a possible storage site for captured carbon dioxide?","options":["Old oil wells","Clouds","Rivers"],"answer":0,"explanation":"Old oil wells are given as an example."},{"type":"fill","question":"Carbon dioxide can be stored in cracks in the ______.","answerText":"rocks","explanation":"Cracks in the rocks are mentioned."},{"type":"mcq","question":"Why is reducing emissions difficult in practice?","options":["Renewables are often more expensive","There are no alternatives at all","People know every answer"],"answer":0,"explanation":"The speech says renewable energy is often more expensive."},{"type":"fill","question":"Renewable energy is often more expensive than fossil ______.","answerText":"fuels","explanation":"That comparison is made directly in the speech."},{"type":"mcq","question":"What is the current economy heavily based on?","options":["Fossil fuels","Only bicycles","No energy"],"answer":0,"explanation":"The speech says the whole economy is based on fossil fuels."},{"type":"fill","question":"This dependence on fossil fuels makes change really ______.","answerText":"hard","explanation":"The speech says it is really hard to change."},{"type":"mcq","question":"Why might governments hesitate to prioritize the environment?","options":["They worry the economy might suffer","They do not know what pollution is","They want more waste"],"answer":0,"explanation":"Governments may fear economic damage."},{"type":"fill","question":"Governments may worry that environmental action could hurt the ______.","answerText":"economy","explanation":"Economic damage is mentioned as a concern."},{"type":"mcq","question":"Why are international agreements difficult?","options":["Countries fear unfair economic disadvantage","Countries all agree instantly","There are no emissions to discuss"],"answer":0,"explanation":"Countries may not want to act unless others do the same."},{"type":"fill","question":"No country wants to agree to changes unless it is sure other countries will do the ______.","answerText":"same","explanation":"The speech says countries want assurance others will also act."},{"type":"mcq","question":"Who else has a role in reducing carbon footprints?","options":["Only scientists","Only governments","Individuals as well"],"answer":2,"explanation":"The speech says every individual also has responsibility."},{"type":"fill","question":"Every individual needs to be responsible for their own ______.","answerText":"consumption","explanation":"Own consumption is specifically mentioned."},{"type":"mcq","question":"Besides consumption, what must people be willing to change?","options":["Their lifestyle","Their species","Their planet"],"answer":0,"explanation":"Lifestyle changes are mentioned."},{"type":"fill","question":"People need to make changes to their ______ choices.","answerText":"lifestyle","explanation":"The speech refers to lifestyle changes."},{"type":"mcq","question":"Which gas besides carbon dioxide is mentioned in relation to waste?","options":["Oxygen","Methane","Nitrogen"],"answer":1,"explanation":"Methane is released when some waste decomposes."},{"type":"fill","question":"A rough carbon footprint can still help us make sensible ______ to reduce emissions.","answerText":"plans","explanation":"The speech says we can make sensible plans once we understand emission sources."}];
+
+let currentQuestion = 0;
+let score = 0;
+let shuffledQuestions = [];
+
+function startGame(){
+  shuffledQuestions = [...questions].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  showQuestion();
+}
+
+function showQuestion(){
+  const gameArea = document.getElementById("game-area");
+  const q = shuffledQuestions[currentQuestion];
+  let html = `<div class="question-box"><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+  if(q.type==="mcq"){
+    q.options.forEach((opt, idx)=>{
+      html += `<label style="display:block;margin:.25rem 0"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+    });
+    html += `<button class="btn" onclick="checkMCQ()">Submit</button>`;
+  } else {
+    html += `<input id="fill" type="text" placeholder="Type your answer…" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px">`;
+    html += `<div style="height:8px"></div>`;
+    html += `<button class="btn" onclick="checkFill()">Submit</button>`;
+  }
+
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  gameArea.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = shuffledQuestions[currentQuestion];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const feedback = document.getElementById("feedback");
+  if(!sel){
+    feedback.textContent = "Please select an answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(parseInt(sel.value,10) === q.answer){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  }else{
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = shuffledQuestions[currentQuestion];
+  const ans = (document.getElementById("fill").value || "").trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  if(!ans){
+    feedback.textContent = "Please enter your answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(ans.includes(q.answerText)){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  } else {
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < shuffledQuestions.length){
+    showQuestion();
+  } else {
+    endGame();
+  }
+}
+
+function endGame(){
+  const gameArea = document.getElementById("game-area");
+  gameArea.innerHTML = `<h3>Quiz Complete!</h3>
+    <p>Your score: <strong>${score} / ${shuffledQuestions.length}</strong></p>
+    <button class="btn" onclick="startGame()">Try Again</button>`;
+}
+</script>
+</body>
+</html>
