@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sound Waves and Hearing</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --ink:#1f2937;
+      --paper:#fafafa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --good:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(135deg,var(--brand),#6366f1);
+      color:white;
+      padding:20px 16px;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);
+    }
+    header h1{margin:0;font-size:clamp(1.2rem,2.5vw,1.8rem);letter-spacing:.5px}
+    .wrap{max-width:1000px;margin:0 auto;padding:16px}
+    .video-container{
+      display:flex;justify-content:center;align-items:center; margin:18px 0;
+    }
+    iframe{
+      width:100%;max-width:900px;height:480px;border:0;border-radius:12px;
+      box-shadow:0 8px 24px rgba(2,6,23,.15);
+      background:#000;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(2,6,23,.08);
+      margin:16px 0;
+    }
+    h2{
+      margin:.2rem 0 .8rem;
+      color:#0f172a;
+      font-size:1.2rem;
+    }
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{font-weight:700;color:#0f766e;cursor:pointer}
+    ul{margin:.5rem 0 .5rem 1.2rem}
+    .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#e0f2fe;color:#075985;font-weight:600;font-size:.8rem;margin-right:.4rem}
+    .muted{color:var(--muted)}
+    .quiz h2{color:#0f172a}
+    .btn{
+      background:var(--brand);color:#fff;border:0;border-radius:10px;
+      padding:10px 14px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(14,165,233,.35);
+      transition:transform .06s ease,box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(14,165,233,.45)}
+    .question-box{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin-top:12px;background:#fff}
+    .feedback{margin-top:8px;font-weight:700}
+    .correct{color:var(--good)}
+    .incorrect{color:var(--bad)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+    code{background:#f1f5f9;border-radius:6px;padding:2px 6px}
+    .footer{font-size:.85rem;color:var(--muted);text-align:center;margin:16px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>73P. Sound Waves and Hearing</h1>
+  </header>
+
+  <div class="wrap">
+    <div class="video-container card">
+      <!-- Requested video link -->
+      <iframe src="https://www.youtube.com/embed/VJTiwHrqtQY" title="Sound Waves and Hearing Video" allowfullscreen></iframe>
+    </div>
+
+    
+    
+    
+
+
+
+
+<section class="card">
+<h2>Key Notes (English)</h2>
+<p class="muted">Topic: Pollution from Burning Fossil Fuels</p>
+
+<details open><summary>1) Complete Combustion</summary>
+<ul>
+<li>Occurs when hydrocarbons burn with plenty of oxygen.</li>
+<li>Produces carbon dioxide and water only.</li>
+</ul></details>
+
+<details><summary>2) Incomplete Combustion</summary>
+<ul>
+<li>Happens when there is limited oxygen.</li>
+<li>Produces carbon monoxide and soot (particulates).</li>
+</ul></details>
+
+<details><summary>3) Particulates (Soot)</summary>
+<ul>
+<li>Solid carbon particles formed during incomplete combustion.</li>
+<li>Can damage lungs when inhaled.</li>
+<li>Cause global dimming by reflecting sunlight.</li>
+</ul></details>
+
+<details><summary>4) Carbon Monoxide</summary>
+<ul>
+<li>Colorless and odorless gas.</li>
+<li>Binds to hemoglobin, reducing oxygen transport.</li>
+<li>Can cause death in severe cases.</li>
+</ul></details>
+
+<details><summary>5) Sulfur Dioxide</summary>
+<ul>
+<li>Formed when sulfur impurities in fuels burn.</li>
+<li>Can irritate lungs and contribute to acid rain.</li>
+</ul></details>
+
+<details><summary>6) Nitrogen Oxides</summary>
+<ul>
+<li>Formed at high temperatures from nitrogen and oxygen in air.</li>
+<li>Common in car engines.</li>
+</ul></details>
+
+<details><summary>7) Acid Rain</summary>
+<ul>
+<li>Forms when sulfur dioxide and nitrogen oxides dissolve in clouds.</li>
+<li>Produces sulfuric acid and nitric acid.</li>
+<li>Damages buildings, metals, and plants.</li>
+</ul></details>
+
+<details><summary>8) Environmental Impact</summary>
+<ul>
+<li>Pollutants damage human health and ecosystems.</li>
+<li>Acid rain makes soil more acidic and harms plant growth.</li>
+</ul></details>
+
+</section>
+
+
+
+
+    <section class="card quiz">
+      <h2>Quiz (40 Questions)</h2>
+      <p class="muted">Mix of multiple choice and short answer. Based strictly on the speech and notes above.</p>
+      <div id="game-area">
+        <button class="btn" onclick="startGame()">Start Quiz</button>
+      </div>
+    </section>
+
+    <p class="footer">© 2026 Contraception Study Helper</p>
+  </div>
+
+<script>
+// 40 quiz questions (based on the contraception speech/notes)
+
+
+
+const questions = [
+{"type":"fill","question":"What fuels release CO2 when burned?","answerText":"fossil","explanation":"fossil fuels"},
+{"type":"fill","question":"Complete combustion needs plenty of what?","answerText":"oxygen","explanation":"oxygen"},
+{"type":"fill","question":"Complete combustion produces carbon dioxide and what?","answerText":"water","explanation":"water"},
+{"type":"fill","question":"Incomplete combustion happens with limited what?","answerText":"oxygen","explanation":"oxygen"},
+{"type":"fill","question":"Incomplete combustion produces carbon monoxide and what?","answerText":"soot","explanation":"soot"},
+{"type":"fill","question":"What are particulates made of?","answerText":"carbon","explanation":"carbon"},
+{"type":"fill","question":"Particulates can damage what organ?","answerText":"lungs","explanation":"lungs"},
+{"type":"fill","question":"Particulates cause what global effect?","answerText":"dimming","explanation":"global dimming"},
+{"type":"fill","question":"Carbon monoxide binds to what?","answerText":"hemoglobin","explanation":"hemoglobin"},
+{"type":"fill","question":"Carbon monoxide reduces oxygen what?","answerText":"transport","explanation":"transport"},
+{"type":"fill","question":"Carbon monoxide is colorless and what?","answerText":"odorless","explanation":"odorless"},
+{"type":"fill","question":"Severe CO poisoning can cause what?","answerText":"death","explanation":"death"},
+{"type":"fill","question":"Sulfur dioxide forms from burning what impurity?","answerText":"sulfur","explanation":"sulfur"},
+{"type":"fill","question":"Nitrogen oxides form at high what?","answerText":"temperature","explanation":"temperature"},
+{"type":"fill","question":"Nitrogen oxides are common in what engines?","answerText":"car","explanation":"car engines"},
+{"type":"fill","question":"Sulfur dioxide can irritate what?","answerText":"lungs","explanation":"lungs"},
+{"type":"fill","question":"Pollutants dissolve in clouds to form what?","answerText":"acid","explanation":"acid rain"},
+{"type":"fill","question":"Acid rain contains sulfuric and nitric what?","answerText":"acid","explanation":"acid"},
+{"type":"fill","question":"Acid rain damages what structures?","answerText":"buildings","explanation":"buildings"},
+{"type":"fill","question":"Acid rain corrodes what?","answerText":"metals","explanation":"metals"},
+{"type":"fill","question":"Acid rain harms what living things?","answerText":"plants","explanation":"plants"},
+{"type":"fill","question":"Acid rain makes soil more what?","answerText":"acidic","explanation":"acidic"},
+{"type":"fill","question":"Less sunlight reaching Earth is called global what?","answerText":"dimming","explanation":"dimming"},
+{"type":"fill","question":"Soot forms dark what?","answerText":"clouds","explanation":"clouds"},
+{"type":"fill","question":"Hydrocarbons are made of carbon and what?","answerText":"hydrogen","explanation":"hydrogen"},
+{"type":"fill","question":"CO2 is produced in complete what?","answerText":"combustion","explanation":"combustion"},
+{"type":"fill","question":"Incomplete combustion wastes what energy?","answerText":"chemical","explanation":"chemical"},
+{"type":"fill","question":"Pollutants can cause respiratory what?","answerText":"problems","explanation":"problems"},
+{"type":"fill","question":"Carbon monoxide prevents oxygen what?","answerText":"delivery","explanation":"delivery"},
+{"type":"fill","question":"Sulfur dioxide contributes to what rain?","answerText":"acid","explanation":"acid rain"},
+{"type":"fill","question":"Nitrogen oxides react with oxygen and what?","answerText":"nitrogen","explanation":"nitrogen"},
+{"type":"fill","question":"Pollution harms the what?","answerText":"environment","explanation":"environment"},
+{"type":"fill","question":"Combustion releases what type of energy?","answerText":"heat","explanation":"heat energy"},
+{"type":"fill","question":"CO is dangerous because it reduces what supply?","answerText":"oxygen","explanation":"oxygen"},
+{"type":"fill","question":"Acid rain affects plant what?","answerText":"growth","explanation":"growth"},
+{"type":"fill","question":"Fossil fuels include coal, oil, and what?","answerText":"gas","explanation":"natural gas"},
+{"type":"fill","question":"Engines produce pollutants at high what?","answerText":"temperature","explanation":"temperature"},
+{"type":"fill","question":"Pollutants mix with clouds to form what?","answerText":"acid","explanation":"acid"},
+{"type":"fill","question":"CO poisoning affects the what organ most?","answerText":"brain","explanation":"brain"},
+{"type":"fill","question":"Air pollution can damage human what?","answerText":"health","explanation":"health"}
+];
+
+
+
+
+let currentQuestion = 0;
+let score = 0;
+let shuffledQuestions = [];
+
+function startGame(){
+  shuffledQuestions = [...questions].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  showQuestion();
+}
+
+function showQuestion(){
+  const gameArea = document.getElementById("game-area");
+  const q = shuffledQuestions[currentQuestion];
+  let html = `<div class="question-box"><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+  if(q.type==="mcq"){
+    q.options.forEach((opt, idx)=>{
+      html += `<label style="display:block;margin:.25rem 0"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+    });
+    html += `<button class="btn" onclick="checkMCQ()">Submit</button>`;
+  } else {
+    html += `<input id="fill" type="text" placeholder="Type your answer…" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px">`;
+    html += `<div style="height:8px"></div>`;
+    html += `<button class="btn" onclick="checkFill()">Submit</button>`;
+  }
+
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  gameArea.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = shuffledQuestions[currentQuestion];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const feedback = document.getElementById("feedback");
+  if(!sel){
+    feedback.textContent = "Please select an answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(parseInt(sel.value,10) === q.answer){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  }else{
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = shuffledQuestions[currentQuestion];
+  const ans = (document.getElementById("fill").value || "").trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  if(!ans){
+    feedback.textContent = "Please enter your answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(ans.includes(q.answerText)){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  } else {
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < shuffledQuestions.length){
+    showQuestion();
+  } else {
+    endGame();
+  }
+}
+
+function endGame(){
+  const gameArea = document.getElementById("game-area");
+  gameArea.innerHTML = `<h3>Quiz Complete!</h3>
+    <p>Your score: <strong>${score} / ${shuffledQuestions.length}</strong></p>
+    <button class="btn" onclick="startGame()">Try Again</button>`;
+}
+</script>
+</body>
+</html>
