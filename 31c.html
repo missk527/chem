@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atom Economy</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#22c55e);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .pill{display:inline-block;background:#e0f2fe;border:1px solid #bae6fd;border-radius:999px;padding:2px 10px;margin-right:6px;margin-bottom:4px}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Atom Economy</h1>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <iframe src="https://www.youtube.com/embed/AEf47L4BIIM" title="Atom Economy" allowfullscreen></iframe>
+    </section>
+
+        <section class="card">
+      <h2>Key Notes (rewritten from the speech)</h2>
+
+      <details open>
+        <summary>1) Why atom economy matters</summary>
+        <ul>
+          <li>Commercial chemical reactions often produce <b>more than one product</b>.</li>
+          <li>Usually, only <b>one main product</b> is useful, while the others are treated as <b>waste</b>.</li>
+          <li>Atom economy helps companies measure how much of the reactants end up in the <b>desired product</b>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) Example reaction and useful product</summary>
+        <ul>
+          <li>In the reaction <span class="chem">CO + H<sub>2</sub>O → H<sub>2</sub> + CO<sub>2</sub></span>, the goal is to make <b>hydrogen</b>.</li>
+          <li>Here, <b>carbon dioxide</b> is not the target product, so it is considered <b>waste</b>.</li>
+          <li>The key question is: what percentage of the reactants becomes hydrogen?</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Definition and formula of atom economy</summary>
+        <ul>
+          <li><b>Atom economy</b> shows the percentage of reactant atoms that are incorporated into the desired product.</li>
+          <li><span class="pill">Atom economy = (Mr of desired product ÷ total Mr of reactants) × 100</span></li>
+          <li>If there is more than one useful product, you add the <b>Mr values of all desired products</b>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) Calculating atom economy for hydrogen production</summary>
+        <ul>
+          <li>For <b>H<sub>2</sub></b>, the M<sub>r</sub> is <b>2</b>.</li>
+          <li>For the reactants: <b>CO = 28</b> and <b>H<sub>2</sub>O = 18</b>, so the total M<sub>r</sub> is <b>46</b>.</li>
+          <li>Atom economy = <b>(2 ÷ 46) × 100 = 4.35%</b>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) Interpreting the result</summary>
+        <ul>
+          <li>An atom economy of <b>4.35%</b> is very low.</li>
+          <li>It means only <b>4.35%</b> of the reactants become the useful product.</li>
+          <li>The remaining <b>95.65%</b> becomes waste, so the reaction is not very efficient in terms of material use.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>6) High atom economy example</summary>
+        <ul>
+          <li>In the reaction <span class="chem">N<sub>2</sub> + 3H<sub>2</sub> → 2NH<sub>3</sub></span>, the only product is <b>ammonia</b>.</li>
+          <li>Because there are no unwanted products, the atom economy is <b>100%</b>.</li>
+          <li>All of the reactant atoms are used to make the desired product.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>7) Why businesses care about atom economy</summary>
+        <ul>
+          <li><b>Raw materials cost money</b>, so turning most of them into waste reduces profit.</li>
+          <li>Using lots of reactants to make a small amount of useful product is <b>less sustainable</b>.</li>
+          <li><b>Waste disposal</b> can be expensive and can also harm the <b>environment</b>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>8) Improving industrial processes</summary>
+        <ul>
+          <li>One solution is to choose a <b>more efficient reaction</b> with a higher atom economy.</li>
+          <li>Another solution is to find a <b>use for waste products</b> so they become useful by-products.</li>
+          <li>Even low-value by-products are often better than paying to dispose of waste.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>9) Other factors that affect profitability</summary>
+        <ul>
+          <li>Atom economy is important, but it is not the <b>only factor</b> in deciding whether a process is profitable.</li>
+          <li>Other factors include <b>percentage yield</b>, <b>cost of raw materials</b>, <b>position of equilibrium</b>, and <b>rate of reaction</b>.</li>
+          <li>Companies also consider the cost of maintaining conditions such as <b>temperature</b> and <b>pressure</b>.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game"><button onclick="startGame()">Start Quiz</button></div>
+    </section>
+
+    <footer>© 2026 Chemistry Pack</footer>
+  </div>
+
+  <script>
+    // 40-question quiz based on the atom economy speech
+    const questions = [
+      {type:"mcq", q:"In commercial chemical manufacture, reactions often produce:", opts:["Only one product", "Multiple products", "No products"], a:1, exp:"Industrial reactions often make multiple products."},
+      {type:"mcq", q:"Usually, how many of those products are actually useful?", opts:["Only one or maybe two", "All of them", "None of them"], a:0, exp:"Usually only one or perhaps two products are useful."},
+      {type:"mcq", q:"In the example reaction CO + H2O → H2 + CO2, the desired product is:", opts:["Carbon dioxide", "Water", "Hydrogen"], a:2, exp:"The aim of the reaction is to produce hydrogen."},
+      {type:"fill", q:"In the hydrogen production example, CO2 is considered ______.", ans:"waste", exp:"Carbon dioxide is treated as the waste product in that example."},
+      {type:"mcq", q:"Atom economy tells us:", opts:["How fast a reaction is", "What percentage of reactants form useful product", "How hot a reaction gets"], a:1, exp:"Atom economy measures the percentage of reactants that end up in the desired product."},
+      {type:"fill", q:"The percentage of reactants that become the desired product is called atom ______.", ans:"economy", exp:"This value is called atom economy."},
+      {type:"mcq", q:"The official atom economy equation uses the Mr of the desired product divided by:", opts:["The total Mr of all products", "The total Mr of all reactants", "The mass of the catalyst"], a:1, exp:"Atom economy = Mr of desired product ÷ total Mr of reactants × 100."},
+      {type:"mcq", q:"Why do we multiply by 100 in the atom economy formula?", opts:["To make the number bigger", "To convert it into a percentage", "To balance the equation"], a:1, exp:"Multiplying by 100 converts the value to a percentage."},
+      {type:"mcq", q:"What is the Mr of hydrogen, H2?", opts:["1", "2", "16"], a:1, exp:"Hydrogen gas has two H atoms, so Mr = 2."},
+      {type:"mcq", q:"What is the Mr of carbon monoxide, CO?", opts:["18", "28", "44"], a:1, exp:"CO has Mr = 12 + 16 = 28."},
+      {type:"mcq", q:"What is the Mr of water, H2O?", opts:["18", "20", "28"], a:0, exp:"H2O has Mr = 2 + 16 = 18."},
+      {type:"fill", q:"The total Mr of the reactants CO and H2O is ______.", ans:"46", exp:"28 + 18 = 46."},
+      {type:"mcq", q:"The atom economy for producing hydrogen in CO + H2O → H2 + CO2 is:", opts:["4.35%", "43.5%", "95.65%"], a:0, exp:"(2 ÷ 46) × 100 = 4.35%."},
+      {type:"fill", q:"Atom economy = (2 ÷ 46) × 100 = ______%.", ans:"4.35", exp:"The calculated atom economy is 4.35%."},
+      {type:"mcq", q:"An atom economy of 4.35% means that the reaction is:", opts:["Very efficient", "Quite poor at using reactants", "Perfect"], a:1, exp:"Only a small percentage of reactants becomes useful product."},
+      {type:"mcq", q:"If atom economy is 4.35%, what percentage becomes waste?", opts:["95.65%", "4.35%", "46%"], a:0, exp:"100% - 4.35% = 95.65% waste."},
+      {type:"fill", q:"If 4.35% becomes useful product, then ______% becomes waste.", ans:"95.65", exp:"The remaining percentage is waste."},
+      {type:"mcq", q:"In general, atom economies are usually:", opts:["Much higher than 4.35%", "Always below 5%", "Exactly 50%"], a:0, exp:"The speech explains that atom economies are usually much higher than 4.35%."},
+      {type:"mcq", q:"Which reaction in the speech has a 100% atom economy?", opts:["CO + H2O → H2 + CO2", "N2 + 3H2 → 2NH3", "C + O2 → CO2 + CO"], a:1, exp:"Making ammonia from nitrogen and hydrogen has 100% atom economy."},
+      {type:"mcq", q:"Why does N2 + 3H2 → 2NH3 have 100% atom economy?", opts:["Because ammonia is the only product", "Because it is very fast", "Because nitrogen is cheap"], a:0, exp:"There are no waste products in that reaction."},
+      {type:"fill", q:"When the desired product is the only product, atom economy is ______%.", ans:"100", exp:"If no waste products form, atom economy is 100%."},
+      {type:"mcq", q:"One reason atom economy matters is that raw materials are:", opts:["Always recycled", "Expensive", "Never measured"], a:1, exp:"Raw materials cost money, so waste reduces profitability."},
+      {type:"mcq", q:"A process that turns most reactants into waste is generally:", opts:["More profitable", "Less profitable", "Always faster"], a:1, exp:"Wasting expensive reactants reduces profit."},
+      {type:"mcq", q:"Using large quantities of reactants to make small amounts of product is:", opts:["More sustainable", "Less sustainable", "Always harmless"], a:1, exp:"It is less sustainable to waste resources this way."},
+      {type:"fill", q:"Waste products can be expensive to get rid of and can damage the ______.", ans:"environment", exp:"Waste can harm the environment."},
+      {type:"mcq", q:"Which is one of the best solutions mentioned for low atom economy?", opts:["Use a more efficient reaction", "Ignore the waste", "Increase the waste"], a:0, exp:"A more efficient reaction can improve atom economy."},
+      {type:"mcq", q:"Another solution is to find a use for waste products so they become:", opts:["Catalysts", "Useful by-products", "Reactants"], a:1, exp:"Useful by-products are better than waste."},
+      {type:"fill", q:"Even low-value useful by-products are better than paying for waste ______.", ans:"disposal", exp:"Selling or using by-products is better than paying to dispose of waste."},
+      {type:"mcq", q:"Atom economy is important, but companies must also consider:", opts:["Only colour changes", "Many other factors", "Only the name of the product"], a:1, exp:"Profitability depends on several factors, not just atom economy."},
+      {type:"mcq", q:"Which of the following is another important factor mentioned in the speech?", opts:["Percentage yield", "Font size", "Beaker shape"], a:0, exp:"Percentage yield is one of the important factors."},
+      {type:"mcq", q:"Which of the following is also listed as important?", opts:["Cost of raw materials", "Colour of the flame", "Brand of equipment"], a:0, exp:"The cost of raw materials affects profitability."},
+      {type:"fill", q:"The position of the ______ is another factor affecting profitability.", ans:"equilibrium", exp:"The speech mentions the position of the equilibrium."},
+      {type:"mcq", q:"Which factor affects how quickly product forms?", opts:["Rate of reaction", "Atomic number", "State symbol"], a:0, exp:"Rate of reaction determines how fast the reaction proceeds."},
+      {type:"mcq", q:"Companies also think about the cost of maintaining the right:", opts:["Temperature and pressure", "Colour and smell", "Mass and volume only"], a:0, exp:"Temperature and pressure control can be expensive."},
+      {type:"fill", q:"The cost of maintaining the right temperature and ______ can affect profit.", ans:"pressure", exp:"Temperature and pressure are both mentioned."},
+      {type:"mcq", q:"If a reaction has high atom economy, it usually means:", opts:["More atoms end up in useful products", "The reaction stops completely", "There is always a catalyst"], a:0, exp:"High atom economy means better use of reactant atoms."},
+      {type:"mcq", q:"If a reaction has low atom economy, it usually produces:", opts:["Less waste", "More waste", "No gases"], a:1, exp:"Low atom economy means a large proportion becomes waste."},
+      {type:"fill", q:"Atom economy helps companies quantify how much of the reactants go into the ______ products they want.", ans:"useful", exp:"It measures how much forms the useful desired products."},
+      {type:"mcq", q:"In atom economy calculations, if there is more than one desired product, you use:", opts:["Only the smallest Mr", "The Mr of all desired products", "Only the waste product Mr"], a:1, exp:"You add the Mr values of all desired products."},
+      {type:"mcq", q:"Which statement best summarizes atom economy?", opts:["It measures the speed of a reaction", "It shows how efficiently atoms from reactants are used in desired products", "It tells you the temperature needed"], a:1, exp:"Atom economy measures how efficiently reactant atoms become useful products."}
+    ];
+
+    let order=[], idx=0, score=0;
+    function startGame(){
+      order=[...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+      idx=0; score=0; renderQ();
+    }
+    function renderQ(){
+      const q=questions[order[idx]];
+      let html = `<div class='qbox'><h3>Q ${idx+1}/${questions.length}</h3><p>${q.q}</p>`;
+      if(q.type==="mcq"){
+        q.opts.forEach((o,i)=>{ html += `<label><input type='radio' name='opt' value='${i}'> ${o}</label><br>`; });
+        html += `<button onclick='checkMCQ()'>Submit</button>`;
+      }else{
+        html += `<input id='fill' placeholder='Answer'> <button onclick='checkFill()'>Submit</button>`;
+      }
+      html += `<div id='fb' class='feedback'></div></div>`;
+      document.getElementById('game').innerHTML = html;
+    }
+    function checkMCQ(){
+      const q=questions[order[idx]];
+      const pick=document.querySelector("input[name='opt']:checked");
+      const fb=document.getElementById('fb');
+      if(!pick){ fb.textContent='Select one'; fb.className='feedback bad'; return; }
+      if(parseInt(pick.value)===q.a){ score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok'; }
+      else{ fb.textContent='❌ '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+    function checkFill(){
+      const q=questions[order[idx]];
+      const ans=(document.getElementById('fill').value||'').trim().toLowerCase();
+      const fb=document.getElementById('fb');
+      if(!ans){ fb.textContent='Enter answer'; fb.className='feedback bad'; return; }
+      if(ans===q.ans.toLowerCase()){
+        score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok';
+      }else{
+        fb.textContent='❌ Correct: '+q.ans+'. '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+    function nextQ(){
+      idx++;
+      if(idx<questions.length) renderQ();
+      else endGame();
+    }
+    function endGame(){
+      document.getElementById('game').innerHTML = `<div class='qbox'><h3>Finished!</h3><p>Your score: <b>${score}/${questions.length}</b></p><button onclick='startGame()'>Play again</button></div>`;
+    }
+  </script>
+</body>
+</html>
