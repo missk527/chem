@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Percentage Yield</title>
+<style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#22c55e);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .pill{display:inline-block;background:#e0f2fe;border:1px solid #bae6fd;border-radius:999px;padding:2px 10px;margin-right:6px;margin-bottom:4px}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    .options{display:grid;gap:10px;margin-top:12px}
+    .option-btn{display:block;width:100%;text-align:left;background:#f8fafc;color:var(--ink);border:1px solid #cbd5e1}
+    .option-btn:hover{background:#e0f2fe}
+    .meta{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 12px}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+<header>
+<h1>Percentage Yield</h1>
+</header>
+<div class="wrap">
+<section class="card video">
+<iframe allowfullscreen="" src="https://www.youtube.com/embed/o_3kHvxNNiM" title="Percentage Yield"></iframe>
+</section>
+<section class="card">
+<h2>Key Notes (rewritten from the speech)</h2>
+<details open="">
+<summary>1) Yield in chemistry</summary>
+<ul>
+<li>The amount of product formed in a chemical reaction is called the <b>yield</b>.</li>
+<li>Yield can be measured in <b>grams</b> or <b>moles</b>.</li>
+<li>Chemists compare the amount expected with the amount actually obtained.</li>
+</ul>
+</details>
+<details>
+<summary>2) Actual yield and theoretical yield</summary>
+<ul>
+<li><b>Actual yield</b> is the amount of product you really collect from the experiment.</li>
+<li><b>Theoretical yield</b> is the amount you calculate should be made if the reaction works perfectly.</li>
+<li>Example: 2 g of hydrogen reacting with 16 g of oxygen should produce 18 g of water, so 18 g is the theoretical yield.</li>
+</ul>
+</details>
+<details>
+<summary>3) Why actual yield is often lower</summary>
+<ul>
+<li>In real experiments, the actual yield is often less than the theoretical yield.</li>
+<li>For example, instead of 18 g of water, you might collect only 15 g.</li>
+<li>This difference happens because real reactions and practical methods are not perfect.</li>
+</ul>
+</details>
+<details>
+<summary>4) Reason 1: not all reactants react</summary>
+<ul>
+<li>Some reactants may remain unreacted at the end.</li>
+<li>This can happen if the reaction is <b>slow</b> and has not had enough time to finish.</li>
+<li>It can also happen in a <b>reversible reaction</b> because equilibrium prevents complete conversion.</li>
+</ul>
+</details>
+<details>
+<summary>5) Reason 2: side reactions</summary>
+<ul>
+<li>Reactants may produce an <b>unexpected product</b> instead of the desired one.</li>
+<li>These extra reactions are called <b>side reactions</b>.</li>
+<li>Example: some nitrogen might react with oxygen in the air to form nitrogen dioxide instead of ammonia.</li>
+</ul>
+</details>
+<details>
+<summary>6) Reason 3: loss of product</summary>
+<ul>
+<li>Some product may be lost during transfer, filtering, scraping, or collection.</li>
+<li>Gases can escape into the air.</li>
+<li>Liquids and solids can be left behind in beakers, on filter paper, or stuck to apparatus.</li>
+</ul>
+</details>
+<details>
+<summary>7) Percentage yield</summary>
+<ul>
+<li><b>Percentage yield = actual yield ÷ theoretical yield × 100</b>.</li>
+<li>A percentage yield can range from <b>0%</b> to <b>100%</b>.</li>
+<li>Example: 15 g ÷ 18 g × 100 = <b>83.3%</b>, meaning 83.3% of the expected product was obtained.</li>
+</ul>
+</details>
+</section>
+<section class="card"><h2>Quiz (40 Questions)</h2><div id="game"><button onclick="startGame()">Start Quiz</button></div></section>
+<footer>© 2026 Chemistry Pack</footer>
+</div>
+<script>
+const questions = [
+{type:"mcq", q:"1. In chemistry, what is the amount of product formed in a reaction called?", opts:["Yield","Rate","Purity","Volume"], a:0, exp:"The amount of product formed is called the yield."},
+{type:"mcq", q:"2. Yield can be measured in which units?", opts:["Seconds or minutes","Grams or moles","Degrees or kelvin","Litres only"], a:1, exp:"The speech says yield can be measured in grams or moles."},
+{type:"mcq", q:"3. What does actual yield mean?", opts:["The amount predicted by calculation","The amount collected in the experiment","The percentage of waste made","The mass of reactants used"], a:1, exp:"Actual yield is the amount actually obtained."},
+{type:"mcq", q:"4. What does theoretical yield mean?", opts:["The product actually collected","The amount expected from calculations","The amount lost during filtration","The amount of reactant left over"], a:1, exp:"Theoretical yield is the predicted amount based on calculations."},
+{type:"mcq", q:"5. If 2 g of hydrogen react with 16 g of oxygen, what is the theoretical yield of water in the example?", opts:["14 g","15 g","18 g","20 g"], a:2, exp:"2 g + 16 g = 18 g, so the theoretical yield is 18 g."},
+{type:"mcq", q:"6. In the example, what was the actual yield of water?", opts:["12 g","15 g","16 g","18 g"], a:1, exp:"The example says the actual yield was 15 g."},
+{type:"mcq", q:"7. Why is actual yield often lower than theoretical yield?", opts:["Because calculations are never used","Because experiments are not perfectly efficient","Because products always gain mass","Because reactants disappear before reacting"], a:1, exp:"Real experiments are not perfect, so actual yield is often lower."},
+{type:"mcq", q:"8. Which is a common reason for low yield?", opts:["All reactants reacting completely","No product being handled","Not all reactants reacting","Products becoming reactants only in theory"], a:2, exp:"One common reason is that not all reactants react."},
+{type:"mcq", q:"9. A reaction may fail to finish if it is what?", opts:["Fast","Slow","Colourless","Exothermic"], a:1, exp:"A slow reaction may not have enough time to go fully to completion."},
+{type:"mcq", q:"10. Why do reversible reactions often give less than the theoretical yield?", opts:["They reach equilibrium before complete conversion","They always explode","They use no reactants","They make only liquids"], a:0, exp:"Reversible reactions can reach equilibrium and not go to completion."},
+{type:"mcq", q:"11. In the ammonia example, which reactants were mentioned?", opts:["Hydrogen and oxygen","Nitrogen and hydrogen","Nitrogen and chlorine","Oxygen and carbon dioxide"], a:1, exp:"The speech mentions nitrogen reacting with hydrogen to make ammonia."},
+{type:"mcq", q:"12. In a reversible ammonia reaction, some ammonia can break back down into which substances?", opts:["Nitrogen and hydrogen","Nitrogen dioxide and water","Oxygen and ozone","Hydrogen peroxide and nitrogen"], a:0, exp:"Ammonia can decompose back into nitrogen and hydrogen."},
+{type:"mcq", q:"13. What is a side reaction?", opts:["A reaction that makes the intended product faster","A reaction where reactants form a different product","A reaction that only happens in textbooks","A reaction that never uses gases"], a:1, exp:"A side reaction produces a different product from the intended one."},
+{type:"mcq", q:"14. In the example, nitrogen might react with oxygen from the air to form what?", opts:["Nitrogen monoxide","Nitric acid","Nitrogen dioxide","Ammonium nitrate"], a:2, exp:"The speech specifically mentions nitrogen dioxide."},
+{type:"mcq", q:"15. If nitrogen reacts with oxygen instead of hydrogen, what happens to the ammonia yield?", opts:["It increases","It stays the same","It becomes less than expected","It becomes exactly 100%"], a:2, exp:"Less nitrogen is available to make ammonia, so the yield drops."},
+{type:"mcq", q:"16. Which is the third common reason for reduced yield?", opts:["Too much theory","Loss of product during the process","Use of a calculator","Heating the mixture"], a:1, exp:"The third reason is losing some product during handling or collection."},
+{type:"mcq", q:"17. Why are gaseous products easy to lose?", opts:["They turn into solids quickly","They can float off and escape","They always react with glass","They cannot be measured"], a:1, exp:"Gases can escape into the air."},
+{type:"mcq", q:"18. During filtration, which materials were mentioned?", opts:["Evaporating basin and tripod","Filter paper and funnel","Pipette and burette","Test tube and clamp"], a:1, exp:"The speech describes using filter paper and a funnel."},
+{type:"mcq", q:"19. If your aim is to collect all the liquid during filtration, why is this difficult?", opts:["Liquid is always destroyed","Some liquid remains in the apparatus","Liquid cannot pass through filter paper","The funnel absorbs all the liquid"], a:1, exp:"Some liquid is left in the beaker, on the solid, and on the filter paper."},
+{type:"mcq", q:"20. Where might liquid be left behind during filtration?", opts:["Only in the test tube","Only in the air","In the beaker, on the solid, and on the filter paper","Nowhere"], a:2, exp:"These three places were listed in the speech."},
+{type:"mcq", q:"21. Why is it also difficult to collect all the solid from filter paper?", opts:["The solid melts instantly","Some solid may be left behind when scraped off","The solid turns into gas","The filter paper dissolves"], a:1, exp:"Some solid can remain stuck to the filter paper."},
+{type:"mcq", q:"22. What does percentage yield tell you?", opts:["How long the reaction took","What percentage of the theoretical yield was actually obtained","How pure the reactants were","How many side reactions occurred"], a:1, exp:"Percentage yield compares actual yield with theoretical yield."},
+{type:"mcq", q:"23. Which formula is correct for percentage yield?", opts:["Theoretical yield ÷ actual yield × 100","Actual yield ÷ theoretical yield × 100","Actual yield + theoretical yield × 100","Actual yield × theoretical yield ÷ 100"], a:1, exp:"Percentage yield = actual yield ÷ theoretical yield × 100."},
+{type:"mcq", q:"24. If no product is obtained, the percentage yield is what?", opts:["0%","25%","50%","100%"], a:0, exp:"No product means an actual yield of zero, so the percentage yield is 0%."},
+{type:"mcq", q:"25. If all predicted product is obtained, the percentage yield is what?", opts:["25%","50%","75%","100%"], a:3, exp:"Getting all of the predicted product gives 100%."},
+{type:"mcq", q:"26. In the example, which calculation is used to find the percentage yield?", opts:["18 ÷ 15 × 100","15 ÷ 18 × 100","15 + 18 × 100","18 - 15 × 100"], a:1, exp:"The speech uses 15 divided by 18, then multiplied by 100."},
+{type:"mcq", q:"27. What is the percentage yield in the example?", opts:["75.0%","80.0%","83.3%","88.3%"], a:2, exp:"15 ÷ 18 × 100 = 83.3%."},
+{type:"mcq", q:"28. A percentage yield of 83.3% means what?", opts:["83.3% of the reactants were used","83.3% of the expected product was obtained","83.3% of the product was pure","83.3% of the reaction was reversible"], a:1, exp:"It means 83.3% of the theoretical yield was actually collected."},
+{type:"mcq", q:"29. Which statement about theoretical yield is true?", opts:["It is always lower than actual yield","It is based on calculations","It is measured after filtration","It is the same as percentage yield"], a:1, exp:"Theoretical yield is the calculated amount expected."},
+{type:"mcq", q:"30. Which statement about actual yield is true?", opts:["It is always 100%","It is the amount really made and collected","It ignores product loss","It cannot be measured"], a:1, exp:"Actual yield is what you truly obtain in practice."},
+{type:"mcq", q:"31. Which process can directly reduce yield by losing material?", opts:["Balancing an equation","Filtering a mixture","Writing a conclusion","Naming a compound"], a:1, exp:"Filtering can cause loss of liquid or solid."},
+{type:"mcq", q:"32. Which type of reaction may stop before all reactants are used because it reaches equilibrium?", opts:["Combustion reaction","Reversible reaction","Neutralization reaction","Displacement reaction"], a:1, exp:"Reversible reactions may not go to completion because of equilibrium."},
+{type:"mcq", q:"33. What happens if some reactants make unwanted products?", opts:["The desired product yield falls","The theoretical yield increases automatically","No measurements are needed","The reaction stops being chemical"], a:0, exp:"Side reactions use up reactants, so less desired product is formed."},
+{type:"mcq", q:"34. Which of these would most likely count as product loss?", opts:["A gas escaping from the apparatus","A balanced equation","A successful calculation","A correct label on a beaker"], a:0, exp:"Escaping gas is a clear example of product loss."},
+{type:"mcq", q:"35. Why might some reactants still be present at the end of a reaction?", opts:["Because they all evaporated","Because not all reacted","Because product always changes back instantly","Because yield is measured in moles"], a:1, exp:"Unreacted reactants can remain if the reaction does not fully proceed."},
+{type:"mcq", q:"36. Which statement best matches the speech?", opts:["Actual yield is usually greater than theoretical yield","Actual yield may be lower because of side reactions, incomplete reaction, and product loss","Theoretical yield depends on filtration skill","Percentage yield cannot be more than 50%"], a:1, exp:"These are the three common causes of reduced yield described in the speech."},
+{type:"mcq", q:"37. If more product is lost during transfer, what happens to actual yield?", opts:["It increases","It decreases","It becomes theoretical yield","It stays 100%"], a:1, exp:"Losing product lowers the amount actually collected."},
+{type:"mcq", q:"38. Which value is needed together with actual yield to calculate percentage yield?", opts:["Temperature","Pressure","Theoretical yield","Concentration only"], a:2, exp:"You need both actual yield and theoretical yield."},
+{type:"mcq", q:"39. Which phrase best describes 100% yield?", opts:["No product obtained","Exactly half the product obtained","All predicted product obtained","Side reactions dominated"], a:2, exp:"100% yield means the actual yield equals the theoretical yield."},
+{type:"mcq", q:"40. What is the main purpose of percentage yield?", opts:["To name the product","To compare real results with calculated expectations","To count reactant particles directly","To identify catalysts"], a:1, exp:"Percentage yield shows how close the actual result is to the theoretical result."}
+];
+
+let current = 0;
+let score = 0;
+let locked = false;
+
+function startGame(){
+  current = 0;
+  score = 0;
+  locked = false;
+  renderQ();
+}
+
+function renderQ(){
+  const game = document.getElementById('game');
+  const item = questions[current];
+  game.innerHTML = `
+    <div class="meta">
+      <span class="pill">Question ${current + 1} / ${questions.length}</span>
+      <span class="pill">Score: ${score}</span>
+    </div>
+    <div class="qbox">
+      <div><b>${item.q}</b></div>
+      <div class="options">
+        ${item.opts.map((opt, i) => `<button class="option-btn" onclick="checkAnswer(${i})">${opt}</button>`).join('')}
+      </div>
+      <div id="feedback" class="feedback"></div>
+    </div>
+  `;
+  locked = false;
+}
+
+function checkAnswer(choice){
+  if(locked) return;
+  locked = true;
+  const item = questions[current];
+  const fb = document.getElementById('feedback');
+  if(choice === item.a){
+    score++;
+    fb.className = 'feedback ok';
+    fb.innerHTML = `Correct! ${item.exp}`;
+  } else {
+    fb.className = 'feedback bad';
+    fb.innerHTML = `Incorrect. Correct answer: <b>${item.opts[item.a]}</b>. ${item.exp}`;
+  }
+
+  const game = document.getElementById('game');
+  const nav = document.createElement('div');
+  nav.style.marginTop = '12px';
+  nav.innerHTML = current < questions.length - 1
+    ? `<button onclick="nextQuestion()">Next Question</button>`
+    : `<button onclick="showResult()">See Result</button>`;
+  game.appendChild(nav);
+}
+
+function nextQuestion(){
+  current++;
+  renderQ();
+}
+
+function showResult(){
+  const percent = ((score / questions.length) * 100).toFixed(1);
+  document.getElementById('game').innerHTML = `
+    <div class="qbox">
+      <h3>Your Result</h3>
+      <p><b>Score:</b> ${score} / ${questions.length}</p>
+      <p><b>Percentage:</b> ${percent}%</p>
+      <p>${percent >= 80 ? 'Excellent work!' : percent >= 60 ? 'Good job!' : 'Keep practicing and try again.'}</p>
+      <button onclick="startGame()">Restart Quiz</button>
+    </div>
+  `;
+}
+</script>
+</body>
+</html>
