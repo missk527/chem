@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sustainable Development</title>
+<style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#22c55e);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .pill{display:inline-block;background:#e0f2fe;border:1px solid #bae6fd;border-radius:999px;padding:2px 10px;margin-right:6px;margin-bottom:4px}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    .options{display:grid;gap:10px;margin-top:12px}
+    .option-btn{display:block;width:100%;text-align:left;background:#f8fafc;color:var(--ink);border:1px solid #cbd5e1}
+    .option-btn:hover{background:#e0f2fe}
+    .meta{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 12px}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+<header>
+<h1>Sustainable Development</h1>
+</header>
+<div class="wrap">
+<section class="card video">
+<iframe allowfullscreen="" src="https://www.youtube.com/embed/SVAYvg-obUA" title="Sustainable Development"></iframe>
+</section>
+<section class="card">
+<h2>Key Notes (rewritten from the speech)</h2>
+<details open="">
+<summary>1) Meaning of sustainable development</summary>
+<ul>
+<li><b>Sustainable development</b> means meeting the needs of people today without harming the ability of future generations to meet their own needs.</li>
+<li>It is a way of developing human society and the economy responsibly over the long term.</li>
+<li>This idea focuses on both present quality of life and future environmental protection.</li>
+</ul>
+</details>
+<details>
+<summary>2) Why sustainability matters</summary>
+<ul>
+<li>Unsustainable actions can use up Earth's limited resources.</li>
+<li>They can also damage the environment and increase global warming.</li>
+<li>These problems create negative effects for people who will live in the future.</li>
+</ul>
+</details>
+<details>
+<summary>3) Renewable and finite resources</summary>
+<ul>
+<li>One way to develop more sustainably is to use <b>renewable resources</b> instead of <b>finite resources</b>.</li>
+<li>Wood is often more sustainable than plastic because more trees can be grown.</li>
+<li>Plastic is usually made from crude oil, and crude oil is a limited resource.</li>
+</ul>
+</details>
+<details>
+<summary>4) Energy use in manufacturing</summary>
+<ul>
+<li>The sustainability of a product also depends on how much energy is needed to make it.</li>
+<li>If a process uses a lot of energy from burning fossil fuels, it may not be very sustainable.</li>
+<li>Low-energy manufacturing methods are usually better for the environment.</li>
+</ul>
+</details>
+<details>
+<summary>5) How chemistry can reduce environmental impact</summary>
+<ul>
+<li>Chemists can make manufacturing processes more efficient.</li>
+<li>They can reduce the energy needed by using <b>catalysts</b> and choosing the <b>optimum temperature and pressure</b>.</li>
+<li>They can also design processes that use smaller amounts of raw materials.</li>
+</ul>
+</details>
+<details>
+<summary>6) Reuse as the most sustainable option</summary>
+<ul>
+<li>After a product has been used, the most sustainable action is often to <b>reuse</b> it.</li>
+<li>Reusing means using an item again for the same purpose or for a new purpose.</li>
+<li>For example, a glass bottle can be refilled and used again.</li>
+</ul>
+</details>
+<details>
+<summary>7) Recycling glass</summary>
+<ul>
+<li>If a product is too damaged to reuse, it can often be <b>recycled</b>.</li>
+<li>Glass is separated by color and type, then crushed and melted before being reshaped.</li>
+<li>Recycled glass can become new bottles, jars, or glass wool for house insulation.</li>
+</ul>
+</details>
+<details>
+<summary>8) Recycling metals</summary>
+<ul>
+<li>Metals can also be recycled by melting and reforming them into new products.</li>
+<li>Different metals usually need to be separated before recycling, such as copper and iron.</li>
+<li>In some cases, mixed materials such as scrap steel can still be reused to reduce the need for newly extracted iron.</li>
+</ul>
+</details>
+</section>
+<section class="card"><h2>Quiz (40 Questions)</h2><div id="game"><button onclick="startGame()">Start Quiz</button></div></section>
+<footer>© 2026 Chemistry Pack</footer>
+</div>
+<script>
+const questions = [
+{type:"mcq", q:"1. What is sustainable development mainly about?", opts:["Using all resources quickly","Meeting present needs without harming future generations","Stopping all economic growth","Using only plastic products"], a:1, exp:"Sustainable development means meeting current needs without damaging the lives of future generations."},
+{type:"mcq", q:"2. Which two areas are included in sustainable development in the speech?", opts:["Human and economic development","Space and medical research","Political and military growth","Entertainment and tourism"], a:0, exp:"The speech describes sustainable development as an approach to human and economic development."},
+{type:"mcq", q:"3. Why should we avoid using up all limited resources?", opts:["Because resources are always cheap","Because it can harm future generations","Because recycling is impossible","Because all resources are renewable"], a:1, exp:"Using up limited resources can negatively affect people in the future."},
+{type:"mcq", q:"4. Which environmental problem is specifically mentioned in the speech?", opts:["Acid rain only","Global warming","Earthquakes","Volcanic eruptions"], a:1, exp:"The speech mentions increasing global warming as a problem for future generations."},
+{type:"mcq", q:"5. Which is a more sustainable type of resource to use?", opts:["Finite resource","Renewable resource","Rare metal only","Imported resource"], a:1, exp:"The speech says using renewable resources is one way to develop more sustainably."},
+{type:"mcq", q:"6. Why may wood be more sustainable than plastic?", opts:["Wood is always stronger","More trees can be grown","Plastic is cheaper","Wood does not require energy"], a:1, exp:"Wood may be more sustainable because trees can be regrown, unlike crude oil."},
+{type:"mcq", q:"7. Plastic is commonly made from which finite resource?", opts:["Coal","Crude oil","Sand","Limestone"], a:1, exp:"The speech explains that plastic comes from crude oil, which is a finite resource."},
+{type:"mcq", q:"8. Besides raw materials, what else must be considered in sustainability?", opts:["The product color","The energy used in manufacturing","The brand name","The shop location"], a:1, exp:"The speech stresses that the energy used in manufacturing is also important."},
+{type:"mcq", q:"9. Why might making products from wood still be unsustainable?", opts:["Because wood cannot be shaped","Because it may require lots of fossil-fuel energy","Because trees are metals","Because bottles cannot be made from wood"], a:1, exp:"If a manufacturing process uses large amounts of fossil-fuel energy, it may not be sustainable."},
+{type:"mcq", q:"10. What do chemists try to do in manufacturing?", opts:["Increase waste","Reduce environmental impact","Use more fuel every time","Avoid all machines"], a:1, exp:"Chemists develop methods to reduce the environmental impact of manufacturing."},
+{type:"mcq", q:"11. One way chemists help is by making processes more what?", opts:["Expensive","Efficient","Dangerous","Complicated"], a:1, exp:"The speech says chemists can make processes more efficient."},
+{type:"mcq", q:"12. In the speech, what is used as an example of efficient plastic production?", opts:["A steel can","A plastic cup","A glass jar","A paper bag"], a:1, exp:"The speech mentions needing only a tiny amount of oil to make a whole plastic cup."},
+{type:"mcq", q:"13. What can chemists use to reduce the energy required for a process?", opts:["Catalysts","Rainwater","Magnets","Paint"], a:0, exp:"Catalysts are specifically mentioned as a way to reduce the energy needed."},
+{type:"mcq", q:"14. Which conditions should be optimized in manufacturing?", opts:["Color and shape","Temperature and pressure","Mass and volume","Speed and size"], a:1, exp:"The speech says optimum temperatures and pressures should be used."},
+{type:"mcq", q:"15. After using a product, what is the most sustainable thing to do?", opts:["Throw it away immediately","Burn it","Reuse or recycle it","Bury it underground"], a:2, exp:"The speech states that the most sustainable thing is to reuse or recycle the product."},
+{type:"mcq", q:"16. What does reusing an item mean?", opts:["Melting it down every time","Using it again","Breaking it into pieces","Turning it into fuel"], a:1, exp:"Reusing simply means using an item again."},
+{type:"mcq", q:"17. Can an item be reused for a different purpose?", opts:["No, never","Only metals can","Yes, it can","Only once a year"], a:2, exp:"The speech says an item can be reused for the same purpose or a different purpose."},
+{type:"mcq", q:"18. What example of reuse is given in the speech?", opts:["Melting a metal bar","Refilling a glass bottle with water","Burning a paper box","Crushing a jar into powder"], a:1, exp:"A glass bottle being refilled with water is the reuse example in the speech."},
+{type:"mcq", q:"19. When is recycling more suitable than reuse?", opts:["When the product is too damaged to reuse","When the product is brand new","When the product is expensive","When the product is made of wood"], a:0, exp:"If a product is too damaged to reuse, recycling is the better option."},
+{type:"mcq", q:"20. Before glass is melted for recycling, what usually happens first?", opts:["It is frozen","It is separated by color and type","It is mixed with plastic","It is turned into gas"], a:1, exp:"The speech says glass is first separated by color and type."},
+{type:"mcq", q:"21. What happens to glass after it is separated?", opts:["It is painted","It is crushed and melted","It is planted in soil","It is cooled into powder only"], a:1, exp:"Glass is then crushed and melted so it can be reshaped."},
+{type:"mcq", q:"22. Recycled glass can be made into which similar products?", opts:["Wooden tables","More bottles and jars","Plastic cups only","Rubber tires"], a:1, exp:"The speech says recycled glass can become more bottles and jars."},
+{type:"mcq", q:"23. What completely different product can recycled glass become?", opts:["Concrete blocks","Glass wool for insulation","Motor oil","Copper wire"], a:1, exp:"The speech gives glass wool used for wall insulation as an example."},
+{type:"mcq", q:"24. What is glass wool used for?", opts:["Cooking food","Wall insulation in houses","Road surfacing","Cleaning water"], a:1, exp:"The speech states that insulating glass wool is used for wall insulation in houses."},
+{type:"mcq", q:"25. How can metals be recycled?", opts:["By dissolving them in water only","By melting and reforming them","By planting them","By freezing them"], a:1, exp:"Metals are recycled in a similar way by melting and reforming them."},
+{type:"mcq", q:"26. Before melting metals, what do we usually need to do?", opts:["Separate different metals","Paint them blue","Mix them with wood","Turn them into glass"], a:0, exp:"Different metals usually need to be separated before they are melted."},
+{type:"mcq", q:"27. Which two metals are mentioned as an example of separation?", opts:["Gold and silver","Copper and iron","Aluminum and zinc","Lead and tin"], a:1, exp:"The speech mentions separating copper wires from iron bars."},
+{type:"mcq", q:"28. Is metal separation always necessary before recycling?", opts:["Yes, always","No, not always","Only in factories","Only for gold"], a:1, exp:"The speech says this is not always the case."},
+{type:"mcq", q:"29. What is steel described as in the speech?", opts:["A pure element","A fossil fuel","An alloy","A renewable resource"], a:2, exp:"Steel is described as an alloy containing small amounts of other elements mixed with iron."},
+{type:"mcq", q:"30. Why can scrap steel sometimes be added to pure iron?", opts:["To increase plastic use","To reduce the amount of pure iron extracted","To stop recycling","To make glass stronger"], a:1, exp:"Using scrap steel reduces the amount of new iron that must be extracted from the ground."},
+{type:"mcq", q:"31. What is a finite resource?", opts:["A resource that cannot run out","A resource that is limited and can be used up","A resource found only in forests","A resource made in factories"], a:1, exp:"A finite resource is limited and can eventually be used up."},
+{type:"mcq", q:"32. Which statement best matches the speech?", opts:["All recycled products must become the same item again","Recycling can produce similar or completely different products","Only glass can be recycled","Reuse is impossible for bottles"], a:1, exp:"The speech explains that recycled materials can become similar or very different products."},
+{type:"mcq", q:"33. Why is burning fossil fuels a concern in manufacturing?", opts:["It makes products shiny","It can reduce sustainability and harm the environment","It always makes products cheaper","It creates renewable resources"], a:1, exp:"Using fossil fuels for energy can make a process less sustainable and more harmful."},
+{type:"mcq", q:"34. Which action would best support sustainable development?", opts:["Using more crude oil whenever possible","Reusing bottles and recycling materials","Throwing away damaged glass","Ignoring energy use in factories"], a:1, exp:"Reusing and recycling materials helps reduce waste and resource use."},
+{type:"mcq", q:"35. What is the main advantage of renewable resources?", opts:["They can be replaced naturally","They are always metal","They never need energy","They are only used once"], a:0, exp:"Renewable resources can be replenished, making them more sustainable."},
+{type:"mcq", q:"36. Which example in the speech shows reuse rather than recycling?", opts:["Crushing glass by color","Melting metal bars","Refilling a bottle with water","Separating copper from iron"], a:2, exp:"Refilling a bottle is reuse because the same object is used again."},
+{type:"mcq", q:"37. Which example in the speech shows recycling rather than reuse?", opts:["Using a bottle again","Growing more trees","Crushing and melting glass","Keeping a jar at home"], a:2, exp:"Crushing and melting glass is a recycling process."},
+{type:"mcq", q:"38. What is one goal of using catalysts in manufacturing?", opts:["To increase energy waste","To lower the energy required","To make crude oil renewable","To stop all recycling"], a:1, exp:"Catalysts help reduce the energy required for chemical processes."},
+{type:"mcq", q:"39. Why is sustainable development described as a long-term approach?", opts:["Because it considers future generations as well as current ones","Because it avoids all products","Because it only applies to trees","Because it depends only on recycling glass"], a:0, exp:"It is long-term because it protects both current and future needs."},
+{type:"mcq", q:"40. What is the overall message of the speech?", opts:["Development should ignore the environment","Reuse, recycling, efficiency, and renewable resources support sustainability","Plastic should replace all other materials","Only metals matter in sustainability"], a:1, exp:"The speech connects sustainable development with renewable resources, efficient manufacturing, reuse, and recycling."}
+];
+
+let current = 0;
+let score = 0;
+let locked = false;
+
+function startGame(){
+  current = 0;
+  score = 0;
+  locked = false;
+  renderQ();
+}
+
+function renderQ(){
+  const game = document.getElementById('game');
+  const item = questions[current];
+  game.innerHTML = `
+    <div class="meta">
+      <span class="pill">Question ${current + 1} / ${questions.length}</span>
+      <span class="pill">Score: ${score}</span>
+    </div>
+    <div class="qbox">
+      <div><b>${item.q}</b></div>
+      <div class="options">
+        ${item.opts.map((opt, i) => `<button class="option-btn" onclick="checkAnswer(${i})">${opt}</button>`).join('')}
+      </div>
+      <div id="feedback" class="feedback"></div>
+    </div>
+  `;
+  locked = false;
+}
+
+function checkAnswer(choice){
+  if(locked) return;
+  locked = true;
+  const item = questions[current];
+  const fb = document.getElementById('feedback');
+  if(choice === item.a){
+    score++;
+    fb.className = 'feedback ok';
+    fb.innerHTML = `Correct! ${item.exp}`;
+  } else {
+    fb.className = 'feedback bad';
+    fb.innerHTML = `Incorrect. Correct answer: <b>${item.opts[item.a]}</b>. ${item.exp}`;
+  }
+
+  const game = document.getElementById('game');
+  const nav = document.createElement('div');
+  nav.style.marginTop = '12px';
+  nav.innerHTML = current < questions.length - 1
+    ? `<button onclick="nextQuestion()">Next Question</button>`
+    : `<button onclick="showResult()">See Result</button>`;
+  game.appendChild(nav);
+}
+
+function nextQuestion(){
+  current++;
+  renderQ();
+}
+
+function showResult(){
+  const percent = ((score / questions.length) * 100).toFixed(1);
+  document.getElementById('game').innerHTML = `
+    <div class="qbox">
+      <h3>Your Result</h3>
+      <p><b>Score:</b> ${score} / ${questions.length}</p>
+      <p><b>Percentage:</b> ${percent}%</p>
+      <p>${percent >= 80 ? 'Excellent work!' : percent >= 60 ? 'Good job!' : 'Keep practicing and try again.'}</p>
+      <button onclick="startGame()">Restart Quiz</button>
+    </div>
+  `;
+}
+</script>
+</body>
+</html>
