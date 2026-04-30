@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strong and Weak Acids — pH & Hydrogen Ion Concentration (Notes & Quiz)</title>
+  <style>
+    :root{ --brand:#2563eb; --paper:#fffef8; --ink:#1f2937; }
+    *{ box-sizing:border-box }
+    body{ margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f7fafc; color:var(--ink); line-height:1.6; }
+    header{ background:var(--brand); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    header h1{ margin:0; font-size:1.2rem; letter-spacing:.2px }
+    .small{ opacity:.95; font-size:.95rem }
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #e5e7eb; border-radius:12px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin-bottom:18px }
+    .notes h2,.game h2{ color:#1e40af; border-bottom:2px solid #bfdbfe; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#1e40af }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #e5e7eb; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#dbeafe; color:#1e40af; border:1px solid #bfdbfe; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#6b7280; font-size:.85rem; padding:20px 0 }
+    code.kbd{ background:#eef2ff; border:1px solid #e0e7ff; padding:1px 6px; border-radius:6px }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Strong and Weak Acids — pH & Hydrogen Ion Concentration <span class="pill">Strong acids · Weak acids · Ionisation · Equilibrium · Concentration · pH</span></h1>
+    <div class="small">Video + focused notes + interactive 40-question quiz</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/KwdGgoYJhUg" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="notes">
+      <h2>Notes (Key points rewritten from the speech)</h2>
+
+      <details open>
+        <summary>What is an acid?</summary>
+        <ul>
+          <li>An <strong>acid</strong> forms an aqueous solution with a <strong>pH below 7</strong>.</li>
+          <li>Acids release <strong>hydrogen ions (H+)</strong> when they ionise in water.</li>
+          <li>A hydrogen ion is a hydrogen atom that has lost its electron, so it is essentially a <strong>proton</strong>.</li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Strong acids</summary>
+        <ul>
+          <li><strong>Strong acids ionise completely</strong> in aqueous solution.</li>
+          <li>This means all acid particles dissociate to release hydrogen ions.</li>
+          <li>Examples include <strong>hydrochloric acid</strong>, <strong>nitric acid</strong>, and <strong>sulfuric acid</strong>.</li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Weak acids</summary>
+        <ul>
+          <li><strong>Weak acids only partially ionise</strong> in water.</li>
+          <li>Only a small proportion of weak acid particles dissociate to release hydrogen ions.</li>
+          <li>Examples include <strong>ethanoic acid</strong>, <strong>citric acid</strong>, and <strong>carbonic acid</strong>.</li>
+          <li>The ionisation of weak acids is <strong>reversible</strong>, so an equilibrium forms between undissociated acid and dissociated ions.</li>
+          <li>For weak acids, the equilibrium lies mostly to the <strong>left</strong>, meaning there are more undissociated acid molecules than ions.</li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Strength is not the same as concentration</summary>
+        <ul>
+          <li><strong>Acid strength</strong> describes the proportion of acid molecules that ionise in water.</li>
+          <li><strong>Concentration</strong> describes how much acid is dissolved in a certain volume of solution.</li>
+          <li>A strong acid can be either concentrated or dilute.</li>
+          <li>A weak acid can also be either concentrated or dilute.</li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>pH and hydrogen ion concentration</summary>
+        <ul>
+          <li><strong>pH measures the concentration of hydrogen ions</strong> in a solution.</li>
+          <li>A higher hydrogen ion concentration gives a <strong>lower pH</strong>.</li>
+          <li>Each decrease of 1 pH unit means the hydrogen ion concentration increases by a factor of <strong>10</strong>.</li>
+          <li>Moving from pH 5 to pH 3 means the hydrogen ion concentration becomes <strong>100 times higher</strong>.</li>
+          <li>Moving from pH 8 to pH 11 means the hydrogen ion concentration becomes <strong>1000 times lower</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Putting the ideas together</summary>
+        <ul>
+          <li>At the same concentration, a <strong>strong acid</strong> has a lower pH than a weak acid because it releases more hydrogen ions.</li>
+          <li>A weak acid needs to be very concentrated to produce a very low pH, because only a small proportion of its particles ionise.</li>
+          <li>The pH of a solution depends on the <strong>hydrogen ion concentration</strong>, not simply on the name or amount of acid present.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="game">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Strong and weak acids practice</div>
+
+<script>
+// Quiz schema: mcq (options, answer index), tf (boolean), fill (string/alternatives)
+const questions = [
+  {type:"mcq", question:"What is an acid?", options:["A substance that forms solutions with pH above 7","A substance that forms aqueous solutions with pH below 7","A substance that cannot dissolve in water","A substance that contains no ions"], answer:1, explanation:"Acids form aqueous solutions with a pH less than 7."},
+  {type:"fill", question:"Acids release ______ ions when they ionise in water.", answer:"hydrogen|h+|hydrogen ions", explanation:"Acids release hydrogen ions, H+."},
+  {type:"tf", question:"A hydrogen ion is essentially a proton.", answer:true, explanation:"A hydrogen atom that has lost its electron is just a proton."},
+  {type:"mcq", question:"Which acid is given as a strong acid?", options:["Citric acid","Carbonic acid","Hydrochloric acid","Ethanoic acid"], answer:2, explanation:"Hydrochloric acid is a strong acid."},
+  {type:"mcq", question:"Which is another example of a strong acid?", options:["Nitric acid","Citric acid","Carbonic acid","Ethanoic acid"], answer:0, explanation:"Nitric acid is a strong acid."},
+  {type:"mcq", question:"Strong acids are defined by the fact that they:", options:["Ionise completely","Never ionise","Only partly dissolve","Always have high concentration"], answer:0, explanation:"Strong acids ionise completely in water."},
+  {type:"tf", question:"In a strong acid, all acid particles dissociate to release hydrogen ions.", answer:true, explanation:"That is what complete ionisation means."},
+  {type:"mcq", question:"Hydrochloric acid ionises to form:", options:["H+ and Cl- ions","H+ and nitrate ions","H+ and sulfate ions","OH- and Cl- ions"], answer:0, explanation:"Hydrochloric acid forms H+ and Cl- ions."},
+  {type:"mcq", question:"Nitric acid ionises to form a hydrogen ion and a:", options:["Chloride ion","Nitrate ion","Carbonate ion","Citrate ion"], answer:1, explanation:"Nitric acid forms hydrogen ions and nitrate ions."},
+  {type:"mcq", question:"Which list contains only strong acids from the speech?", options:["Hydrochloric, nitric, sulfuric","Ethanoic, citric, carbonic","Citric, nitric, carbonic","Hydrochloric, carbonic, ethanoic"], answer:0, explanation:"Hydrochloric, nitric, and sulfuric acids are strong acids."},
+  {type:"mcq", question:"Weak acids are defined by the fact that they:", options:["Ionise completely","Do not contain hydrogen","Only partially ionise","Always have pH 7"], answer:2, explanation:"Weak acids only partially ionise in water."},
+  {type:"tf", question:"Only a small proportion of weak acid particles dissociate.", answer:true, explanation:"Weak acids do not fully ionise."},
+  {type:"mcq", question:"Which acid is given as a weak acid?", options:["Sulfuric acid","Nitric acid","Hydrochloric acid","Ethanoic acid"], answer:3, explanation:"Ethanoic acid is a weak acid."},
+  {type:"mcq", question:"Which pair contains weak acids from the speech?", options:["Hydrochloric and nitric","Citric and carbonic","Sulfuric and nitric","Hydrochloric and sulfuric"], answer:1, explanation:"Citric acid and carbonic acid are weak acids."},
+  {type:"fill", question:"The ionisation of a weak acid is ______.", answer:"reversible", explanation:"Weak acid ionisation is reversible."},
+  {type:"mcq", question:"What symbol shows a reversible reaction in an equation?", options:["A double arrow","A plus sign","A full stop","A single number"], answer:0, explanation:"A double arrow shows the reaction can go both ways."},
+  {type:"tf", question:"In a reversible reaction, products can react to reform reactants.", answer:true, explanation:"The reaction can go forwards and backwards."},
+  {type:"mcq", question:"For a weak acid, the equilibrium usually lies to the:", options:["Right","Left","Middle only","Top"], answer:1, explanation:"There are more undissociated acid molecules than ions."},
+  {type:"fill", question:"At equilibrium in a weak acid, there are more ______ acid molecules than dissociated ions.", answer:"undissociated", explanation:"Most weak acid particles remain undissociated."},
+  {type:"tf", question:"Acid strength and acid concentration mean the same thing.", answer:false, explanation:"Strength is about ionisation; concentration is about amount per volume."},
+  {type:"mcq", question:"Acid strength describes:", options:["How much acid is in a volume","The proportion of acid molecules that ionise","The colour of the solution","The temperature of the solution"], answer:1, explanation:"Strength depends on how much the acid ionises."},
+  {type:"mcq", question:"Concentration describes:", options:["How much acid is present in a given volume","How completely the acid ionises","Whether the reaction is reversible","Whether the acid is organic"], answer:0, explanation:"Concentration is amount per unit volume."},
+  {type:"tf", question:"A strong acid can be dilute.", answer:true, explanation:"Strength and concentration are different ideas."},
+  {type:"tf", question:"A weak acid can be concentrated.", answer:true, explanation:"Weak acids can have high concentration but still only partly ionise."},
+  {type:"mcq", question:"pH measures the concentration of:", options:["Chloride ions","Hydrogen ions","Nitrate ions","Water molecules"], answer:1, explanation:"pH is linked to hydrogen ion concentration."},
+  {type:"tf", question:"As hydrogen ion concentration increases, pH increases.", answer:false, explanation:"As hydrogen ion concentration increases, pH decreases."},
+  {type:"mcq", question:"A lower pH means:", options:["Lower hydrogen ion concentration","Higher hydrogen ion concentration","No hydrogen ions","Neutral solution only"], answer:1, explanation:"Lower pH means more hydrogen ions."},
+  {type:"mcq", question:"Each decrease of 1 on the pH scale means hydrogen ion concentration increases by:", options:["2 times","5 times","10 times","100 times"], answer:2, explanation:"The pH scale changes by factors of 10."},
+  {type:"mcq", question:"Moving from pH 5 to pH 4 makes hydrogen ion concentration:", options:["10 times higher","10 times lower","100 times lower","Unchanged"], answer:0, explanation:"A decrease of 1 pH unit means 10 times more H+."},
+  {type:"mcq", question:"Moving from pH 5 to pH 3 makes hydrogen ion concentration:", options:["10 times higher","20 times higher","100 times higher","1000 times higher"], answer:2, explanation:"Two pH decreases means 10 × 10 = 100 times higher."},
+  {type:"mcq", question:"Moving from pH 8 to pH 11 makes hydrogen ion concentration:", options:["1000 times higher","1000 times lower","3 times lower","30 times higher"], answer:1, explanation:"Three pH increases means 10 × 10 × 10 = 1000 times lower H+."},
+  {type:"fill", question:"A very acidic solution has a ______ pH.", answer:"low", explanation:"Very acidic solutions have low pH values."},
+  {type:"mcq", question:"At the same concentration, which acid has the lower pH?", options:["Strong acid","Weak acid","Pure water","They are always equal"], answer:0, explanation:"Strong acids release a higher proportion of hydrogen ions."},
+  {type:"tf", question:"At any given concentration, a strong acid releases more hydrogen ions than a weak acid.", answer:true, explanation:"Strong acids ionise more completely."},
+  {type:"mcq", question:"Why can hydrochloric acid produce a low pH at many concentrations?", options:["It does not ionise","Each particle fully dissociates","It is always weak","It contains no hydrogen"], answer:1, explanation:"Complete dissociation releases many hydrogen ions."},
+  {type:"mcq", question:"To get a low pH from a weak acid such as carbonic acid, it would need to be:", options:["Very dilute","Very concentrated","Neutral","Completely unionised"], answer:1, explanation:"Only a small proportion ionises, so more acid is needed."},
+  {type:"fill", question:"Only the concentration of ______ ions determines pH.", answer:"hydrogen|h+|hydrogen ions", explanation:"pH depends on hydrogen ion concentration."},
+  {type:"tf", question:"A concentrated weak acid must ionise completely because it contains lots of acid.", answer:false, explanation:"Concentration does not change the definition of weak; weak acids still only partially ionise."},
+  {type:"mcq", question:"Which statement is correct?", options:["Strong means concentrated","Weak means dilute","Strength is about ionisation, concentration is about amount per volume","pH is unrelated to hydrogen ions"], answer:2, explanation:"This is the key difference from the lesson."},
+  {type:"mcq", question:"What is the best summary of the video?", options:["All acids have the same pH","Strong acids fully ionise, weak acids partly ionise, and pH depends on H+ concentration","Weak acids have no hydrogen ions","Concentration and strength are identical"], answer:1, explanation:"This captures the main ideas."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
