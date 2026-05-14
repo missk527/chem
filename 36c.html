@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reactivity Series — Notes & Quiz</title>
+  <style>
+    :root{ --brand:#10b981; --paper:#fffef9; --ink:#1f2937; }
+    *{ box-sizing:border-box }
+    body{ margin:0; font-family:Inter,Arial,system-ui,sans-serif; background:#f6f7fb; color:var(--ink); line-height:1.7; }
+    header{ background:var(--brand); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15) }
+    header h1{ margin:0; font-size:1.2rem; letter-spacing:.2px }
+    .small{ opacity:.95; font-size:.9rem }
+    .wrap{ max-width:1000px; margin:20px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #e3e8f5; border-radius:12px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin:18px 0 }
+    .notes h2,.game h2{ color:#047857; border-bottom:2px solid #a7f3d0; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#047857 }
+    ul{ margin:8px 0 0 22px }
+    code.k{ background:#ecfdf5; padding:2px 6px; border-radius:6px }
+    .question-box{ border:1px solid #e0e0e0; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#d1fae5; color:#065f46; border:1px solid #a7f3d0; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#666; font-size:.85rem; padding:20px 0 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Reactivity Series — Exam Notes & Quiz <span class="pill">Metals · Acids · Water · Displacement</span></h1>
+    <div class="small">Video + exam-focused notes + 40-question practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <!-- Updated video link -->
+        <iframe src="https://www.youtube.com/embed/_5nSeEs00UQ" title="Reactivity Series video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="notes">
+      <h2>Notes (Key points from the speech)</h2>
+
+      <details open>
+        <summary>What metal reactivity means</summary>
+        <ul>
+          <li>Metals have outer-shell electrons that they tend to <strong>lose</strong> during reactions.</li>
+          <li>When a metal loses electrons, it forms a <strong>positive ion</strong>.</li>
+          <li>The <strong>reactivity</strong> of a metal means how easily it forms positive ions.</li>
+          <li>Metals that form positive ions most easily are the <strong>most reactive</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>The reactivity series</summary>
+        <ul>
+          <li>The <strong>reactivity series</strong> arranges metals in order of reactivity.</li>
+          <li><strong>Carbon</strong> and <strong>hydrogen</strong> are not metals, but they are often included as useful reference points.</li>
+          <li><strong>Group 1 metals</strong> are among the most reactive metals.</li>
+          <li><strong>Group 2 metals</strong> are generally less reactive than Group 1 metals.</li>
+          <li><strong>Transition metals</strong> are generally less reactive than Group 1 and Group 2 metals.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Reactions with acids</summary>
+        <ul>
+          <li>When a metal reacts with an acid, it forms a <strong>salt</strong> and <strong>hydrogen gas</strong>.</li>
+          <li>General word equation: <code class="k">metal + acid → salt + hydrogen</code>.</li>
+          <li>Example: potassium + hydrochloric acid → <strong>potassium chloride</strong> + <strong>hydrogen</strong>.</li>
+          <li>Very reactive metals, such as potassium, may react <strong>explosively</strong>, catch fire, or move around quickly as hydrogen is produced.</li>
+          <li>Less reactive metals react more slowly and produce fewer bubbles.</li>
+          <li>Magnesium reacts with acid and produces lots of bubbles as the metal disappears.</li>
+          <li>Zinc and iron produce fewer bubbles than magnesium.</li>
+          <li>Copper usually does <strong>not</strong> react with dilute acid.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Comparing reactivity fairly</summary>
+        <ul>
+          <li>The speed or violence of the reaction can be used to compare metal reactivity.</li>
+          <li>The <strong>temperature change</strong> can also be measured because more reactive metals usually release more heat.</li>
+          <li>For a fair test, each metal sample should have the same <strong>mass</strong> and <strong>surface area</strong>.</li>
+          <li>The same type and concentration of acid should be used each time.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Reactions with water</summary>
+        <ul>
+          <li>When a metal reacts with water, it forms a <strong>metal hydroxide</strong> and <strong>hydrogen gas</strong>.</li>
+          <li>General word equation: <code class="k">metal + water → metal hydroxide + hydrogen</code>.</li>
+          <li>Example: lithium + water → <strong>lithium hydroxide</strong> + <strong>hydrogen</strong>.</li>
+          <li>Only the most reactive metals react strongly with water.</li>
+          <li>Magnesium reacts only very slightly with water.</li>
+          <li>Zinc, iron, and copper do <strong>not</strong> react with water under these conditions.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Displacement reactions</summary>
+        <ul>
+          <li>A more reactive metal can <strong>displace</strong> a less reactive metal from its compound.</li>
+          <li>Example: magnesium + iron sulfate → <strong>magnesium sulfate</strong> + <strong>iron</strong>.</li>
+          <li>Magnesium displaces iron because magnesium is more reactive than iron.</li>
+          <li>Copper cannot displace iron from iron sulfate because copper is less reactive than iron.</li>
+          <li>If the added metal is less reactive than the metal in the compound, there is <strong>no reaction</strong>.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="game">
+      <h2>Quiz (40 Questions — Mixed Types)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Reactivity Series practice</div>
+
+<script>
+// Quiz schema supports: mcq (options, answer index), tf (boolean), and fill (string answer)
+// All questions are derived strictly from the provided speech content.
+const questions = [
+  // MCQ (1–18)
+  {type:"mcq", question:"What does the reactivity of a metal mean?", options:["How shiny it is","How easily it forms positive ions","How heavy it is","How easily it melts"], answer:1, explanation:"Metal reactivity means how easily the metal loses electrons and forms positive ions."},
+  {type:"mcq", question:"What do metals usually do with their outer-shell electrons when they react?", options:["Gain them","Share all of them equally","Lose them","Keep them unchanged"], answer:2, explanation:"Metals tend to lose outer-shell electrons."},
+  {type:"mcq", question:"What type of ions do metals form?", options:["Negative ions","Positive ions","Neutral ions","No ions"], answer:1, explanation:"Metals form positive ions when they lose electrons."},
+  {type:"mcq", question:"What is the reactivity series used for?", options:["Arranging metals by colour","Arranging metals by reactivity","Arranging gases by density","Arranging acids by strength"], answer:1, explanation:"The reactivity series ranks metals from most to least reactive."},
+  {type:"mcq", question:"Which two non-metals are often included in the reactivity series as reference points?", options:["Oxygen and nitrogen","Carbon and hydrogen","Chlorine and oxygen","Sulfur and nitrogen"], answer:1, explanation:"Carbon and hydrogen are included for comparison."},
+  {type:"mcq", question:"Which group of metals is among the most reactive?", options:["Group 1 metals","Transition metals","Noble gases","Halogens"], answer:0, explanation:"Group 1 metals are very reactive."},
+  {type:"mcq", question:"Compared with Group 1 metals, Group 2 metals are generally:", options:["More reactive","A bit less reactive","Always unreactive","Non-metals"], answer:1, explanation:"Group 2 metals are generally a bit less reactive than Group 1 metals."},
+  {type:"mcq", question:"Transition metals are generally:", options:["The most reactive metals","Less reactive than Group 1 and Group 2 metals","All explosive in water","Not metals"], answer:1, explanation:"Transition metals are generally less reactive."},
+  {type:"mcq", question:"What are the products when a metal reacts with an acid?", options:["Metal hydroxide and oxygen","Salt and hydrogen","Salt and water","Metal oxide and hydrogen"], answer:1, explanation:"Metal + acid → salt + hydrogen."},
+  {type:"mcq", question:"Potassium reacting with hydrochloric acid forms potassium chloride and:", options:["Oxygen","Water","Hydrogen","Carbon dioxide"], answer:2, explanation:"Hydrogen gas is produced."},
+  {type:"mcq", question:"How would potassium react with hydrochloric acid?", options:["Very slowly","Not at all","Explosively or very violently","Only after heating for hours"], answer:2, explanation:"Potassium is extremely reactive."},
+  {type:"mcq", question:"What visible sign shows magnesium reacting with acid?", options:["Lots of bubbles","No change","A blue flame only","The acid freezes"], answer:0, explanation:"Hydrogen bubbles are produced."},
+  {type:"mcq", question:"Which metal usually does not react with dilute acid?", options:["Magnesium","Zinc","Iron","Copper"], answer:3, explanation:"Copper is too unreactive to react with dilute acid under normal conditions."},
+  {type:"mcq", question:"What can be measured to compare heat released by metal-acid reactions?", options:["Temperature change","Colour of the metal","Sound level only","Mass of the beaker"], answer:0, explanation:"More reactive metals usually produce a larger temperature rise."},
+  {type:"mcq", question:"What must be kept the same in a fair test comparing metals with acid?", options:["Metal colour","Metal mass and surface area","The time of day","The name of the metal"], answer:1, explanation:"Mass and surface area should be controlled."},
+  {type:"mcq", question:"When a metal reacts with water, the products are:", options:["Salt and hydrogen","Metal hydroxide and hydrogen","Metal carbonate and water","Acid and salt"], answer:1, explanation:"Metal + water → metal hydroxide + hydrogen."},
+  {type:"mcq", question:"Lithium plus water forms lithium hydroxide and:", options:["Hydrogen","Oxygen","Carbon dioxide","Chlorine"], answer:0, explanation:"Hydrogen is produced."},
+  {type:"mcq", question:"What is a displacement reaction?", options:["A reaction where a less reactive metal replaces a more reactive metal","A reaction where a more reactive metal replaces a less reactive metal","A reaction that only produces water","A reaction that only happens with gases"], answer:1, explanation:"More reactive metals displace less reactive metals from compounds."},
+
+  // True/False (19–28)
+  {type:"tf", question:"Metals become positive ions by losing electrons.", answer:true, explanation:"Losing negative electrons leaves a positive ion."},
+  {type:"tf", question:"The most reactive metals form positive ions most easily.", answer:true, explanation:"This is the meaning of high metal reactivity."},
+  {type:"tf", question:"Carbon and hydrogen are metals.", answer:false, explanation:"They are not metals, but they are used as reference points."},
+  {type:"tf", question:"A metal reacting with acid produces hydrogen gas.", answer:true, explanation:"Metal + acid → salt + hydrogen."},
+  {type:"tf", question:"Copper usually reacts strongly with dilute acid.", answer:false, explanation:"Copper usually does not react with dilute acid."},
+  {type:"tf", question:"Zinc and iron react less vigorously with acid than magnesium.", answer:true, explanation:"They produce fewer bubbles than magnesium."},
+  {type:"tf", question:"A fair test should use different acid concentrations each time.", answer:false, explanation:"The same acid concentration should be used each time."},
+  {type:"tf", question:"Only the most reactive metals react strongly with water.", answer:true, explanation:"Less reactive metals do not react or react only slightly."},
+  {type:"tf", question:"Magnesium reacts very strongly with cold water in the speech.", answer:false, explanation:"The speech says magnesium reacts only very slightly with water."},
+  {type:"tf", question:"Copper can displace iron from iron sulfate because copper is more reactive than iron.", answer:false, explanation:"Copper is less reactive than iron, so no reaction happens."},
+
+  // Fill-in (29–40)
+  {type:"fill", question:"Metals tend to lose outer-shell ______ during reactions.", answer:"electrons|electron", explanation:"Metals lose outer-shell electrons."},
+  {type:"fill", question:"Metals form ______ ions when they lose electrons.", answer:"positive|positive ions", explanation:"Losing electrons gives a positive charge."},
+  {type:"fill", question:"The list that arranges metals in order of reactivity is called the reactivity ______.", answer:"series", explanation:"It is called the reactivity series."},
+  {type:"fill", question:"Metal + acid → salt + ______.", answer:"hydrogen|hydrogen gas", explanation:"Hydrogen gas is produced."},
+  {type:"fill", question:"Potassium + hydrochloric acid → potassium ______ + hydrogen.", answer:"chloride", explanation:"The salt formed is potassium chloride."},
+  {type:"fill", question:"Bubbles in a metal-acid reaction are usually caused by ______ gas.", answer:"hydrogen", explanation:"Hydrogen gas forms bubbles."},
+  {type:"fill", question:"Metal + water → metal ______ + hydrogen.", answer:"hydroxide", explanation:"A metal hydroxide is formed."},
+  {type:"fill", question:"Lithium + water → lithium hydroxide + ______.", answer:"hydrogen|hydrogen gas", explanation:"Hydrogen is the gas product."},
+  {type:"fill", question:"A more reactive metal can ______ a less reactive metal from its compound.", answer:"displace|replace", explanation:"This is displacement."},
+  {type:"fill", question:"Magnesium + iron sulfate → magnesium sulfate + ______.", answer:"iron", explanation:"Magnesium displaces iron."},
+  {type:"fill", question:"Copper cannot displace iron because copper is less ______ than iron.", answer:"reactive", explanation:"Only a more reactive metal can displace a less reactive one."},
+  {type:"fill", question:"To compare metal-acid reactions fairly, use the same acid type and ______.", answer:"concentration", explanation:"Acid concentration must be controlled."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
