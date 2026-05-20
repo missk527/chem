@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Metal Extraction & Reduction</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --ink:#1f2937;
+      --paper:#fafafa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --good:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(135deg,var(--brand),#6366f1);
+      color:white;
+      padding:20px 16px;
+      text-align:center;
+    }
+    header h1{margin:0;font-size:clamp(1.2rem,2.5vw,1.8rem);}
+    .wrap{max-width:1000px;margin:0 auto;padding:16px}
+    .video-container{
+      display:flex;justify-content:center;align-items:center; margin:18px 0;
+    }
+    iframe{
+      width:100%;max-width:900px;height:480px;border:0;border-radius:12px;
+      box-shadow:0 8px 24px rgba(2,6,23,.15);
+      background:#000;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(2,6,23,.08);
+      margin:16px 0;
+    }
+    h2{margin:.2rem 0 .8rem;color:#0f172a;font-size:1.2rem;}
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{font-weight:700;color:#0f766e;cursor:pointer}
+    ul{margin:.5rem 0 .5rem 1.2rem}
+    .muted{color:var(--muted)}
+    .quiz h2{color:#0f172a}
+    .btn{
+      background:var(--brand);color:#fff;border:0;border-radius:10px;
+      padding:10px 14px;font-weight:700;cursor:pointer;
+    }
+    .question-box{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin-top:12px;background:#fff}
+    .feedback{margin-top:8px;font-weight:700}
+    .correct{color:var(--good)}
+    .incorrect{color:var(--bad)}
+  </style>
+</head>
+<body>
+<header>
+<h1>37C. Metal Extraction & Reduction</h1>
+</header>
+
+<div class="wrap">
+
+<div class="video-container card">
+<iframe src="https://www.youtube.com/embed/GIGrvodBPRI" title="Metal Extraction Video" allowfullscreen></iframe>
+</div>
+
+<section class="card">
+<h2>Key Notes (Synced with Video)</h2>
+
+<details open>
+<summary>0:00 - 0:37 | Oxidation and Reduction</summary>
+<ul>
+<li>Oxidation means gaining oxygen.</li>
+<li>Example: magnesium reacts with oxygen to form magnesium oxide.</li>
+<li>Reduction means losing oxygen.</li>
+<li>Breaking magnesium oxide into magnesium and oxygen is reduction.</li>
+</ul>
+</details>
+
+<details>
+<summary>0:37 - 1:18 | Metal Oxides in Nature</summary>
+<ul>
+<li>Most metals react with oxygen and form metal oxides.</li>
+<li>Iron reacts with oxygen to produce rust.</li>
+<li>Because oxygen is abundant, many metals are found as oxides.</li>
+<li>Gold is very unreactive, so it is often found pure.</li>
+</ul>
+</details>
+
+<details>
+<summary>1:18 - 1:42 | Extracting Pure Metals</summary>
+<ul>
+<li>Most metals are bonded to oxygen in ores.</li>
+<li>To obtain pure metals, the oxygen must be removed.</li>
+<li>This process is called reduction.</li>
+</ul>
+</details>
+
+<details>
+<summary>1:42 - 2:12 | Reduction with Carbon</summary>
+<ul>
+<li>Carbon can remove oxygen from some metal oxides.</li>
+<li>The oxygen combines with carbon to form carbon dioxide.</li>
+<li>Example: copper oxide + carbon → copper + carbon dioxide.</li>
+<li>Copper is reduced because it loses oxygen.</li>
+<li>Carbon is oxidized because it gains oxygen.</li>
+</ul>
+</details>
+
+<details>
+<summary>2:12 - 2:48 | Reactivity Series</summary>
+<ul>
+<li>Only metals less reactive than carbon can be extracted using carbon reduction.</li>
+<li>Carbon is placed in the reactivity series for comparison.</li>
+<li>Zinc, iron, and copper can be extracted with carbon.</li>
+<li>More reactive metals require electrolysis.</li>
+<li>Electrolysis uses a large amount of energy and is expensive.</li>
+</ul>
+</details>
+
+<details>
+<summary>2:48 - 3:12 | Iron Ore Example</summary>
+<ul>
+<li>Ores are metal-rich compounds from which metals can be extracted.</li>
+<li>A common iron ore is iron oxide (Fe₂O₃).</li>
+<li>Iron oxide must be reduced to produce pure iron.</li>
+</ul>
+</details>
+
+<details>
+<summary>3:12 - 3:40 | Iron Extraction Equation</summary>
+<ul>
+<li>Iron is less reactive than carbon.</li>
+<li>Therefore, iron can be extracted using carbon reduction.</li>
+<li>Fe₂O₃ reacts with carbon when heated.</li>
+<li>The products are iron and carbon dioxide.</li>
+</ul>
+</details>
+
+</section>
+
+<section class="card quiz">
+<h2>Quiz (40 Questions)</h2>
+<div id="game-area">
+<button class="btn" onclick="startGame()">Start Quiz</button>
+</div>
+</section>
+
+</div>
+
+<script>
+const questions = [
+{type:"mcq",question:"What does oxidation mean?",options:["Loss of oxygen","Gain of oxygen","Gain of electrons"],answer:1,explanation:"Oxidation means gaining oxygen."},
+{type:"mcq",question:"What does reduction mean?",options:["Gain of oxygen","Loss of oxygen","Heating"],answer:1,explanation:"Reduction means losing oxygen."},
+{type:"fill",question:"Magnesium reacts with oxygen to form magnesium _____.",answerText:"oxide",explanation:"Magnesium oxide is formed."},
+{type:"mcq",question:"Most metals react with oxygen to form:",options:["Pure metals","Metal oxides","Alloys"],answer:1,explanation:"Most metals form metal oxides."},
+{type:"mcq",question:"Rust is another name for:",options:["Copper oxide","Iron oxide","Zinc oxide"],answer:1,explanation:"Rust is iron oxide."},
+{type:"fill",question:"Gold is very ______, so it is often found pure.",answerText:"unreactive",explanation:"Gold does not easily react with oxygen."},
+{type:"mcq",question:"Reduction removes which element from a metal oxide?",options:["Carbon","Hydrogen","Oxygen"],answer:2,explanation:"Reduction removes oxygen."},
+{type:"mcq",question:"What is the cheapest way to reduce metal oxides?",options:["Electrolysis","Using carbon","Cooling"],answer:1,explanation:"Carbon reduction is cheap and easy."},
+{type:"fill",question:"Carbon removes oxygen to form carbon _____.",answerText:"dioxide",explanation:"Carbon dioxide is produced."},
+{type:"mcq",question:"Copper oxide + carbon produces:",options:["Copper + carbon dioxide","Copper + oxygen","Copper oxide + oxygen"],answer:0,explanation:"Carbon reduces copper oxide."},
+{type:"mcq",question:"Copper is reduced because it:",options:["Gains oxygen","Loses oxygen","Becomes hotter"],answer:1,explanation:"Reduction is loss of oxygen."},
+{type:"mcq",question:"Carbon is oxidized because it:",options:["Gains oxygen","Loses oxygen","Loses carbon"],answer:0,explanation:"Oxidation is gain of oxygen."},
+{type:"fill",question:"Only metals less reactive than ______ can be extracted using carbon.",answerText:"carbon",explanation:"Carbon reduction only works for less reactive metals."},
+{type:"mcq",question:"Why is carbon included in the reactivity series?",options:["To compare metal reactivity","To produce oxygen","To cool metals"],answer:0,explanation:"Carbon is used for comparison."},
+{type:"mcq",question:"Which metal can be extracted using carbon?",options:["Potassium","Zinc","Sodium"],answer:1,explanation:"Zinc is less reactive than carbon."},
+{type:"mcq",question:"Which process is needed for very reactive metals?",options:["Rusting","Electrolysis","Burning"],answer:1,explanation:"Reactive metals require electrolysis."},
+{type:"fill",question:"Electrolysis requires a lot of ______.",answerText:"energy",explanation:"Electrolysis is expensive because it needs energy."},
+{type:"mcq",question:"An ore is a:",options:["Metal-rich compound","Pure metal","Gas"],answer:0,explanation:"Ores contain metals."},
+{type:"fill",question:"The formula for iron oxide mentioned is _____.",answerText:"fe2o3",explanation:"Fe2O3 is a common iron ore."},
+{type:"mcq",question:"Iron is less reactive than:",options:["Carbon","Oxygen","Gold"],answer:0,explanation:"Iron can be reduced with carbon."},
+{type:"mcq",question:"What must be supplied for iron oxide to react with carbon?",options:["Water","Heat","Salt"],answer:1,explanation:"Heat is needed."},
+{type:"fill",question:"Pure Fe is the symbol for pure _____.",answerText:"iron",explanation:"Fe represents iron."},
+{type:"mcq",question:"What gas forms during carbon reduction?",options:["Hydrogen","Oxygen","Carbon dioxide"],answer:2,explanation:"Carbon dioxide is produced."},
+{type:"mcq",question:"Oxidation and reduction happen together in a:",options:["Redox reaction","Neutralization","Combustion only"],answer:0,explanation:"These are redox reactions."},
+{type:"fill",question:"Most metals found in nature are bonded to _____.",answerText:"oxygen",explanation:"They usually exist as oxides."},
+{type:"mcq",question:"Which metal is commonly found pure?",options:["Iron","Gold","Zinc"],answer:1,explanation:"Gold is unreactive."},
+{type:"mcq",question:"What causes iron to rust?",options:["Nitrogen","Oxygen in air","Water only"],answer:1,explanation:"Iron reacts with oxygen."},
+{type:"fill",question:"Reduction with carbon cannot extract metals more reactive than _____.",answerText:"carbon",explanation:"Reactive metals need electrolysis."},
+{type:"mcq",question:"Which metal below requires electrolysis?",options:["Copper","Iron","Sodium"],answer:2,explanation:"Sodium is very reactive."},
+{type:"mcq",question:"What happens to oxygen during reduction?",options:["It is removed","It is added","It disappears"],answer:0,explanation:"Reduction removes oxygen."},
+{type:"fill",question:"Copper oxide is reduced to pure _____.",answerText:"copper",explanation:"The product is copper metal."},
+{type:"mcq",question:"What does carbon gain during oxidation?",options:["Nitrogen","Oxygen","Iron"],answer:1,explanation:"Carbon gains oxygen."},
+{type:"mcq",question:"What is rust mainly made from?",options:["Iron oxide","Copper","Carbon"],answer:0,explanation:"Rust is iron oxide."},
+{type:"fill",question:"The extraction process using electricity is called _____.",answerText:"electrolysis",explanation:"Electrolysis uses electricity."},
+{type:"mcq",question:"Which metal is NOT extracted using carbon?",options:["Copper","Iron","Potassium"],answer:2,explanation:"Potassium is too reactive."},
+{type:"mcq",question:"What is the purpose of reducing metal oxides?",options:["To make alloys","To get pure metals","To cool metals"],answer:1,explanation:"Reduction produces pure metals."},
+{type:"fill",question:"Most metal ores contain metals combined with _____.",answerText:"oxygen",explanation:"Metal oxides are common ores."},
+{type:"mcq",question:"Why is electrolysis expensive?",options:["It needs gold","It uses lots of energy","It takes seconds"],answer:1,explanation:"Electrolysis consumes energy."},
+{type:"mcq",question:"Which reactant removes oxygen from metal oxides?",options:["Carbon","Water","Hydrogen"],answer:0,explanation:"Carbon removes oxygen."},
+{type:"fill",question:"Fe₂O₃ plus carbon forms iron and carbon _____.",answerText:"dioxide",explanation:"Carbon dioxide is produced."}
+];
+
+let currentQuestion=0;
+let score=0;
+let shuffledQuestions=[];
+
+function startGame(){
+shuffledQuestions=[...questions].sort(()=>Math.random()-0.5);
+currentQuestion=0;
+score=0;
+showQuestion();
+}
+
+function showQuestion(){
+const gameArea=document.getElementById("game-area");
+const q=shuffledQuestions[currentQuestion];
+let html=`<div class="question-box"><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+if(q.type==="mcq"){
+q.options.forEach((opt,idx)=>{
+html+=`<label style="display:block;margin:.25rem 0"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+});
+html+=`<button class="btn" onclick="checkMCQ()">Submit</button>`;
+}else{
+html+=`<input id="fill" type="text" placeholder="Type your answer…" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px">`;
+html+=`<button class="btn" onclick="checkFill()">Submit</button>`;
+}
+
+html+=`<div id="feedback" class="feedback"></div></div>`;
+gameArea.innerHTML=html;
+}
+
+function checkMCQ(){
+const q=shuffledQuestions[currentQuestion];
+const sel=document.querySelector('input[name="opt"]:checked');
+const feedback=document.getElementById("feedback");
+
+if(!sel){
+feedback.textContent="Please select an answer.";
+return;
+}
+
+if(parseInt(sel.value)==q.answer){
+feedback.innerHTML="✅ Correct! "+q.explanation;
+feedback.className="feedback correct";
+score++;
+}else{
+feedback.innerHTML="❌ Incorrect. "+q.explanation;
+feedback.className="feedback incorrect";
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function checkFill(){
+const q=shuffledQuestions[currentQuestion];
+const ans=document.getElementById("fill").value.trim().toLowerCase();
+const feedback=document.getElementById("feedback");
+
+if(ans.includes(q.answerText)){
+feedback.innerHTML="✅ Correct! "+q.explanation;
+feedback.className="feedback correct";
+score++;
+}else{
+feedback.innerHTML="❌ Incorrect. "+q.explanation;
+feedback.className="feedback incorrect";
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function nextQuestion(){
+currentQuestion++;
+if(currentQuestion<shuffledQuestions.length){
+showQuestion();
+}else{
+document.getElementById("game-area").innerHTML=`<h3>Quiz Complete!</h3><p>Your score: <strong>${score}/${shuffledQuestions.length}</strong></p><button class="btn" onclick="startGame()">Try Again</button>`;
+}
+}
+</script>
+</body>
+</html>
