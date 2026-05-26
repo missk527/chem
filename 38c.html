@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redox Reactions</title>
+<style>
+:root{
+--brand:#0ea5e9;
+--ink:#1f2937;
+--paper:#fafafa;
+--card:#ffffff;
+--muted:#6b7280;
+--good:#16a34a;
+--bad:#dc2626;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+color:var(--ink);
+background:var(--paper);
+line-height:1.6;
+}
+header{
+background:linear-gradient(135deg,var(--brand),#6366f1);
+color:white;
+padding:20px 16px;
+text-align:center;
+}
+.wrap{max-width:1000px;margin:0 auto;padding:16px}
+.card{
+background:var(--card);
+border-radius:12px;
+padding:18px;
+box-shadow:0 6px 18px rgba(2,6,23,.08);
+margin:16px 0;
+}
+iframe{
+width:100%;
+max-width:900px;
+height:480px;
+border:0;
+border-radius:12px;
+}
+details{
+border:1px solid #e5e7eb;
+border-radius:10px;
+padding:10px 12px;
+margin:10px 0;
+background:#fff;
+}
+summary{
+font-weight:700;
+color:#0f766e;
+cursor:pointer;
+}
+.btn{
+background:var(--brand);
+color:white;
+border:0;
+border-radius:10px;
+padding:10px 14px;
+font-weight:700;
+cursor:pointer;
+}
+.correct{color:green}
+.incorrect{color:red}
+</style>
+</head>
+<body>
+
+<header>
+<h1>38C. Redox Reactions</h1>
+</header>
+
+<div class="wrap">
+
+<div class="card">
+<iframe src="https://www.youtube.com/embed/TCp58ZSVdUE" allowfullscreen></iframe>
+</div>
+
+<section class="card">
+<h2>Key Notes (Synced with Video)</h2>
+
+<details open>
+<summary>0:00 - 1:10 | Oxidation and Reduction</summary>
+<ul>
+<li>Redox reactions involve oxidation and reduction happening at the same time.</li>
+<li>Oxidation can mean gaining oxygen, while reduction can mean losing oxygen.</li>
+<li>Oxidation can also mean losing electrons.</li>
+<li>Reduction can also mean gaining electrons.</li>
+<li>The mnemonic OIL RIG helps: Oxidation Is Loss, Reduction Is Gain.</li>
+</ul>
+</details>
+
+<details>
+<summary>1:10 - 2:02 | Redox Happens Together</summary>
+<ul>
+<li>Oxidation and reduction usually occur together because electrons are transferred.</li>
+<li>If one substance loses electrons, another substance must gain them.</li>
+<li>Magnesium is oxidized when it loses two electrons to form Mg²⁺.</li>
+<li>Hydrogen ions are reduced when they gain electrons to form hydrogen gas.</li>
+<li>Redox means reduction-oxidation.</li>
+</ul>
+</details>
+
+<details>
+<summary>2:02 - 3:07 | Displacement and Ionic Equations</summary>
+<ul>
+<li>Displacement reactions happen when a more reactive metal replaces a less reactive metal.</li>
+<li>Calcium can displace iron because calcium is more reactive than iron.</li>
+<li>In calcium plus iron sulfate, calcium sulfate forms and iron is produced as a solid.</li>
+<li>Ionic equations show only the particles that actually change during the reaction.</li>
+<li>Sulfate ions are spectator ions because they do not change or exchange electrons.</li>
+</ul>
+</details>
+
+<details>
+<summary>3:07 - 4:07 | Half Equations</summary>
+<ul>
+<li>Half equations show electron loss or electron gain for one element at a time.</li>
+<li>Calcium is oxidized: Ca → Ca²⁺ + 2e⁻.</li>
+<li>Iron(II) ions are reduced: Fe²⁺ + 2e⁻ → Fe.</li>
+<li>Electrons go on the product side when they are lost.</li>
+<li>Electrons go on the reactant side when they are gained.</li>
+</ul>
+</details>
+
+<details>
+<summary>4:07 - 4:29 | Checking Charges</summary>
+<ul>
+<li>In half equations, the total charge must be the same on both sides.</li>
+<li>For Fe²⁺ + 2e⁻ → Fe, the left side has an overall charge of zero.</li>
+<li>The right side is neutral iron, so it also has an overall charge of zero.</li>
+<li>If the charges do not balance, the electrons may be on the wrong side.</li>
+<li>Balancing charges helps confirm that the half equation is correct.</li>
+</ul>
+</details>
+
+</section>
+
+<section class="card">
+<h2>Quiz (40 Questions)</h2>
+<div id="game-area">
+<button class="btn" onclick="startGame()">Start Quiz</button>
+</div>
+</section>
+
+</div>
+
+<script>
+const questions=[
+{type:"mcq",question:'What does a redox reaction involve?',options:['Only oxidation','Only reduction','Oxidation and reduction together'],answer:2,explanation:'Redox reactions involve oxidation and reduction at the same time.'},
+{type:"fill",question:'Redox means reduction-______.',answerText:'oxidation',explanation:'Redox stands for reduction-oxidation.'},
+{type:"mcq",question:'What can oxidation mean in terms of oxygen?',options:['Gaining oxygen','Losing oxygen','No oxygen change'],answer:0,explanation:'Oxidation can mean gaining oxygen.'},
+{type:"mcq",question:'What can reduction mean in terms of oxygen?',options:['Gaining oxygen','Losing oxygen','Making oxygen'],answer:1,explanation:'Reduction can mean losing oxygen.'},
+{type:"fill",question:'OIL RIG stands for Oxidation Is Loss, Reduction Is ______.',answerText:'gain',explanation:'Reduction is gain of electrons.'},
+{type:"mcq",question:'In OIL RIG, what is lost or gained?',options:['Protons','Neutrons','Electrons'],answer:2,explanation:'OIL RIG refers to electrons.'},
+{type:"mcq",question:'If magnesium loses two electrons, what ion does it form?',options:['Mg+','Mg2+','Mg2-'],answer:1,explanation:'Magnesium forms a 2+ ion when it loses two electrons.'},
+{type:"fill",question:'A substance is oxidized when it ______ electrons.',answerText:'loses',explanation:'Oxidation is loss of electrons.'},
+{type:"fill",question:'A substance is reduced when it ______ electrons.',answerText:'gains',explanation:'Reduction is gain of electrons.'},
+{type:"mcq",question:'Why do oxidation and reduction usually happen together?',options:['Electrons must be transferred','Atoms disappear','Water is always formed'],answer:0,explanation:'If one substance loses electrons, another gains them.'},
+{type:"mcq",question:'In magnesium reacting with acid, what represents the important part of the acid?',options:['H+','OH-','SO4'],answer:0,explanation:'Hydrogen ions, H+, are the important acid particles here.'},
+{type:"fill",question:'Hydrogen ions gain electrons and form hydrogen ______.',answerText:'gas',explanation:'Hydrogen ions are reduced to hydrogen gas.'},
+{type:"mcq",question:'What happens to magnesium atoms in dilute acid?',options:['They gain electrons','They lose electrons','They become sulfate ions'],answer:1,explanation:'Magnesium atoms lose electrons and are oxidized.'},
+{type:"mcq",question:'What type of reaction involves a more reactive metal replacing a less reactive one?',options:['Neutralization','Displacement','Combustion'],answer:1,explanation:'This is a displacement reaction.'},
+{type:"fill",question:'A more reactive metal can ______ a less reactive metal.',answerText:'displace',explanation:'More reactive metals displace less reactive metals.'},
+{type:"mcq",question:'Which metal is more reactive in the example?',options:['Iron','Calcium','Copper'],answer:1,explanation:'Calcium is more reactive than iron.'},
+{type:"mcq",question:'What solution does calcium react with in the example?',options:['Iron sulfate','Calcium chloride','Hydrogen sulfate'],answer:0,explanation:'Calcium is added to iron sulfate solution.'},
+{type:"fill",question:'When calcium reacts with iron sulfate, ______ sulfate forms.',answerText:'calcium',explanation:'Calcium sulfate forms.'},
+{type:"mcq",question:'What happens to iron in the calcium and iron sulfate reaction?',options:['It evaporates','It precipitates as a solid','It becomes oxygen'],answer:1,explanation:'Iron is produced as a solid.'},
+{type:"mcq",question:'What do ionic equations show?',options:['Only particles that change','Every atom in the universe','Only spectator ions'],answer:0,explanation:'Ionic equations show particles that take part and change.'},
+{type:"fill",question:'Ions that do not change are called ______ ions.',answerText:'spectator',explanation:'Spectator ions do not take part in electron transfer.'},
+{type:"mcq",question:'Which ion is a spectator ion in the calcium and iron sulfate example?',options:['Ca2+','Fe2+','SO4 2-'],answer:2,explanation:'Sulfate ions remain unchanged.'},
+{type:"mcq",question:'What is removed from an ionic equation?',options:['Spectator ions','Reactive metals','All electrons'],answer:0,explanation:'Spectator ions are removed.'},
+{type:"fill",question:'Half equations show the gain or loss of ______.',answerText:'electrons',explanation:'Half equations show electron transfer.'},
+{type:"mcq",question:'For calcium, which half equation is correct?',options:['Ca → Ca2+ + 2e-','Ca + 2e- → Ca2+','Ca2+ → Ca + 2e-'],answer:0,explanation:'Calcium loses two electrons, so electrons are on the right.'},
+{type:"mcq",question:'Is calcium oxidized or reduced in the displacement example?',options:['Oxidized','Reduced','Neither'],answer:0,explanation:'Calcium loses electrons, so it is oxidized.'},
+{type:"fill",question:'Electrons are placed on the right side when they are ______.',answerText:'lost',explanation:'Lost electrons appear as products.'},
+{type:"mcq",question:'For iron, which half equation is correct?',options:['Fe → Fe2+ + 2e-','Fe2+ + 2e- → Fe','Fe2- → Fe + 2e-'],answer:1,explanation:'Iron(II) ions gain electrons to form iron atoms.'},
+{type:"mcq",question:'Is iron(II) reduced or oxidized in the example?',options:['Reduced','Oxidized','Both impossible'],answer:0,explanation:'Iron(II) ions gain electrons, so they are reduced.'},
+{type:"fill",question:'Electrons are placed on the left side when they are ______.',answerText:'gained',explanation:'Gained electrons are reactants.'},
+{type:"mcq",question:'What charge does a neutral calcium atom have?',options:['0','2+','2-'],answer:0,explanation:'A neutral atom has no overall charge.'},
+{type:"mcq",question:'What charge does Ca2+ have?',options:['2+','2-','0'],answer:0,explanation:'Ca2+ has a two plus charge.'},
+{type:"fill",question:'In half equations, the total ______ must balance on both sides.',answerText:'charge',explanation:'The charge must be the same on both sides.'},
+{type:"mcq",question:'What is the overall charge on the left of Fe2+ + 2e- → Fe?',options:['0','2+','2-'],answer:0,explanation:'2+ plus two 1- electrons gives zero.'},
+{type:"mcq",question:'What is the overall charge on neutral iron?',options:['0','1+','2-'],answer:0,explanation:'Neutral iron has a charge of zero.'},
+{type:"fill",question:'If charges do not balance, the electrons may be on the wrong ______.',answerText:'side',explanation:'Wrong-side electrons often cause unbalanced charge.'},
+{type:"mcq",question:'Which phrase best describes oxidation in electron terms?',options:['Loss of electrons','Gain of electrons','Loss of neutrons'],answer:0,explanation:'Oxidation is loss of electrons.'},
+{type:"mcq",question:'Which phrase best describes reduction in electron terms?',options:['Loss of electrons','Gain of electrons','Gain of oxygen only'],answer:1,explanation:'Reduction is gain of electrons.'},
+{type:"fill",question:'In a redox reaction, electrons move from one ______ to another.',answerText:'substance',explanation:'Electrons are transferred between substances.'},
+{type:"mcq",question:'Why are half equations useful?',options:['They show electron transfer clearly','They remove all ions','They only show oxygen'],answer:0,explanation:'Half equations clearly show loss and gain of electrons.'}
+];
+
+let currentQuestion=0;
+let score=0;
+let shuffledQuestions=[];
+
+function startGame(){
+shuffledQuestions=[...questions].sort(()=>Math.random()-0.5);
+currentQuestion=0;
+score=0;
+showQuestion();
+}
+
+function showQuestion(){
+const gameArea=document.getElementById("game-area");
+const q=shuffledQuestions[currentQuestion];
+let html=`<div><p><strong>Question ${currentQuestion+1}:</strong> ${q.question}</p>`;
+
+if(q.type==="mcq"){
+q.options.forEach((opt,idx)=>{
+html+=`<label style="display:block"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+});
+html+=`<button class="btn" onclick="checkMCQ()">Submit</button>`;
+}else{
+html+=`<input id="fill" type="text" style="width:100%;padding:10px;margin:10px 0;">`;
+html+=`<button class="btn" onclick="checkFill()">Submit</button>`;
+}
+
+html+=`<div id="feedback"></div></div>`;
+gameArea.innerHTML=html;
+}
+
+function checkMCQ(){
+const q=shuffledQuestions[currentQuestion];
+const sel=document.querySelector('input[name="opt"]:checked');
+if(!sel)return;
+
+const feedback=document.getElementById("feedback");
+
+if(parseInt(sel.value)===q.answer){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function checkFill(){
+const q=shuffledQuestions[currentQuestion];
+const ans=document.getElementById("fill").value.trim().toLowerCase();
+const feedback=document.getElementById("feedback");
+
+if(ans.includes(q.answerText)){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function nextQuestion(){
+currentQuestion++;
+if(currentQuestion<shuffledQuestions.length){
+showQuestion();
+}else{
+document.getElementById("game-area").innerHTML=`<h3>Quiz Complete!</h3><p>Your score: ${score}/${shuffledQuestions.length}</p><button class="btn" onclick="startGame()">Try Again</button>`;
+}
+}
+</script>
+
+</body>
+</html>
