@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electrolysis of Molten Lead Bromide</title>
+<style>
+:root{--brand:#0ea5e9;--ink:#1f2937;--paper:#fafafa;--card:#ffffff;--muted:#6b7280;--good:#16a34a;--bad:#dc2626;}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--ink);background:var(--paper);line-height:1.6;}
+header{background:linear-gradient(135deg,var(--brand),#6366f1);color:white;padding:20px 16px;text-align:center;}
+.wrap{max-width:1000px;margin:0 auto;padding:16px}
+.card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(2,6,23,.08);margin:16px 0;}
+iframe{width:100%;max-width:900px;height:480px;border:0;border-radius:12px;}
+details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff;}
+summary{font-weight:700;color:#0f766e;cursor:pointer;}
+.btn{background:var(--brand);color:white;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer;}
+.correct{color:green}
+.incorrect{color:red}
+</style>
+</head>
+<body>
+
+<header>
+<h1>39C. Electrolysis of Molten Lead Bromide</h1>
+</header>
+
+<div class="wrap">
+
+<div class="card">
+<iframe src="https://www.youtube.com/embed/BbVZu_Acbq4" allowfullscreen></iframe>
+</div>
+
+<section class="card">
+<h2>Key Notes (Synced with Video)</h2>
+<details open>
+<summary>0:00 - 0:14 | What Electrolysis Does</summary>
+<ul>
+<li>Electrolysis means splitting substances using electricity.</li>
+<li>It can separate the elements in ionic compounds.</li>
+<li>This video focuses on insoluble compounds such as lead bromide.</li>
+</ul>
+</details>
+<details >
+<summary>0:14 - 1:12 | Electrolytes and Moving Ions</summary>
+<ul>
+<li>An electrolyte is a liquid or solution containing an ionic compound.</li>
+<li>The ions in an electrolyte must be free to move.</li>
+<li>Soluble compounds can be dissolved in water to make an aqueous electrolyte.</li>
+<li>Insoluble compounds must be melted to form a molten liquid.</li>
+<li>Molten lead bromide contains Pb²⁺ ions and Br⁻ ions that can move freely.</li>
+</ul>
+</details>
+<details >
+<summary>1:12 - 1:42 | Electrodes and Circuit</summary>
+<ul>
+<li>Electrodes are solid conductors, usually made from metal or carbon.</li>
+<li>The positive electrode is called the anode.</li>
+<li>The negative electrode is called the cathode.</li>
+<li>Wires allow electrons to flow around the circuit.</li>
+<li>A battery or power supply drives the movement of electrons.</li>
+</ul>
+</details>
+<details >
+<summary>1:42 - 2:35 | Separating Lead Bromide</summary>
+<ul>
+<li>Passing current through molten lead bromide separates lead and bromine.</li>
+<li>Negative bromide ions move to the positive anode.</li>
+<li>Positive lead ions move to the negative cathode.</li>
+<li>Bromide ions are discharged to form bromine gas.</li>
+<li>Lead ions are discharged to form pure molten lead.</li>
+<li>The molten lead collects at the bottom of the container.</li>
+</ul>
+</details>
+<details >
+<summary>2:35 - 3:04 | Oxidation and Reduction</summary>
+<ul>
+<li>At the anode, bromide ions lose electrons and are oxidised.</li>
+<li>Bromide ions form bromine molecules.</li>
+<li>At the cathode, lead ions gain electrons and are reduced.</li>
+<li>Lead ions become neutral lead atoms.</li>
+<li>Half equations can show the electron transfer at each electrode.</li>
+</ul>
+</details>
+<details >
+<summary>3:04 - 3:43 | Overall Electron Transfer</summary>
+<ul>
+<li>Electrons are taken from bromide ions at the anode.</li>
+<li>The battery moves these electrons through the wire to the cathode.</li>
+<li>Lead ions receive electrons at the cathode and become pure lead.</li>
+<li>Electrolysis uses electricity to turn ions back into their elemental forms.</li>
+<li>Overall, electrons are transferred from negative ions to positive ions.</li>
+</ul>
+</details>
+</section>
+
+<section class="card">
+<h2>Quiz (40 Questions)</h2>
+<div id="game-area">
+<button class="btn" onclick="startGame()">Start Quiz</button>
+</div>
+</section>
+
+</div>
+
+<script>
+const questions=[
+  {
+    "type": "mcq",
+    "question": "What does electrolysis use to split compounds?",
+    "options": [
+      "Electricity",
+      "Sunlight",
+      "Sound"
+    ],
+    "answer": 0,
+    "explanation": "Electrolysis splits compounds using electricity."
+  },
+  {
+    "type": "fill",
+    "question": "Electrolysis means splitting up with ______.",
+    "answerText": "electricity",
+    "explanation": "The word electrolysis means splitting up with electricity."
+  },
+  {
+    "type": "mcq",
+    "question": "Which insoluble compound is used as the main example?",
+    "options": [
+      "Lead bromide",
+      "Copper sulfate",
+      "Sodium chloride"
+    ],
+    "answer": 0,
+    "explanation": "The video uses molten lead bromide as the main example."
+  },
+  {
+    "type": "fill",
+    "question": "An electrolyte is a liquid or solution containing an ______ compound.",
+    "answerText": "ionic",
+    "explanation": "An electrolyte contains an ionic compound with mobile ions."
+  },
+  {
+    "type": "mcq",
+    "question": "What must ions be able to do in an electrolyte?",
+    "options": [
+      "Move freely",
+      "Stay fixed",
+      "Disappear"
+    ],
+    "answer": 0,
+    "explanation": "Ions must be free to move so they can carry charge."
+  },
+  {
+    "type": "mcq",
+    "question": "What can be done to soluble compounds to make an electrolyte?",
+    "options": [
+      "Dissolve them in water",
+      "Freeze them",
+      "Remove their ions"
+    ],
+    "answer": 0,
+    "explanation": "Soluble ionic compounds can be dissolved in water."
+  },
+  {
+    "type": "fill",
+    "question": "Insoluble compounds must be ______ to make their ions free to move.",
+    "answerText": "melted",
+    "explanation": "Insoluble compounds are melted to form a molten electrolyte."
+  },
+  {
+    "type": "mcq",
+    "question": "What type of electrolyte is molten lead bromide?",
+    "options": [
+      "Molten liquid",
+      "Aqueous solution",
+      "Gas"
+    ],
+    "answer": 0,
+    "explanation": "Lead bromide must be molten because it is insoluble."
+  },
+  {
+    "type": "fill",
+    "question": "Molten lead bromide contains positive lead ions and negative ______ ions.",
+    "answerText": "bromide",
+    "explanation": "Molten lead bromide contains Pb²⁺ and Br⁻ ions."
+  },
+  {
+    "type": "mcq",
+    "question": "What are electrodes?",
+    "options": [
+      "Solid conductors",
+      "Plastic insulators",
+      "Liquid fuels"
+    ],
+    "answer": 0,
+    "explanation": "Electrodes are solid conductors, often metal or carbon."
+  },
+  {
+    "type": "fill",
+    "question": "Electrodes are often made from metal or ______.",
+    "answerText": "carbon",
+    "explanation": "Electrodes are generally made of metal or carbon."
+  },
+  {
+    "type": "mcq",
+    "question": "What is the positive electrode called?",
+    "options": [
+      "Anode",
+      "Cathode",
+      "Electrolyte"
+    ],
+    "answer": 0,
+    "explanation": "The positive electrode is the anode."
+  },
+  {
+    "type": "mcq",
+    "question": "What is the negative electrode called?",
+    "options": [
+      "Cathode",
+      "Anode",
+      "Beaker"
+    ],
+    "answer": 0,
+    "explanation": "The negative electrode is the cathode."
+  },
+  {
+    "type": "fill",
+    "question": "The positive electrode is called the ______.",
+    "answerText": "anode",
+    "explanation": "The anode is the positive electrode."
+  },
+  {
+    "type": "fill",
+    "question": "The negative electrode is called the ______.",
+    "answerText": "cathode",
+    "explanation": "The cathode is the negative electrode."
+  },
+  {
+    "type": "mcq",
+    "question": "What joins the electrodes in the circuit?",
+    "options": [
+      "Wires",
+      "Salt crystals",
+      "Water only"
+    ],
+    "answer": 0,
+    "explanation": "Wires connect the electrodes so electrons can flow."
+  },
+  {
+    "type": "mcq",
+    "question": "What drives the flow of electrons?",
+    "options": [
+      "A power supply or battery",
+      "A thermometer",
+      "A filter paper"
+    ],
+    "answer": 0,
+    "explanation": "A battery or power supply drives electron flow."
+  },
+  {
+    "type": "fill",
+    "question": "During electrolysis, an electric current passes through the ______.",
+    "answerText": "electrolyte",
+    "explanation": "Current passes through the electrolyte to split the compound."
+  },
+  {
+    "type": "mcq",
+    "question": "Which ions move to the positive anode?",
+    "options": [
+      "Negative ions",
+      "Positive ions",
+      "Neutral atoms"
+    ],
+    "answer": 0,
+    "explanation": "Negative ions are attracted to the positive anode."
+  },
+  {
+    "type": "mcq",
+    "question": "Which ions move to the negative cathode?",
+    "options": [
+      "Positive ions",
+      "Negative ions",
+      "Neutral atoms"
+    ],
+    "answer": 0,
+    "explanation": "Positive ions are attracted to the negative cathode."
+  },
+  {
+    "type": "fill",
+    "question": "Bromide ions are attracted to the positive ______.",
+    "answerText": "anode",
+    "explanation": "Negative bromide ions move to the positive anode."
+  },
+  {
+    "type": "fill",
+    "question": "Lead ions are attracted to the negative ______.",
+    "answerText": "cathode",
+    "explanation": "Positive lead ions move to the negative cathode."
+  },
+  {
+    "type": "mcq",
+    "question": "What does discharge mean?",
+    "options": [
+      "A charged ion becomes neutral",
+      "A solid becomes invisible",
+      "A wire breaks"
+    ],
+    "answer": 0,
+    "explanation": "Discharge means an ion gains or loses electrons to become neutral."
+  },
+  {
+    "type": "mcq",
+    "question": "What forms when bromide ions are discharged?",
+    "options": [
+      "Bromine gas",
+      "Lead metal",
+      "Oxygen gas"
+    ],
+    "answer": 0,
+    "explanation": "Bromide ions form bromine gas at the anode."
+  },
+  {
+    "type": "fill",
+    "question": "Bromine atoms pair up to form bromine ______.",
+    "answerText": "gas",
+    "explanation": "Bromine forms a gas that floats away."
+  },
+  {
+    "type": "mcq",
+    "question": "What forms when lead ions are discharged?",
+    "options": [
+      "Pure lead",
+      "Bromine gas",
+      "Water"
+    ],
+    "answer": 0,
+    "explanation": "Lead ions form pure lead at the cathode."
+  },
+  {
+    "type": "fill",
+    "question": "Pure lead forms a layer of molten ______ at the bottom.",
+    "answerText": "lead",
+    "explanation": "The discharged lead collects as molten lead."
+  },
+  {
+    "type": "mcq",
+    "question": "Where does oxidation happen in this example?",
+    "options": [
+      "At the anode",
+      "At the cathode",
+      "In the wire only"
+    ],
+    "answer": 0,
+    "explanation": "Bromide ions are oxidised at the anode."
+  },
+  {
+    "type": "mcq",
+    "question": "Where does reduction happen in this example?",
+    "options": [
+      "At the cathode",
+      "At the anode",
+      "In the beaker wall"
+    ],
+    "answer": 0,
+    "explanation": "Lead ions are reduced at the cathode."
+  },
+  {
+    "type": "fill",
+    "question": "Oxidation involves losing ______.",
+    "answerText": "electrons",
+    "explanation": "Bromide ions lose electrons during oxidation."
+  },
+  {
+    "type": "fill",
+    "question": "Reduction involves gaining ______.",
+    "answerText": "electrons",
+    "explanation": "Lead ions gain electrons during reduction."
+  },
+  {
+    "type": "mcq",
+    "question": "How many electrons does each bromide ion lose?",
+    "options": [
+      "One",
+      "Two",
+      "Four"
+    ],
+    "answer": 0,
+    "explanation": "Each bromide ion loses one electron."
+  },
+  {
+    "type": "mcq",
+    "question": "How many electrons does each lead ion gain?",
+    "options": [
+      "Two",
+      "One",
+      "Three"
+    ],
+    "answer": 0,
+    "explanation": "Each Pb²⁺ ion gains two electrons to become Pb."
+  },
+  {
+    "type": "fill",
+    "question": "At the cathode, Pb²⁺ ions gain two electrons to form ______.",
+    "answerText": "lead",
+    "explanation": "Pb²⁺ + 2e⁻ forms Pb."
+  },
+  {
+    "type": "mcq",
+    "question": "What carries electrons from the anode to the cathode?",
+    "options": [
+      "The external wire",
+      "The bromine gas",
+      "The molten lead only"
+    ],
+    "answer": 0,
+    "explanation": "Electrons travel around the external circuit through the wire."
+  },
+  {
+    "type": "mcq",
+    "question": "What role does the battery have?",
+    "options": [
+      "It drives electrons around the circuit",
+      "It becomes the electrolyte",
+      "It makes ions solid"
+    ],
+    "answer": 0,
+    "explanation": "The battery provides energy to move electrons."
+  },
+  {
+    "type": "fill",
+    "question": "Electrolysis converts ions back into pure ______ forms.",
+    "answerText": "elemental",
+    "explanation": "Electrolysis turns ions into elements such as lead and bromine."
+  },
+  {
+    "type": "mcq",
+    "question": "In lead bromide electrolysis, which product leaves as a gas?",
+    "options": [
+      "Bromine",
+      "Lead",
+      "Carbon"
+    ],
+    "answer": 0,
+    "explanation": "Bromine forms as a gas at the anode."
+  },
+  {
+    "type": "mcq",
+    "question": "In lead bromide electrolysis, which product collects at the bottom?",
+    "options": [
+      "Lead",
+      "Bromine",
+      "Hydrogen"
+    ],
+    "answer": 0,
+    "explanation": "Molten lead collects at the bottom."
+  },
+  {
+    "type": "fill",
+    "question": "Overall, electrons are transferred from negative ions to ______ ions.",
+    "answerText": "positive",
+    "explanation": "Electrons move from bromide ions to lead ions through the circuit."
+  }
+];
+let currentQuestion=0;
+let score=0;
+let shuffledQuestions=[];
+function startGame(){shuffledQuestions=[...questions].sort(()=>Math.random()-0.5);currentQuestion=0;score=0;showQuestion();}
+function showQuestion(){
+const gameArea=document.getElementById("game-area");
+const q=shuffledQuestions[currentQuestion];
+let html=`<div><p><strong>Question ${currentQuestion+1}:</strong> ${q.question}</p>`;
+if(q.type==="mcq"){q.options.forEach((opt,idx)=>{html+=`<label style="display:block"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;});html+=`<button class="btn" onclick="checkMCQ()">Submit</button>`;}
+else{html+=`<input id="fill" type="text" style="width:100%;padding:10px;margin:10px 0;">`;html+=`<button class="btn" onclick="checkFill()">Submit</button>`;}
+html+=`<div id="feedback"></div></div>`;gameArea.innerHTML=html;
+}
+function checkMCQ(){const q=shuffledQuestions[currentQuestion];const sel=document.querySelector('input[name="opt"]:checked');if(!sel)return;const feedback=document.getElementById("feedback");if(parseInt(sel.value)===q.answer){feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;score++;}else{feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;}setTimeout(nextQuestion,1200);}
+function checkFill(){const q=shuffledQuestions[currentQuestion];const ans=document.getElementById("fill").value.trim().toLowerCase();const feedback=document.getElementById("feedback");if(ans.includes(q.answerText.toLowerCase())){feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;score++;}else{feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;}setTimeout(nextQuestion,1200);}
+function nextQuestion(){currentQuestion++;if(currentQuestion<shuffledQuestions.length){showQuestion();}else{document.getElementById("game-area").innerHTML=`<h3>Quiz Complete!</h3><p>Your score: ${score}/${shuffledQuestions.length}</p><button class="btn" onclick="startGame()">Try Again</button>`;}}
+</script>
+</body>
+</html>
