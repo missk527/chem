@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electrolysis of Aluminium Oxide</title>
+<style>
+:root{
+--brand:#0ea5e9;
+--ink:#1f2937;
+--paper:#fafafa;
+--card:#ffffff;
+--muted:#6b7280;
+--good:#16a34a;
+--bad:#dc2626;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+color:var(--ink);
+background:var(--paper);
+line-height:1.6;
+}
+header{
+background:linear-gradient(135deg,var(--brand),#6366f1);
+color:white;
+padding:20px 16px;
+text-align:center;
+}
+.wrap{max-width:1000px;margin:0 auto;padding:16px}
+.card{
+background:var(--card);
+border-radius:12px;
+padding:18px;
+box-shadow:0 6px 18px rgba(2,6,23,.08);
+margin:16px 0;
+}
+iframe{
+width:100%;
+max-width:900px;
+height:480px;
+border:0;
+border-radius:12px;
+}
+details{
+border:1px solid #e5e7eb;
+border-radius:10px;
+padding:10px 12px;
+margin:10px 0;
+background:#fff;
+}
+summary{
+font-weight:700;
+color:#0f766e;
+cursor:pointer;
+}
+.btn{
+background:var(--brand);
+color:white;
+border:0;
+border-radius:10px;
+padding:10px 14px;
+font-weight:700;
+cursor:pointer;
+}
+.correct{color:green}
+.incorrect{color:red}
+</style>
+</head>
+<body>
+
+<header>
+<h1>40C. Electrolysis of Aluminium Oxide</h1>
+</header>
+
+<div class="wrap">
+
+<div class="card">
+<iframe src="https://www.youtube.com/embed/hIMGwLzCIbQ" allowfullscreen></iframe>
+</div>
+
+<section class="card">
+<h2>Key Notes (Synced with Video)</h2>
+
+<details open>
+<summary>0:00 - 0:45 | Extracting Metals from Oxides</summary>
+<ul>
+<li>Many metals are found naturally as metal oxides, such as aluminium oxide and copper oxide.</li>
+<li>To obtain the pure metal, the oxygen must be removed from the metal oxide.</li>
+<li>Removing oxygen from a compound is called reduction.</li>
+<li>Carbon can reduce some metal oxides by displacing the metal and forming carbon dioxide.</li>
+</ul>
+</details>
+<details>
+<summary>0:45 - 1:24 | Why Electrolysis Is Needed</summary>
+<ul>
+<li>Reduction with carbon only works for metals that are less reactive than carbon, such as zinc, iron, and copper.</li>
+<li>More reactive metals cannot be extracted using carbon, so electrolysis is required instead.</li>
+<li>Electrolysis separates ionic compounds into their elements using an electric current.</li>
+<li>Aluminium oxide can be electrolysed to produce aluminium and oxygen.</li>
+</ul>
+</details>
+<details>
+<summary>1:24 - 2:27 | Preparing Molten Aluminium Oxide</summary>
+<ul>
+<li>Electrolysis only works when ions are free to move.</li>
+<li>Solid aluminium oxide cannot be electrolysed because its ions are fixed in place.</li>
+<li>Aluminium oxide is purified from bauxite before electrolysis.</li>
+<li>Cryolite is added to lower the melting point, reducing the amount of energy needed.</li>
+</ul>
+</details>
+<details>
+<summary>2:27 - 3:11 | Setting Up the Electrolysis Cell</summary>
+<ul>
+<li>The molten aluminium oxide mixture acts as the electrolyte.</li>
+<li>Carbon electrodes are used because they conduct electricity.</li>
+<li>The positive electrode is called the anode, and the negative electrode is called the cathode.</li>
+<li>A power source and wires complete the circuit so electrons can flow.</li>
+</ul>
+</details>
+<details>
+<summary>3:11 - 4:05 | Ion Movement and Products</summary>
+<ul>
+<li>Molten aluminium oxide contains aluminium ions, Al³⁺, and oxide ions, O²⁻.</li>
+<li>Oxide ions move to the positive anode, lose electrons, and form oxygen gas.</li>
+<li>Aluminium ions move to the negative cathode, gain electrons, and form aluminium atoms.</li>
+<li>Molten aluminium collects at the bottom of the electrolysis cell.</li>
+</ul>
+</details>
+<details>
+<summary>4:13 - 5:41 | Half Equations and Redox</summary>
+<ul>
+<li>At the anode, oxide ions lose electrons: 2O²⁻ → O₂ + 4e⁻.</li>
+<li>At the cathode, aluminium ions gain electrons: Al³⁺ + 3e⁻ → Al.</li>
+<li>Oxidation is loss of electrons, and reduction is gain of electrons.</li>
+<li>The overall equation is 2Al₂O₃(l) → 4Al(l) + 3O₂(g).</li>
+</ul>
+</details>
+
+</section>
+
+<section class="card">
+<h2>Quiz (40 Questions)</h2>
+<div id="game-area">
+<button class="btn" onclick="startGame()">Start Quiz</button>
+</div>
+</section>
+
+</div>
+
+<script>
+const questions=[
+  {
+    "type": "mcq",
+    "question": "Why must oxygen be removed from a metal oxide?",
+    "options": [
+      "To obtain the pure metal",
+      "To make the metal more reactive",
+      "To turn the metal into carbon dioxide"
+    ],
+    "answer": 0,
+    "explanation": "A metal oxide must be reduced to isolate the pure metal."
+  },
+  {
+    "type": "fill",
+    "question": "Removing oxygen from a metal oxide is called ______.",
+    "answerText": "reduction",
+    "explanation": "Reduction means removing oxygen or gaining electrons, depending on the context."
+  },
+  {
+    "type": "mcq",
+    "question": "Which substance can reduce some metal oxides cheaply?",
+    "options": [
+      "Carbon",
+      "Cryolite",
+      "Oxygen"
+    ],
+    "answer": 0,
+    "explanation": "Carbon can reduce oxides of metals that are less reactive than carbon."
+  },
+  {
+    "type": "fill",
+    "question": "Carbon reduces some metal oxides and forms carbon ______.",
+    "answerText": "dioxide",
+    "explanation": "Carbon removes oxygen from the metal oxide and forms carbon dioxide."
+  },
+  {
+    "type": "mcq",
+    "question": "Reduction with carbon works only for metals that are what compared with carbon?",
+    "options": [
+      "Less reactive",
+      "More reactive",
+      "Exactly as reactive"
+    ],
+    "answer": 0,
+    "explanation": "Carbon can only displace metals that are less reactive than itself."
+  },
+  {
+    "type": "mcq",
+    "question": "Which metal is more reactive than carbon and must be extracted by electrolysis?",
+    "options": [
+      "Aluminium",
+      "Copper",
+      "Iron"
+    ],
+    "answer": 0,
+    "explanation": "Aluminium is too reactive to be extracted by reduction with carbon."
+  },
+  {
+    "type": "fill",
+    "question": "Electrolysis uses an electric current to separate ionic compounds into their ______.",
+    "answerText": "elements",
+    "explanation": "Electrolysis breaks ionic compounds into their pure elements."
+  },
+  {
+    "type": "mcq",
+    "question": "What is the electrolyte in the aluminium extraction process?",
+    "options": [
+      "Molten aluminium oxide mixture",
+      "Solid bauxite only",
+      "Carbon dioxide gas"
+    ],
+    "answer": 0,
+    "explanation": "The molten aluminium oxide mixture contains mobile ions and acts as the electrolyte."
+  },
+  {
+    "type": "fill",
+    "question": "Electrolysis only works if the ions are free to ______.",
+    "answerText": "move",
+    "explanation": "Mobile ions are needed to carry charge through the electrolyte."
+  },
+  {
+    "type": "mcq",
+    "question": "Why can solid aluminium oxide not be electrolysed directly?",
+    "options": [
+      "Its ions are fixed in place",
+      "It contains no aluminium",
+      "It is already pure aluminium"
+    ],
+    "answer": 0,
+    "explanation": "In a solid ionic compound, ions cannot move freely."
+  },
+  {
+    "type": "fill",
+    "question": "Aluminium oxide is purified from an ore called ______.",
+    "answerText": "bauxite",
+    "explanation": "Bauxite is the ore that contains aluminium oxide."
+  },
+  {
+    "type": "mcq",
+    "question": "Why is cryolite added to aluminium oxide?",
+    "options": [
+      "To lower the melting point",
+      "To make oxygen disappear instantly",
+      "To replace the carbon electrodes"
+    ],
+    "answer": 0,
+    "explanation": "Cryolite lowers the melting point, reducing energy costs."
+  },
+  {
+    "type": "fill",
+    "question": "Aluminium oxide has a melting point of over 2000 degrees ______.",
+    "answerText": "celsius",
+    "explanation": "The video states that aluminium oxide melts above 2000°C."
+  },
+  {
+    "type": "mcq",
+    "question": "What material are the electrodes made from in this process?",
+    "options": [
+      "Carbon",
+      "Aluminium oxide",
+      "Cryolite"
+    ],
+    "answer": 0,
+    "explanation": "Carbon electrodes conduct electricity in the electrolysis cell."
+  },
+  {
+    "type": "fill",
+    "question": "The positive electrode is called the ______.",
+    "answerText": "anode",
+    "explanation": "The anode is the positive electrode in this electrolysis setup."
+  },
+  {
+    "type": "fill",
+    "question": "The negative electrode is called the ______.",
+    "answerText": "cathode",
+    "explanation": "The cathode is the negative electrode."
+  },
+  {
+    "type": "mcq",
+    "question": "Which ions are attracted to the positive anode?",
+    "options": [
+      "Oxide ions, O²⁻",
+      "Aluminium ions, Al³⁺",
+      "Neutral aluminium atoms"
+    ],
+    "answer": 0,
+    "explanation": "Negative oxide ions are attracted to the positive anode."
+  },
+  {
+    "type": "mcq",
+    "question": "Which ions are attracted to the negative cathode?",
+    "options": [
+      "Aluminium ions, Al³⁺",
+      "Oxide ions, O²⁻",
+      "Oxygen molecules"
+    ],
+    "answer": 0,
+    "explanation": "Positive aluminium ions are attracted to the negative cathode."
+  },
+  {
+    "type": "fill",
+    "question": "Oxide ions have a charge of ______ minus.",
+    "answerText": "2",
+    "explanation": "Oxide ions are O²⁻ ions."
+  },
+  {
+    "type": "fill",
+    "question": "Aluminium ions have a charge of ______ plus.",
+    "answerText": "3",
+    "explanation": "Aluminium ions are Al³⁺ ions."
+  },
+  {
+    "type": "mcq",
+    "question": "What happens to oxide ions at the anode?",
+    "options": [
+      "They lose electrons and form oxygen gas",
+      "They gain electrons and form aluminium",
+      "They become cryolite"
+    ],
+    "answer": 0,
+    "explanation": "Oxide ions are discharged at the anode to form oxygen gas."
+  },
+  {
+    "type": "mcq",
+    "question": "What happens to aluminium ions at the cathode?",
+    "options": [
+      "They gain electrons and form aluminium atoms",
+      "They lose electrons and form oxygen",
+      "They turn into carbon dioxide"
+    ],
+    "answer": 0,
+    "explanation": "Aluminium ions gain electrons at the cathode and become aluminium atoms."
+  },
+  {
+    "type": "fill",
+    "question": "Oxygen leaves the cell as a ______.",
+    "answerText": "gas",
+    "explanation": "Oxygen molecules float away as oxygen gas."
+  },
+  {
+    "type": "fill",
+    "question": "Molten aluminium collects at the ______ of the cell.",
+    "answerText": "bottom",
+    "explanation": "The aluminium metal sinks and collects at the bottom."
+  },
+  {
+    "type": "mcq",
+    "question": "What is the half equation at the cathode?",
+    "options": [
+      "Al³⁺ + 3e⁻ → Al",
+      "2O²⁻ → O₂ + 4e⁻",
+      "Al₂O₃ → Al + O"
+    ],
+    "answer": 0,
+    "explanation": "Aluminium ions gain three electrons to form aluminium atoms."
+  },
+  {
+    "type": "mcq",
+    "question": "What is the balanced half equation at the anode?",
+    "options": [
+      "2O²⁻ → O₂ + 4e⁻",
+      "Al³⁺ + 3e⁻ → Al",
+      "O₂ + 4e⁻ → 2O²⁻"
+    ],
+    "answer": 0,
+    "explanation": "Two oxide ions lose four electrons to form one oxygen molecule."
+  },
+  {
+    "type": "fill",
+    "question": "At the anode, oxide ions lose ______.",
+    "answerText": "electrons",
+    "explanation": "Loss of electrons occurs at the anode."
+  },
+  {
+    "type": "fill",
+    "question": "At the cathode, aluminium ions gain ______.",
+    "answerText": "electrons",
+    "explanation": "Aluminium ions gain electrons to become aluminium atoms."
+  },
+  {
+    "type": "mcq",
+    "question": "What does OIL RIG stand for?",
+    "options": [
+      "Oxidation Is Loss, Reduction Is Gain",
+      "Oxygen Is Liquid, Rocks In Gas",
+      "Only Ions Leave, Reactions Include Gold"
+    ],
+    "answer": 0,
+    "explanation": "OIL RIG helps remember electron transfer in redox reactions."
+  },
+  {
+    "type": "fill",
+    "question": "Oxidation is the ______ of electrons.",
+    "answerText": "loss",
+    "explanation": "Oxidation means loss of electrons."
+  },
+  {
+    "type": "fill",
+    "question": "Reduction is the ______ of electrons.",
+    "answerText": "gain",
+    "explanation": "Reduction means gain of electrons."
+  },
+  {
+    "type": "mcq",
+    "question": "Which ion is oxidised during aluminium extraction?",
+    "options": [
+      "Oxide ion",
+      "Aluminium ion",
+      "Cryolite ion"
+    ],
+    "answer": 0,
+    "explanation": "Oxide ions lose electrons, so they are oxidised."
+  },
+  {
+    "type": "mcq",
+    "question": "Which ion is reduced during aluminium extraction?",
+    "options": [
+      "Aluminium ion",
+      "Oxide ion",
+      "Oxygen molecule"
+    ],
+    "answer": 0,
+    "explanation": "Aluminium ions gain electrons, so they are reduced."
+  },
+  {
+    "type": "fill",
+    "question": "The overall product metals are aluminium and ______.",
+    "answerText": "oxygen",
+    "explanation": "Electrolysis of aluminium oxide produces aluminium and oxygen."
+  },
+  {
+    "type": "mcq",
+    "question": "What is the overall balanced equation for aluminium oxide electrolysis?",
+    "options": [
+      "2Al₂O₃(l) → 4Al(l) + 3O₂(g)",
+      "Al₂O₃(l) → Al₂(l) + O₃(g)",
+      "Al(l) + O₂(g) → Al₂O₃(l)"
+    ],
+    "answer": 0,
+    "explanation": "The balanced overall reaction is 2Al₂O₃(l) → 4Al(l) + 3O₂(g)."
+  },
+  {
+    "type": "mcq",
+    "question": "Why is extracting aluminium by electrolysis expensive?",
+    "options": [
+      "It needs a lot of energy",
+      "It uses no electricity",
+      "Bauxite is always liquid"
+    ],
+    "answer": 0,
+    "explanation": "High temperatures and electrolysis require large amounts of energy."
+  },
+  {
+    "type": "fill",
+    "question": "The electrons flow through the external ______.",
+    "answerText": "wire",
+    "explanation": "Electrons move through the wire between electrodes."
+  },
+  {
+    "type": "mcq",
+    "question": "What type of compound is separated by electrolysis in this example?",
+    "options": [
+      "An ionic compound",
+      "A covalent gas only",
+      "A pure metal only"
+    ],
+    "answer": 0,
+    "explanation": "Aluminium oxide is ionic and can be separated when molten."
+  },
+  {
+    "type": "fill",
+    "question": "A liquid ionic compound with mobile ions is described as ______.",
+    "answerText": "molten",
+    "explanation": "Molten means melted, so ions are free to move."
+  },
+  {
+    "type": "mcq",
+    "question": "Which statement best summarises aluminium extraction?",
+    "options": [
+      "Purify aluminium oxide, mix with cryolite, melt it, then electrolyse it",
+      "Burn aluminium in oxygen",
+      "React aluminium oxide with copper"
+    ],
+    "answer": 0,
+    "explanation": "The process involves purification, cryolite, melting, and electrolysis."
+  }
+];
+
+let currentQuestion=0;
+let score=0;
+let shuffledQuestions=[];
+
+function startGame(){
+shuffledQuestions=[...questions].sort(()=>Math.random()-0.5);
+currentQuestion=0;
+score=0;
+showQuestion();
+}
+
+function showQuestion(){
+const gameArea=document.getElementById("game-area");
+const q=shuffledQuestions[currentQuestion];
+let html=`<div><p><strong>Question ${currentQuestion+1}:</strong> ${q.question}</p>`;
+
+if(q.type==="mcq"){
+q.options.forEach((opt,idx)=>{
+html+=`<label style="display:block"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+});
+html+=`<button class="btn" onclick="checkMCQ()">Submit</button>`;
+}else{
+html+=`<input id="fill" type="text" style="width:100%;padding:10px;margin:10px 0;">`;
+html+=`<button class="btn" onclick="checkFill()">Submit</button>`;
+}
+
+html+=`<div id="feedback"></div></div>`;
+gameArea.innerHTML=html;
+}
+
+function checkMCQ(){
+const q=shuffledQuestions[currentQuestion];
+const sel=document.querySelector('input[name="opt"]:checked');
+if(!sel)return;
+
+const feedback=document.getElementById("feedback");
+
+if(parseInt(sel.value)===q.answer){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function checkFill(){
+const q=shuffledQuestions[currentQuestion];
+const ans=document.getElementById("fill").value.trim().toLowerCase();
+const feedback=document.getElementById("feedback");
+
+if(ans.includes(q.answerText)){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function nextQuestion(){
+currentQuestion++;
+if(currentQuestion<shuffledQuestions.length){
+showQuestion();
+}else{
+document.getElementById("game-area").innerHTML=`<h3>Quiz Complete!</h3><p>Your score: ${score}/${shuffledQuestions.length}</p><button class="btn" onclick="startGame()">Try Again</button>`;
+}
+}
+</script>
+
+</body>
+</html>
